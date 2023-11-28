@@ -103,19 +103,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ApprovedAmount_DataCard1.DataCardValue3.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimType_DataCard1.DataCardValue9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ApprovedAmount_DataCard1.DataCardValue3.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimType_DataCard1.DataCardValue9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Container3.Form1.ApprovedAmount_DataCard1.DataCardValue3"
+                "type": "Screen1.Container3.Form1.ClaimType_DataCard1.DataCardValue9"
               }
             }
           ],
@@ -163,66 +163,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimCompanyName_DataCard1.DataCardValue5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimCompanyName_DataCard1.DataCardValue5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Container3.Form1.ClaimCompanyName_DataCard1.DataCardValue5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimDocument_DataCard1.DataCardValue6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimDocument_DataCard1.DataCardValue6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Container3.Form1.ClaimDocument_DataCard1.DataCardValue6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Screen1.Container3.Form1.RegistrationNumber_DataCard1.DataCardValue2.AccessibleLabel"
                 }
               ],
@@ -236,6 +176,36 @@
                 "member": "AccessibleLabel",
                 "module": "Screen1",
                 "type": "Screen1.Container3.Form1.RegistrationNumber_DataCard1.DataCardValue2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimCompanyName_DataCard1.DataCardValue5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimCompanyName_DataCard1.DataCardValue5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen1",
+                "type": "Screen1.Container3.Form1.ClaimCompanyName_DataCard1.DataCardValue5"
               }
             }
           ],
@@ -283,19 +253,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimType_DataCard1.DataCardValue9.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ProjectedCost_DataCard1.DataCardValue1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimType_DataCard1.DataCardValue9.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ProjectedCost_DataCard1.DataCardValue1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Container3.Form1.ClaimType_DataCard1.DataCardValue9"
+                "type": "Screen1.Container3.Form1.ProjectedCost_DataCard1.DataCardValue1"
               }
             }
           ],
@@ -313,19 +283,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ProjectedCost_DataCard1.DataCardValue1.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ApprovedAmount_DataCard1.DataCardValue3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Container3.Form1.ProjectedCost_DataCard1.DataCardValue1.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ApprovedAmount_DataCard1.DataCardValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Container3.Form1.ProjectedCost_DataCard1.DataCardValue1"
+                "type": "Screen1.Container3.Form1.ApprovedAmount_DataCard1.DataCardValue3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimDocument_DataCard1.DataCardValue6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.Container3.Form1.ClaimDocument_DataCard1.DataCardValue6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Screen1",
+                "type": "Screen1.Container3.Form1.ClaimDocument_DataCard1.DataCardValue6"
               }
             }
           ],

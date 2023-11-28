@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =true
     OnStart: |-
-        =Collect(
+        =ClearCollect(
             ColNav,
             Table(
                 {
@@ -22,6 +22,12 @@ App As appinfo:
                 }
             )
         );
+        Set(
+            Colors,{
+                backgroundcolor:ColorValue("#000000"),
+                selectedValue:ColorValue("#ffffff")
+            }
+        )
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
