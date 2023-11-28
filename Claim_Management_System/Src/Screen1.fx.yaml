@@ -565,3 +565,17 @@ Screen1 As screen:
                     Y: =DataCardKey9.Y
                     ZIndex: =4
 
+    Label3 As label:
+        Text: =User().FullName
+        X: =1204
+        Y: =16
+        ZIndex: =3
+
+    Image2 As image:
+        Height: =47
+        Image: =User().Image
+        Width: =46
+        X: =1142
+        Y: =12
+        ZIndex: =4
+
