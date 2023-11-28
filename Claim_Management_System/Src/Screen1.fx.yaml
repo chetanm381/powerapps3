@@ -121,60 +121,22 @@ Screen1 As screen:
             Y: =8
             ZIndex: =1
 
-            ClaimID_DataCard1 As typedDataCard.textualViewCard:
+            ApprovedAmount_DataCard1 As typedDataCard.numberEditCard:
                 BorderStyle: =BorderStyle.Solid
-                DataField: ="new_claimid"
-                Default: =ThisItem.ClaimID
-                DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimid")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =40
-                Required: =false
-                Width: =584
-                X: =0
-                Y: =0
-                ZIndex: =1
-
-                DataCardKey7 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue7.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue7 As label:
-                    DisplayMode: =Parent.DisplayMode
-                    Height: =45
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Default
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey7.X + DataCardKey7.Width
-                    Y: =10
-                    ZIndex: =2
-
-            ClaimType_DataCard1 As typedDataCard.textualEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_claimtype"
-                Default: =ThisItem.ClaimType
+                DataField: ="new_approvedamount"
+                Default: =ThisItem.ApprovedAmount
                 DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimtype")
+                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_approvedamount")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =50
-                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimtype")
                 Required: =false
-                Update: =DataCardValue9.Text
+                Update: =Value(DataCardValue3.Text)
                 Width: =584
                 X: =1
-                Y: =0
+                Y: =3
                 ZIndex: =1
 
-                DataCardKey9 As label:
+                DataCardKey3 As label:
                     AutoHeight: =true
                     FontWeight: =FontWeight.Bold
                     Height: =34
@@ -182,15 +144,15 @@ Screen1 As screen:
                     Width: =(Parent.Width - 60) * 0.4
                     Wrap: =false
                     X: =30
-                    Y: =10 + (DataCardValue9.Height / 2) - (Self.Height / 2)
+                    Y: =10 + (DataCardValue3.Height / 2) - (Self.Height / 2)
                     ZIndex: =1
 
-                DataCardValue9 As text:
+                DataCardValue3 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
-                    MaxLength: =Parent.MaxLength
+                    Format: =TextFormat.Number
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -198,11 +160,11 @@ Screen1 As screen:
                     RadiusTopRight: =0
                     Tooltip: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey9.X + DataCardKey9.Width
+                    X: =DataCardKey3.X + DataCardKey3.Width
                     Y: =10
                     ZIndex: =2
 
-                ErrorMessage7 As label:
+                ErrorMessage2 As label:
                     AutoHeight: =true
                     Height: =10
                     Live: =Live.Assertive
@@ -214,17 +176,17 @@ Screen1 As screen:
                     Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =DataCardValue9.Y + DataCardValue9.Height
+                    Y: =DataCardValue3.Y + DataCardValue3.Height
                     ZIndex: =3
 
-                StarVisible7 As label:
+                StarVisible2 As label:
                     Align: =Align.Center
-                    Height: =DataCardKey9.Height
+                    Height: =DataCardKey3.Height
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                     Width: =30
                     Wrap: =false
-                    Y: =DataCardKey9.Y
+                    Y: =DataCardKey3.Y
                     ZIndex: =4
 
             ClaimChildType_DataCard1 As typedDataCard.textualEditCard:
@@ -296,75 +258,6 @@ Screen1 As screen:
                     Y: =DataCardKey4.Y
                     ZIndex: =4
 
-            RegistrationNumber_DataCard1 As typedDataCard.textualEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_registrationnumber"
-                Default: =ThisItem.RegistrationNumber
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_registrationnumber")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_registrationnumber")
-                Required: =false
-                Update: =DataCardValue2.Text
-                Width: =584
-                X: =1
-                Y: =1
-                ZIndex: =1
-
-                DataCardKey2 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue2.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue2 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    MaxLength: =Parent.MaxLength
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey2.X + DataCardKey2.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage8 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue2.Y + DataCardValue2.Height
-                    ZIndex: =3
-
-                StarVisible8 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey2.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey2.Y
-                    ZIndex: =4
-
             ClaimCompanyName_DataCard1 As typedDataCard.textualEditCard:
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="new_claimcompanyname"
@@ -432,211 +325,6 @@ Screen1 As screen:
                     Width: =30
                     Wrap: =false
                     Y: =DataCardKey5.Y
-                    ZIndex: =4
-
-            ClaimProcessStage_DataCard1 As typedDataCard.textualEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_claimprocessstage"
-                Default: =ThisItem.ClaimProcessStage
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimprocessstage")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimprocessstage")
-                Required: =false
-                Update: =DataCardValue8.Text
-                Width: =584
-                X: =1
-                Y: =2
-                ZIndex: =1
-
-                DataCardKey8 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue8 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    MaxLength: =Parent.MaxLength
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey8.X + DataCardKey8.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage6 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue8.Y + DataCardValue8.Height
-                    ZIndex: =3
-
-                StarVisible6 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey8.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey8.Y
-                    ZIndex: =4
-
-            ProjectedCost_DataCard1 As typedDataCard.numberEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_projectedcost"
-                Default: =ThisItem.ProjectedCost
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_projectedcost")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                Required: =false
-                Update: =Value(DataCardValue1.Text)
-                Width: =584
-                X: =0
-                Y: =3
-                ZIndex: =1
-
-                DataCardKey1 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue1.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue1 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    Format: =TextFormat.Number
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey1.X + DataCardKey1.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage1 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue1.Y + DataCardValue1.Height
-                    ZIndex: =3
-
-                StarVisible1 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey1.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey1.Y
-                    ZIndex: =4
-
-            ApprovedAmount_DataCard1 As typedDataCard.numberEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_approvedamount"
-                Default: =ThisItem.ApprovedAmount
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_approvedamount")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                Required: =false
-                Update: =Value(DataCardValue3.Text)
-                Width: =584
-                X: =1
-                Y: =3
-                ZIndex: =1
-
-                DataCardKey3 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue3.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue3 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    Format: =TextFormat.Number
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey3.X + DataCardKey3.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage2 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue3.Y + DataCardValue3.Height
-                    ZIndex: =3
-
-                StarVisible2 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey3.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey3.Y
                     ZIndex: =4
 
             ClaimDocument_DataCard1 As typedDataCard.fileEditCard:
@@ -711,19 +399,325 @@ Screen1 As screen:
                     Y: =DataCardKey6.Y
                     ZIndex: =4
 
-    Label3 As label:
-        Text: =User().FullName
-        X: =1204
-        Y: =16
-        ZIndex: =3
+            ClaimID_DataCard1 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="new_claimid"
+                Default: =ThisItem.ClaimID
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimid")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =false
+                Width: =584
+                X: =0
+                Y: =0
+                ZIndex: =1
 
-    Image2 As image:
-        Height: =47
-        Image: =User().Image
-        Width: =46
-        X: =1142
-        Y: =12
-        ZIndex: =4
+                DataCardKey7 As label:
+                    AutoHeight: =true
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue7.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue7 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =45
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Default
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey7.X + DataCardKey7.Width
+                    Y: =10
+                    ZIndex: =2
+
+            ClaimProcessStage_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="new_claimprocessstage"
+                Default: =ThisItem.ClaimProcessStage
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimprocessstage")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimprocessstage")
+                Required: =false
+                Update: =DataCardValue8.Text
+                Width: =584
+                X: =1
+                Y: =2
+                ZIndex: =1
+
+                DataCardKey8 As label:
+                    AutoHeight: =true
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue8 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey8.X + DataCardKey8.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage6 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue8.Y + DataCardValue8.Height
+                    ZIndex: =3
+
+                StarVisible6 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey8.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey8.Y
+                    ZIndex: =4
+
+            ClaimType_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="new_claimtype"
+                Default: =ThisItem.ClaimType
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimtype")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimtype")
+                Required: =false
+                Update: =DataCardValue9.Text
+                Width: =584
+                X: =1
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey9 As label:
+                    AutoHeight: =true
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue9.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue9 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey9.X + DataCardKey9.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage7 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue9.Y + DataCardValue9.Height
+                    ZIndex: =3
+
+                StarVisible7 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey9.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey9.Y
+                    ZIndex: =4
+
+            RegistrationNumber_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="new_registrationnumber"
+                Default: =ThisItem.RegistrationNumber
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_registrationnumber")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_registrationnumber")
+                Required: =false
+                Update: =DataCardValue2.Text
+                Width: =584
+                X: =1
+                Y: =1
+                ZIndex: =1
+
+                DataCardKey2 As label:
+                    AutoHeight: =true
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue2.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue2 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    MaxLength: =Parent.MaxLength
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey2.X + DataCardKey2.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage8 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue2.Y + DataCardValue2.Height
+                    ZIndex: =3
+
+                StarVisible8 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey2.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey2.Y
+                    ZIndex: =4
+
+            ProjectedCost_DataCard1 As typedDataCard.numberEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="new_projectedcost"
+                Default: =ThisItem.ProjectedCost
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_projectedcost")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =Value(DataCardValue1.Text)
+                Width: =584
+                X: =0
+                Y: =3
+                ZIndex: =1
+
+                DataCardKey1 As label:
+                    AutoHeight: =true
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.4
+                    Wrap: =false
+                    X: =30
+                    Y: =10 + (DataCardValue1.Height / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                DataCardValue1 As text:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Format: =TextFormat.Number
+                    PaddingLeft: =5
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Tooltip: =Parent.DisplayName
+                    Width: =(Parent.Width - 60) * 0.6
+                    X: =DataCardKey1.X + DataCardKey1.Width
+                    Y: =10
+                    ZIndex: =2
+
+                ErrorMessage1 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue1.Y + DataCardValue1.Height
+                    ZIndex: =3
+
+                StarVisible1 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey1.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey1.Y
+                    ZIndex: =4
+
+    Label3 As label:
+        DisplayMode: =DisplayMode.View
+        Size: =10
+        Text: =User().FullName
+        X: =1193
+        Y: =11
+        ZIndex: =3
 
     HtmlText1 As htmlViewer:
         Height: =106
@@ -731,4 +725,57 @@ Screen1 As screen:
         X: =876
         Y: =540
         ZIndex: =5
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Height: =45
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Width: =45
+        X: =1309
+        Y: =8
+        ZIndex: =6
+
+        Image2 As image:
+            DisplayMode: =DisplayMode.View
+            Height: =45
+            Image: =User().Image
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Width: =45
+            ZIndex: =1
+
+        Circle1 As circle:
+            Height: =45
+            Visible: =If(IsBlank(User().Image),true,false)
+            Width: =45
+            ZIndex: =2
+
+        Label4 As label:
+            Align: =Align.Center
+            BorderStyle: =BorderStyle.None
+            Color: =Color.White
+            FontWeight: =FontWeight.Semibold
+            Height: =45
+            Text: |-
+                =With(
+                        {
+                            // get the user record
+                            varRecordUser: If(
+                                !IsBlank(User().Image),
+                                Office365Users.UserProfileV2(User().Email)
+                            )
+                        },
+                        // find the user initials
+                        Concatenate(
+                            Left(varRecordUser.givenName, 1),
+                            Left(varRecordUser.surname, 1)
+                        )
+                    )
+            Visible: =If(IsBlank(User().Image),true,false)
+            Width: =45
+            ZIndex: =3
 
