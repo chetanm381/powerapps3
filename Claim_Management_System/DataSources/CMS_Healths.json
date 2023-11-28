@@ -1,0 +1,108 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "new_cms_healths",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "new_cms_health",
+    "Name": "CMS_Healths",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "new_approvedamount": "ApprovedAmount",
+      "new_claimchildtype": "ClaimChildType",
+      "new_claimcompanyname": "ClaimCompanyName",
+      "new_claimdocument": "ClaimDocument",
+      "new_claimid": "ClaimID",
+      "new_claimprocessstage": "ClaimProcessStage",
+      "new_claimtype": "ClaimType",
+      "new_cms_health_AsyncOperations": "System Jobs",
+      "new_cms_health_BulkDeleteFailures": "Bulk Delete Failures",
+      "new_cms_health_DuplicateBaseRecord": "Duplicate Records (new_cms_health_DuplicateBaseRecord)",
+      "new_cms_health_DuplicateMatchingRecord": "Duplicate Records (new_cms_health_DuplicateMatchingRecord)",
+      "new_cms_health_FileAttachments": "FileAttachments",
+      "new_cms_health_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "new_cms_health_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "new_cms_health_ProcessSession": "Process Sessions",
+      "new_cms_health_SyncErrors": "Sync Errors",
+      "new_cms_healthid": "CMS_Health",
+      "new_description": "Description",
+      "new_name": "Name",
+      "new_projectedcost": "ProjectedCost",
+      "new_registrationnumber": "RegistrationNumber",
+      "new_userid": "UserID",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "CMS_Healths",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "CMS_Healths (Views)",
+    "Name": "_new_cms_health_views",
+    "RelatedEntityName": "CMS_Healths",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2af297ef-033d-449e-a5f3-31725462fda6": "CMS_Health Advanced Find View",
+      "3e9dce0c-9976-42ec-b434-b79ed93a9403": "Inactive CMS_Healths",
+      "61efc842-ba89-46cd-89b0-ce24ce6770ac": "CMS_Health Associated View",
+      "6ebaf9da-57fb-4ab0-b746-59bb2347e51c": "Active CMS_Healths",
+      "8e86780b-1181-4739-8e47-97fa47709163": "CMS_Health Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (CMS_Healths)",
+    "Name": "new_cms_health_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "CMS_Healths"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "CMS_Healths",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (CMS_Healths)",
+    "Name": "new_cms_health_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "CMS_Healths"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "CMS_Healths",
+    "Type": "OptionSetInfo"
+  }
+]
