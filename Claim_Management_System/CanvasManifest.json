@@ -111,6 +111,7 @@
     "FileID": "78070973-c99f-48c2-bb18-11601e5ec3d0",
     "Id": "78070973-c99f-48c2-bb18-11601e5ec3d0",
     "InstrumentationKey": "",
+    "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
     "Name": "Claim_Management_System",
     "OriginatingVersion": "1.335",

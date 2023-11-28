@@ -1,5 +1,27 @@
 App As appinfo:
     BackEnabled: =true
+    OnStart: |-
+        =Collect(
+            ColNav,
+            Table(
+                {
+                    Title: "DashBoard",
+                    Icon: Icon.Waffle
+                },
+                {
+                    Title: "Health ",
+                    Icon: Icon.Health
+                },
+                {
+                    Title: "Vechicle",
+                    Icon: Icon.Cars
+                },
+                 {
+                    Title: "Logout",
+                    Icon: Icon.Leave
+                }
+            )
+        );
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
