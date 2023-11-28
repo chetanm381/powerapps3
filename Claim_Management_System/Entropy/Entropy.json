@@ -3,40 +3,42 @@
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
-    "Container3": 39,
-    "Created On_DataCard1": 46,
-    "DataCardKey1": 42,
-    "DataCardKey2": 47,
-    "DataCardValue1": 43,
-    "DataCardValue2": 48,
-    "ErrorMessage1": 44,
-    "Form1": 40,
-    "Gallery2": 22,
-    "galleryTemplate2": 23,
+    "Container3": 13,
+    "Created On_DataCard1": 20,
+    "DataCardKey1": 17,
+    "DataCardKey2": 21,
+    "DataCardValue1": 18,
+    "DataCardValue2": 22,
+    "ErrorMessage1": 19,
+    "Form1": 14,
+    "Gallery2": 6,
+    "galleryTemplate2": 7,
     "Host": 3,
-    "Icon3": 35,
-    "Name_DataCard1": 41,
+    "Icon3": 9,
+    "Name_DataCard1": 15,
     "NavContainer": 5,
-    "NextArrow4": 31,
-    "Rectangle5": 33,
+    "NextArrow4": 10,
+    "Rectangle5": 8,
     "Screen1": 4,
-    "Separator4": 32,
-    "StarVisible1": 45,
-    "Title4": 30
+    "Separator4": 12,
+    "StarVisible1": 16,
+    "Title4": 11
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/28/2023 11:06:11",
+  "HeaderLastSavedDateTimeUTC": "11/28/2023 11:07:36",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
+    "claim-3": "e2cff41b-9de0-4546-a608-135fcb495e4f.svg",
     "claim-banner": "860090c3-1855-404c-9560-f84e595f0dcd.jpg",
     "claims-vector-28039160": "1c961fc2-4abf-44b6-aa53-deb5351671db.jpg"
   },
   "LocalResourceRootPaths": {
-    "claim-banner": "https://docserverpwaprodneu.blob.core.windows.net/a5ff4c5b-ff13-42e4-8a1b-8e958c0e864e-1/resource/db59f1c8-294d-4080-a474-a4cd40975252.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-11-28T10%3A10%3A42Z&ske=2023-11-29T10%3A25%3A42Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-11-29T10%3A25%3A42Z&sr=b&sp=r&sig=48c134C5F5olxDU7omR%2BIifTxgB5RO255kROD1BHKrw%3D",
-    "claims-vector-28039160": "https://docserverpwaprodneu.blob.core.windows.net/a5ff4c5b-ff13-42e4-8a1b-8e958c0e864e-1/resource/ec7f97bb-23d7-4793-85f3-91955aeb8a33.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-11-28T10%3A11%3A56Z&ske=2023-11-29T10%3A26%3A56Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-11-29T10%3A26%3A56Z&sr=b&sp=r&sig=bxTqz9VSK49pfwFDnWbP1bSXIOcDSTNjHkyH99RYxe0%3D"
+    "claim-3": "https://docserverpwaprodneu.blob.core.windows.net/5003ac7b-f28c-433c-b90e-c7e50b6912e0-1/resource/1261fa5a-3b6a-49e1-b4c0-864bee2f2217.svg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-11-28T11%3A07%3A35Z&ske=2023-11-29T11%3A22%3A35Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-11-29T11%3A22%3A35Z&sr=b&sp=r&sig=pL%2Bnyy5o1idOjrz4BYDk%2Bz%2FrkXbsDg6w8sRYjBGUaDk%3D",
+    "claim-banner": "https://docserverpwaprodneu.blob.core.windows.net/5003ac7b-f28c-433c-b90e-c7e50b6912e0-1/resource/Assets0Images0860090c3-1855-404c-9560-f84e595f0dcd.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-11-28T11%3A06%3A59Z&ske=2023-11-29T11%3A21%3A59Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-11-29T11%3A21%3A59Z&sr=b&sp=r&sig=ca2qVi6prNx%2FXf9PCf%2BxWrBzXTwTuo9yqGBVLuKR9rk%3D",
+    "claims-vector-28039160": "https://docserverpwaprodneu.blob.core.windows.net/5003ac7b-f28c-433c-b90e-c7e50b6912e0-1/resource/Assets0Images01c961fc2-4abf-44b6-aa53-deb5351671db.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-11-28T11%3A06%3A59Z&ske=2023-11-29T11%3A21%3A59Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-11-29T11%3A21%3A59Z&sr=b&sp=r&sig=Pkx0WAeVaNbc0W8p%2B%2BzuAERXeCHqnqXRoyR6%2BWSflvw%3D"
   },
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
@@ -109,6 +111,7 @@
     "Title4": 6
   },
   "ResourcesJsonIndices": {
+    "Image-claim-3": 3,
     "Image-claim-banner": 1,
     "Image-claims-vector-28039160": 2,
     "Image-SampleImage": 0
@@ -116,12 +119,20 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0420567,
+    "AnalysisLoadTime": 0.153678,
     "ControlCount": {
-      "groupContainer": 1,
-      "screen": 1
+      "form": 1,
+      "gallery": 1,
+      "galleryTemplate": 1,
+      "groupContainer": 2,
+      "icon": 2,
+      "label": 6,
+      "rectangle": 2,
+      "screen": 1,
+      "text": 1,
+      "typedDataCard": 2
     },
-    "DeserializationLoadTime": 0.7193692
+    "DeserializationLoadTime": 1.5849562
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
