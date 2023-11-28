@@ -79,6 +79,27 @@ Screen1 As screen:
                 Y: =Parent.TemplateHeight - Self.Height
                 ZIndex: =5
 
+        Image1 As image:
+            Height: =48
+            Image: ='claim-3'
+            Width: =50
+            X: =12
+            Y: =8
+            ZIndex: =2
+
+        Label1 As label:
+            Text: ="Rapid"
+            Width: =106
+            X: =62
+            ZIndex: =3
+
+        Label2 As label:
+            Text: ="Claims"
+            Width: =60
+            X: =85
+            Y: =28
+            ZIndex: =4
+
     Container3 As groupContainer.manualLayoutContainer:
         Height: =700
         Width: =1168
