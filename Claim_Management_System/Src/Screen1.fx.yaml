@@ -1,7 +1,7 @@
 Screen1 As screen:
 
     NavContainer As groupContainer.manualLayoutContainer:
-        Fill: =Colors.selectedValue
+        Fill: =Colors.backgroundcolor
         Height: =768
         RadiusBottomLeft: =0
         RadiusBottomRight: =15

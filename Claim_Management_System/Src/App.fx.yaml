@@ -24,7 +24,7 @@ App As appinfo:
         );
         Set(
             Colors,{
-                backgroundcolor:ColorValue("#000000"),
+                backgroundcolor:ColorValue("#278898"),
                 selectedValue:ColorValue("#ffffff")
             }
         )
