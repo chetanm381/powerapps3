@@ -80,10 +80,10 @@ Screen1 As screen:
                 ZIndex: =5
 
         Image1 As image:
-            Height: =48
+            Height: =45
             Image: ='claim-3'
-            Width: =50
-            X: =12
+            Width: =35
+            X: =23
             Y: =8
             ZIndex: =2
 
