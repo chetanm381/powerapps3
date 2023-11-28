@@ -566,16 +566,63 @@ Screen1 As screen:
                     ZIndex: =4
 
     Label3 As label:
+        DisplayMode: =DisplayMode.View
+        Size: =10
         Text: =User().FullName
-        X: =1204
-        Y: =16
+        X: =1193
+        Y: =11
         ZIndex: =3
 
-    Image2 As image:
-        Height: =47
-        Image: =User().Image
-        Width: =46
-        X: =1142
-        Y: =12
-        ZIndex: =4
+    Container1 As groupContainer.manualLayoutContainer:
+        Height: =45
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Width: =45
+        X: =1309
+        Y: =8
+        ZIndex: =6
+
+        Image2 As image:
+            DisplayMode: =DisplayMode.View
+            Height: =45
+            Image: =User().Image
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Width: =45
+            ZIndex: =1
+
+        Circle1 As circle:
+            Height: =45
+            Visible: =If(IsBlank(User().Image),true,false)
+            Width: =45
+            ZIndex: =2
+
+        Label4 As label:
+            Align: =Align.Center
+            BorderStyle: =BorderStyle.None
+            Color: =Color.White
+            FontWeight: =FontWeight.Semibold
+            Height: =45
+            Text: |-
+                =With(
+                        {
+                            // get the user record
+                            varRecordUser: If(
+                                !IsBlank(User().Image),
+                                Office365Users.UserProfileV2(User().Email)
+                            )
+                        },
+                        // find the user initials
+                        Concatenate(
+                            Left(varRecordUser.givenName, 1),
+                            Left(varRecordUser.surname, 1)
+                        )
+                    )
+            Visible: =If(IsBlank(User().Image),true,false)
+            Width: =45
+            ZIndex: =3
 
