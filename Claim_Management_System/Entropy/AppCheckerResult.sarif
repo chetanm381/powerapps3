@@ -343,6 +343,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.claim-3"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.claim-3",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "claim-3",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.claim-banner"
                 }
               ],

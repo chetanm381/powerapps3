@@ -24,8 +24,9 @@ App As appinfo:
         );
         Set(
             Colors,{
-                backgroundcolor:ColorValue("#278898"),
-                selectedValue:ColorValue("#ffffff")
+                backgroundcolor:ColorValue("#146C94"),
+                selectedValue:ColorValue("#ffffff"),
+                textcolor:ColorValue("#f6f1f1")
             }
         )
     Theme: =PowerAppsTheme
