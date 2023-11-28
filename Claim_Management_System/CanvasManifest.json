@@ -109,11 +109,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "78070973-c99f-48c2-bb18-11601e5ec3d0",
-    "Id": "78070973-c99f-48c2-bb18-11601e5ec3d0",
+    "Id": "0feda55a-cf6f-4dcd-8219-11f1df1c60b3",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "Claim_Management_System",
+    "Name": "Claim_Management_System.msapp",
     "OriginatingVersion": "1.335",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
