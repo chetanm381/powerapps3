@@ -1,14 +1,22 @@
 Screen1 As screen:
 
+    Container2 As groupContainer.manualLayoutContainer:
+        Fill: |-
+            =ColorValue("#ebf4fd")
+        Height: =768
+        Width: =Parent.Width-NavContainer.Width
+        X: =NavContainer.Width
+        ZIndex: =1
+
     NavContainer As groupContainer.manualLayoutContainer:
         Fill: =Colors.backgroundcolor
         Height: =768
         RadiusBottomLeft: =0
-        RadiusBottomRight: =15
+        RadiusBottomRight: =0
         RadiusTopLeft: =0
-        RadiusTopRight: =15
+        RadiusTopRight: =0
         Width: =198
-        ZIndex: =1
+        ZIndex: =2
 
         "Gallery2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
@@ -16,8 +24,7 @@ Screen1 As screen:
             Items: =ColNav
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            OnSelect: |-
-                =Set(HtmlText, "<p>Selected Value: " & Gallery2.Selected.Title & "</p>")
+            OnSelect: =Set(HtmlText,  Gallery2.Selected.Title )
             TemplatePadding: =0
             TemplateSize: =121
             Width: =198
@@ -118,18 +125,23 @@ Screen1 As screen:
             ZIndex: =6
 
     Container3 As groupContainer.manualLayoutContainer:
-        Height: =700
-        Width: =1168
-        X: =198
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =472
+        RadiusBottomLeft: =15
+        RadiusBottomRight: =15
+        RadiusTopLeft: =15
+        RadiusTopRight: =15
+        Width: =Container2.Width-40
+        X: =Container2.X+20
         Y: =68
-        ZIndex: =2
+        ZIndex: =3
 
         Form1 As form:
             DataSource: =CMS_Healths
-            Height: =691
+            Height: =Parent.Height
             NumberOfColumns: =2
-            Width: =1168
-            Y: =8
+            Width: =Parent.Width
+            Y: =9
             ZIndex: =1
 
             ClaimID_DataCard1 As typedDataCard.textualViewCard:
@@ -141,7 +153,7 @@ Screen1 As screen:
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =584
+                Width: =564
                 X: =0
                 Y: =0
                 ZIndex: =1
@@ -180,7 +192,7 @@ Screen1 As screen:
                 MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimtype")
                 Required: =false
                 Update: =DataCardValue9.Text
-                Width: =584
+                Width: =564
                 X: =1
                 Y: =0
                 ZIndex: =1
@@ -249,7 +261,7 @@ Screen1 As screen:
                 MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimchildtype")
                 Required: =false
                 Update: =DataCardValue4.Text
-                Width: =584
+                Width: =564
                 X: =0
                 Y: =1
                 ZIndex: =1
@@ -318,7 +330,7 @@ Screen1 As screen:
                 MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_registrationnumber")
                 Required: =false
                 Update: =DataCardValue2.Text
-                Width: =584
+                Width: =564
                 X: =1
                 Y: =1
                 ZIndex: =1
@@ -387,7 +399,7 @@ Screen1 As screen:
                 MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimcompanyname")
                 Required: =false
                 Update: =DataCardValue5.Text
-                Width: =584
+                Width: =564
                 X: =0
                 Y: =2
                 ZIndex: =1
@@ -456,7 +468,7 @@ Screen1 As screen:
                 MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimprocessstage")
                 Required: =false
                 Update: =DataCardValue8.Text
-                Width: =584
+                Width: =564
                 X: =1
                 Y: =2
                 ZIndex: =1
@@ -524,7 +536,7 @@ Screen1 As screen:
                 Height: =50
                 Required: =false
                 Update: =Value(DataCardValue1.Text)
-                Width: =584
+                Width: =564
                 X: =0
                 Y: =3
                 ZIndex: =1
@@ -592,7 +604,7 @@ Screen1 As screen:
                 Height: =50
                 Required: =false
                 Update: =Value(DataCardValue3.Text)
-                Width: =584
+                Width: =564
                 X: =1
                 Y: =3
                 ZIndex: =1
@@ -661,7 +673,7 @@ Screen1 As screen:
                 Height: =50
                 Required: =false
                 Update: =DataCardValue6.Attachments
-                Width: =584
+                Width: =564
                 X: =0
                 Y: =4
                 ZIndex: =1
@@ -728,14 +740,7 @@ Screen1 As screen:
         Text: =User().FullName
         X: =1193
         Y: =11
-        ZIndex: =3
-
-    HtmlText1 As htmlViewer:
-        Height: =106
-        HtmlText: =HtmlText
-        X: =876
-        Y: =540
-        ZIndex: =5
+        ZIndex: =4
 
     Container1 As groupContainer.manualLayoutContainer:
         Height: =45
@@ -789,4 +794,15 @@ Screen1 As screen:
             Visible: =If(IsBlank(User().Image),true,false)
             Width: =45
             ZIndex: =3
+
+    Label5 As label:
+        Color: =Colors.darktextcolor
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        Size: =20
+        Text: =HtmlText
+        Width: =215
+        X: =218
+        Y: =11
+        ZIndex: =7
 

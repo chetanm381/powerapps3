@@ -26,7 +26,8 @@ App As appinfo:
             Colors,{
                 backgroundcolor:ColorValue("#146C94"),
                 selectedValue:ColorValue("#ffffff"),
-                textcolor:ColorValue("#f6f1f1")
+                textcolor:ColorValue("#f6f1f1"),
+                darktextcolor:ColorValue("#0f647c")
             }
         )
     Theme: =PowerAppsTheme
