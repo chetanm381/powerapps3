@@ -17,5 +17,6 @@
     "TableName": "new_cms_health",
     "Views": "{\"@odata.context\":\"https://orga283e4d9.crm4.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"2272080\\\"\",\"savedqueryid\":\"2af297ef-033d-449e-a5f3-31725462fda6\",\"name\":\"CMS_Health Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"2272032\\\"\",\"savedqueryid\":\"6ebaf9da-57fb-4ab0-b746-59bb2347e51c\",\"name\":\"Active CMS_Healths\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2272068\\\"\",\"savedqueryid\":\"8e86780b-1181-4739-8e47-97fa47709163\",\"name\":\"CMS_Health Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"2272044\\\"\",\"savedqueryid\":\"3e9dce0c-9976-42ec-b434-b79ed93a9403\",\"name\":\"Inactive CMS_Healths\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2272056\\\"\",\"savedqueryid\":\"61efc842-ba89-46cd-89b0-ce24ce6770ac\",\"name\":\"CMS_Health Associated View\",\"querytype\":2}]}"
   },
+  "UnusedDataSources": {},
   "webApiVersion": "v9.0"
 }
