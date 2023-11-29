@@ -2,15 +2,20 @@ PersonaScreen As screen:
 
     Container4 As groupContainer.manualLayoutContainer:
         Height: =Parent.Height
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Width: =Parent.Width
         ZIndex: =1
 
         HtmlText1 As htmlViewer:
+            AutoHeight: =true
+            DisplayMode: =DisplayMode.View
             Fill: =RGBA(0, 0, 0, 0)
             Height: =Parent.Height
             HtmlText: |-
-                =Concatenate("<div style=' height: ",Parent.Height-1, "px;
-                
+                =Concatenate("<div style=' height: ",Parent.Height, "px;
                 background: linear-gradient(to right, #5b98b4, #0c4159);
                 
                 '

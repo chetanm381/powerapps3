@@ -8,6 +8,156 @@ Screen1 As screen:
         X: =NavContainer.Width
         ZIndex: =1
 
+        Label3 As label:
+            DisplayMode: =DisplayMode.View
+            Size: =10
+            Text: =User().FullName
+            X: =962
+            Y: =11
+            ZIndex: =1
+
+        Container1 As groupContainer.manualLayoutContainer:
+            Height: =45
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Width: =45
+            X: =1095
+            Y: =9
+            ZIndex: =2
+
+        Container3 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =472
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =Container2.Width-40
+            X: =25
+            Y: =260
+            ZIndex: =3
+
+            Label9 As label:
+                FontWeight: =FontWeight.Bold
+                Text: ="Name"
+                X: =28
+                Y: =118
+                ZIndex: =2
+
+            TextInput1 As text:
+                Default: =User().FullName
+                DisplayMode: =DisplayMode.View
+                X: =209
+                Y: =118
+                ZIndex: =3
+
+            Label9_1 As label:
+                FontWeight: =FontWeight.Bold
+                Text: ="Type"
+                X: =28
+                Y: =193
+                ZIndex: =4
+
+            Dropdown1 As dropdown:
+                ChevronBackground: =
+                ChevronFill: =Colors.backgroundcolor
+                Items: =["Please Select a Category","Health","Vechicle"]
+                Reset: =true
+                Tooltip: ="Please Select Type"
+                X: =209
+                Y: =193
+                ZIndex: =7
+
+            Dropdown2 As dropdown:
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =Colors.backgroundcolor
+                Items: =If(Dropdown1.SelectedText.Value="Health",Health,Vechicle)
+                X: =209
+                Y: =285
+                ZIndex: =8
+
+            Label9_2 As label:
+                FontWeight: =FontWeight.Bold
+                Text: ="Sub Type"
+                X: =28
+                Y: =285
+                ZIndex: =9
+
+            Label9_3 As label:
+                FontWeight: =FontWeight.Bold
+                Text: =""
+                X: =28
+                Y: =285
+                ZIndex: =10
+
+            Label10 As label:
+                Color: =Colors.darktextcolor
+                FontWeight: =FontWeight.Bold
+                Height: =50
+                Size: =20
+                Text: ="Basic Detail"
+                Width: =488
+                X: =28
+                Y: =33
+                ZIndex: =11
+
+            Button1 As button:
+                Color: =Colors.textcolor
+                Fill: =Colors.backgroundcolor
+                Height: =44
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =Colors.selectedValue
+                Text: ="Next"
+                Width: =100
+                X: =976
+                Y: =384
+                ZIndex: =12
+
+            Label9_5 As label:
+                FontWeight: =FontWeight.Bold
+                Text: ="Address"
+                X: =632
+                Y: =118
+                ZIndex: =14
+
+            TextInput2 As text:
+                Default: =""
+                Height: =115
+                HintText: ="Please enter Adddress"
+                Mode: =TextMode.MultiLine
+                Width: =301
+                X: =808
+                Y: =118
+                ZIndex: =15
+
+            Label9_6 As label:
+                FontWeight: =FontWeight.Bold
+                Text: ="Mobile No."
+                X: =632
+                Y: =285
+                ZIndex: =16
+
+            TextInput3 As text:
+                Default: ="Text input"
+                Format: =TextFormat.Number
+                Width: =301
+                X: =808
+                Y: =285
+                ZIndex: =17
+
+        Label5 As label:
+            Color: =Colors.darktextcolor
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            Size: =20
+            Text: =HtmlText
+            Width: =215
+            X: =40
+            Y: =10
+            ZIndex: =4
+
     NavContainer As groupContainer.manualLayoutContainer:
         Fill: =Colors.backgroundcolor
         Height: =768
@@ -64,7 +214,7 @@ Screen1 As screen:
                 Color: |-
                     =If(ThisItem.IsSelected,ColorValue("#0f647c"),Colors.textcolor)
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Semibold)
-                Height: =32
+                Height: =36
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -73,9 +223,8 @@ Screen1 As screen:
                 Size: =15
                 Text: =ThisItem.Title
                 VerticalAlign: =VerticalAlign.Top
-                Width: =132
-                X: =34
-                Y: =65
+                Width: =198
+                Y: =72
                 ZIndex: =3
 
             "Icon3 As icon.'3DPrinting'":
@@ -95,17 +244,18 @@ Screen1 As screen:
             FontWeight: =FontWeight.Semibold
             Size: =15
             Text: ="Rapid"
-            Width: =106
+            Width: =136
             X: =62
             ZIndex: =3
 
         Label2 As label:
             Color: =Colors.textcolor
             DisplayMode: =DisplayMode.View
+            Height: =38
             Text: ="Claims"
-            Width: =70
+            Width: =100
             X: =98
-            Y: =18
+            Y: =20
             ZIndex: =4
 
         Icon1 As icon.Person:
@@ -126,965 +276,4 @@ Screen1 As screen:
             X: =30
             Y: =20
             ZIndex: =6
-
-    Container3 As groupContainer.manualLayoutContainer:
-        BorderStyle: =BorderStyle.None
-        DropShadow: =DropShadow.None
-        Fill: |-
-            =ColorValue("#ebf4fd")
-        Height: =687
-        RadiusBottomLeft: =15
-        RadiusBottomRight: =15
-        RadiusTopLeft: =15
-        RadiusTopRight: =15
-        Width: =1136
-        X: =218
-        Y: =65
-        ZIndex: =3
-
-        Form1 As form:
-            DataSource: =CMS_Healths
-            Height: =Parent.Height
-            NumberOfColumns: =2
-            Visible: =false
-            Width: =Parent.Width
-            Y: =9
-            ZIndex: =1
-
-            ClaimID_DataCard1 As typedDataCard.textualViewCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_claimid"
-                Default: =ThisItem.ClaimID
-                DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimid")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =40
-                Required: =false
-                Width: =564
-                X: =0
-                Y: =0
-                ZIndex: =1
-
-                DataCardKey7 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue7.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue7 As label:
-                    DisplayMode: =Parent.DisplayMode
-                    Height: =45
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Default
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey7.X + DataCardKey7.Width
-                    Y: =10
-                    ZIndex: =2
-
-            ClaimType_DataCard1 As typedDataCard.textualEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_claimtype"
-                Default: =ThisItem.ClaimType
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimtype")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimtype")
-                Required: =false
-                Update: =DataCardValue9.Text
-                Width: =564
-                X: =1
-                Y: =0
-                ZIndex: =1
-
-                DataCardKey9 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue9.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue9 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    MaxLength: =Parent.MaxLength
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey9.X + DataCardKey9.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage7 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue9.Y + DataCardValue9.Height
-                    ZIndex: =3
-
-                StarVisible7 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey9.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey9.Y
-                    ZIndex: =4
-
-            ClaimChildType_DataCard1 As typedDataCard.textualEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_claimchildtype"
-                Default: =ThisItem.ClaimChildType
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimchildtype")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimchildtype")
-                Required: =false
-                Update: =DataCardValue4.Text
-                Width: =564
-                X: =0
-                Y: =1
-                ZIndex: =1
-
-                DataCardKey4 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue4.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue4 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    MaxLength: =Parent.MaxLength
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey4.X + DataCardKey4.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage3 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue4.Y + DataCardValue4.Height
-                    ZIndex: =3
-
-                StarVisible3 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey4.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey4.Y
-                    ZIndex: =4
-
-            RegistrationNumber_DataCard1 As typedDataCard.textualEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_registrationnumber"
-                Default: =ThisItem.RegistrationNumber
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_registrationnumber")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_registrationnumber")
-                Required: =false
-                Update: =DataCardValue2.Text
-                Width: =564
-                X: =1
-                Y: =1
-                ZIndex: =1
-
-                DataCardKey2 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue2.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue2 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    MaxLength: =Parent.MaxLength
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey2.X + DataCardKey2.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage8 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue2.Y + DataCardValue2.Height
-                    ZIndex: =3
-
-                StarVisible8 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey2.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey2.Y
-                    ZIndex: =4
-
-            ClaimCompanyName_DataCard1 As typedDataCard.textualEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_claimcompanyname"
-                Default: =ThisItem.ClaimCompanyName
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimcompanyname")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimcompanyname")
-                Required: =false
-                Update: =DataCardValue5.Text
-                Width: =564
-                X: =0
-                Y: =2
-                ZIndex: =1
-
-                DataCardKey5 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue5.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue5 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    MaxLength: =Parent.MaxLength
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey5.X + DataCardKey5.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage4 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue5.Y + DataCardValue5.Height
-                    ZIndex: =3
-
-                StarVisible4 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey5.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey5.Y
-                    ZIndex: =4
-
-            ClaimProcessStage_DataCard1 As typedDataCard.textualEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_claimprocessstage"
-                Default: =ThisItem.ClaimProcessStage
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimprocessstage")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                MaxLength: =DataSourceInfo([@CMS_Healths], DataSourceInfo.MaxLength, "new_claimprocessstage")
-                Required: =false
-                Update: =DataCardValue8.Text
-                Width: =564
-                X: =1
-                Y: =2
-                ZIndex: =1
-
-                DataCardKey8 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue8 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    MaxLength: =Parent.MaxLength
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey8.X + DataCardKey8.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage6 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue8.Y + DataCardValue8.Height
-                    ZIndex: =3
-
-                StarVisible6 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey8.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey8.Y
-                    ZIndex: =4
-
-            ProjectedCost_DataCard1 As typedDataCard.numberEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_projectedcost"
-                Default: =ThisItem.ProjectedCost
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_projectedcost")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                Required: =false
-                Update: =Value(DataCardValue1.Text)
-                Width: =564
-                X: =0
-                Y: =3
-                ZIndex: =1
-
-                DataCardKey1 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue1.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue1 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    Format: =TextFormat.Number
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey1.X + DataCardKey1.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage1 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue1.Y + DataCardValue1.Height
-                    ZIndex: =3
-
-                StarVisible1 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey1.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey1.Y
-                    ZIndex: =4
-
-            ApprovedAmount_DataCard1 As typedDataCard.numberEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_approvedamount"
-                Default: =ThisItem.ApprovedAmount
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_approvedamount")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                Required: =false
-                Update: =Value(DataCardValue3.Text)
-                Width: =564
-                X: =1
-                Y: =3
-                ZIndex: =1
-
-                DataCardKey3 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue3.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue3 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisplayMode: =Parent.DisplayMode
-                    Format: =TextFormat.Number
-                    PaddingLeft: =5
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey3.X + DataCardKey3.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage2 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue3.Y + DataCardValue3.Height
-                    ZIndex: =3
-
-                StarVisible2 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey3.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey3.Y
-                    ZIndex: =4
-
-            ClaimDocument_DataCard1 As typedDataCard.fileEditCard:
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="new_claimdocument"
-                Default: |-
-                    =If(!IsBlank(ThisItem.ClaimDocument.FileName), Table({DisplayName: ThisItem.ClaimDocument.FileName, Value: ThisItem.ClaimDocument.Value}), Blank())
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimdocument")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                Required: =false
-                Update: =DataCardValue6.Attachments
-                Width: =564
-                X: =0
-                Y: =4
-                ZIndex: =1
-
-                DataCardKey6 As label:
-                    AutoHeight: =true
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.4
-                    Wrap: =false
-                    X: =30
-                    Y: =10 + (DataCardValue6.Height / 2) - (Self.Height / 2)
-                    ZIndex: =1
-
-                DataCardValue6 As attachments:
-                    AddAttachmentText: ="Upload file"
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DisplayMode: =Parent.DisplayMode
-                    Height: =170
-                    IsInDataCard: =true
-                    Items: =Parent.Default
-                    MaxAttachments: =1
-                    MaxAttachmentsText: =""
-                    NoAttachmentsText: ="There is no file."
-                    PaddingBottom: =5
-                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                    PaddingRight: =5
-                    PaddingTop: =5
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey6.X + DataCardKey6.Width
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessage5 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue6.Y + DataCardValue6.Height
-                    ZIndex: =3
-
-                StarVisible5 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey6.Height
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey6.Y
-                    ZIndex: =4
-
-        Container8 As groupContainer.manualLayoutContainer:
-            Height: =350
-            Visible: =next=2
-            Width: =1128
-            Y: =337
-            ZIndex: =3
-
-            Label11 As label:
-                FontWeight: =FontWeight.Bold
-                Height: =50
-                Italic: =true
-                Size: =24
-                Text: ="Incident Detail"
-                Underline: =true
-                Width: =514
-                X: =37
-                Y: =12
-                ZIndex: =1
-
-            Label11_1 As label:
-                FontWeight: =FontWeight.Bold
-                Size: =14
-                Text: ="Description"
-                X: =11
-                Y: =188
-                ZIndex: =3
-
-            TextInput4 As text:
-                Color: =Colors.backgroundcolor
-                Default: =""
-                Fill: |-
-                    =ColorValue("#ebf4fd")
-                Height: =132
-                HintText: ="Please Enter Description"
-                Mode: =TextMode.MultiLine
-                X: =201
-                Y: =188
-                ZIndex: =4
-
-            Label11_2 As label:
-                FontWeight: =FontWeight.Bold
-                Size: =14
-                Text: ="Document"
-                X: =581
-                Y: =188
-                ZIndex: =5
-
-            Label11_3 As label:
-                FontWeight: =FontWeight.Bold
-                Size: =14
-                Text: ="Registration No."
-                Width: =177
-                X: =11
-                Y: =94
-                ZIndex: =6
-
-            TextInput4_1 As text:
-                Color: =Colors.backgroundcolor
-                Default: =""
-                Fill: |-
-                    =ColorValue("#ebf4fd")
-                Height: =42
-                HintText: ="Please Enter Registration No. "
-                X: =201
-                Y: =94
-                ZIndex: =7
-
-            Form3 As form:
-                DataSource: =CMS_Healths
-                DefaultMode: =FormMode.New
-                Height: =147
-                NumberOfColumns: =1
-                Width: =347
-                X: =775
-                Y: =188
-                ZIndex: =8
-
-                ClaimDocument_DataCard3 As typedDataCard.fileEditCard:
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="new_claimdocument"
-                    Default: |-
-                        =If(!IsBlank(ThisItem.ClaimDocument.FileName), Table({DisplayName: ThisItem.ClaimDocument.FileName, Value: ThisItem.ClaimDocument.Value}), Blank())
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimdocument")
-                    Fill: |-
-                        =ColorValue("#ebf4fd")
-                    Height: =146
-                    Required: =false
-                    Update: =DataCardValue13.Attachments
-                    Width: =347
-                    X: =0
-                    Y: =0
-                    ZIndex: =1
-
-                    DataCardValue13 As attachments:
-                        AddAttachmentText: ="Upload file"
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        Color: |
-                            =Colors.backgroundcolor
-                        Fill: =
-                        Height: =139
-                        IsInDataCard: =true
-                        Items: =Parent.Default
-                        MaxAttachments: =1
-                        MaxAttachmentsText: =""
-                        NoAttachmentsText: ="There is no file."
-                        PaddingBottom: =5
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        PaddingRight: =5
-                        PaddingTop: =5
-                        Tooltip: =Parent.DisplayName
-                        Width: =344
-                        X: =3
-                        Y: =5
-                        ZIndex: =2
-
-            Label12 As label:
-                FontWeight: =FontWeight.Bold
-                Size: =14
-                Text: ="Insurance Number"
-                Width: =194
-                X: =581
-                Y: =96
-                ZIndex: =9
-
-            TextInput4_2 As text:
-                Color: =Colors.backgroundcolor
-                Default: =""
-                Fill: |-
-                    =ColorValue("#ebf4fd")
-                Height: =42
-                HintText: ="Please Enter Insurance No."
-                Width: =339
-                X: =783
-                Y: =96
-                ZIndex: =10
-
-            Button1_1 As button:
-                Color: =Colors.textcolor
-                Fill: =Colors.backgroundcolor
-                Height: =44
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =Colors.selectedValue
-                OnSelect: =Set(next,3)
-                Text: ="Next"
-                Width: =100
-                X: =1000
-                Y: =411
-                ZIndex: =11
-
-        Container5 As groupContainer.manualLayoutContainer:
-            Fill: =Colors.selectedValue
-            Height: =317
-            RadiusBottomLeft: =15
-            RadiusBottomRight: =15
-            RadiusTopLeft: =15
-            RadiusTopRight: =15
-            Width: =1128
-            ZIndex: =4
-
-            Label9 As label:
-                Color: =Colors.backgroundcolor
-                FontWeight: =FontWeight.Bold
-                Text: ="Name"
-                X: =40
-                Y: =78
-                ZIndex: =1
-
-            TextInput1 As text:
-                Color: =Colors.backgroundcolor
-                Default: =User().FullName
-                DisplayMode: =DisplayMode.View
-                Fill: |-
-                    =ColorValue("#ebf4fd")
-                X: =213
-                Y: =78
-                ZIndex: =2
-
-            Label9_1 As label:
-                FontWeight: =FontWeight.Bold
-                Text: ="Type"
-                X: =40
-                Y: =150
-                ZIndex: =3
-
-            Dropdown1 As dropdown:
-                ChevronBackground: =
-                ChevronFill: =Colors.backgroundcolor
-                Color: =Colors.backgroundcolor
-                Fill: |-
-                    =ColorValue("#ebf4fd")
-                Items: =["Please Select a Category","Health","Vechicle"]
-                Reset: =true
-                Tooltip: ="Please Select Type"
-                X: =213
-                Y: =153
-                ZIndex: =4
-
-            Dropdown2 As dropdown:
-                ChevronBackground: |-
-                    =ColorValue("#ebf4fd")
-                ChevronFill: =Colors.backgroundcolor
-                Color: =Colors.backgroundcolor
-                Fill: |-
-                    =ColorValue("#ebf4fd")
-                Items: =If(Dropdown1.SelectedText.Value="Health",Health,Vechicle)
-                X: =213
-                Y: =245
-                ZIndex: =5
-
-            Label9_2 As label:
-                FontWeight: =FontWeight.Bold
-                Text: ="Sub Type"
-                X: =40
-                Y: =230
-                ZIndex: =6
-
-            Label9_3 As label:
-                FontWeight: =FontWeight.Bold
-                Text: =""
-                X: =40
-                Y: =219
-                ZIndex: =7
-
-            Label10 As label:
-                Color: =Colors.darktextcolor
-                FontWeight: =FontWeight.Bold
-                Height: =44
-                Italic: =true
-                Size: =26
-                Text: ="Basic Detail"
-                Underline: =true
-                Width: =242
-                X: =40
-                Y: =12
-                ZIndex: =8
-
-            Label9_5 As label:
-                FontWeight: =FontWeight.Bold
-                Text: ="Address"
-                X: =581
-                Y: =78
-                ZIndex: =10
-
-            TextInput2 As text:
-                Color: =Colors.backgroundcolor
-                Default: =""
-                Fill: |-
-                    =ColorValue("#ebf4fd")
-                Height: =115
-                HintText: ="Please enter Adddress"
-                Mode: =TextMode.MultiLine
-                Width: =301
-                X: =820
-                Y: =78
-                ZIndex: =11
-
-            Label9_6 As label:
-                FontWeight: =FontWeight.Bold
-                Text: ="Mobile No."
-                X: =581
-                Y: =245
-                ZIndex: =12
-
-            TextInput3 As text:
-                Color: =Colors.backgroundcolor
-                Default: ="Text input"
-                Fill: |-
-                    =ColorValue("#ebf4fd")
-                Format: =TextFormat.Number
-                Width: =301
-                X: =820
-                Y: =245
-                ZIndex: =13
-
-    Label3 As label:
-        DisplayMode: =DisplayMode.View
-        Size: =10
-        Text: =User().FullName
-        X: =1193
-        Y: =11
-        ZIndex: =4
-
-    Container1 As groupContainer.manualLayoutContainer:
-        Height: =45
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
-        Width: =45
-        X: =1309
-        Y: =8
-        ZIndex: =6
-
-        Image2 As image:
-            DisplayMode: =DisplayMode.View
-            Height: =45
-            Image: =User().Image
-            RadiusBottomLeft: =30
-            RadiusBottomRight: =30
-            RadiusTopLeft: =30
-            RadiusTopRight: =30
-            Width: =45
-            ZIndex: =1
-
-        Circle1 As circle:
-            Height: =45
-            Visible: =If(IsBlank(User().Image),true,false)
-            Width: =45
-            ZIndex: =2
-
-        Label4 As label:
-            Align: =Align.Center
-            BorderStyle: =BorderStyle.None
-            Color: =Color.White
-            FontWeight: =FontWeight.Semibold
-            Height: =45
-            Text: |-
-                =With(
-                        {
-                            // get the user record
-                            varRecordUser: If(
-                                !IsBlank(User().Image),
-                                Office365Users.UserProfileV2(User().Email)
-                            )
-                        },
-                        // find the user initials
-                        Concatenate(
-                            Left(varRecordUser.givenName, 1),
-                            Left(varRecordUser.surname, 1)
-                        )
-                    )
-            Visible: =If(IsBlank(User().Image),true,false)
-            Width: =45
-            ZIndex: =3
-
-    Label5 As label:
-        Color: =Colors.darktextcolor
-        FontWeight: =FontWeight.Bold
-        Height: =42
-        Size: =20
-        Text: =HtmlText
-        Width: =215
-        X: =218
-        Y: =11
-        ZIndex: =7
 
