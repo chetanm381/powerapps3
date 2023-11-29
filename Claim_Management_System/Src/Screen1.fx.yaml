@@ -363,7 +363,9 @@ Screen1 As screen:
             ZIndex: =5
 
             Button1 As button:
-                Text: ="Button"
+                Color: =Colors.textcolor
+                Fill: =Colors.backgroundcolor
+                Text: ="Preview Details"
                 X: =486
                 ZIndex: =3
 
