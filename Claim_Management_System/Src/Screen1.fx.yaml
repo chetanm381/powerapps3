@@ -110,8 +110,8 @@ Screen1 As screen:
 
                 Label9 As label:
                     FontWeight: =FontWeight.Bold
-                    Text: ="Name"
-                    X: =52
+                    Text: ="Claimant Name"
+                    X: =36
                     Y: =78
                     ZIndex: =2
 
@@ -124,8 +124,9 @@ Screen1 As screen:
 
                 Label9_1 As label:
                     FontWeight: =FontWeight.Bold
-                    Text: ="Type"
-                    X: =52
+                    Text: ="Insurance Category"
+                    Width: =182
+                    X: =36
                     Y: =181
                     ZIndex: =4
 
@@ -149,8 +150,8 @@ Screen1 As screen:
 
                 Label9_2 As label:
                     FontWeight: =FontWeight.Bold
-                    Text: ="Sub Type"
-                    X: =52
+                    Text: ="Sub-Category"
+                    X: =36
                     Y: =269
                     ZIndex: =9
 
@@ -190,8 +191,9 @@ Screen1 As screen:
                     ZIndex: =16
 
                 TextInput3 As text:
-                    Default: ="Text input"
+                    Default: =""
                     Format: =TextFormat.Number
+                    HintText: ="Please Provide mobile number"
                     Width: =301
                     X: =782
                     Y: =229
@@ -259,7 +261,7 @@ Screen1 As screen:
                     ZIndex: =18
 
                 TextInput4_1 As text:
-                    Default: ="Text input"
+                    Default: =""
                     HintText: ="Enter Vechile Registration Number"
                     Width: =306
                     X: =784
@@ -365,7 +367,7 @@ Screen1 As screen:
             Button1 As button:
                 Color: =Colors.textcolor
                 Fill: =Colors.backgroundcolor
-                Text: ="Preview Details"
+                Text: ="Preview "
                 X: =486
                 ZIndex: =3
 
