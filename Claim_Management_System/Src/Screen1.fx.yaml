@@ -253,7 +253,7 @@ Screen1 As screen:
                     ZIndex: =15
 
                 TextInput4 As text:
-                    Default: ="Text input"
+                    Default: =""
                     HintText: ="Enter Your Insurance Number"
                     Width: =301
                     X: =242
