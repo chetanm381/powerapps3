@@ -135,7 +135,7 @@ Screen1 As screen:
         RadiusTopLeft: =15
         RadiusTopRight: =15
         Width: =Container2.Width-40
-        X: =Container2.X+20
+        X: =218
         Y: =68
         ZIndex: =3
 
@@ -143,6 +143,7 @@ Screen1 As screen:
             DataSource: =CMS_Healths
             Height: =Parent.Height
             NumberOfColumns: =2
+            Visible: =false
             Width: =Parent.Width
             Y: =9
             ZIndex: =1
@@ -736,6 +737,114 @@ Screen1 As screen:
                     Wrap: =false
                     Y: =DataCardKey6.Y
                     ZIndex: =4
+
+        Label9 As label:
+            FontWeight: =FontWeight.Bold
+            Text: ="Name"
+            X: =28
+            Y: =118
+            ZIndex: =2
+
+        TextInput1 As text:
+            Default: =User().FullName
+            DisplayMode: =DisplayMode.View
+            X: =209
+            Y: =118
+            ZIndex: =3
+
+        Label9_1 As label:
+            FontWeight: =FontWeight.Bold
+            Text: ="Type"
+            X: =28
+            Y: =193
+            ZIndex: =4
+
+        Dropdown1 As dropdown:
+            ChevronBackground: =
+            ChevronFill: =Colors.backgroundcolor
+            Items: =["Please Select a Category","Health","Vechicle"]
+            Reset: =true
+            Tooltip: ="Please Select Type"
+            X: =209
+            Y: =193
+            ZIndex: =7
+
+        Dropdown2 As dropdown:
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =Colors.backgroundcolor
+            Items: =If(Dropdown1.SelectedText.Value="Health",Health,Vechicle)
+            X: =209
+            Y: =285
+            ZIndex: =8
+
+        Label9_2 As label:
+            FontWeight: =FontWeight.Bold
+            Text: ="Sub Type"
+            X: =28
+            Y: =285
+            ZIndex: =9
+
+        Label9_3 As label:
+            FontWeight: =FontWeight.Bold
+            Text: =""
+            X: =28
+            Y: =285
+            ZIndex: =10
+
+        Label10 As label:
+            Color: =Colors.darktextcolor
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            Size: =20
+            Text: ="Basic Detail"
+            Width: =198
+            X: =28
+            Y: =40
+            ZIndex: =11
+
+        Button1 As button:
+            Color: =Colors.textcolor
+            Fill: =Colors.backgroundcolor
+            Height: =44
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =Colors.selectedValue
+            Text: ="Next"
+            Width: =100
+            X: =976
+            Y: =384
+            ZIndex: =12
+
+        Label9_5 As label:
+            FontWeight: =FontWeight.Bold
+            Text: ="Address"
+            X: =632
+            Y: =118
+            ZIndex: =14
+
+        TextInput2 As text:
+            Default: =""
+            Height: =115
+            HintText: ="Please enter Adddress"
+            Mode: =TextMode.MultiLine
+            Width: =301
+            X: =808
+            Y: =118
+            ZIndex: =15
+
+        Label9_6 As label:
+            FontWeight: =FontWeight.Bold
+            Text: ="Mobile No."
+            X: =632
+            Y: =285
+            ZIndex: =16
+
+        TextInput3 As text:
+            Default: ="Text input"
+            Format: =TextFormat.Number
+            Width: =301
+            X: =808
+            Y: =285
+            ZIndex: =17
 
     Label3 As label:
         DisplayMode: =DisplayMode.View

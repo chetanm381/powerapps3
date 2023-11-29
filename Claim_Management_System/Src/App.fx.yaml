@@ -32,6 +32,18 @@ App As appinfo:
         );
         Set(HtmlText,"DashBoard");
         Reset(Gallery2);
+        ClearCollect(
+            Health,{dep:"Please select sub-category"},
+            {dep: "Cashless"},
+            {dep: "Reimbursement"}
+            
+        );
+        ClearCollect(
+            Vechicle,{dep:"Please select sub-category"},
+            {dep: "Accidental"},
+            {dep: "Theft"}
+            
+        );
     StartScreen: =PersonaScreen
     Theme: =PowerAppsTheme
 
