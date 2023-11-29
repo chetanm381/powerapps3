@@ -9,8 +9,7 @@ PersonaScreen As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =Parent.Height
             HtmlText: |-
-                =Concatenate("<div style=' height: ",Parent.Height-1, "px;
-                
+                =Concatenate("<div style=' height: ",Container6.Height, "px;
                 background: linear-gradient(to right, #5b98b4, #0c4159);
                 
                 '

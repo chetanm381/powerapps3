@@ -780,7 +780,7 @@
         {
           "Category": "Data",
           "PropertyName": "HtmlText",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
