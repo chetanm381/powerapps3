@@ -30,6 +30,7 @@ App As appinfo:
                 darktextcolor:ColorValue("#0f647c")
             }
         )
+    StartScreen: =PersonaScreen
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

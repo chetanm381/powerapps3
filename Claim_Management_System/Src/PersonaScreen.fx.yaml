@@ -126,3 +126,12 @@ PersonaScreen As screen:
             Y: =72
             ZIndex: =4
 
+        Image1 As image:
+            Height: =539
+            Image: ='verify-safety-protection-security-quality-guarantees-survey-submit-claims-insurance_4968-661-removebg-preview'
+            ImagePosition: =ImagePosition.Fill
+            Width: =623
+            X: =620
+            Y: =140
+            ZIndex: =5
+
