@@ -1,0 +1,26 @@
+PersonaScreen As screen:
+
+    Container4 As groupContainer.manualLayoutContainer:
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HtmlText1 As htmlViewer:
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height
+            HtmlText: |-
+                =Concatenate("<div style=' height: ",Parent.Height-1, "px;
+                
+                background: linear-gradient(to right, #146C94, #4ca4c1);
+                
+                '
+                ></div>
+                ")
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =
+            Width: =1366
+            ZIndex: =1
+
