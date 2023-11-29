@@ -1,8 +1,8 @@
 PersonaScreen As screen:
 
     Container4 As groupContainer.manualLayoutContainer:
-        Height: =Parent.Height
-        Width: =Parent.Width
+        Height: =PersonaScreen.Height
+        Width: =PersonaScreen.Width
         ZIndex: =1
 
         HtmlText1 As htmlViewer:
