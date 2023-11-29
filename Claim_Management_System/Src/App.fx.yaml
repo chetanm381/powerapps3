@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: |-
+    OnStart: |+
         =ClearCollect(
             ColNav,
             Table(
@@ -29,7 +29,8 @@ App As appinfo:
                 textcolor:ColorValue("#f6f1f1"),
                 darktextcolor:ColorValue("#0f647c")
             }
-        )
+        );
+        
     StartScreen: =PersonaScreen
     Theme: =PowerAppsTheme
 
