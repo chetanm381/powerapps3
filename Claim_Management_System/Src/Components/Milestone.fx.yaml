@@ -1,0 +1,97 @@
+Milestone As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Max(App.Height, App.MinScreenHeight)
+    OnReset: =Set(stage,1);
+    Width: =Max(App.Height, App.MinScreenHeight)
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container5 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(66, 245, 93, 0)
+        Height: =240
+        Width: =768
+        ZIndex: =1
+
+        Label11 As label:
+            Align: =Align.Center
+            Color: =If(stage<1,RGBA(166, 166, 166, 1),RGBA(44, 201, 44, 1))
+            Size: =15
+            Text: ="Basic Details"
+            Width: =166
+            Y: =69
+            ZIndex: =1
+
+        Rectangle2 As rectangle:
+            Fill: =If(stage<2,RGBA(166, 166, 166, 1),RGBA(44, 201, 44, 1))
+            Height: =2
+            Width: =100
+            X: =166
+            Y: =88
+            ZIndex: =2
+
+        Label12 As label:
+            Align: =Align.Center
+            Color: =If(stage<2,RGBA(166, 166, 166, 1),RGBA(44, 201, 44, 1))
+            Size: =15
+            Text: ="Incident Details"
+            Width: =175
+            X: =278
+            Y: =69
+            ZIndex: =3
+
+        Rectangle2_1 As rectangle:
+            Fill: =If(stage<3,RGBA(166, 166, 166, 1),RGBA(44, 201, 44, 1))
+            Height: =2
+            Width: =100
+            X: =466
+            Y: =88
+            ZIndex: =4
+
+        Label12_1 As label:
+            Align: =Align.Center
+            Color: =If(stage<3,RGBA(166, 166, 166, 1),RGBA(44, 201, 44, 1))
+            Size: =15
+            Text: ="Preview Form"
+            Width: =202
+            X: =566
+            Y: =69
+            ZIndex: =5
+
+        Icon5 As icon.CheckBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =37
+            Icon: =Icon.CheckBadge
+            Visible: =If(stage<2,false,true)
+            Width: =47
+            X: =59
+            Y: =124
+            ZIndex: =6
+
+        Icon5_1 As icon.CheckBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =37
+            Icon: =Icon.CheckBadge
+            Visible: =If(stage<3,false,true)
+            Width: =47
+            X: =342
+            Y: =124
+            ZIndex: =7
+
+        Icon5_2 As icon.CheckBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =37
+            Icon: =Icon.CheckBadge
+            Visible: =If(stage<4,false,true)
+            Width: =47
+            X: =643
+            Y: =124
+            ZIndex: =8
+
+    Button2 As button:
+        OnSelect: =Set(stage,2)
+        Text: ="Button"
+        X: =150
+        Y: =430
+        ZIndex: =2
+
