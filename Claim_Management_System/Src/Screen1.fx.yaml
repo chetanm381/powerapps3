@@ -24,10 +24,10 @@ Screen1 As screen:
             Items: =ColNav
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            OnSelect: |-
-                =Set(HtmlText,  Gallery2.Selected.Title );
+            OnSelect: |
+                =Set(HtmlText,Gallery2.Selected.Title );
                 If(Gallery2.Selected.Title="Logout",
-                Navigate(PersonaScreen,ScreenTransition.UnCover));
+                Navigate(PersonaScreen,ScreenTransition.UnCover);Reset(Gallery2);Set(HtmlText,"DashBoard"));
             TemplatePadding: =0
             TemplateSize: =121
             Width: =198

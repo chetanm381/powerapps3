@@ -67,7 +67,7 @@ PersonaScreen As screen:
                 Rectangle1 As rectangle:
                     Fill: =RGBA(0,0,0,0)
                     Height: =Parent.Height
-                    OnSelect: |-
+                    OnSelect: |
                         =Navigate(Screen1,ScreenTransition.CoverRight);
                         Set(LoggedInUser,"user");
                     Width: =Parent.Width
@@ -106,7 +106,8 @@ PersonaScreen As screen:
                 Rectangle1_1 As rectangle:
                     Fill: =RGBA(0,0,0,0)
                     Height: =Parent.Height
-                    OnSelect: =Navigate(Screen1,ScreenTransition.CoverRight);Set(LoggedInUser,"admin");
+                    OnSelect: |
+                        =Navigate(Screen1,ScreenTransition.CoverRight);Set(LoggedInUser,"admin");
                     Width: =Parent.Width
                     ZIndex: =3
 
