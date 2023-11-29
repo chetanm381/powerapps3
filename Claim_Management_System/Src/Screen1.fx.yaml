@@ -128,15 +128,18 @@ Screen1 As screen:
             ZIndex: =6
 
     Container3 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =472
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.None
+        Fill: |-
+            =ColorValue("#ebf4fd")
+        Height: =687
         RadiusBottomLeft: =15
         RadiusBottomRight: =15
         RadiusTopLeft: =15
         RadiusTopRight: =15
-        Width: =Container2.Width-40
+        Width: =1136
         X: =218
-        Y: =68
+        Y: =65
         ZIndex: =3
 
         Form1 As form:
@@ -738,113 +741,280 @@ Screen1 As screen:
                     Y: =DataCardKey6.Y
                     ZIndex: =4
 
-        Label9 As label:
-            FontWeight: =FontWeight.Bold
-            Text: ="Name"
-            X: =28
-            Y: =118
-            ZIndex: =2
-
-        TextInput1 As text:
-            Default: =User().FullName
-            DisplayMode: =DisplayMode.View
-            X: =209
-            Y: =118
+        Container8 As groupContainer.manualLayoutContainer:
+            Height: =350
+            Visible: =next=2
+            Width: =1128
+            Y: =337
             ZIndex: =3
 
-        Label9_1 As label:
-            FontWeight: =FontWeight.Bold
-            Text: ="Type"
-            X: =28
-            Y: =193
+            Label11 As label:
+                FontWeight: =FontWeight.Bold
+                Height: =50
+                Italic: =true
+                Size: =24
+                Text: ="Incident Detail"
+                Underline: =true
+                Width: =514
+                X: =37
+                Y: =12
+                ZIndex: =1
+
+            Label11_1 As label:
+                FontWeight: =FontWeight.Bold
+                Size: =14
+                Text: ="Description"
+                X: =11
+                Y: =188
+                ZIndex: =3
+
+            TextInput4 As text:
+                Color: =Colors.backgroundcolor
+                Default: =""
+                Fill: |-
+                    =ColorValue("#ebf4fd")
+                Height: =132
+                HintText: ="Please Enter Description"
+                Mode: =TextMode.MultiLine
+                X: =201
+                Y: =188
+                ZIndex: =4
+
+            Label11_2 As label:
+                FontWeight: =FontWeight.Bold
+                Size: =14
+                Text: ="Document"
+                X: =581
+                Y: =188
+                ZIndex: =5
+
+            Label11_3 As label:
+                FontWeight: =FontWeight.Bold
+                Size: =14
+                Text: ="Registration No."
+                Width: =177
+                X: =11
+                Y: =94
+                ZIndex: =6
+
+            TextInput4_1 As text:
+                Color: =Colors.backgroundcolor
+                Default: =""
+                Fill: |-
+                    =ColorValue("#ebf4fd")
+                Height: =42
+                HintText: ="Please Enter Registration No. "
+                X: =201
+                Y: =94
+                ZIndex: =7
+
+            Form3 As form:
+                DataSource: =CMS_Healths
+                DefaultMode: =FormMode.New
+                Height: =147
+                NumberOfColumns: =1
+                Width: =347
+                X: =775
+                Y: =188
+                ZIndex: =8
+
+                ClaimDocument_DataCard3 As typedDataCard.fileEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="new_claimdocument"
+                    Default: |-
+                        =If(!IsBlank(ThisItem.ClaimDocument.FileName), Table({DisplayName: ThisItem.ClaimDocument.FileName, Value: ThisItem.ClaimDocument.Value}), Blank())
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@CMS_Healths],DataSourceInfo.DisplayName,"new_claimdocument")
+                    Fill: |-
+                        =ColorValue("#ebf4fd")
+                    Height: =146
+                    Required: =false
+                    Update: =DataCardValue13.Attachments
+                    Width: =347
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                    DataCardValue13 As attachments:
+                        AddAttachmentText: ="Upload file"
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        Color: |
+                            =Colors.backgroundcolor
+                        Fill: =
+                        Height: =139
+                        IsInDataCard: =true
+                        Items: =Parent.Default
+                        MaxAttachments: =1
+                        MaxAttachmentsText: =""
+                        NoAttachmentsText: ="There is no file."
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Tooltip: =Parent.DisplayName
+                        Width: =344
+                        X: =3
+                        Y: =5
+                        ZIndex: =2
+
+            Label12 As label:
+                FontWeight: =FontWeight.Bold
+                Size: =14
+                Text: ="Insurance Number"
+                Width: =194
+                X: =581
+                Y: =96
+                ZIndex: =9
+
+            TextInput4_2 As text:
+                Color: =Colors.backgroundcolor
+                Default: =""
+                Fill: |-
+                    =ColorValue("#ebf4fd")
+                Height: =42
+                HintText: ="Please Enter Insurance No."
+                Width: =339
+                X: =783
+                Y: =96
+                ZIndex: =10
+
+            Button1_1 As button:
+                Color: =Colors.textcolor
+                Fill: =Colors.backgroundcolor
+                Height: =44
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =Colors.selectedValue
+                OnSelect: =Set(next,3)
+                Text: ="Next"
+                Width: =100
+                X: =1000
+                Y: =411
+                ZIndex: =11
+
+        Container5 As groupContainer.manualLayoutContainer:
+            Fill: =Colors.selectedValue
+            Height: =317
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =1128
             ZIndex: =4
 
-        Dropdown1 As dropdown:
-            ChevronBackground: =
-            ChevronFill: =Colors.backgroundcolor
-            Items: =["Please Select a Category","Health","Vechicle"]
-            Reset: =true
-            Tooltip: ="Please Select Type"
-            X: =209
-            Y: =193
-            ZIndex: =7
+            Label9 As label:
+                Color: =Colors.backgroundcolor
+                FontWeight: =FontWeight.Bold
+                Text: ="Name"
+                X: =40
+                Y: =78
+                ZIndex: =1
 
-        Dropdown2 As dropdown:
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronFill: =Colors.backgroundcolor
-            Items: =If(Dropdown1.SelectedText.Value="Health",Health,Vechicle)
-            X: =209
-            Y: =285
-            ZIndex: =8
+            TextInput1 As text:
+                Color: =Colors.backgroundcolor
+                Default: =User().FullName
+                DisplayMode: =DisplayMode.View
+                Fill: |-
+                    =ColorValue("#ebf4fd")
+                X: =213
+                Y: =78
+                ZIndex: =2
 
-        Label9_2 As label:
-            FontWeight: =FontWeight.Bold
-            Text: ="Sub Type"
-            X: =28
-            Y: =285
-            ZIndex: =9
+            Label9_1 As label:
+                FontWeight: =FontWeight.Bold
+                Text: ="Type"
+                X: =40
+                Y: =150
+                ZIndex: =3
 
-        Label9_3 As label:
-            FontWeight: =FontWeight.Bold
-            Text: =""
-            X: =28
-            Y: =285
-            ZIndex: =10
+            Dropdown1 As dropdown:
+                ChevronBackground: =
+                ChevronFill: =Colors.backgroundcolor
+                Color: =Colors.backgroundcolor
+                Fill: |-
+                    =ColorValue("#ebf4fd")
+                Items: =["Please Select a Category","Health","Vechicle"]
+                Reset: =true
+                Tooltip: ="Please Select Type"
+                X: =213
+                Y: =153
+                ZIndex: =4
 
-        Label10 As label:
-            Color: =Colors.darktextcolor
-            FontWeight: =FontWeight.Bold
-            Height: =42
-            Size: =20
-            Text: ="Basic Detail"
-            Width: =198
-            X: =28
-            Y: =40
-            ZIndex: =11
+            Dropdown2 As dropdown:
+                ChevronBackground: |-
+                    =ColorValue("#ebf4fd")
+                ChevronFill: =Colors.backgroundcolor
+                Color: =Colors.backgroundcolor
+                Fill: |-
+                    =ColorValue("#ebf4fd")
+                Items: =If(Dropdown1.SelectedText.Value="Health",Health,Vechicle)
+                X: =213
+                Y: =245
+                ZIndex: =5
 
-        Button1 As button:
-            Color: =Colors.textcolor
-            Fill: =Colors.backgroundcolor
-            Height: =44
-            HoverColor: =RGBA(0, 0, 0, 1)
-            HoverFill: =Colors.selectedValue
-            Text: ="Next"
-            Width: =100
-            X: =976
-            Y: =384
-            ZIndex: =12
+            Label9_2 As label:
+                FontWeight: =FontWeight.Bold
+                Text: ="Sub Type"
+                X: =40
+                Y: =230
+                ZIndex: =6
 
-        Label9_5 As label:
-            FontWeight: =FontWeight.Bold
-            Text: ="Address"
-            X: =632
-            Y: =118
-            ZIndex: =14
+            Label9_3 As label:
+                FontWeight: =FontWeight.Bold
+                Text: =""
+                X: =40
+                Y: =219
+                ZIndex: =7
 
-        TextInput2 As text:
-            Default: =""
-            Height: =115
-            HintText: ="Please enter Adddress"
-            Mode: =TextMode.MultiLine
-            Width: =301
-            X: =808
-            Y: =118
-            ZIndex: =15
+            Label10 As label:
+                Color: =Colors.darktextcolor
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Italic: =true
+                Size: =26
+                Text: ="Basic Detail"
+                Underline: =true
+                Width: =242
+                X: =40
+                Y: =12
+                ZIndex: =8
 
-        Label9_6 As label:
-            FontWeight: =FontWeight.Bold
-            Text: ="Mobile No."
-            X: =632
-            Y: =285
-            ZIndex: =16
+            Label9_5 As label:
+                FontWeight: =FontWeight.Bold
+                Text: ="Address"
+                X: =581
+                Y: =78
+                ZIndex: =10
 
-        TextInput3 As text:
-            Default: ="Text input"
-            Format: =TextFormat.Number
-            Width: =301
-            X: =808
-            Y: =285
-            ZIndex: =17
+            TextInput2 As text:
+                Color: =Colors.backgroundcolor
+                Default: =""
+                Fill: |-
+                    =ColorValue("#ebf4fd")
+                Height: =115
+                HintText: ="Please enter Adddress"
+                Mode: =TextMode.MultiLine
+                Width: =301
+                X: =820
+                Y: =78
+                ZIndex: =11
+
+            Label9_6 As label:
+                FontWeight: =FontWeight.Bold
+                Text: ="Mobile No."
+                X: =581
+                Y: =245
+                ZIndex: =12
+
+            TextInput3 As text:
+                Color: =Colors.backgroundcolor
+                Default: ="Text input"
+                Fill: |-
+                    =ColorValue("#ebf4fd")
+                Format: =TextFormat.Number
+                Width: =301
+                X: =820
+                Y: =245
+                ZIndex: =13
 
     Label3 As label:
         DisplayMode: =DisplayMode.View
