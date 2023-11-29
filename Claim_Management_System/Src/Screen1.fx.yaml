@@ -76,7 +76,7 @@ Screen1 As screen:
         Container8 As groupContainer.verticalAutoLayoutContainer:
             BorderStyle: =BorderStyle.None
             DropShadow: =DropShadow.None
-            Height: =612
+            Height: =623
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =15
@@ -169,7 +169,7 @@ Screen1 As screen:
                     FontWeight: =FontWeight.Bold
                     Text: ="Address"
                     X: =618
-                    Y: =118
+                    Y: =78
                     ZIndex: =14
 
                 TextInput2 As text:
@@ -179,14 +179,14 @@ Screen1 As screen:
                     Mode: =TextMode.MultiLine
                     Width: =301
                     X: =782
-                    Y: =118
+                    Y: =78
                     ZIndex: =15
 
                 Label9_6 As label:
                     FontWeight: =FontWeight.Bold
                     Text: ="Mobile No."
                     X: =618
-                    Y: =269
+                    Y: =229
                     ZIndex: =16
 
                 TextInput3 As text:
@@ -194,7 +194,7 @@ Screen1 As screen:
                     Format: =TextFormat.Number
                     Width: =301
                     X: =782
-                    Y: =269
+                    Y: =229
                     ZIndex: =17
 
             Container3_1 As groupContainer.manualLayoutContainer:
@@ -243,7 +243,7 @@ Screen1 As screen:
                 TextInput2_1 As text:
                     Default: =""
                     Height: =115
-                    HintText: ="Please enter Adddress"
+                    HintText: ="Please enter Description about Claim"
                     Mode: =TextMode.MultiLine
                     Width: =301
                     X: =242
@@ -252,6 +252,7 @@ Screen1 As screen:
 
                 TextInput4 As text:
                     Default: ="Text input"
+                    HintText: ="Enter Your Insurance Number"
                     Width: =301
                     X: =242
                     Y: =78
@@ -259,6 +260,7 @@ Screen1 As screen:
 
                 TextInput4_1 As text:
                     Default: ="Text input"
+                    HintText: ="Enter Vechile Registration Number"
                     Width: =306
                     X: =784
                     Y: =78
@@ -314,7 +316,8 @@ Screen1 As screen:
                             Height: =122
                             IsInDataCard: =true
                             Items: =Parent.Default
-                            MaxAttachments: =1
+                            MaxAttachments: =5
+                            MaxAttachmentSize: =25
                             MaxAttachmentsText: =""
                             NoAttachmentsText: ="There is no file."
                             PaddingBottom: =5
@@ -356,7 +359,7 @@ Screen1 As screen:
             DropShadow: =DropShadow.None
             Height: =54
             Width: =1168
-            Y: =713
+            Y: =701
             ZIndex: =5
 
             Button1 As button:
