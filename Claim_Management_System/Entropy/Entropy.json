@@ -55,7 +55,7 @@
     "Gallery2": 12,
     "galleryTemplate2": 13,
     "Host": 3,
-    "HtmlText1": 85,
+    "HtmlText1": 163,
     "Icon1": 8,
     "Icon2": 11,
     "Icon3": 15,
@@ -103,7 +103,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/29/2023 10:09:46",
+  "HeaderLastSavedDateTimeUTC": "11/29/2023 10:15:49",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "e139edbc-7be3-4493-8053-6e94e7060bcc": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/shared-office365user-8ffb611a-daf4-4df5-915a-22f89eceb537\""
@@ -382,7 +382,7 @@
       "gallery": 1,
       "galleryTemplate": 1,
       "groupContainer": 11,
-      "htmlViewer": 1,
+      "htmlViewer": 2,
       "icon": 6,
       "image": 3,
       "label": 80,
