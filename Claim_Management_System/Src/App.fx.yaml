@@ -44,6 +44,7 @@ App As appinfo:
             {dep: "Theft"}
             
         );
+        Set(next,1)
     StartScreen: =PersonaScreen
     Theme: =PowerAppsTheme
 
