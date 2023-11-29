@@ -112,7 +112,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/29/2023 10:39:27",
+  "HeaderLastSavedDateTimeUTC": "11/29/2023 10:54:06",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "e139edbc-7be3-4493-8053-6e94e7060bcc": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/shared-office365user-8ffb611a-daf4-4df5-915a-22f89eceb537\""
@@ -283,7 +283,7 @@
     "App": 0,
     "ApprovedAmount_DataCard1": 53,
     "Button1": 75,
-    "Button2": 99,
+    "Button2": 100,
     "Circle1": 14,
     "ClaimChildType_DataCard1": 28,
     "ClaimCompanyName_DataCard1": 38,
