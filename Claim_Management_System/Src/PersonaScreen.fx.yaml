@@ -11,7 +11,7 @@ PersonaScreen As screen:
             HtmlText: |-
                 =Concatenate("<div style=' height: ",Parent.Height-1, "px;
                 
-                background: linear-gradient(to right, #146C94, #4ca4c1);
+                background: linear-gradient(to right, #5b98b4, #0c4159);
                 
                 '
                 ></div>
@@ -23,4 +23,106 @@ PersonaScreen As screen:
             Size: =
             Width: =1366
             ZIndex: =1
+
+        Container6 As groupContainer.manualLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(0,0,0,0)
+            Height: =Parent.Height
+            Width: =Parent.Width*.30
+            ZIndex: =2
+
+            Container7 As groupContainer.manualLayoutContainer:
+                Fill: =Colors.textcolor
+                Height: =Parent.Height*.25
+                RadiusBottomLeft: =25
+                RadiusBottomRight: =25
+                RadiusTopLeft: =25
+                RadiusTopRight: =25
+                Width: =Parent.Width*.75
+                X: =Parent.X+Parent.Width*.125 
+                Y: =Parent.Y+Parent.Height*.125
+                ZIndex: =1
+
+                Icon4 As icon.People:
+                    Color: =Colors.darktextcolor
+                    Height: =71
+                    Icon: =Icon.People
+                    Width: =81
+                    X: =Parent.Width/2-Self.Width/2
+                    Y: =Parent.Height/2-Self.Height
+                    ZIndex: =1
+
+                Label6 As label:
+                    Align: =Align.Center
+                    Color: =Colors.darktextcolor
+                    FontWeight: =FontWeight.Bold
+                    Text: ="Login As User"
+                    X: =78
+                    Y: =125
+                    ZIndex: =2
+
+                Rectangle1 As rectangle:
+                    Fill: =RGBA(0,0,0,0)
+                    Height: =Parent.Height
+                    OnSelect: =Navigate(Screen1,ScreenTransition.CoverRight);
+                    Width: =Parent.Width
+                    ZIndex: =3
+
+            Container7_1 As groupContainer.manualLayoutContainer:
+                Fill: =Colors.textcolor
+                Height: =Parent.Height*.25
+                RadiusBottomLeft: =25
+                RadiusBottomRight: =25
+                RadiusTopLeft: =25
+                RadiusTopRight: =25
+                Width: =Parent.Width*.75
+                X: =Parent.X+Parent.Width*.125 
+                Y: =Parent.Y+Parent.Height*.50
+                ZIndex: =2
+
+                Icon4_1 As icon.People:
+                    Color: =Colors.darktextcolor
+                    Height: =71
+                    Icon: =Icon.Support
+                    Width: =81
+                    X: =Parent.Width/2-Self.Width/2
+                    Y: =Parent.Height/2-Self.Height
+                    ZIndex: =1
+
+                Label6_1 As label:
+                    Align: =Align.Center
+                    Color: =Colors.darktextcolor
+                    FontWeight: =FontWeight.Bold
+                    Text: ="Login As User"
+                    X: =78
+                    Y: =130
+                    ZIndex: =2
+
+                Rectangle1_1 As rectangle:
+                    Fill: =RGBA(0,0,0,0)
+                    Height: =Parent.Height
+                    OnSelect: =Navigate(Screen1,ScreenTransition.CoverRight);
+                    Width: =Parent.Width
+                    ZIndex: =3
+
+        Label7 As label:
+            Color: =Colors.textcolor
+            FontWeight: =FontWeight.Bold
+            Height: =47
+            Size: =30
+            Text: ="Rapid"
+            Width: =217
+            X: =1009
+            Y: =25
+            ZIndex: =3
+
+        Label8 As label:
+            Color: =Color.Orange
+            FontWeight: =FontWeight.Semibold
+            Size: =25
+            Text: ="Claims"
+            X: =1093
+            Y: =72
+            ZIndex: =4
 
