@@ -1,0 +1,13 @@
+Component1 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Max(App.Height, App.MinScreenHeight)
+    Width: =Max(App.Height, App.MinScreenHeight)
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container5 As groupContainer.manualLayoutContainer:
+        Height: =240
+        Width: =768
+        ZIndex: =1
+
