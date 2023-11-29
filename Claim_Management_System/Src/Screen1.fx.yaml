@@ -193,7 +193,7 @@ Screen1 As screen:
                 TextInput3 As text:
                     Default: =""
                     Format: =TextFormat.Number
-                    HintText: ="Please Provide mobile number"
+                    HintText: ="Please Provide Mobile No."
                     Width: =301
                     X: =782
                     Y: =229
@@ -254,7 +254,7 @@ Screen1 As screen:
 
                 TextInput4 As text:
                     Default: =""
-                    HintText: ="Enter Your Insurance Number"
+                    HintText: ="Enter Your Insurance No."
                     Width: =301
                     X: =242
                     Y: =78
@@ -262,7 +262,7 @@ Screen1 As screen:
 
                 TextInput4_1 As text:
                     Default: =""
-                    HintText: ="Enter Vechile Registration Number"
+                    HintText: ="Enter Vechile Registration No."
                     Width: =306
                     X: =784
                     Y: =78
