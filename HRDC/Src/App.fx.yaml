@@ -54,11 +54,17 @@ App As appinfo:
           "Xpirit Nederland B.V."
         ]);
         Collect(UserData,{
-        ID:1,Name:"Chetan.Meena@xebia.com",Company:"Appcino Technologies Pvt. Ltd.",userRole:"SuperUser"
+        ID:1,Name:"Chetan.Meena@xebia.com",Entity:"Appcino Technologies Pvt. Ltd.",userRole:"SuperUser",EmpId:"Appcino#01468"
         
         
         });
         Set(Popup,false);
+        ClearCollect(StatusCounts,
+          AddColumns(
+            GroupBy(UserData, "Entity","userRole", "Count"),
+            "StatusCount", CountRows(Count)
+          )
+        );                                                                                                             
     StartScreen: =Screen2
     Theme: =PowerAppsTheme
 

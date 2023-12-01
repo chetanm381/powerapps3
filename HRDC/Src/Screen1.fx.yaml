@@ -46,24 +46,24 @@ Screen1 As screen:
                 Color: =RGBA(123, 52, 111, 1)
                 FontWeight: =FontWeight.Bold
                 Text: ="User Name"
-                X: =208
-                Y: =134
+                X: =404
+                Y: =200
                 ZIndex: =1
 
             Label1_1 As label:
                 Color: =RGBA(123, 52, 111, 1)
                 FontWeight: =FontWeight.Bold
                 Text: ="User Role"
-                X: =208
-                Y: =253
+                X: =38
+                Y: =320
                 ZIndex: =2
 
             Label1_2 As label:
                 Color: =RGBA(123, 52, 111, 1)
                 FontWeight: =FontWeight.Bold
-                Text: ="Company Name "
-                X: =208
-                Y: =374
+                Text: ="Entity "
+                X: =404
+                Y: =320
                 ZIndex: =3
 
             Label1_3 As label:
@@ -71,10 +71,10 @@ Screen1 As screen:
                 Color: =RGBA(123, 52, 111, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =86
-                Size: =20
+                Size: =30
                 Text: ="User Information"
                 Width: =737
-                Y: =15
+                Y: =70
                 ZIndex: =4
 
             TextInput1 As text:
@@ -87,8 +87,8 @@ Screen1 As screen:
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                X: =208
-                Y: =178
+                X: =404
+                Y: =260
                 ZIndex: =5
 
             Dropdown1_1 As dropdown:
@@ -98,6 +98,7 @@ Screen1 As screen:
                 ChevronHoverBackground: =Dropdown1.ChevronHoverBackground
                 Color: =RGBA(0, 65, 106, 1)
                 Default: =selecteditem.Company
+                DisplayMode: =If(Dropdown1.SelectedText.Value="SuperUser",DisplayMode.Disabled,DisplayMode.Edit)
                 HoverBorderColor: =RGBA(0, 65, 106, 1)
                 HoverColor: =Dropdown1.HoverColor
                 HoverFill: =Dropdown1.HoverFill
@@ -158,8 +159,8 @@ Screen1 As screen:
                 SelectionColor: =Color.White
                 SelectionFill: =Dropdown1.SelectionFill
                 Width: =320
-                X: =208
-                Y: =421
+                X: =404
+                Y: =380
                 ZIndex: =6
 
             Dropdown1 As dropdown:
@@ -176,8 +177,8 @@ Screen1 As screen:
                 PressedFill: =RGBA(123, 52, 111, 1)
                 SelectionFill: =RGBA(123, 52, 111, 0.84)
                 Width: =320
-                X: =208
-                Y: =296
+                X: =38
+                Y: =380
                 ZIndex: =8
 
             Button1 As button:
@@ -230,8 +231,9 @@ Screen1 As screen:
                         
                     );
                 Text: =If(IsBlank(selecteditem),"Create","Save")
-                X: =429
-                Y: =545
+                Width: =100
+                X: =620
+                Y: =513
                 ZIndex: =9
 
             Button1_1 As button:
@@ -247,24 +249,10 @@ Screen1 As screen:
                     Set(warninguserrole,false);
                     Set(warningCompany,false);
                 Text: ="Cancel"
-                X: =166
-                Y: =545
+                Width: =100
+                X: =16
+                Y: =513
                 ZIndex: =10
-
-            Icon10 As icon.Trash:
-                Color: =RGBA(252, 114, 114, 1)
-                Height: =40
-                HoverColor: =ColorFade(Self.Color, 60%)
-                Icon: =Icon.Trash
-                OnSelect: |
-                    =
-                    Set(Popup,true);
-                Tooltip: ="Delete User"
-                Visible: =If(IsBlank(selecteditem),false,true)
-                Width: =40
-                X: =669
-                Y: =38
-                ZIndex: =11
 
             Label9 As label:
                 Color: =RGBA(255, 0, 0, 1)
@@ -295,6 +283,39 @@ Screen1 As screen:
                 X: =208
                 Y: =471
                 ZIndex: =14
+
+            Label1_4 As label:
+                Color: =RGBA(123, 52, 111, 1)
+                FontWeight: =FontWeight.Bold
+                Text: ="EmpId"
+                X: =38
+                Y: =200
+                ZIndex: =15
+
+            TextInput1_1 As text:
+                BorderColor: =RGBA(123, 52, 111, 1)
+                Default: =selecteditem.EmpId
+                HintText: ="Enter your Name"
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(123, 52, 111, 0.64)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                X: =38
+                Y: =260
+                ZIndex: =16
+
+            Button1_2 As button:
+                Fill: =RGBA(191, 15, 15, 1)
+                HoverColor: =RGBA(191, 15, 15, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: =Set(Popup,true);
+                Text: ="Delete"
+                Width: =100
+                X: =501
+                Y: =513
+                ZIndex: =17
 
         Label3 As label:
             Align: =Align.Center
@@ -352,62 +373,69 @@ Screen1 As screen:
             ZIndex: =8
 
     Container10 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(227, 227, 227, 0.87)
+        Fill: =RGBA(202, 202, 202, .85)
         Height: =768
         Visible: =Popup
         Width: =1366
         ZIndex: =3
 
         Container11 As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(123, 52, 111, 1)
+            BorderThickness: =3
+            DropShadow: =DropShadow.Semilight
             Fill: =RGBA(255, 255, 255, 1)
             Height: =390
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
             X: =422
             Y: =166
             ZIndex: =1
 
             Label7 As label:
                 Color: =RGBA(123, 52, 111, 1)
-                Height: =50
-                Text: |-
-                    ="User Name  : "& selecteditem.Name
-                Width: =442
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                Text: ="User Name  "
+                Width: =139
                 X: =40
-                Y: =40
+                Y: =100
                 ZIndex: =2
 
             Label7_1 As label:
                 Color: =RGBA(123, 52, 111, 1)
+                FontWeight: =FontWeight.Bold
                 Height: =50
-                Text: |-
-                    ="Company Name  : "& selecteditem.Company
-                Width: =417
+                Text: ="Company Name   "
+                Width: =177
                 X: =40
-                Y: =110
+                Y: =140
                 ZIndex: =3
 
             Label7_2 As label:
                 Color: =RGBA(123, 52, 111, 1)
-                Height: =50
-                Text: |-
-                    ="User Role  : "&selecteditem.userRole
-                Width: =427
+                FontWeight: =FontWeight.Bold
+                Height: =54
+                Text: ="User Role   "
+                Width: =139
                 X: =40
                 Y: =180
                 ZIndex: =4
 
             Label8 As label:
                 Align: =Align.Center
-                Color: =RGBA(255, 0, 0, 1)
+                Color: =RGBA(237, 9, 9, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =42
                 Size: =12
-                Text: ="Sure you want to delete the User ?"
+                Text: ="Are you sure you want to delete the User ?"
                 Width: =500
-                Y: =250
+                Y: =234
                 ZIndex: =5
 
             Button3 As button:
-                Fill: =RGBA(255, 0, 0, 1)
+                Fill: =RGBA(191, 15, 15, 0.75)
                 HoverColor: =RGBA(255, 0, 0, 1)
                 HoverFill: =RGBA(255,255,255,1)
                 OnSelect: |-
@@ -415,18 +443,63 @@ Screen1 As screen:
                     Set(Popup,false);
                     Back();
                 Text: ="Delete"
-                X: =307
-                Y: =315
+                Width: =100
+                X: =373
+                Y: =298
                 ZIndex: =6
 
             Button3_1 As button:
                 Color: =RGBA(123, 52, 111, 1)
                 Fill: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(Self.Color, -20%)
+                HoverColor: =RGBA(191, 15, 15, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
                 OnSelect: |
                     =Set(Popup,false)
                 Text: ="Cancel"
-                X: =67
-                Y: =315
+                Width: =100
+                X: =40
+                Y: =298
                 ZIndex: =7
+
+            TextInput2 As text:
+                Color: =RGBA(123, 52, 111, 1)
+                Default: =selecteditem.Name
+                DisplayMode: =DisplayMode.View
+                Height: =54
+                Width: =272
+                X: =217
+                Y: =100
+                ZIndex: =8
+
+            TextInput2_1 As text:
+                Color: =RGBA(123, 52, 111, 1)
+                Default: =selecteditem.Company
+                DisplayMode: =DisplayMode.View
+                Height: =54
+                Width: =272
+                X: =217
+                Y: =140
+                ZIndex: =9
+
+            TextInput2_2 As text:
+                Color: =RGBA(123, 52, 111, 1)
+                Default: =selecteditem.userRole
+                DisplayMode: =DisplayMode.View
+                Height: =54
+                Width: =272
+                X: =217
+                Y: =180
+                ZIndex: =10
+
+            Label10 As label:
+                Align: =Align.Center
+                Color: =RGBA(191, 15, 15, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =43
+                Size: =20
+                Text: ="Delete User"
+                Width: =338
+                X: =81
+                Y: =40
+                ZIndex: =11
 

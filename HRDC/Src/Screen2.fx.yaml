@@ -10,12 +10,12 @@ Screen2 As screen:
         ZIndex: =1
 
         Container5 As groupContainer.manualLayoutContainer:
-            Height: =100
+            Height: =71
             Width: =1366
             ZIndex: =2
 
             HtmlText2 As htmlViewer:
-                Height: =100
+                Height: =71
                 HtmlText: |-
                     =Concatenate("<div style=' height: ",Parent.Height, "px;
                     background: linear-gradient(to right,#56174c,#6c1d5f);
@@ -31,6 +31,7 @@ Screen2 As screen:
                 ZIndex: =1
 
             Image1 As image:
+                Height: =71
                 Image: ='idRjl8hQmG-fotor-bg-remover-20231130175755'
                 ImagePosition: =ImagePosition.Fill
                 Width: =180
@@ -46,7 +47,7 @@ Screen2 As screen:
                 RadiusTopRight: =40
                 Width: =70
                 X: =1263
-                Y: =16
+                Y: =3
                 ZIndex: =3
 
             Label2 As label:
@@ -57,15 +58,15 @@ Screen2 As screen:
                 Text: =User().FullName
                 Width: =178
                 X: =1085
-                Y: =29
+                Y: =16
                 ZIndex: =4
 
         Container6 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =502
             Width: =932
-            X: =16
-            Y: =251
+            X: =407
+            Y: =247
             ZIndex: =3
 
             Gallery1 As gallery.galleryVertical:
@@ -102,33 +103,32 @@ Screen2 As screen:
                 OnSelect: |-
                     =Set(selecteditem,Gallery1.Selected);
                     Navigate(Screen1);
-                TemplateSize: =92
+                TemplateSize: =58
                 Width: =Parent.Width
                 ZIndex: =1
 
                 Label5 As label:
-                    Height: =88
+                    Height: =59
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.Name
-                    Width: =262
-                    X: =26
+                    Width: =240
                     ZIndex: =1
 
                 Label5_1 As label:
-                    Height: =90
+                    Height: =59
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.Company
+                    Text: =ThisItem.Entity
                     Width: =308
-                    X: =342
+                    X: =435
                     ZIndex: =2
 
                 Label5_2 As label:
                     Align: =Align.Center
-                    Height: =88
+                    Height: =59
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.userRole
-                    Width: =142
-                    X: =686
+                    Width: =118
+                    X: =743
                     ZIndex: =3
 
                 Rectangle2 As rectangle:
@@ -136,7 +136,7 @@ Screen2 As screen:
                     Height: =2
                     OnSelect: =Select(Parent)
                     Width: =922
-                    Y: =88
+                    Y: =57
                     ZIndex: =4
 
                 Icon9 As icon.AddUser:
@@ -145,9 +145,17 @@ Screen2 As screen:
                     OnSelect: =Select(Parent)
                     Rotation: =90
                     Width: =35
-                    X: =865
-                    Y: =29
+                    X: =862
+                    Y: =14
                     ZIndex: =5
+
+                Label5_3 As label:
+                    Height: =57
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.EmpId
+                    Width: =176
+                    X: =258
+                    ZIndex: =6
 
         Button2 As button:
             Fill: =RGBA(123, 52, 111, 1)
@@ -157,15 +165,15 @@ Screen2 As screen:
                 Reset(Dropdown1);Reset(Dropdown1_1);Navigate(Screen1);
             Text: ="New User"
             X: =1179
-            Y: =136
+            Y: =96
             ZIndex: =4
 
         Container8 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(123, 52, 111, 1)
             Height: =49
             Width: =932
-            X: =16
-            Y: =202
+            X: =407
+            Y: =198
             ZIndex: =5
 
             Label6 As label:
@@ -175,7 +183,7 @@ Screen2 As screen:
                 Height: =49
                 Text: ="User"
                 Width: =262
-                X: =26
+                X: =3
                 ZIndex: =1
 
             Label6_1 As label:
@@ -183,9 +191,9 @@ Screen2 As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =49
-                Text: ="Company "
+                Text: ="Entity"
                 Width: =245
-                X: =342
+                X: =429
                 ZIndex: =2
 
             Label6_2 As label:
@@ -195,8 +203,18 @@ Screen2 As screen:
                 Height: =49
                 Text: ="User Role"
                 Width: =134
-                X: =695
+                X: =727
                 ZIndex: =3
+
+            Label6_3 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =49
+                Text: ="EmpId"
+                Width: =164
+                X: =265
+                ZIndex: =4
 
         Dropdown2 As dropdown:
             BorderColor: =RGBA(123, 52, 111, 1)
@@ -211,7 +229,7 @@ Screen2 As screen:
             SelectionFill: =Dropdown2_1.SelectionFill
             Width: =200
             X: =364
-            Y: =141
+            Y: =101
             ZIndex: =6
 
         Dropdown2_1 As dropdown:
@@ -278,52 +296,8 @@ Screen2 As screen:
             SelectionFill: =RGBA(123, 52, 111, 1)
             Width: =320
             X: =16
-            Y: =141
+            Y: =101
             ZIndex: =7
-
-        Container12 As groupContainer.manualLayoutContainer:
-            BorderStyle: =BorderStyle.None
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =295
-            RadiusBottomLeft: =10
-            RadiusBottomRight: =10
-            RadiusTopLeft: =10
-            RadiusTopRight: =10
-            Width: =356
-            X: =983
-            Y: =202
-            ZIndex: =8
-
-            CompositePieChart1 As group:
-                Height: =5
-                Width: =5
-                X: =40
-                Y: =40
-                ZIndex: =1
-
-                Title1 As label:
-                    Align: =Align.Center
-                    Color: =RGBA(123, 52, 111, 1)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =29
-                    Text: ="User Roles"
-                    Width: =356
-                    Y: =12
-                    ZIndex: =2
-
-                PieChart1 As pieChart:
-                    DisplayMode: =DisplayMode.View
-                    Height: =266
-                    ItemColorSet: |-
-                        =[ColorValue("#6c1d5f"),ColorValue("#a7779f"),ColorValue("#e2d2df")]
-                    Items: |-
-                        =[
-                        {ID:1,count:CountRows(Filter(UserData,userRole="EHR")),label:"EHR"}
-                        ,{ID:2,count:CountRows(Filter(UserData,userRole="SuperUser")),label:"SuperUser"},{ID:3,count:CountRows(Filter(UserData,userRole="ESU")),label:"ESU"}
-                        ]
-                    Width: =356
-                    Y: =29
-                    ZIndex: =3
 
         Label4 As label:
             Color: =RGBA(123, 52, 111, 1)
@@ -331,7 +305,7 @@ Screen2 As screen:
             Size: =9
             Text: ="**Company "
             X: =16
-            Y: =183
+            Y: =152
             ZIndex: =9
 
         Label4_1 As label:
@@ -340,6 +314,13 @@ Screen2 As screen:
             Size: =9
             Text: ="**User Roles"
             X: =364
-            Y: =183
+            Y: =152
             ZIndex: =10
+
+    Container3 As groupContainer.manualLayoutContainer:
+        Height: =104
+        Width: =354
+        X: =35
+        Y: =200
+        ZIndex: =2
 
