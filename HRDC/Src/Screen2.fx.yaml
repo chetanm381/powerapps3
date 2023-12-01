@@ -64,8 +64,8 @@ Screen2 As screen:
         Container6 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =502
-            Width: =932
-            X: =407
+            Width: =1059
+            X: =280
             Y: =247
             ZIndex: =3
 
@@ -104,14 +104,15 @@ Screen2 As screen:
                     =Set(selecteditem,Gallery1.Selected);
                     Navigate(Screen1);
                 TemplateSize: =58
-                Width: =Parent.Width
+                Width: =1059
                 ZIndex: =1
 
                 Label5 As label:
                     Height: =59
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.Name
-                    Width: =240
+                    Width: =257
+                    X: =31
                     ZIndex: =1
 
                 Label5_1 As label:
@@ -119,7 +120,7 @@ Screen2 As screen:
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.Entity
                     Width: =308
-                    X: =435
+                    X: =536
                     ZIndex: =2
 
                 Label5_2 As label:
@@ -128,14 +129,14 @@ Screen2 As screen:
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.userRole
                     Width: =118
-                    X: =743
+                    X: =855
                     ZIndex: =3
 
                 Rectangle2 As rectangle:
                     Fill: =RGBA(123, 52, 111, 1)
-                    Height: =2
+                    Height: =0.5
                     OnSelect: =Select(Parent)
-                    Width: =922
+                    Width: =1047
                     Y: =57
                     ZIndex: =4
 
@@ -145,8 +146,8 @@ Screen2 As screen:
                     OnSelect: =Select(Parent)
                     Rotation: =90
                     Width: =35
-                    X: =862
-                    Y: =14
+                    X: =1012
+                    Y: =13
                     ZIndex: =5
 
                 Label5_3 As label:
@@ -154,7 +155,8 @@ Screen2 As screen:
                     OnSelect: =Select(Parent)
                     Text: =ThisItem.EmpId
                     Width: =176
-                    X: =258
+                    X: =315
+                    Y: =1
                     ZIndex: =6
 
         Button2 As button:
@@ -165,14 +167,14 @@ Screen2 As screen:
                 Reset(Dropdown1);Reset(Dropdown1_1);Navigate(Screen1);
             Text: ="New User"
             X: =1179
-            Y: =96
+            Y: =114
             ZIndex: =4
 
         Container8 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(123, 52, 111, 1)
             Height: =49
-            Width: =932
-            X: =407
+            Width: =1059
+            X: =280
             Y: =198
             ZIndex: =5
 
@@ -193,7 +195,7 @@ Screen2 As screen:
                 Height: =49
                 Text: ="Entity"
                 Width: =245
-                X: =429
+                X: =526
                 ZIndex: =2
 
             Label6_2 As label:
@@ -203,7 +205,7 @@ Screen2 As screen:
                 Height: =49
                 Text: ="User Role"
                 Width: =134
-                X: =727
+                X: =849
                 ZIndex: =3
 
             Label6_3 As label:
@@ -213,7 +215,7 @@ Screen2 As screen:
                 Height: =49
                 Text: ="EmpId"
                 Width: =164
-                X: =265
+                X: =313
                 ZIndex: =4
 
         Dropdown2 As dropdown:
@@ -228,8 +230,8 @@ Screen2 As screen:
             SelectionColor: =Dropdown2_1.SelectionColor
             SelectionFill: =Dropdown2_1.SelectionFill
             Width: =200
-            X: =364
-            Y: =101
+            X: =655
+            Y: =117
             ZIndex: =6
 
         Dropdown2_1 As dropdown:
@@ -295,8 +297,8 @@ Screen2 As screen:
             PressedFill: =RGBA(123, 52, 111, 1)
             SelectionFill: =RGBA(123, 52, 111, 1)
             Width: =320
-            X: =16
-            Y: =101
+            X: =282
+            Y: =117
             ZIndex: =7
 
         Label4 As label:
@@ -304,8 +306,8 @@ Screen2 As screen:
             Height: =12
             Size: =9
             Text: ="**Company "
-            X: =16
-            Y: =152
+            X: =282
+            Y: =159
             ZIndex: =9
 
         Label4_1 As label:
@@ -313,14 +315,53 @@ Screen2 As screen:
             Height: =12
             Size: =9
             Text: ="**User Roles"
-            X: =364
-            Y: =152
+            X: =655
+            Y: =159
             ZIndex: =10
 
+        Container3_1 As groupContainer.manualLayoutContainer:
+            Height: =120
+            Width: =205
+            X: =25
+            Y: =270
+            ZIndex: =11
+
+            Label12 As label:
+                Text: ="Text"
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+        Container3_2 As groupContainer.manualLayoutContainer:
+            Height: =120
+            Width: =205
+            X: =25
+            Y: =435
+            ZIndex: =12
+
+            Label12_1 As label:
+                Text: ="Text"
+                X: =28
+                Y: =4
+                ZIndex: =1
+
+        Container3_3 As groupContainer.manualLayoutContainer:
+            Height: =120
+            Width: =205
+            X: =25
+            Y: =595
+            ZIndex: =13
+
+            Label12_2 As label:
+                Text: ="Text"
+                X: =28
+                Y: =8
+                ZIndex: =1
+
     Container3 As groupContainer.manualLayoutContainer:
-        Height: =104
-        Width: =354
-        X: =35
-        Y: =200
+        Height: =120
+        Width: =205
+        X: =25
+        Y: =115
         ZIndex: =2
 
