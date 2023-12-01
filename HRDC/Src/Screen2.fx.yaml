@@ -1,0 +1,345 @@
+Screen2 As screen:
+    OnVisible: |-
+        =Reset(Dropdown2);
+        Reset(Dropdown2_1)
+
+    Container4 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(237, 237, 237, 0.4)
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Container5 As groupContainer.manualLayoutContainer:
+            Height: =100
+            Width: =1366
+            ZIndex: =2
+
+            HtmlText2 As htmlViewer:
+                Height: =100
+                HtmlText: |-
+                    =Concatenate("<div style=' height: ",Parent.Height, "px;
+                    background: linear-gradient(to right,#56174c,#6c1d5f);
+                    
+                    '
+                    ></div>
+                    ")
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Width: =1366
+                ZIndex: =1
+
+            Image1 As image:
+                Image: ='idRjl8hQmG-fotor-bg-remover-20231130175755'
+                ImagePosition: =ImagePosition.Fill
+                Width: =180
+                X: =22
+                ZIndex: =2
+
+            Image2 As image:
+                Height: =68
+                Image: =User().Image
+                RadiusBottomLeft: =40
+                RadiusBottomRight: =40
+                RadiusTopLeft: =40
+                RadiusTopRight: =40
+                Width: =70
+                X: =1263
+                Y: =16
+                ZIndex: =3
+
+            Label2 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =42
+                Size: =15
+                Text: =User().FullName
+                Width: =178
+                X: =1085
+                Y: =29
+                ZIndex: =4
+
+        Container6 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =502
+            Width: =932
+            X: =16
+            Y: =251
+            ZIndex: =3
+
+            Gallery1 As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =Parent.Height
+                Items: |-
+                    =If(
+                        And(
+                            Dropdown2.SelectedText.Value = "All",
+                            Dropdown2_1.SelectedText.Value = "All"
+                        ),
+                        UserData,
+                        If(
+                            And(
+                                Dropdown2.SelectedText.Value = "All",
+                                Dropdown2_1.SelectedText.Value <> "All"
+                            ),
+                            Filter(
+                                UserData,
+                                Company = Dropdown2_1.SelectedText.Value
+                            ),
+                            If(
+                                And(
+                                    Dropdown2.SelectedText.Value <> "All",
+                                    Dropdown2_1.SelectedText.Value = "All"
+                                ),
+                                Filter(UserData,userRole=Dropdown2.SelectedText.Value),
+                                Filter(UserData,userRole=Dropdown2.SelectedText.Value And Company=Dropdown2_1.SelectedText.Value)
+                            )
+                        )
+                    )
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: |-
+                    =Set(selecteditem,Gallery1.Selected);
+                    Navigate(Screen1);
+                TemplateSize: =92
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Label5 As label:
+                    Height: =88
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.Name
+                    Width: =262
+                    X: =26
+                    ZIndex: =1
+
+                Label5_1 As label:
+                    Height: =90
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.Company
+                    Width: =308
+                    X: =342
+                    ZIndex: =2
+
+                Label5_2 As label:
+                    Align: =Align.Center
+                    Height: =88
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.userRole
+                    Width: =142
+                    X: =686
+                    ZIndex: =3
+
+                Rectangle2 As rectangle:
+                    Fill: =RGBA(123, 52, 111, 1)
+                    Height: =2
+                    OnSelect: =Select(Parent)
+                    Width: =922
+                    Y: =88
+                    ZIndex: =4
+
+                Icon9 As icon.AddUser:
+                    Height: =30
+                    Icon: =Icon.More
+                    OnSelect: =Select(Parent)
+                    Rotation: =90
+                    Width: =35
+                    X: =865
+                    Y: =29
+                    ZIndex: =5
+
+        Button2 As button:
+            Fill: =RGBA(123, 52, 111, 1)
+            HoverFill: =ColorFade(Self.Fill, 40%)
+            OnSelect: |-
+                =Set(selecteditem,Blank());
+                Reset(Dropdown1);Reset(Dropdown1_1);Navigate(Screen1);
+            Text: ="New User"
+            X: =1179
+            Y: =136
+            ZIndex: =4
+
+        Container8 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(123, 52, 111, 1)
+            Height: =49
+            Width: =932
+            X: =16
+            Y: =202
+            ZIndex: =5
+
+            Label6 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =49
+                Text: ="User"
+                Width: =262
+                X: =26
+                ZIndex: =1
+
+            Label6_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =49
+                Text: ="Company "
+                Width: =245
+                X: =342
+                ZIndex: =2
+
+            Label6_2 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =49
+                Text: ="User Role"
+                Width: =134
+                X: =695
+                ZIndex: =3
+
+        Dropdown2 As dropdown:
+            BorderColor: =RGBA(123, 52, 111, 1)
+            ChevronBackground: =RGBA(123, 52, 111, 1)
+            ChevronHoverBackground: =Dropdown2_1.ChevronHoverBackground
+            ChevronHoverFill: =RGBA(123, 52, 111, 1)
+            Height: =35
+            HoverFill: =Dropdown2_1.HoverFill
+            Items: =["All","ESU","EHR","SuperUser"]
+            PressedFill: =RGBA(123, 52, 111, 1)
+            SelectionColor: =Dropdown2_1.SelectionColor
+            SelectionFill: =Dropdown2_1.SelectionFill
+            Width: =200
+            X: =364
+            Y: =141
+            ZIndex: =6
+
+        Dropdown2_1 As dropdown:
+            BorderColor: =RGBA(123, 52, 111, 1)
+            ChevronBackground: =RGBA(123, 52, 111, 1)
+            ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
+            Height: =35
+            HoverFill: =RGBA(123, 52, 111, 0.48)
+            Items: |-
+                =["All",
+                  "47 Degrees Colombia S.A.S.",
+                  "47 Degrees Consulting Limited",
+                  "47 Degrees LLC",
+                  "Appcino Technologies Pvt. Ltd.",
+                  "Binx.io B.V.",
+                  "CoMakeIT B.V.",
+                  "coMakeIT India Pvt Ltd",
+                  "coMakeIT UK Pvt Ltd",
+                  "GetIndata Poland sp. zoo",
+                  "Oblivion Cloud Consultancy ApS",
+                  "Oblivion Cloud Control B.V.",
+                  "Oblivion GmbH",
+                  "PGS Software GmbH",
+                  "PGS Software Ltd",
+                  "Qxperts B.V.",
+                  "SwissQ Consulting AG",
+                  "Xccelerated B.V.",
+                  "Xebia Academy B.V.",
+                  "Xebia Academy Europe B.V.",
+                  "Xebia Australia Pty Ltd",
+                  "Xebia België B.V.",
+                  "Xebia Canada Inc.",
+                  "Xebia Cloud Control B.V.",
+                  "Xebia Consultancy Services B.V.",
+                  "Xebia Data Academy B.V.",
+                  "Xebia Data B.V.",
+                  "Xebia Digital Strategy B.V.",
+                  "Xebia Global Services B.V.",
+                  "Xebia Group B.V.",
+                  "Xebia India Holding B.V.",
+                  "Xebia IT Architects India Pvt. Ltd.",
+                  "Xebia Middle East Software Trading L.L.C.",
+                  "Xebia NDS India Private Limited",
+                  "Xebia NDS, Inc",
+                  "Xebia Nederland B.V.",
+                  "Xebia Security B.V.",
+                  "Xebia Singapore Pte. Ltd",
+                  "Xebia Software Development B.V.",
+                  "Xebia Software Technology Spain, S.L.",
+                  "Xebia sp. zoo",
+                  "Xebia Topco B.V.",
+                  "Xebia UK Ltd",
+                  "Xebia USA, Inc.",
+                  "Xebia Vietnam Ltd.",
+                  "Xebia Workplace B.V.",
+                  "XITA B.V.",
+                  "Xpirit Belgium B.V.",
+                  "Xpirit DevOps Services B.V.",
+                  "Xpirit Germany GmbH",
+                  "Xpirit Nederland B.V."
+                ]
+            PressedBorderColor: =RGBA(123, 52, 111, 1)
+            PressedFill: =RGBA(123, 52, 111, 1)
+            SelectionFill: =RGBA(123, 52, 111, 1)
+            Width: =320
+            X: =16
+            Y: =141
+            ZIndex: =7
+
+        Container12 As groupContainer.manualLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =295
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =356
+            X: =983
+            Y: =202
+            ZIndex: =8
+
+            CompositePieChart1 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+                Title1 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(123, 52, 111, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =29
+                    Text: ="User Roles"
+                    Width: =356
+                    Y: =12
+                    ZIndex: =2
+
+                PieChart1 As pieChart:
+                    DisplayMode: =DisplayMode.View
+                    Height: =266
+                    ItemColorSet: |-
+                        =[ColorValue("#6c1d5f"),ColorValue("#a7779f"),ColorValue("#e2d2df")]
+                    Items: |-
+                        =[
+                        {ID:1,count:CountRows(Filter(UserData,userRole="EHR")),label:"EHR"}
+                        ,{ID:2,count:CountRows(Filter(UserData,userRole="SuperUser")),label:"SuperUser"},{ID:3,count:CountRows(Filter(UserData,userRole="ESU")),label:"ESU"}
+                        ]
+                    Width: =356
+                    Y: =29
+                    ZIndex: =3
+
+        Label4 As label:
+            Color: =RGBA(123, 52, 111, 1)
+            Height: =12
+            Size: =9
+            Text: ="**Company "
+            X: =16
+            Y: =183
+            ZIndex: =9
+
+        Label4_1 As label:
+            Color: =RGBA(123, 52, 111, 1)
+            Height: =12
+            Size: =9
+            Text: ="**User Roles"
+            X: =364
+            Y: =183
+            ZIndex: =10
+

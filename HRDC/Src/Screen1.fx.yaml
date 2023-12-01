@@ -1,0 +1,432 @@
+Screen1 As screen:
+
+    HtmlText1 As htmlViewer:
+        DisplayMode: =DisplayMode.View
+        Height: =Parent.Height
+        HtmlText: |-
+            =Concatenate("<div style=' height: ",Max(App.Height, App.MinScreenHeight), "px;
+            background: linear-gradient(to right,  #f0e8ef,#6c1d5f);
+            
+            '
+            ></div>
+            ")
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(247, 247, 248, 1)
+        Height: =Parent.Height*.90
+        Width: =Parent.Width*.90
+        X: =Parent.Width*.05
+        Y: =Parent.Height*.05
+        ZIndex: =2
+
+        Rectangle1 As rectangle:
+            BorderStyle: =BorderStyle.Dashed
+            Fill: =RGBA(123, 52, 111, 1)
+            Height: =Parent.Height
+            Width: =Parent.Width*.40
+            ZIndex: =1
+
+        Container2 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =Parent.Width*.60
+            X: =Rectangle1.Width
+            ZIndex: =2
+
+            Label1 As label:
+                Color: =RGBA(123, 52, 111, 1)
+                FontWeight: =FontWeight.Bold
+                Text: ="User Name"
+                X: =208
+                Y: =134
+                ZIndex: =1
+
+            Label1_1 As label:
+                Color: =RGBA(123, 52, 111, 1)
+                FontWeight: =FontWeight.Bold
+                Text: ="User Role"
+                X: =208
+                Y: =253
+                ZIndex: =2
+
+            Label1_2 As label:
+                Color: =RGBA(123, 52, 111, 1)
+                FontWeight: =FontWeight.Bold
+                Text: ="Company Name "
+                X: =208
+                Y: =374
+                ZIndex: =3
+
+            Label1_3 As label:
+                Align: =Align.Center
+                Color: =RGBA(123, 52, 111, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =86
+                Size: =20
+                Text: ="User Information"
+                Width: =737
+                Y: =15
+                ZIndex: =4
+
+            TextInput1 As text:
+                BorderColor: =RGBA(123, 52, 111, 1)
+                Default: =selecteditem.Name
+                HintText: ="Enter your Name"
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(123, 52, 111, 0.64)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                X: =208
+                Y: =178
+                ZIndex: =5
+
+            Dropdown1_1 As dropdown:
+                BorderColor: =RGBA(123, 52, 111, 1)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =Dropdown1.ChevronFill
+                ChevronHoverBackground: =Dropdown1.ChevronHoverBackground
+                Color: =RGBA(0, 65, 106, 1)
+                Default: =selecteditem.Company
+                HoverBorderColor: =RGBA(0, 65, 106, 1)
+                HoverColor: =Dropdown1.HoverColor
+                HoverFill: =Dropdown1.HoverFill
+                Items: |-
+                    =["Select your Company Name",
+                      "47 Degrees Colombia S.A.S.",
+                      "47 Degrees Consulting Limited",
+                      "47 Degrees LLC",
+                      "Appcino Technologies Pvt. Ltd.",
+                      "Binx.io B.V.",
+                      "CoMakeIT B.V.",
+                      "coMakeIT India Pvt Ltd",
+                      "coMakeIT UK Pvt Ltd",
+                      "GetIndata Poland sp. zoo",
+                      "Oblivion Cloud Consultancy ApS",
+                      "Oblivion Cloud Control B.V.",
+                      "Oblivion GmbH",
+                      "PGS Software GmbH",
+                      "PGS Software Ltd",
+                      "Qxperts B.V.",
+                      "SwissQ Consulting AG",
+                      "Xccelerated B.V.",
+                      "Xebia Academy B.V.",
+                      "Xebia Academy Europe B.V.",
+                      "Xebia Australia Pty Ltd",
+                      "Xebia België B.V.",
+                      "Xebia Canada Inc.",
+                      "Xebia Cloud Control B.V.",
+                      "Xebia Consultancy Services B.V.",
+                      "Xebia Data Academy B.V.",
+                      "Xebia Data B.V.",
+                      "Xebia Digital Strategy B.V.",
+                      "Xebia Global Services B.V.",
+                      "Xebia Group B.V.",
+                      "Xebia India Holding B.V.",
+                      "Xebia IT Architects India Pvt. Ltd.",
+                      "Xebia Middle East Software Trading L.L.C.",
+                      "Xebia NDS India Private Limited",
+                      "Xebia NDS, Inc",
+                      "Xebia Nederland B.V.",
+                      "Xebia Security B.V.",
+                      "Xebia Singapore Pte. Ltd",
+                      "Xebia Software Development B.V.",
+                      "Xebia Software Technology Spain, S.L.",
+                      "Xebia sp. zoo",
+                      "Xebia Topco B.V.",
+                      "Xebia UK Ltd",
+                      "Xebia USA, Inc.",
+                      "Xebia Vietnam Ltd.",
+                      "Xebia Workplace B.V.",
+                      "XITA B.V.",
+                      "Xpirit Belgium B.V.",
+                      "Xpirit DevOps Services B.V.",
+                      "Xpirit Germany GmbH",
+                      "Xpirit Nederland B.V."
+                    ]
+                PressedFill: =Dropdown1.PressedFill
+                SelectionColor: =Color.White
+                SelectionFill: =Dropdown1.SelectionFill
+                Width: =320
+                X: =208
+                Y: =421
+                ZIndex: =6
+
+            Dropdown1 As dropdown:
+                BorderColor: =RGBA(123, 52, 111, 1)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(123, 52, 111, 1)
+                ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
+                Color: =RGBA(0, 65, 106, 1)
+                Default: =selecteditem.userRole
+                HoverBorderColor: =RGBA(123, 52, 111, 0.61)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(123, 52, 111, 1)
+                Items: =["Select your User Role","ESU","EHR","SuperUser"]
+                PressedFill: =RGBA(123, 52, 111, 1)
+                SelectionFill: =RGBA(123, 52, 111, 0.84)
+                Width: =320
+                X: =208
+                Y: =296
+                ZIndex: =8
+
+            Button1 As button:
+                Fill: =RGBA(123, 52, 111, 1)
+                HoverFill: =ColorFade(Self.Fill, 40%)
+                OnSelect: |
+                    =Set(warningname,If(IsBlank(TextInput1),true,false));
+                    Set(warninguserrole,If(Dropdown1.SelectedText.Value = "Select your User Role",true,false));
+                    Set(warningCompany,If( Dropdown1_1.SelectedText.Value = "Select your Company Name",true,false));
+                    
+                    If(
+                        Or(
+                            warningname,warningCompany,warninguserrole
+                        ),
+                        Notify("Please Fill all fields",NotificationType.Error),
+                        If(
+                            IsBlank(selecteditem),
+                            Set(
+                                id,
+                                Last(UserData).ID + 1
+                            );
+                            Collect(
+                                UserData,
+                                {
+                                    ID: id,
+                                    Name: TextInput1.Text,
+                                    Company: Dropdown1_1.SelectedText.Value,
+                                    userRole: Dropdown1.SelectedText.Value
+                                }
+                            ),
+                            Update(
+                                UserData,
+                                LookUp(
+                                    UserData,
+                                    ID = selecteditem.ID
+                                ),
+                                {
+                                    ID: selecteditem.ID,
+                                    Name: TextInput1.Text,
+                                    Company: Dropdown1_1.SelectedText.Value,
+                                    userRole: Dropdown1.SelectedText.Value
+                                }
+                            )
+                        );
+                        Reset(TextInput1);
+                        Back();
+                        Set(warningname,false);
+                    Set(warninguserrole,false);
+                    Set(warningCompany,false);
+                        
+                    );
+                Text: =If(IsBlank(selecteditem),"Create","Save")
+                X: =429
+                Y: =545
+                ZIndex: =9
+
+            Button1_1 As button:
+                Color: =RGBA(123, 52, 111, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(Self.Color, -20%)
+                OnSelect: |-
+                    =Back();
+                    Reset(TextInput1);
+                    Reset(Dropdown1);
+                    Reset(Dropdown1_1);
+                    Set(warningname,false);
+                    Set(warninguserrole,false);
+                    Set(warningCompany,false);
+                Text: ="Cancel"
+                X: =166
+                Y: =545
+                ZIndex: =10
+
+            Icon10 As icon.Trash:
+                Color: =RGBA(252, 114, 114, 1)
+                Height: =40
+                HoverColor: =ColorFade(Self.Color, 60%)
+                Icon: =Icon.Trash
+                OnSelect: |
+                    =
+                    Set(Popup,true);
+                Tooltip: ="Delete User"
+                Visible: =If(IsBlank(selecteditem),false,true)
+                Width: =40
+                X: =669
+                Y: =38
+                ZIndex: =11
+
+            Label9 As label:
+                Color: =RGBA(255, 0, 0, 1)
+                Height: =16
+                Size: =9
+                Text: ="* Required "
+                Visible: =warningname
+                X: =208
+                Y: =227
+                ZIndex: =12
+
+            Label9_1 As label:
+                Color: =RGBA(255, 0, 0, 1)
+                Height: =16
+                Size: =9
+                Text: ="* Required "
+                Visible: =warninguserrole
+                X: =208
+                Y: =344
+                ZIndex: =13
+
+            Label9_2 As label:
+                Color: =RGBA(255, 0, 0, 1)
+                Height: =16
+                Size: =9
+                Text: ="* Required "
+                Visible: =warningCompany
+                X: =208
+                Y: =471
+                ZIndex: =14
+
+        Label3 As label:
+            Align: =Align.Center
+            Color: =RGBA(247, 247, 248, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =156
+            Size: =25
+            Text: ="Welcome Aboard, User Onboarding Information"
+            Width: =369
+            X: =62
+            Y: =78
+            ZIndex: =3
+
+        Circle1 As circle:
+            Fill: =RGBA(247, 247, 248, 1)
+            Height: =80
+            Width: =80
+            X: =194
+            Y: =274
+            ZIndex: =4
+
+        Icon1 As icon.Mail:
+            Color: =RGBA(123, 52, 111, 1)
+            DisplayMode: =DisplayMode.View
+            Height: =45
+            Icon: =Icon.Mail
+            Width: =52
+            X: =208
+            Y: =291
+            ZIndex: =5
+
+        Icon4 As icon.More:
+            Color: =RGBA(247, 247, 248, 1)
+            DisplayMode: =DisplayMode.View
+            Icon: =Icon.More
+            Rotation: =90
+            X: =202
+            Y: =387
+            ZIndex: =6
+
+        Circle1_1 As circle:
+            Fill: =RGBA(247, 247, 248, 1)
+            Height: =80
+            Width: =80
+            X: =194
+            Y: =487
+            ZIndex: =7
+
+        Icon5 As icon.CheckBadge:
+            Color: =RGBA(123, 52, 111, 1)
+            DisplayMode: =DisplayMode.View
+            Icon: =Icon.CheckBadge
+            X: =202
+            Y: =495
+            ZIndex: =8
+
+    Container10 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(227, 227, 227, 0.87)
+        Height: =768
+        Visible: =Popup
+        Width: =1366
+        ZIndex: =3
+
+        Container11 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =390
+            X: =422
+            Y: =166
+            ZIndex: =1
+
+            Label7 As label:
+                Color: =RGBA(123, 52, 111, 1)
+                Height: =50
+                Text: |-
+                    ="User Name  : "& selecteditem.Name
+                Width: =442
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+            Label7_1 As label:
+                Color: =RGBA(123, 52, 111, 1)
+                Height: =50
+                Text: |-
+                    ="Company Name  : "& selecteditem.Company
+                Width: =417
+                X: =40
+                Y: =110
+                ZIndex: =3
+
+            Label7_2 As label:
+                Color: =RGBA(123, 52, 111, 1)
+                Height: =50
+                Text: |-
+                    ="User Role  : "&selecteditem.userRole
+                Width: =427
+                X: =40
+                Y: =180
+                ZIndex: =4
+
+            Label8 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 0, 0, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =42
+                Size: =12
+                Text: ="Sure you want to delete the User ?"
+                Width: =500
+                Y: =250
+                ZIndex: =5
+
+            Button3 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                HoverColor: =RGBA(255, 0, 0, 1)
+                HoverFill: =RGBA(255,255,255,1)
+                OnSelect: |-
+                    =Remove(UserData,LookUp(UserData,ID=selecteditem.ID));
+                    Set(Popup,false);
+                    Back();
+                Text: ="Delete"
+                X: =307
+                Y: =315
+                ZIndex: =6
+
+            Button3_1 As button:
+                Color: =RGBA(123, 52, 111, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(Self.Color, -20%)
+                OnSelect: |
+                    =Set(Popup,false)
+                Text: ="Cancel"
+                X: =67
+                Y: =315
+                ZIndex: =7
+

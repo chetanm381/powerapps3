@@ -1,0 +1,71 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |-
+        =Set(array,[
+          "47 Degrees Colombia S.A.S.",
+          "47 Degrees Consulting Limited",
+          "47 Degrees LLC",
+          "Appcino Technologies Pvt. Ltd.",
+          "Binx.io B.V.",
+          "CoMakeIT B.V.",
+          "coMakeIT India Pvt Ltd",
+          "coMakeIT UK Pvt Ltd",
+          "GetIndata Poland sp. zoo",
+          "Oblivion Cloud Consultancy ApS",
+          "Oblivion Cloud Control B.V.",
+          "Oblivion GmbH",
+          "PGS Software GmbH",
+          "PGS Software Ltd",
+          "Qxperts B.V.",
+          "SwissQ Consulting AG",
+          "Xccelerated B.V.",
+          "Xebia Academy B.V.",
+          "Xebia Academy Europe B.V.",
+          "Xebia Australia Pty Ltd",
+          "Xebia België B.V.",
+          "Xebia Canada Inc.",
+          "Xebia Cloud Control B.V.",
+          "Xebia Consultancy Services B.V.",
+          "Xebia Data Academy B.V.",
+          "Xebia Data B.V.",
+          "Xebia Digital Strategy B.V.",
+          "Xebia Global Services B.V.",
+          "Xebia Group B.V.",
+          "Xebia India Holding B.V.",
+          "Xebia IT Architects India Pvt. Ltd.",
+          "Xebia Middle East Software Trading L.L.C.",
+          "Xebia NDS India Private Limited",
+          "Xebia NDS, Inc",
+          "Xebia Nederland B.V.",
+          "Xebia Security B.V.",
+          "Xebia Singapore Pte. Ltd",
+          "Xebia Software Development B.V.",
+          "Xebia Software Technology Spain, S.L.",
+          "Xebia sp. zoo",
+          "Xebia Topco B.V.",
+          "Xebia UK Ltd",
+          "Xebia USA, Inc.",
+          "Xebia Vietnam Ltd.",
+          "Xebia Workplace B.V.",
+          "XITA B.V.",
+          "Xpirit Belgium B.V.",
+          "Xpirit DevOps Services B.V.",
+          "Xpirit Germany GmbH",
+          "Xpirit Nederland B.V."
+        ]);
+        Collect(UserData,{
+        ID:1,Name:"Chetan.Meena@xebia.com",Company:"Appcino Technologies Pvt. Ltd.",userRole:"SuperUser"
+        
+        
+        });
+        Set(Popup,false);
+    StartScreen: =Screen2
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+
