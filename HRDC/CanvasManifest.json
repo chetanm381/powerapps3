@@ -111,11 +111,11 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "dbf95eaf-2acc-4f73-a99b-c875a013803c",
-    "Id": "1c48164b-2b24-434c-8440-1fc5e61462d9",
+    "Id": "c2f4cc57-0fe7-4bde-bb38-1811f0da5305",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "HRDC",
+    "Name": "HRDC.msapp",
     "OriginatingVersion": "1.335",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
