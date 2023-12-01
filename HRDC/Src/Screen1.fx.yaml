@@ -55,7 +55,7 @@ Screen1 As screen:
                 FontWeight: =FontWeight.Bold
                 Text: ="User Role"
                 X: =38
-                Y: =320
+                Y: =332
                 ZIndex: =2
 
             Label1_2 As label:
@@ -63,7 +63,7 @@ Screen1 As screen:
                 FontWeight: =FontWeight.Bold
                 Text: ="Entity "
                 X: =404
-                Y: =320
+                Y: =332
                 ZIndex: =3
 
             Label1_3 As label:
@@ -209,11 +209,20 @@ Screen1 As screen:
                             false
                         )
                     );
+                    Set(
+                        warningEmpID,
+                        If(
+                            IsBlank(TextInput1_1),
+                            true,
+                            false
+                        )
+                    );
                     If(
                         Or(
                             warningname,
                             warningCompany,
-                            warninguserrole
+                            warninguserrole,
+                            warningEmpID
                         ),
                         Notify(
                             "Please Fill all fields",
@@ -264,6 +273,10 @@ Screen1 As screen:
                         );
                         Set(
                             warningCompany,
+                            false
+                        );
+                        Set(
+                            warningEmpID,
                             false
                         );
                         
@@ -354,6 +367,16 @@ Screen1 As screen:
                 X: =501
                 Y: =513
                 ZIndex: =17
+
+            Label9_3 As label:
+                Color: =RGBA(255, 0, 0, 1)
+                Height: =16
+                Size: =9
+                Text: ="* Required "
+                Visible: =warningname
+                X: =38
+                Y: =309
+                ZIndex: =18
 
         Label3 As label:
             Align: =Align.Center
