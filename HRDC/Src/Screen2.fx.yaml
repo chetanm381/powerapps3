@@ -63,10 +63,10 @@ Screen2 As screen:
 
         Container6 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =502
+            Height: =516
             Width: =1059
             X: =280
-            Y: =247
+            Y: =233
             ZIndex: =3
 
             Gallery1 As gallery.galleryVertical:
@@ -86,7 +86,7 @@ Screen2 As screen:
                             ),
                             Filter(
                                 UserData,
-                                Company = Dropdown2_1.SelectedText.Value
+                                Entity = Dropdown2_1.SelectedText.Value
                             ),
                             If(
                                 And(
@@ -94,7 +94,7 @@ Screen2 As screen:
                                     Dropdown2_1.SelectedText.Value = "All"
                                 ),
                                 Filter(UserData,userRole=Dropdown2.SelectedText.Value),
-                                Filter(UserData,userRole=Dropdown2.SelectedText.Value And Company=Dropdown2_1.SelectedText.Value)
+                                Filter(UserData,userRole=Dropdown2.SelectedText.Value And Entity=Dropdown2_1.SelectedText.Value)
                             )
                         )
                     )
@@ -175,7 +175,7 @@ Screen2 As screen:
             Height: =49
             Width: =1059
             X: =280
-            Y: =198
+            Y: =184
             ZIndex: =5
 
             Label6 As label:
@@ -215,7 +215,7 @@ Screen2 As screen:
                 Height: =49
                 Text: ="EmpId"
                 Width: =164
-                X: =313
+                X: =300
                 ZIndex: =4
 
         Dropdown2 As dropdown:
@@ -326,11 +326,25 @@ Screen2 As screen:
             Y: =270
             ZIndex: =11
 
-            Label12 As label:
-                Text: ="Text"
+            Label12_3 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Size: =18
+                Text: ="SuperUser"
+                X: =28
+                Y: =4
+                ZIndex: =1
+
+            Label11_1 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =56
+                Size: =20
+                Text: =If(Dropdown2_1.SelectedText.Value ="All",CountRows(Filter(UserData,userRole="SuperUser")),CountRows(Filter(UserData,Entity =Dropdown2_1.SelectedText.Value And userRole="SuperUser")))
+                Width: =123
                 X: =40
                 Y: =40
-                ZIndex: =1
+                ZIndex: =2
 
         Container3_2 As groupContainer.manualLayoutContainer:
             Height: =120
@@ -340,10 +354,24 @@ Screen2 As screen:
             ZIndex: =12
 
             Label12_1 As label:
-                Text: ="Text"
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Size: =18
+                Text: ="ESU"
                 X: =28
                 Y: =4
                 ZIndex: =1
+
+            Label11_2 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =56
+                Size: =20
+                Text: =If(Dropdown2_1.SelectedText.Value ="All",CountRows(Filter(UserData,userRole="ESU")),CountRows(Filter(UserData,Entity =Dropdown2_1.SelectedText.Value And userRole="ESU")))
+                Width: =123
+                X: =40
+                Y: =40
+                ZIndex: =2
 
         Container3_3 As groupContainer.manualLayoutContainer:
             Height: =120
@@ -353,10 +381,24 @@ Screen2 As screen:
             ZIndex: =13
 
             Label12_2 As label:
-                Text: ="Text"
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Size: =18
+                Text: ="EHR"
                 X: =28
-                Y: =8
+                Y: =4
                 ZIndex: =1
+
+            Label11_3 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =56
+                Size: =20
+                Text: =If(Dropdown2_1.SelectedText.Value ="All",CountRows(Filter(UserData,userRole="EHR")),CountRows(Filter(UserData,Entity =Dropdown2_1.SelectedText.Value And userRole="EHR")))
+                Width: =123
+                X: =40
+                Y: =40
+                ZIndex: =2
 
     Container3 As groupContainer.manualLayoutContainer:
         Height: =120
@@ -364,4 +406,24 @@ Screen2 As screen:
         X: =25
         Y: =115
         ZIndex: =2
+
+        Label12_4 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Size: =18
+            Text: ="Total User"
+            X: =28
+            Y: =4
+            ZIndex: =1
+
+        Label11 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Height: =56
+            Size: =20
+            Text: =If(Dropdown2_1.SelectedText.Value ="All",CountRows(UserData),CountRows(Filter(UserData,Entity =Dropdown2_1.SelectedText.Value)))
+            Width: =123
+            X: =41
+            Y: =44
+            ZIndex: =2
 
