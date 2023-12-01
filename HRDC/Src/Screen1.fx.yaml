@@ -185,15 +185,40 @@ Screen1 As screen:
                 Fill: =RGBA(123, 52, 111, 1)
                 HoverFill: =ColorFade(Self.Fill, 40%)
                 OnSelect: |
-                    =Set(warningname,If(IsBlank(TextInput1),true,false));
-                    Set(warninguserrole,If(Dropdown1.SelectedText.Value = "Select your User Role",true,false));
-                    Set(warningCompany,If( Dropdown1_1.SelectedText.Value = "Select your Company Name",true,false));
-                    
+                    =Set(
+                        warningname,
+                        If(
+                            IsBlank(TextInput1),
+                            true,
+                            false
+                        )
+                    );
+                    Set(
+                        warninguserrole,
+                        If(
+                            Dropdown1.SelectedText.Value = "Select your User Role",
+                            true,
+                            false
+                        )
+                    );
+                    Set(
+                        warningCompany,
+                        If(
+                            Dropdown1_1.SelectedText.Value = "Select your Company Name",
+                            true,
+                            false
+                        )
+                    );
                     If(
                         Or(
-                            warningname,warningCompany,warninguserrole
+                            warningname,
+                            warningCompany,
+                            warninguserrole
                         ),
-                        Notify("Please Fill all fields",NotificationType.Error),
+                        Notify(
+                            "Please Fill all fields",
+                            NotificationType.Error
+                        ),
                         If(
                             IsBlank(selecteditem),
                             Set(
@@ -218,16 +243,29 @@ Screen1 As screen:
                                 {
                                     ID: selecteditem.ID,
                                     Name: TextInput1.Text,
-                                    Company: Dropdown1_1.SelectedText.Value,
+                                    Company: If(
+                                        Dropdown1_1.SelectedText.Value = "SuperUser",
+                                        "-",
+                                        Dropdown1_1.SelectedText.Value
+                                    ),
                                     userRole: Dropdown1.SelectedText.Value
                                 }
                             )
                         );
                         Reset(TextInput1);
                         Back();
-                        Set(warningname,false);
-                    Set(warninguserrole,false);
-                    Set(warningCompany,false);
+                        Set(
+                            warningname,
+                            false
+                        );
+                        Set(
+                            warninguserrole,
+                            false
+                        );
+                        Set(
+                            warningCompany,
+                            false
+                        );
                         
                     );
                 Text: =If(IsBlank(selecteditem),"Create","Save")
@@ -260,8 +298,8 @@ Screen1 As screen:
                 Size: =9
                 Text: ="* Required "
                 Visible: =warningname
-                X: =208
-                Y: =227
+                X: =404
+                Y: =309
                 ZIndex: =12
 
             Label9_1 As label:
@@ -270,8 +308,8 @@ Screen1 As screen:
                 Size: =9
                 Text: ="* Required "
                 Visible: =warninguserrole
-                X: =208
-                Y: =344
+                X: =38
+                Y: =428
                 ZIndex: =13
 
             Label9_2 As label:
@@ -279,9 +317,9 @@ Screen1 As screen:
                 Height: =16
                 Size: =9
                 Text: ="* Required "
-                Visible: =warningCompany
-                X: =208
-                Y: =471
+                Visible: =If(Dropdown1.SelectedText.Value="SuperUser",false,warningCompany)
+                X: =404
+                Y: =428
                 ZIndex: =14
 
             Label1_4 As label:
