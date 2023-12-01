@@ -84,7 +84,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/01/2023 12:31:39",
+  "HeaderLastSavedDateTimeUTC": "12/01/2023 12:32:57",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -93,8 +93,8 @@
     "xebia-logos-idFARe1nYa": "0002.png"
   },
   "LocalResourceRootPaths": {
-    "idRjl8hQmG-fotor-bg-remover-20231130175755": "https://docserverpwaprodneu.blob.core.windows.net/eaa2d504-9961-49e4-b180-318758ec3372-1/resource/Assets0Images00001.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-01T12%3A31%3A05Z&ske=2023-12-02T12%3A46%3A05Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-12-02T12%3A46%3A05Z&sr=b&sp=r&sig=wlE0yaJEB8%2BnQO1t0bZBtwEsVZqusj8mxgkYaUPcpjo%3D",
-    "xebia-logos-idFARe1nYa": "https://docserverpwaprodneu.blob.core.windows.net/eaa2d504-9961-49e4-b180-318758ec3372-1/resource/Assets0Images00002.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-01T12%3A31%3A05Z&ske=2023-12-02T12%3A46%3A05Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-12-02T12%3A46%3A05Z&sr=b&sp=r&sig=KtRdEBmXDmzreGwple0u76wDCHYWiqfPqNZxMq5EFlE%3D"
+    "idRjl8hQmG-fotor-bg-remover-20231130175755": "https://docserverpwaprodneu.blob.core.windows.net/ff9470b9-5222-4582-897e-47462450bab6-1/resource/Assets0Images00001.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-01T12%3A32%3A26Z&ske=2023-12-02T12%3A47%3A26Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-12-02T12%3A47%3A26Z&sr=b&sp=r&sig=asV%2BgCmnqHtvh%2BQZKGYgoEAnXnUkVM4dN%2BVANLZi3Es%3D",
+    "xebia-logos-idFARe1nYa": "https://docserverpwaprodneu.blob.core.windows.net/ff9470b9-5222-4582-897e-47462450bab6-1/resource/Assets0Images00002.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-01T12%3A32%3A26Z&ske=2023-12-02T12%3A47%3A26Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-12-02T12%3A47%3A26Z&sr=b&sp=r&sig=Ktoa%2BFloGmUnbpg%2FKPlqbJgsw5u2Ocpn2if4R%2FPBL1g%3D"
   },
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
@@ -296,7 +296,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.5089116,
+    "AnalysisLoadTime": 0.3769701,
     "ControlCount": {
       "button": 6,
       "circle": 2,
@@ -312,7 +312,7 @@
       "screen": 2,
       "text": 5
     },
-    "DeserializationLoadTime": 1.4361143
+    "DeserializationLoadTime": 1.1005482
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

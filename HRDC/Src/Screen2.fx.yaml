@@ -17,7 +17,7 @@ Screen2 As screen:
             HtmlText2 As htmlViewer:
                 Height: =Parent.Height
                 HtmlText: |-
-                    =Concatenate("<div style=' height:",HtmlText2.Height-1,"px;
+                    =Concatenate("<div style=' height:",HtmlText2.Height,"px;
                     background: linear-gradient(to right,#56174c,#6c1d5f);
                     
                     '
