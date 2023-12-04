@@ -536,8 +536,9 @@ Screen1 As screen:
 
             TextInput2_1 As text:
                 Color: =RGBA(123, 52, 111, 1)
-                Default: =If(IsBlank(selecteditem.Entity),"-",selecteditem.Entity)
+                Default: =If(selecteditem.Entity="Select Your Entity","No Entity Provided",selecteditem.Entity)
                 DisplayMode: =DisplayMode.View
+                FontWeight: =If(selecteditem.Entity="Select Your Entity",FontWeight.Lighter,FontWeight.Normal)
                 Height: =54
                 Width: =272
                 X: =217

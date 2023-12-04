@@ -119,10 +119,11 @@ Screen2 As screen:
                     ZIndex: =1
 
                 Label5_1 As label:
+                    FontWeight: =If(ThisItem.Entity="Select Your Entity",FontWeight.Lighter,FontWeight.Normal)
                     Height: =59
                     OnSelect: =Select(Parent)
                     Size: =11
-                    Text: =If(ThisItem.Entity="Select Your Entity","-",ThisItem.Entity)
+                    Text: =If(ThisItem.Entity="Select Your Entity","No Entity Provided",ThisItem.Entity)
                     Width: =308
                     X: =536
                     ZIndex: =2
