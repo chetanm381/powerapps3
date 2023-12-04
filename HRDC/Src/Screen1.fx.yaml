@@ -204,7 +204,7 @@ Screen1 As screen:
                     Set(
                         warningCompany,
                         If(
-                            And(Dropdown1_1.SelectedText.Value = "Select your Company Name",Dropdown1.SelectedText.Value<>"SuperUser"),
+                            And(Dropdown1_1.SelectedText.Value = "Select Your Entity",Dropdown1.SelectedText.Value<>"SuperUser"),
                             true,
                             false
                         )
