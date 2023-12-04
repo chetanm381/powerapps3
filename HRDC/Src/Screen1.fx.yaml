@@ -103,7 +103,7 @@ Screen1 As screen:
                 HoverColor: =Dropdown1.HoverColor
                 HoverFill: =Dropdown1.HoverFill
                 Items: |-
-                    =["Select your Company Name",
+                    =["Select Your Entity",
                       "47 Degrees Colombia S.A.S.",
                       "47 Degrees Consulting Limited",
                       "47 Degrees LLC",
