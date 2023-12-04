@@ -122,7 +122,7 @@ Screen2 As screen:
                     Height: =59
                     OnSelect: =Select(Parent)
                     Size: =11
-                    Text: =ThisItem.Entity
+                    Text: =If(IsBlank(ThisItem.Entity),"-",ThisItem.Entity)
                     Width: =308
                     X: =536
                     ZIndex: =2

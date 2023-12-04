@@ -97,7 +97,7 @@ Screen1 As screen:
                 ChevronFill: =Dropdown1.ChevronFill
                 ChevronHoverBackground: =Dropdown1.ChevronHoverBackground
                 Color: =RGBA(0, 65, 106, 1)
-                Default: =selecteditem.Company
+                Default: =selecteditem.Entity
                 DisplayMode: =If(Dropdown1.SelectedText.Value="SuperUser",DisplayMode.Disabled,DisplayMode.Edit)
                 HoverBorderColor: =RGBA(0, 65, 106, 1)
                 HoverColor: =Dropdown1.HoverColor
@@ -204,7 +204,7 @@ Screen1 As screen:
                     Set(
                         warningCompany,
                         If(
-                            Dropdown1_1.SelectedText.Value = "Select your Company Name",
+                            And(Dropdown1_1.SelectedText.Value = "Select your Company Name",Dropdown1.SelectedText.Value<>"SuperUser"),
                             true,
                             false
                         )
@@ -536,7 +536,7 @@ Screen1 As screen:
 
             TextInput2_1 As text:
                 Color: =RGBA(123, 52, 111, 1)
-                Default: =selecteditem.Company
+                Default: =If(IsBlank(selecteditem.Entity),"-",selecteditem.Entity)
                 DisplayMode: =DisplayMode.View
                 Height: =54
                 Width: =272
