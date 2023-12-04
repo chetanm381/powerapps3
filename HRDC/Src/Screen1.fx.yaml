@@ -239,7 +239,8 @@ Screen1 As screen:
                                 {
                                     ID: id,
                                     Name: TextInput1.Text,
-                                    Company: Dropdown1_1.SelectedText.Value,
+                                    EmpId:TextInput1_1.Text,
+                                    Entity: Dropdown1_1.SelectedText.Value,
                                     userRole: Dropdown1.SelectedText.Value
                                 }
                             ),
@@ -251,8 +252,8 @@ Screen1 As screen:
                                 ),
                                 {
                                     ID: selecteditem.ID,
-                                    Name: TextInput1.Text,
-                                    Company: If(
+                                    Name: TextInput1.Text,EmpId:TextInput1_1.Text,
+                                    Entity: If(
                                         Dropdown1_1.SelectedText.Value = "SuperUser",
                                         "-",
                                         Dropdown1_1.SelectedText.Value
@@ -363,6 +364,7 @@ Screen1 As screen:
                 HoverFill: =RGBA(255, 255, 255, 1)
                 OnSelect: =Set(Popup,true);
                 Text: ="Delete"
+                Visible: =If(IsBlank(selecteditem),false,true)
                 Width: =100
                 X: =501
                 Y: =513

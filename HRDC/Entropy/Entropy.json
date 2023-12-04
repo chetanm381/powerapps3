@@ -84,7 +84,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/04/2023 06:41:43",
+  "HeaderLastSavedDateTimeUTC": "12/04/2023 06:56:24",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -93,8 +93,8 @@
     "xebia-logos-idFARe1nYa": "0002.png"
   },
   "LocalResourceRootPaths": {
-    "idRjl8hQmG-fotor-bg-remover-20231130175755": "https://docserverpwaprodneu.blob.core.windows.net/5f19c273-ce7f-4a18-8b92-990b50aa0d48-1/resource/Assets0Images00001.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-04T06%3A39%3A33Z&ske=2023-12-05T06%3A54%3A33Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-12-05T06%3A54%3A33Z&sr=b&sp=r&sig=%2FWExrU0kke1SIdt6l%2F50J6%2Beq3UMcDEVKE30dSauAvc%3D",
-    "xebia-logos-idFARe1nYa": "https://docserverpwaprodneu.blob.core.windows.net/5f19c273-ce7f-4a18-8b92-990b50aa0d48-1/resource/Assets0Images00002.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-04T06%3A39%3A33Z&ske=2023-12-05T06%3A54%3A33Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-12-05T06%3A54%3A33Z&sr=b&sp=r&sig=Ppf6X%2FMggmK3Fa1r5Jj50VpG%2FEpZPCaCIAvaCdHjGBw%3D"
+    "idRjl8hQmG-fotor-bg-remover-20231130175755": "https://docserverpwaprodneu.blob.core.windows.net/5c554cfe-34f7-41c4-8366-1e38e1306157-1/resource/Assets0Images00001.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-04T06%3A45%3A41Z&ske=2023-12-05T07%3A00%3A41Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-12-05T07%3A00%3A41Z&sr=b&sp=r&sig=Jwav2bbx%2ByrFoEdxemjo73dB75xEjwNMlqmdjl0az3Y%3D",
+    "xebia-logos-idFARe1nYa": "https://docserverpwaprodneu.blob.core.windows.net/5c554cfe-34f7-41c4-8366-1e38e1306157-1/resource/Assets0Images00002.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-04T06%3A45%3A41Z&ske=2023-12-05T07%3A00%3A41Z&sks=b&skv=2021-12-02&sv=2021-12-02&spr=https&se=2023-12-05T07%3A00%3A41Z&sr=b&sp=r&sig=QJEahB8j9o2iW8s6gP%2FfBuDpqZv9mACOoY9f9HN6RqM%3D"
   },
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
@@ -296,7 +296,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.3767501,
+    "AnalysisLoadTime": 0.4401121,
     "ControlCount": {
       "button": 6,
       "circle": 2,
@@ -312,7 +312,7 @@
       "screen": 2,
       "text": 5
     },
-    "DeserializationLoadTime": 1.6019598
+    "DeserializationLoadTime": 1.216877
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

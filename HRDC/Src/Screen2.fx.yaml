@@ -112,6 +112,7 @@ Screen2 As screen:
                 Label5 As label:
                     Height: =59
                     OnSelect: =Select(Parent)
+                    Size: =11
                     Text: =ThisItem.Name
                     Width: =257
                     X: =31
@@ -120,6 +121,7 @@ Screen2 As screen:
                 Label5_1 As label:
                     Height: =59
                     OnSelect: =Select(Parent)
+                    Size: =11
                     Text: =ThisItem.Entity
                     Width: =308
                     X: =536
@@ -129,6 +131,7 @@ Screen2 As screen:
                     Align: =Align.Center
                     Height: =59
                     OnSelect: =Select(Parent)
+                    Size: =11
                     Text: =ThisItem.userRole
                     Width: =118
                     X: =855
@@ -155,6 +158,7 @@ Screen2 As screen:
                 Label5_3 As label:
                     Height: =57
                     OnSelect: =Select(Parent)
+                    Size: =11
                     Text: =ThisItem.EmpId
                     Width: =176
                     X: =315
