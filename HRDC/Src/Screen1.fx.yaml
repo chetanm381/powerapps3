@@ -301,7 +301,7 @@ Screen1 As screen:
                     Set(warningCompany,false);
                 Text: ="Cancel"
                 Width: =100
-                X: =16
+                X: =38
                 Y: =513
                 ZIndex: =10
 

@@ -51,14 +51,16 @@ Screen2 As screen:
                 ZIndex: =3
 
             Label2 As label:
+                Align: =Align.Right
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =42
-                Size: =15
+                PaddingLeft: =0
+                PaddingRight: =20
                 Text: =User().FullName
-                Width: =178
-                X: =1085
-                Y: =16
+                Width: =465
+                X: =798
+                Y: =14
                 ZIndex: =4
 
         Container6 As groupContainer.manualLayoutContainer:
@@ -338,7 +340,7 @@ Screen2 As screen:
                 FontWeight: =FontWeight.Bold
                 Size: =18
                 Text: ="SuperUser"
-                X: =26
+                Width: =205
                 Y: =15
                 ZIndex: =1
 
@@ -440,7 +442,7 @@ Screen2 As screen:
             FontWeight: =FontWeight.Bold
             Size: =18
             Text: ="Total User"
-            X: =27
+            Width: =205
             Y: =15
             ZIndex: =1
 
