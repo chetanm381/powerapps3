@@ -359,14 +359,16 @@ Screen1 As screen:
                 ZIndex: =16
 
             Button1_2 As button:
-                Fill: =RGBA(191, 15, 15, 1)
+                Color: =RGBA(191, 15, 15, 1)
+                Fill: =RGBA(255, 255, 255, 1)
                 HoverColor: =RGBA(191, 15, 15, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 OnSelect: =Set(Popup,true);
-                Text: ="Delete"
+                Size: =14
+                Text: ="Deactivate"
                 Visible: =If(IsBlank(selecteditem),false,true)
-                Width: =100
-                X: =501
+                Width: =125
+                X: =482
                 Y: =513
                 ZIndex: =17
 
@@ -505,9 +507,9 @@ Screen1 As screen:
                     =Remove(UserData,LookUp(UserData,ID=selecteditem.ID));
                     Set(Popup,false);
                     Back();
-                Text: ="Delete"
-                Width: =100
-                X: =373
+                Text: ="Deactivate"
+                Width: =133
+                X: =338
                 Y: =298
                 ZIndex: =6
 
