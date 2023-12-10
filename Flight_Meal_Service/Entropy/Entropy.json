@@ -11,13 +11,12 @@
     "Host": 3,
     "MainSectionContainer1": 13,
     "Offline sync Icon1": 12,
-    "Screen1": 4,
     "Screen2": 8,
     "ScreenContainer1": 9
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/10/2023 15:22:41",
+  "HeaderLastSavedDateTimeUTC": "12/10/2023 17:44:49",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -44,7 +43,6 @@
     "Host": {},
     "MainSectionContainer1": {},
     "Offline sync Icon1": {},
-    "Screen1": {},
     "Screen2": {},
     "ScreenContainer1": {}
   },
@@ -60,7 +58,6 @@
     "Host": 0,
     "MainSectionContainer1": 0,
     "Offline sync Icon1": 0,
-    "Screen1": 0,
     "Screen2": 0,
     "ScreenContainer1": 0
   },
@@ -68,12 +65,14 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0521751,
+    "AnalysisLoadTime": 0.0832619,
     "ControlCount": {
-      "groupContainer": 2,
-      "screen": 2
+      "groupContainer": 5,
+      "icon": 1,
+      "label": 1,
+      "screen": 3
     },
-    "DeserializationLoadTime": 0.5629803
+    "DeserializationLoadTime": 0.4976834
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
