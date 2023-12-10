@@ -1,0 +1,13 @@
+DetailedScreen As screen:
+
+    DS_BackgroundContainer As groupContainer.manualLayoutContainer:
+        Fill: =colors.backgroundcolor
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =1
+
+        DS_Navbar As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height*.08
+            Width: =640
+            ZIndex: =1
+

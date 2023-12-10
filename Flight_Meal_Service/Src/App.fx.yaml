@@ -1,5 +1,11 @@
 App As appinfo:
     BackEnabled: =true
+    OnStart: |-
+        =Set(
+            colors,{
+                backgroundcolor:ColorValue("#F0F8FF")
+            }
+        )
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
