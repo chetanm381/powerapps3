@@ -6,6 +6,7 @@ App As appinfo:
                 backgroundcolor:ColorValue("#F0F8FF")
             }
         )
+    StartScreen: =DetailedScreen
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
