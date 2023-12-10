@@ -36,7 +36,7 @@
       "enablecomponentnamemaps": false,
       "enablecomponentscopeoldbehavior": false,
       "enablecopilotcontrol": true,
-      "enabledataverseoffline": false,
+      "enabledataverseoffline": true,
       "enableeditcacherefreshfrequency": false,
       "enableexcelonlinebusinessv2connector": true,
       "enableexperimentaldataverseoffline": true,
@@ -132,6 +132,7 @@
   },
   "ScreenOrder": [
     "Screen1",
-    "DetailedScreen"
+    "DetailedScreen",
+    "Screen2"
   ]
 }
