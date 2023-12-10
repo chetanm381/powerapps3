@@ -7,7 +7,7 @@ DetailedScreen As screen:
         ZIndex: =1
 
         DS_Navbar As groupContainer.manualLayoutContainer:
-            Height: =Parent.Height*.08
+            Height: =Parent.Height*.07
             Width: =640
             ZIndex: =1
 
