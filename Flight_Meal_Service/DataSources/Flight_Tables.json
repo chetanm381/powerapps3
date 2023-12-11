@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr319_flight_tables",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr319_flight_table",
+    "Name": "Flight_Tables",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr319_departure_date": "Departure_Date",
+      "cr319_departure_time": "Departure_Time",
+      "cr319_flight_id": "Flight_Id",
+      "cr319_flight_number": "Flight_Number",
+      "cr319_flight_table_AsyncOperations": "System Jobs",
+      "cr319_flight_table_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr319_flight_table_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr319_flight_table_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr319_flight_table_ProcessSession": "Process Sessions",
+      "cr319_flight_table_SyncErrors": "Sync Errors",
+      "cr319_flight_tableid": "Flight_Table",
+      "cr319_from": "From",
+      "cr319_to": "To",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Flight_Tables",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Flight_Tables (Views)",
+    "Name": "_cr319_flight_table_views",
+    "RelatedEntityName": "Flight_Tables",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1436d34b-a752-46b3-8f65-682ea7aecc2f": "Active Flight_Tables",
+      "3f837aca-58f5-41a8-bccc-bde4c466ad82": "Flight_Table Advanced Find View",
+      "bc582e4d-ce57-4d76-8601-66e9dc931ccd": "Inactive Flight_Tables",
+      "cf78e460-1895-4657-975c-9123c3214afc": "Flight_Table Lookup View",
+      "de775a22-66b3-4349-8777-951f16578e20": "Flight_Table Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Flight_Tables)",
+    "Name": "cr319_flight_table_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Flight_Tables"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Flight_Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Flight_Tables)",
+    "Name": "cr319_flight_table_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Flight_Tables"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Flight_Tables",
+    "Type": "OptionSetInfo"
+  }
+]
