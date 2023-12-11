@@ -57,7 +57,8 @@ App As appinfo:
             Collect(
                 updatedCrew,
                 ForAll(FMS_Crew_Members,ThisRecord)
-            )
+            );
+            Clear(crew);
         );
         Set(
             colors,

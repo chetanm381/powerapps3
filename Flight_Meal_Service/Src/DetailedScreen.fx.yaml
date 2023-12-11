@@ -49,10 +49,10 @@ DetailedScreen As screen:
 
         Gallery1 As gallery.galleryVertical:
             DelayItemLoading: =true
-            Items: =crew
+            Items: =updatedCrew
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+            TemplateSize: =140
             Y: =444
             ZIndex: =3
 
@@ -76,7 +76,7 @@ DetailedScreen As screen:
         Size: =24
         Text: ="Button"
         Width: =280
-        X: =140
-        Y: =734
+        X: =86
+        Y: =1040
         ZIndex: =2
 
