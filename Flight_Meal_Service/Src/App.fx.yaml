@@ -3,15 +3,18 @@ App As appinfo:
     OnStart: |-
         =ClearCollect(
             flights,
-           [ {
-                from: "Delhi",
-                to: "Chennai",
-                Date: "20/12/2023"
-            },{
-                from: "Delhi",
-                to: "Chennai",
-                Date: "20/12/2023"
-            }]
+            [
+                {
+                    from: "Delhi",
+                    to: "Chennai",
+                    Date: "20/12/2023"
+                },
+                {
+                    from: "Delhi",
+                    to: "Chennai",
+                    Date: "20/12/2023"
+                }
+            ]
         );
         Set(
             colors,
