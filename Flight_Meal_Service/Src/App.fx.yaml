@@ -16,6 +16,34 @@ App As appinfo:
                 }
             ]
         );
+        
+        ClearCollect(
+            Details,
+            [
+                {
+                    CrewMember: "Chetan",
+                    Number: "#01234",
+                    from: "Delhi",
+                    to: "Chennai",
+                    Date: "20/12/2023",
+                    DepartureTime: "4:00 PM",
+                    ArrivalTime: "7:00 PM"
+        
+                },
+                {
+                    CrewMember: "Gourav",
+                    Number: "#01234",
+                    from: "Delhi",
+                    to: "Chennai",
+                    Date: "20/12/2023",
+                    DepartureTime: "4:00 PM",
+                    ArrivalTime: "7:00 PM"
+                }
+            ]
+        );
+        
+        
+        
         Set(
             colors,
             {backgroundcolor: ColorValue("#F1F4F9")}
