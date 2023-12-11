@@ -13,7 +13,7 @@
         MainSectionContainer2 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.None
-            Fill: =RGBA(6, 102, 242, 1)
+            Fill: =RGBA(193, 213, 245, 1)
             Height: =225
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =20
@@ -78,7 +78,7 @@
         BorderStyle: =BorderStyle.None
         Color: =RGBA(255, 255, 255, 1)
         Default: |-
-            ="#0123"
+            ="#PN123"
         Fill: =RGBA(0, 0, 0, 0)
         Height: =36
         Size: =21

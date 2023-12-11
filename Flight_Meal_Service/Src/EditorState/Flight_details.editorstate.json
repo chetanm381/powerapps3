@@ -271,7 +271,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"Arrival_Time\"}",
+          "NameMap": "{\"Value\":\"Crew_Member\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
@@ -3593,7 +3593,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"Text input\"",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Default",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
