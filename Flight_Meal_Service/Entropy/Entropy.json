@@ -4,6 +4,7 @@
   "ControlUniqueIds": {
     "App": 1,
     "Button1": 27,
+    "Button2": 49,
     "Container11": 32,
     "Container2": 7,
     "Container3": 8,
@@ -52,7 +53,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/11/2023 17:48:57",
+  "HeaderLastSavedDateTimeUTC": "12/11/2023 18:08:17",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "a4fc6352-8ce6-4073-ae97-b96017976ecc": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/f597afac72dd422baf0f16bc04fdfbd6\""
@@ -75,7 +76,7 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "crew": 10,
+    "crew": 11,
     "CustomGallerySample": 3,
     "Details": 8,
     "DropDownSample": 4,
@@ -85,7 +86,8 @@
     "Flight_Tables\\cr319_flight_table_statuscode": 1,
     "Flight_Tables\\default.cds_cr319_flight_table_views": 2,
     "flights": 9,
-    "FMS_Crew_Members": 7
+    "FMS_Crew_Members": 7,
+    "updatedCrew": 10
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
@@ -104,6 +106,7 @@
   "OverridablePropertiesEntry": {
     "App": {},
     "Button1": {},
+    "Button2": {},
     "Container11": {},
     "Container2": {},
     "Container3": {},
@@ -155,6 +158,7 @@
   "PublishOrderIndices": {
     "App": 0,
     "Button1": 2,
+    "Button2": 0,
     "Container11": 25,
     "Container2": 5,
     "Container3": 6,
