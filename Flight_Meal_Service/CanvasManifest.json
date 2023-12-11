@@ -113,13 +113,13 @@
     "Id": "9fa95398-b9aa-4006-9cac-dac8ec86ecff",
     "InstrumentationKey": "",
     "ManualOfflineProfileId": "",
-    "Name": "Flight_Meal_Service",
+    "Name": "Flight_Meal_Service_Chetan",
     "OriginatingVersion": "1.336",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "Flight_Meal_Service",
+    "AppName": "Flight_Meal_Service_Chetan",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",

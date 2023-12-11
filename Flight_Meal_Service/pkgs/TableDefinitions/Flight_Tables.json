@@ -2,7 +2,7 @@
   "DatasetName": "default.cds",
   "EntityName": "Flight_Tables",
   "environmentVariableName": "",
-  "InstanceUrl": "https://orgdca76f3b.crm8.dynamics.com",
+  "InstanceUrl": "https://orgdca76f3b.crm8.dynamics.com/",
   "LocalReferenceDSJson": {
     "entitySetName": "cr319_flight_tables",
     "logicalName": "cr319_flight_table"
