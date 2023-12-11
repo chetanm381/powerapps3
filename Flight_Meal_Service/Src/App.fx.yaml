@@ -6,13 +6,7 @@ App As appinfo:
             Connection.Connected
         );
         // Creating Collect for LoadFlights
-        Collect(
-            loadflights,
-            Filter(
-                FMS_Flights,
-                ID = 1234
-            )
-        );
+        If(isConnected,Collect(UpdatedFlightData,FMS_Flights));
         // Isconnected condition for checking
         If(
             isConnected,

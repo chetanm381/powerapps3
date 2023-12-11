@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 4,
-                  "charOffset": 3085,
+                  "charOffset": 3055,
                   "snippet": {
                     "text": "crew"
                   }
@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 36,
-                  "charOffset": 3071,
+                  "charOffset": 3041,
                   "snippet": {
                     "text": "LoadData(\n    crew,\n    \"crewdata\"\n)"
                   }
@@ -104,7 +104,7 @@
                 },
                 "region": {
                   "charLength": 4,
-                  "charOffset": 3150,
+                  "charOffset": 3120,
                   "snippet": {
                     "text": "crew"
                   }
@@ -144,7 +144,7 @@
                 },
                 "region": {
                   "charLength": 182,
-                  "charOffset": 3134,
+                  "charOffset": 3104,
                   "snippet": {
                     "text": "ForAll(\n        crew,\n        Patch(\n            FMS_Crew_Members,\n            Defaults(FMS_Crew_Members),\n            {Crew_Member_Name: ThisRecord.Crew_Member_Name}\n        )\n    )"
                   }
@@ -184,7 +184,7 @@
                 },
                 "region": {
                   "charLength": 10,
-                  "charOffset": 3272,
+                  "charOffset": 3242,
                   "snippet": {
                     "text": "ThisRecord"
                   }
@@ -224,7 +224,7 @@
                 },
                 "region": {
                   "charLength": 17,
-                  "charOffset": 3282,
+                  "charOffset": 3252,
                   "snippet": {
                     "text": ".Crew_Member_Name"
                   }
@@ -261,7 +261,7 @@
                 },
                 "region": {
                   "charLength": 146,
-                  "charOffset": 3164,
+                  "charOffset": 3134,
                   "snippet": {
                     "text": "Patch(\n            FMS_Crew_Members,\n            Defaults(FMS_Crew_Members),\n            {Crew_Member_Name: ThisRecord.Crew_Member_Name}\n        )"
                   }
@@ -301,7 +301,7 @@
                 },
                 "region": {
                   "charLength": 47,
-                  "charOffset": 3253,
+                  "charOffset": 3223,
                   "snippet": {
                     "text": "{Crew_Member_Name: ThisRecord.Crew_Member_Name}"
                   }
@@ -343,7 +343,7 @@
                 },
                 "region": {
                   "charLength": 4,
-                  "charOffset": 3448,
+                  "charOffset": 3418,
                   "snippet": {
                     "text": "crew"
                   }
@@ -383,7 +383,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 3442,
+                  "charOffset": 3412,
                   "snippet": {
                     "text": "Clear(crew)"
                   }
@@ -423,7 +423,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 3316,
+                  "charOffset": 3286,
                   "snippet": {
                     "text": ";"
                   }
@@ -460,7 +460,7 @@
                 },
                 "region": {
                   "charLength": 352,
-                  "charOffset": 3109,
+                  "charOffset": 3079,
                   "snippet": {
                     "text": "If(\n    isConnected,\n    ForAll(\n        crew,\n        Patch(\n            FMS_Crew_Members,\n            Defaults(FMS_Crew_Members),\n            {Crew_Member_Name: ThisRecord.Crew_Member_Name}\n        )\n    );\n    Collect(\n        updatedCrew,\n        ForAll(\n            FMS_Crew_Members,\n            ThisRecord\n        )\n    );\n    Clear(crew);\n    \n)"
                   }
@@ -973,6 +973,36 @@
           },
           "ruleId": "app-UnusedMediaResources",
           "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.OnStart"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.OnStart",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnStart",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 10
         },
         {
           "locations": [
