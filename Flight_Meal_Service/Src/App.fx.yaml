@@ -3,7 +3,7 @@ App As appinfo:
     OnStart: |-
         =Set(
             colors,{
-                backgroundcolor:ColorValue("#F0F8FF")
+                backgroundcolor:ColorValue("#F1F4F9")
             }
         )
     StartScreen: =DetailedScreen

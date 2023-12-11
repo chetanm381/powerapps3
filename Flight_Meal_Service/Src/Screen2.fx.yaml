@@ -105,6 +105,7 @@
             ZIndex: =1
 
     Container4 As groupContainer.manualLayoutContainer:
+        Fill: =colors.backgroundcolor
         Height: =529
         Width: =640
         Y: =607
