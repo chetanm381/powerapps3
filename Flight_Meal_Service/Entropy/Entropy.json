@@ -24,7 +24,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/11/2023 08:06:47",
+  "HeaderLastSavedDateTimeUTC": "12/11/2023 09:36:11",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -46,7 +46,8 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "CustomGallerySample": 1,
-    "DropDownSample": 0
+    "DropDownSample": 0,
+    "flights": 2
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},

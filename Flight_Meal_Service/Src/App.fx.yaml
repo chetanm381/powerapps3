@@ -1,10 +1,21 @@
 App As appinfo:
     BackEnabled: =true
     OnStart: |-
-        =Set(
-            colors,{
-                backgroundcolor:ColorValue("#F1F4F9")
-            }
+        =ClearCollect(
+            flights,
+           [ {
+                from: "Delhi",
+                to: "Chennai",
+                Date: "20/12/2023"
+            },{
+                from: "Delhi",
+                to: "Chennai",
+                Date: "20/12/2023"
+            }]
+        );
+        Set(
+            colors,
+            {backgroundcolor: ColorValue("#F1F4F9")}
         )
     StartScreen: =Screen2
     Theme: =PowerAppsTheme
