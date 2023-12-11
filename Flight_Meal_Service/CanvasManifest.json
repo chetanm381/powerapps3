@@ -116,7 +116,7 @@
     "Name": "Flight_Meal_Service",
     "OriginatingVersion": "1.336",
     "ParserErrorCount": 0,
-    "ShowStatusBar": false
+    "ShowStatusBar": true
   },
   "PublishInfo": {
     "AppName": "Flight_Meal_Service",
