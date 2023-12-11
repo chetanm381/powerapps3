@@ -57,7 +57,7 @@
     Dropdown1 As dropdown:
         ChevronBackground: =RGBA(6, 102, 242, 1)
         Height: =72
-        Items: =Details
+        Items: =Flight_Details
         SelectionFill: =RGBA(72, 144, 241, 1)
         Size: =21
         Width: =505
