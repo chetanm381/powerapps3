@@ -23,29 +23,46 @@ DetailedScreen As screen:
                     Patch(
                         FMS_Crew_Members,
                         Defaults(FMS_Crew_Members),
-                        {   
-                            Crew_Member_Name:"Aditi Sharma"
-                        }
-                    );SaveData(
-                        crew,
-                        "saveflightdata"
-                    );,
-                    Collect(
-                        crew,
-                        {   
-                            Crew_Member_Name:"Aditi Sharma"
-                        }
+                        {Crew_Member_Name: "Aditi Sharma"}
                     );
                     SaveData(
-                        flights,
-                        "saveflightdata"
+                        crew,
+                        "crewdata"
+                    );
+                    ,
+                    Collect(
+                        crew,
+                        {Crew_Member_Name: "Aditi Sharma"}
+                    );
+                    SaveData(
+                        crew,
+                        "crewdata"
                     );
                     
                 );
             Size: =24
             Text: ="Button"
             Width: =280
-            X: =80
+            X: =97
             Y: =302
             ZIndex: =2
+
+        Gallery1 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Items: =crew
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+            Y: =444
+            ZIndex: =3
+
+            Label1 As label:
+                Height: =70
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.Crew_Member_Name
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
 

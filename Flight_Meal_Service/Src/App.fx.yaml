@@ -42,7 +42,13 @@ App As appinfo:
             ]
         );
         
+        LoadData(crew,"crewdata");
+        If(isConnected,
+        ForAll(crew,Patch(FMS_Crew_Members,Defaults(FMS_Crew_Members),{
+            Crew_Member_Name:ThisRecord.Crew_Member_Name
+        })
         
+        );
         
         Set(
             colors,
