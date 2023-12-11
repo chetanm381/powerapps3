@@ -2,72 +2,14 @@
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =Parent.Height
+        Height: =1136
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        RadiusTopLeft: =40
+        RadiusTopRight: =40
         Width: =Parent.Width
         ZIndex: =1
-
-        HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.None
-            Fill: =RGBA(255, 255, 255, 1)
-            FillPortions: =0
-            Height: =75
-            LayoutGap: =10
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            PaddingLeft: =16
-            PaddingRight: =16
-            ZIndex: =2
-
-            AppName1 As label:
-                ContentLanguage: ="Add the name of your app"
-                FillPortions: =1
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Lighter
-                Height: =75
-                LayoutMinWidth: =280
-                PaddingLeft: =10
-                Size: =16
-                Text: =""
-                Tooltip: ="Add the name of your app"
-                Width: =280
-                X: =1
-                ZIndex: =3
-
-            "'Offline sync Icon1' As icon.Globe":
-                AccessibleLabel: ="Offline sync status icon"
-                AlignInContainer: =AlignInContainer.Stretch
-                Icon: |-
-                    =Switch(Connection.Sync,
-                       ConnectionSync.Connected, Icon.Globe, 
-                       ConnectionSync.ConnectedWithWarning, Icon.GlobeWarning,
-                       ConnectionSync.ConnectedPendingUpsync, Icon.GlobeChangesPending,
-                       ConnectionSync.ConnectedError, Icon.GlobeError,
-                       ConnectionSync.ConnectedRefresh, Icon.GlobeRefresh,
-                       ConnectionSync.NotConnected, Icon.GlobeNotConnected, 
-                       ConnectionSync.NotConnectedWithWarning, Icon.GlobeWarning,
-                       ConnectionSync.NotConnectedPendingUpsync, Icon.GlobeChangesPending,
-                       ConnectionSync.NotConnectedSyncError, Icon.GlobeError)
-                LayoutMinHeight: =32
-                OnSelect: |-
-                    =Switch(Connection.Sync,
-                       ConnectionSync.Connected, Notify("Your device is connected to the network, and your app is ready to work offline.",NotificationType.Success), 
-                       ConnectionSync.ConnectedWithWarning, Notify(Connection.LastSyncMessage,NotificationType.Warning),
-                       ConnectionSync.ConnectedPendingUpsync, Notify("Some data on your device must be synchronized with the server.",NotificationType.Warning),
-                       ConnectionSync.ConnectedError, Notify(Connection.LastSyncMessage,NotificationType.Error),
-                       ConnectionSync.ConnectedRefresh, Notify("Your app is currently synchronizing data with the server.",NotificationType.Information),
-                       ConnectionSync.NotConnected, Notify("Your device is not connected to the network, but you can keep using this app.",NotificationType.Success), 
-                       ConnectionSync.NotConnectedWithWarning, Notify(Connection.LastSyncMessage,NotificationType.Warning),
-                       ConnectionSync.NotConnectedPendingUpsync, Notify("Some data on your device must be synchronized with the server. Reconnect to the network to synchronize.",NotificationType.Warning),
-                       ConnectionSync.NotConnectedSyncError, Notify(Connection.LastSyncMessage,NotificationType.Error))
-                TabIndex: =0
-                Tooltip: =If(Connection.Connected,"Connected","Offline")
-                Width: =32
-                ZIndex: =4
 
         MainSectionContainer1 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -77,6 +19,8 @@
             LayoutMinHeight: =20
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
             ZIndex: =5
 
             Container2 As groupContainer.manualLayoutContainer:
@@ -84,142 +28,93 @@
                 Height: =225
                 LayoutMinHeight: =112
                 LayoutMinWidth: =250
+                RadiusTopLeft: =30
+                RadiusTopRight: =30
                 ZIndex: =1
 
     Container3 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(37, 86, 212, 1)
-        Height: =387
+        Fill: =RGBA(189, 204, 240, 1)
+        Height: =393
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
         Width: =640
-        Y: =74
         ZIndex: =2
 
         Label2 As label:
+            Color: =RGBA(37, 86, 212, 1)
             FontWeight: =FontWeight.Bold
-            Height: =70
+            Height: =146
             Size: =40
             Text: ="Choose Your Flight"
-            Width: =560
-            X: =40
-            Y: =40
+            Width: =364
+            X: =24
+            Y: =87
             ZIndex: =1
-
-    Container4 As groupContainer.manualLayoutContainer:
-        Fill: =colors.backgroundcolor
-        Height: =614
-        RadiusTopLeft: =35
-        RadiusTopRight: =35
-        Width: =640
-        Y: =522
-        ZIndex: =3
-
-        Button1 As button:
-            Fill: =RGBA(37, 86, 212, 1)
-            Height: =76
-            Size: =24
-            Text: ="Next"
-            Width: =572
-            X: =39
-            Y: =471
-            ZIndex: =3
-
-    Dropdown_pilot As groupContainer.manualLayoutContainer:
-        Height: =77
-        RadiusBottomLeft: =10
-        RadiusBottomRight: =10
-        RadiusTopLeft: =10
-        RadiusTopRight: =10
-        Width: =562
-        X: =45
-        Y: =690
-        ZIndex: =4
-
-        Dropdown1 As dropdown:
-            ChevronBackground: =RGBA(37, 86, 212, 1)
-            Default: ="Select"
-            Height: =77
-            Items: =DropDownSample
-            SelectionFill: =RGBA(255, 255, 68, 1)
-            Size: =21
-            Width: =562
-            ZIndex: =1
-
-    Dropdown_crew As groupContainer.manualLayoutContainer:
-        Height: =71
-        RadiusBottomLeft: =10
-        RadiusBottomRight: =10
-        RadiusTopLeft: =10
-        RadiusTopRight: =10
-        Width: =562
-        X: =45
-        Y: =862
-        ZIndex: =5
-
-        Dropdown1_1 As dropdown:
-            ChevronBackground: =RGBA(37, 86, 212, 1)
-            Default: ="Select"
-            Height: =71
-            Items: =DropDownSample
-            Size: =21
-            Width: =562
-            ZIndex: =1
-
-    Label1 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =64
-        Size: =21
-        Text: ="Search Flights"
-        Width: =206
-        X: =45
-        Y: =616
-        ZIndex: =6
-
-    Label1_1 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =79
-        Size: =21
-        Text: ="Crew Members"
-        Width: =230
-        X: =45
-        Y: =783
-        ZIndex: =7
 
     Image1 As image:
         Height: =212
         Image: =aeroplane
         Width: =256
         X: =384
-        Y: =270
+        Y: =66
         ZIndex: =8
 
-    Container6 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(237, 237, 237, 1)
-        Height: =77
-        RadiusBottomLeft: =10
-        RadiusBottomRight: =10
-        RadiusTopLeft: =10
-        RadiusTopRight: =10
-        X: =45
-        Y: =210
+    Container8 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =773
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Width: =536
+        X: =57
+        Y: =339
         ZIndex: =9
 
-        TextInput1 As text:
-            Default: ="Search"
-            Height: =77
-            Size: =21
-            Width: =400
-            X: =99
+        Gallery2 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Height: =707
+            Items: =CustomGallerySample
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+            Width: =536
             ZIndex: =1
 
-        Icon1 As icon.Search:
-            BorderColor: =RGBA(237, 237, 237, 1)
-            Height: =65
-            Icon: =Icon.Search
-            Width: =58
-            X: =25
-            Y: =6
-            ZIndex: =2
+            Label3 As label:
+                Height: =56
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.SampleHeading
+                Width: =138
+                X: =27
+                Y: =45
+                ZIndex: =1
+
+            Label3_1 As label:
+                Height: =56
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.SampleHeading
+                Width: =138
+                X: =356
+                Y: =45
+                ZIndex: =2
+
+            Icon4 As icon.Airplane:
+                Icon: =Icon.Airplane
+                OnSelect: =Select(Parent)
+                X: =228
+                Y: =45
+                ZIndex: =3
+
+            Label4 As label:
+                Height: =50
+                OnSelect: =Select(Parent)
+                Size: =21
+                Text: =ThisItem.SampleText
+                Width: =140
+                X: =190
+                Y: =153
+                ZIndex: =4
 
