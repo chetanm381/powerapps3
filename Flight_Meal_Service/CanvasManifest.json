@@ -112,8 +112,9 @@
     "FileID": "9fa95398-b9aa-4006-9cac-dac8ec86ecff",
     "Id": "9fa95398-b9aa-4006-9cac-dac8ec86ecff",
     "InstrumentationKey": "",
+    "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "Flight_Meal_Service_Chetan",
+    "Name": "Flight_Meal_Service",
     "OriginatingVersion": "1.336",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
