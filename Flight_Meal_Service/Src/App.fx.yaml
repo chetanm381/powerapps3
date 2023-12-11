@@ -134,10 +134,12 @@ App As appinfo:
                 }
             ]
         );
+        /*
         LoadData(
             crew,
             "crewdata"
         );
+        
         If(
             isConnected,
             ForAll(
@@ -157,7 +159,8 @@ App As appinfo:
             );
             Clear(crew);
             
-        );
+        );*/
+        
         Set(
             colors,
             ColorValue("#f1f6f8")
