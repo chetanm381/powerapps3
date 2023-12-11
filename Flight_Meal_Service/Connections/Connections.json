@@ -8,18 +8,18 @@
     "datasets": {
       "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase": {
         "dataSources": {
-          "Flight_Details": {
-            "tableName": "057b4c06-1164-4687-bafe-eccd3ab383ca"
-          },
           "FMS_Crew_Members": {
             "tableName": "979b9abe-80d6-421f-aff9-d1a4be0053de"
+          },
+          "FMS_Flights": {
+            "tableName": "057b4c06-1164-4687-bafe-eccd3ab383ca"
           }
         }
       }
     },
     "dataSources": [
-      "Flight_Details",
-      "FMS_Crew_Members"
+      "FMS_Crew_Members",
+      "FMS_Flights"
     ],
     "dependencies": {},
     "dependents": [],

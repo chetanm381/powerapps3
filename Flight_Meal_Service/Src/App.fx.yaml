@@ -1,21 +1,122 @@
 App As appinfo:
     BackEnabled: =true
     OnStart: |
-        =ClearCollect(
-            flights,
-            [
-                {
-                    from: "Delhi",
-                    to: "Chennai",
-                    Date: "20/12/2023"
-                },
-                {
-                    from: "Delhi",
-                    to: "Chennai",
-                    Date: "20/12/2023"
-                }
-            ]
+        =Set(
+            isConnected,
+            Connection.Connected
         );
+        // Creating Collect for LoadFlights
+        Collect(
+            loadflights,
+            Filter(
+                FMS_Flights,
+                ID = 1234
+            )
+        );
+        // Isconnected condition for checking
+        If(
+            isConnected,
+        // IsConnected Condition 
+        //loaddata from local storage     
+        //          ************************************Connected COndition *****************
+            LoadData(
+                loadflights,
+                "loadflights"
+            );
+            
+        //for all used to update data to sharepoint from local storage when we are connected to network.
+        ForAll(
+                loadflights As input,
+                Patch(
+                    FMS_Flights,
+                    {ID: input.ID},
+                    {
+                        From: input.From,
+                        To: input.To,
+                        Arrival_Date: input.Arrival_Date,
+                        Arrival_Time: input.Arrival_Time,
+                        Title: input.Title,
+                        Departure_Date: input.Departure_Date,
+                        Departure_Time: input.Departure_Time
+                    }
+                )
+            );
+            
+        // refresh data source 
+        Refresh(FMS_Flights);
+            
+        // updated data is stored in updatedata 
+        //********************************************************
+        Clear(UpdatedFlightData);
+        Collect(
+                UpdatedFlightData,
+                FMS_Flights
+            );
+            
+        //Clear load data and save updated data 
+        //****************************    
+        Clear(loadflights);
+            Collect(
+                loadflights,
+                UpdatedFlightData
+            );
+            ,
+        
+         //
+         //
+         //*************************** Disconnected Condition ***********************   
+            LoadData(
+                loadflights,
+                "loadflights"
+            );
+            
+        //for all used to update data to UpdateData from local Data .
+        /*ForAll(
+                loadflights As input,
+                Patch(
+                    UpdatedFlightData,
+                    {ID: input.ID},
+                    {
+                        From: input.From,
+                        To: input.To,
+                        Arrival_Date: input.Arrival_Date,
+                        Arrival_Time: input.Arrival_Time,
+                        Title: input.Title,
+                        Departure_Date: input.Departure_Date,
+                        Departure_Time: input.Departure_Time
+                    }
+                )
+            );
+            */
+        // refresh data source 
+        //Refresh(FMS_Flights);
+            
+        // updated data is stored in updatedata 
+        //********************************************************
+        Clear(UpdatedFlightData);
+        Collect(
+                UpdatedFlightData,
+                loadflights
+            );
+            
+        //Clear load data and save updated data 
+        //****************************    
+        Clear(loadflights);
+            Collect(
+                loadflights,
+                UpdatedFlightData
+            );
+            
+        );
+        
+        
+        
+        
+        
+        
+        
+        
+        
         ClearCollect(
             Details,
             [
@@ -45,7 +146,6 @@ App As appinfo:
         );
         If(
             isConnected,
-            
             ForAll(
                 crew,
                 Patch(
@@ -56,9 +156,13 @@ App As appinfo:
             );
             Collect(
                 updatedCrew,
-                ForAll(FMS_Crew_Members,ThisRecord)
+                ForAll(
+                    FMS_Crew_Members,
+                    ThisRecord
+                )
             );
             Clear(crew);
+            
         );
         Set(
             colors,

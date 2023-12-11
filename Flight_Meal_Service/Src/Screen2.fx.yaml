@@ -74,7 +74,7 @@
         Gallery2 As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =761
-            Items: =flights
+            Items: =UpdatedFlightData
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: =Navigate(DetailedScreen)
@@ -88,7 +88,7 @@
                 Height: =56
                 OnSelect: =Select(Parent)
                 Size: =30
-                Text: =ThisItem.from
+                Text: =ThisItem.From
                 Width: =138
                 X: =27
                 Y: =45
@@ -100,7 +100,7 @@
                 Height: =56
                 OnSelect: =Select(Parent)
                 Size: =30
-                Text: =ThisItem.to
+                Text: =ThisItem.To
                 Width: =175
                 X: =318
                 Y: =45
@@ -123,7 +123,7 @@
                 Height: =54
                 OnSelect: =Select(Parent)
                 Size: =21
-                Text: =ThisItem.Date
+                Text: =ThisItem.Arrival_Date
                 Width: =166
                 X: =190
                 Y: =149

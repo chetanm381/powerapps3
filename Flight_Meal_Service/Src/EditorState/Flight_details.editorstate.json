@@ -271,7 +271,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"Crew_Member\"}",
+          "NameMap": "{\"Value\":\"Arrival_Time\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
