@@ -11,3 +11,46 @@ DetailedScreen As screen:
             Width: =640
             ZIndex: =1
 
+        Button1 As button:
+            Height: =70
+            OnSelect: |
+                =Set(
+                    isConnected,
+                    Connection.Connected
+                );
+                If(
+                    isConnected,
+                    Patch(
+                        Flight_Tables,
+                        Defaults(Flight_Tables),
+                        {   
+                            Flight_Number: "AA 098",
+                            Departure_Date: DateValue("23 Dec 2023"),
+                            Departure_Time: TimeValue("8:00 PM"),
+                            From: "Delhi",
+                            To: "Chennai"
+                        }
+                    ),
+                    Collect(
+                        flights,
+                        {
+                            Flight_Number: "AA 098",
+                            Departure_Date: DateValue("23 Dec 2023"),
+                            Departure_Time: TimeValue("8:00 PM"),
+                            From: "Delhi",
+                            To: "Chennai"
+                        }
+                    );
+                    SaveData(
+                        flights,
+                        "saveflightdata"
+                    );
+                    
+                );
+            Size: =24
+            Text: ="Button"
+            Width: =280
+            X: =80
+            Y: =302
+            ZIndex: =2
+
