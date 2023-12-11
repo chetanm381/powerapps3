@@ -21,24 +21,19 @@ DetailedScreen As screen:
                 If(
                     isConnected,
                     Patch(
-                        Flight_Tables,
-                        Defaults(Flight_Tables),
+                        FMS_Crew_Members,
+                        Defaults(FMS_Crew_Members),
                         {   
-                            Flight_Number: "AA 098",
-                            Departure_Date: DateValue("23 Dec 2023"),
-                            Departure_Time: TimeValue("8:00 PM"),
-                            From: "Delhi",
-                            To: "Chennai"
+                            Crew_Member_Name:"Aditi Sharma"
                         }
-                    ),
+                    );SaveData(
+                        crew,
+                        "saveflightdata"
+                    );,
                     Collect(
-                        flights,
-                        {
-                            Flight_Number: "AA 098",
-                            Departure_Date: DateValue("23 Dec 2023"),
-                            Departure_Time: TimeValue("8:00 PM"),
-                            From: "Delhi",
-                            To: "Chennai"
+                        crew,
+                        {   
+                            Crew_Member_Name:"Aditi Sharma"
                         }
                     );
                     SaveData(
