@@ -87,40 +87,43 @@
                 ZIndex: =1
 
     Container3 As groupContainer.manualLayoutContainer:
-        Height: =533
-        RadiusBottomLeft: =10
-        RadiusBottomRight: =10
+        Fill: =RGBA(37, 86, 212, 1)
+        Height: =387
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
         RadiusTopLeft: =30
         RadiusTopRight: =30
         Width: =640
         Y: =74
-        ZIndex: =3
+        ZIndex: =2
 
-        Image1 As image:
-            Height: =530
-            Image: ='Screenshot 2023-12-11 111534'
-            ImagePosition: =ImagePosition.Stretch
-            Width: =638
-            X: =2
+        Label2 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            Size: =40
+            Text: ="Choose Your Flight"
+            Width: =560
+            X: =40
+            Y: =40
             ZIndex: =1
 
     Container4 As groupContainer.manualLayoutContainer:
         Fill: =colors.backgroundcolor
-        Height: =564
+        Height: =614
         RadiusTopLeft: =35
         RadiusTopRight: =35
         Width: =640
-        Y: =572
-        ZIndex: =4
+        Y: =522
+        ZIndex: =3
 
         Button1 As button:
-            Fill: =RGBA(228, 91, 190, 1)
-            Height: =62
+            Fill: =RGBA(37, 86, 212, 1)
+            Height: =76
             Size: =24
             Text: ="Next"
-            Width: =224
-            X: =390
-            Y: =444
+            Width: =572
+            X: =39
+            Y: =471
             ZIndex: =3
 
     Dropdown_pilot As groupContainer.manualLayoutContainer:
@@ -132,7 +135,7 @@
         Width: =562
         X: =45
         Y: =690
-        ZIndex: =5
+        ZIndex: =4
 
         Dropdown1 As dropdown:
             ChevronBackground: =RGBA(37, 86, 212, 1)
@@ -153,7 +156,7 @@
         Width: =562
         X: =45
         Y: =862
-        ZIndex: =6
+        ZIndex: =5
 
         Dropdown1_1 As dropdown:
             ChevronBackground: =RGBA(37, 86, 212, 1)
@@ -172,7 +175,7 @@
         Width: =206
         X: =45
         Y: =616
-        ZIndex: =7
+        ZIndex: =6
 
     Label1_1 As label:
         FontWeight: =FontWeight.Bold
@@ -182,5 +185,41 @@
         Width: =230
         X: =45
         Y: =783
+        ZIndex: =7
+
+    Image1 As image:
+        Height: =212
+        Image: =aeroplane
+        Width: =256
+        X: =384
+        Y: =270
         ZIndex: =8
+
+    Container6 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =77
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        X: =45
+        Y: =210
+        ZIndex: =9
+
+        TextInput1 As text:
+            Default: ="Search"
+            Height: =77
+            Size: =21
+            Width: =400
+            X: =99
+            ZIndex: =1
+
+        Icon1 As icon.Search:
+            BorderColor: =RGBA(237, 237, 237, 1)
+            Height: =65
+            Icon: =Icon.Search
+            Width: =58
+            X: =25
+            Y: =6
+            ZIndex: =2
 
