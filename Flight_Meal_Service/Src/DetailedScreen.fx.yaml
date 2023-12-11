@@ -23,7 +23,7 @@ DetailedScreen As screen:
                     Patch(
                         Flight_Tables,
                         Defaults(Flight_Tables),
-                        {
+                        {   
                             Flight_Number: "AA 098",
                             Departure_Date: DateValue("23 Dec 2023"),
                             Departure_Time: TimeValue("8:00 PM"),
