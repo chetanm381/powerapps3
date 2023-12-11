@@ -53,7 +53,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/11/2023 21:02:17",
+  "HeaderLastSavedDateTimeUTC": "12/11/2023 21:12:43",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "a4fc6352-8ce6-4073-ae97-b96017976ecc": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/f597afac72dd422baf0f16bc04fdfbd6\""
@@ -76,7 +76,6 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "crew": 11,
     "CustomGallerySample": 3,
     "Details": 8,
     "DropDownSample": 4,
@@ -88,7 +87,7 @@
     "FMS_Flights": 6,
     "loadflights": 9,
     "updatedCrew": 10,
-    "UpdatedFlightData": 12
+    "UpdatedFlightData": 11
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},

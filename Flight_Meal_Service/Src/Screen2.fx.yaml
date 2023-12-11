@@ -77,7 +77,9 @@
             Items: =UpdatedFlightData
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            OnSelect: =Navigate(DetailedScreen)
+            OnSelect: |
+                =
+                Set(selectedFlight,Gallery2.Selected);Navigate(DetailedScreen);
             TemplateSize: =227
             Width: =536
             ZIndex: =1

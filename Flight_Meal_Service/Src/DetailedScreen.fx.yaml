@@ -18,6 +18,39 @@ DetailedScreen As screen:
                     isConnected,
                     Connection.Connected
                 );
+                
+                    If(
+                        isConnected,Patch(FMS_Flights,{ID:selectedFlight.ID},
+                        {To:"UpdatedFromConnected"}
+                        );
+                        Refresh(FMS_Flights);
+                        Clear(UpdatedFlightData);
+                        Collect(UpdatedFlightData,FMS_Flights);
+                        Clear(loadflights);
+                        Collect(loadflights,UpdatedFlightData);
+                        SaveData(loadflights,"loadflights"),
+                
+                        ///***************
+                        //*********
+                        Patch(UpdatedFlightData,{ID:selectedFlight.ID},
+                        {To:"UpdatedFromDisConnected"}
+                        );
+                        Clear(loadflights);
+                        Collect(loadflights,UpdatedFlightData);
+                        SaveData(loadflights,"loadflights")
+                    )
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                /*
                 If(
                     isConnected,
                     Patch(
@@ -39,7 +72,7 @@ DetailedScreen As screen:
                         "crewdata"
                     );
                     
-                );
+                );*/
             Size: =24
             Text: ="Button"
             Width: =280
