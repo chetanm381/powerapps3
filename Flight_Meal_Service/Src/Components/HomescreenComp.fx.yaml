@@ -58,85 +58,59 @@ HomescreenComp As CanvasComponent:
                 Y: =22
                 ZIndex: =4
 
-        Source_1 As text:
-            BorderColor: =RGBA(102, 102, 102, 1)
-            Default: =""
-            Height: =42
-            HintText: ="Departure City"
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(153, 153, 153, 1)
-            Size: =10
-            Width: =250
-            X: =32
-            Y: =148
-            ZIndex: =2
-
-        Destination_1 As text:
-            BorderColor: =RGBA(102, 102, 102, 1)
-            Default: =""
-            Height: =42
-            HintText: ="Arrival City"
-            HoverBorderColor: =RGBA(51, 51, 51, 1)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(153, 153, 153, 1)
-            Size: =10
-            Width: =250
-            X: =356
-            Y: =148
-            ZIndex: =3
-
         Icon3_1 As icon.ArrowsUpDown:
             Color: =RGBA(102, 102, 102, 1)
             Height: =35
             Icon: =Icon.Sort
             Rotation: =90
             Width: =35
-            X: =301
-            Y: =148
+            X: =239
+            Y: =170
             ZIndex: =4
 
         Container6_1 As groupContainer.manualLayoutContainer:
             BorderStyle: =BorderStyle.None
             DropShadow: =DropShadow.None
-            Height: =830
+            Height: =905
             RadiusBottomLeft: =15
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Width: =574
-            X: =32
-            Y: =222
+            Width: =620
+            X: =20
+            Y: =220
             ZIndex: =5
 
             Flights_1 As gallery.galleryVertical:
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
-                Height: =830
-                Items: =LastN(FMS_Flights,3)
+                Height: =860
+                Items: =LastN(FMS_Flights,4)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =221
-                Width: =574
+                Width: =620
+                Y: =45
                 ZIndex: =1
 
                 itemcontainer_1 As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None
                     DropShadow: =DropShadow.Semilight
                     Fill: =RGBA(255, 255, 255, 1)
-                    Height: =201
+                    Height: =206
                     RadiusBottomLeft: =20
                     RadiusBottomRight: =20
                     RadiusTopLeft: =20
                     RadiusTopRight: =20
-                    Width: =564
+                    Width: =577
                     ZIndex: =1
 
                     backgroundContainer_1 As rectangle:
                         BorderStyle: =BorderStyle.None
                         Fill: =RGBA(0, 0, 0, 0)
-                        Height: =Parent.Height
+                        Height: =201
                         OnSelect: =Select(Flights_1);
-                        Width: =Parent.Width
+                        Width: =564
                         ZIndex: =1
 
                     Label19_4 As label:
@@ -268,18 +242,91 @@ HomescreenComp As CanvasComponent:
 
                     Rectangle4_1 As rectangle:
                         Fill: =RGBA(51, 51, 51, 1)
-                        Height: =8
-                        Width: =564
-                        Y: =193
+                        Height: =10
+                        Width: =itemcontainer_1.Width
+                        Y: =itemcontainer_1.Height-Rectangle4_1.Height
                         ZIndex: =14
 
-        Label10_1 As label:
+            Label23_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =39
+                PaddingLeft: =10
+                Size: =20
+                Text: =If(filter,"Search Results","Upcoming Flights")
+                Underline: =true
+                Width: =597
+                ZIndex: =2
+
+        ChooseYourFlight_1 As label:
             Color: =RGBA(102, 102, 102, 1)
             Height: =27
             Size: =10
             Text: ="Choose Your Flight"
             Width: =257
-            X: =32
-            Y: =115
+            X: =43
+            Y: =128
             ZIndex: =6
+
+        fromCombobox_1 As combobox:
+            BorderColor: =RGBA(102, 102, 102, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronFill: =RGBA(51, 51, 51, 1)
+            ChevronHoverBackground: =ColorFade(Self.BorderColor, -20%)
+            DisplayFields: =["Value"]
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            InputTextPlaceholder: ="Departure City"
+            IsSearchable: =false
+            Items: =Distinct(UpdatedFlightData,From)
+            PressedFill: =RGBA(153, 153, 153, 1)
+            SearchFields: =["Value"]
+            SearchItems: =[]
+            SelectionFill: =RGBA(102, 102, 102, 1)
+            SelectMultiple: =false
+            Size: =8
+            Width: =171
+            X: =43
+            Y: =173
+            ZIndex: =7
+
+        toCombobox_1 As combobox:
+            BorderColor: =fromCombobox_1.BorderColor
+            BorderThickness: =1
+            ChevronBackground: =fromCombobox_1.ChevronBackground
+            ChevronFill: =fromCombobox_1.ChevronFill
+            ChevronHoverBackground: =fromCombobox_1.ChevronHoverBackground
+            DisplayFields: =["Value"]
+            Height: =30
+            HoverColor: =fromCombobox_1.HoverColor
+            HoverFill: =fromCombobox_1.HoverFill
+            InputTextPlaceholder: ="Arrival City"
+            IsSearchable: =false
+            Items: =Distinct(UpdatedFlightData,To)
+            PressedColor: =fromCombobox_1.PressedColor
+            SearchFields: =["Value"]
+            SearchItems: =[]
+            SelectionColor: =fromCombobox_1.SelectionColor
+            SelectionFill: =fromCombobox_1.SelectionFill
+            SelectMultiple: =false
+            Size: =8
+            Width: =171
+            X: =289
+            Y: =172
+            ZIndex: =8
+
+        Button3_1 As button:
+            Fill: =RGBA(102, 102, 102, 1)
+            Height: =30
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: |
+                =Set(filter,true);
+            Size: =10
+            Text: ="Search"
+            Width: =111
+            X: =486
+            Y: =172
+            ZIndex: =9
 
