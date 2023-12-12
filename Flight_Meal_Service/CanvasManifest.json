@@ -111,10 +111,10 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "9fa95398-b9aa-4006-9cac-dac8ec86ecff",
-    "Id": "9fa95398-b9aa-4006-9cac-dac8ec86ecff",
+    "Id": "08f78a55-3e5a-4a0b-a71d-b231cdffaa23",
     "InstrumentationKey": "",
     "ManualOfflineProfileId": "",
-    "Name": "Flight_Meal_Service",
+    "Name": "Flight_Meal_Service.msapp",
     "OriginatingVersion": "1.336",
     "ParserErrorCount": 0,
     "ShowStatusBar": true

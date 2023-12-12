@@ -634,7 +634,7 @@
       "MetaDataIDKey": "",
       "Name": "HeaderName_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1156,7 +1156,7 @@
       "MetaDataIDKey": "",
       "Name": "SyncName_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
