@@ -132,7 +132,8 @@
   },
   "ScreenOrder": [
     "DetailedScreen",
-    "Screen2",
-    "Flight_details"
+    "Home_Screen",
+    "Flight_details",
+    "Dish_Menu"
   ]
 }

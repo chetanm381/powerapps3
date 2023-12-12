@@ -165,7 +165,7 @@ App As appinfo:
             colors,
             ColorValue("#f1f6f8")
         );
-    StartScreen: =Screen2
+    StartScreen: =Home_Screen
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

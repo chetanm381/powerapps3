@@ -1,4 +1,4 @@
-"Screen2 As screen.'layout_Offline_ver1.0'":
+"Home_Screen As screen.'layout_Offline_ver1.0'":
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
