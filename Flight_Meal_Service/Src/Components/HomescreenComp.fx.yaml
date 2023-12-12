@@ -1,0 +1,60 @@
+HomescreenComp As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    BackgroundContainer_1 As groupContainer.manualLayoutContainer:
+        BorderThickness: =1
+        Fill: =RGBA(230, 230, 230, 1)
+        Height: =1136
+        Width: =640
+        ZIndex: =1
+
+        HeaderContainer_1 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height*.09
+            Width: =Parent.Width
+            ZIndex: =1
+
+            "'Sync Icon_1' As icon.Link":
+                Color: =RGBA(102, 102, 102, 1)
+                Height: =50
+                Icon: =Icon.Link
+                Width: =50
+                X: =564
+                Y: =16
+                ZIndex: =1
+
+            SyncName_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(102, 102, 102, 1)
+                Height: =30
+                Size: =10
+                Text: ="Sync"
+                Width: =50
+                X: =564
+                Y: =56
+                ZIndex: =2
+
+            HeaderName_1 As label:
+                Color: =RGBA(102, 102, 102, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =25
+                Text: ="AzureJet"
+                Width: =408
+                X: =97
+                Y: =16
+                ZIndex: =3
+
+            HeaderIcon_1 As image:
+                Height: =64
+                Image: =airplane_1
+                Width: =52
+                X: =29
+                Y: =22
+                ZIndex: =4
+

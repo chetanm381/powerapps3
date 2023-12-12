@@ -1,9 +1,12 @@
 {
-  "ComponentIndexes": {},
+  "ComponentIndexes": {
+    "HomescreenComp": 4
+  },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
     "BackgroundContainer": 32,
+    "BackgroundContainer_1": 53,
     "Button1": 36,
     "Button2": 40,
     "Circle1": 9,
@@ -19,9 +22,13 @@
     "galleryTemplate1": 38,
     "galleryTemplate3": 7,
     "HeaderContainer": 41,
+    "HeaderContainer_1": 54,
     "HeaderIcon": 44,
+    "HeaderIcon_1": 57,
     "HeaderName": 47,
+    "HeaderName_1": 58,
     "Home_Screen": 30,
+    "HomescreenComp": 52,
     "Host": 3,
     "Icon8": 17,
     "Label1": 39,
@@ -41,14 +48,16 @@
     "Rectangle7": 12,
     "ScreenContainer2": 14,
     "Sync Icon": 43,
+    "Sync Icon_1": 56,
     "SyncName": 46,
+    "SyncName_1": 55,
     "TextInput6": 18,
     "TextInput8": 19,
     "TextInput9": 21
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/12/2023 06:45:51",
+  "HeaderLastSavedDateTimeUTC": "12/12/2023 06:46:37",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "a4fc6352-8ce6-4073-ae97-b96017976ecc": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/f597afac72dd422baf0f16bc04fdfbd6\""
@@ -70,8 +79,12 @@
     "png-transparent-airplane-aircraft-belfast-airport-bus-airplane-mode-of-transport-cargo-flight-thumbnail": "https://docserverpwaprodcin.blob.core.windows.net/0b985625-a562-4b8c-803c-f9b7367bec1c-1/resource/Assets0Images00004.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-12T06%3A16%3A58Z&ske=2023-12-13T06%3A31%3A58Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2023-12-13T06%3A31%3A58Z&sr=b&sp=r&sig=h1kqslXU1ny3SCheqX818ycLnWYvMAoZfTmXDZ8pxVM%3D",
     "Screenshot 2023-12-11 111534": "https://docserverpwaprodcin.blob.core.windows.net/0b985625-a562-4b8c-803c-f9b7367bec1c-1/resource/Assets0Images00005.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-12-12T06%3A16%3A58Z&ske=2023-12-13T06%3A31%3A58Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2023-12-13T06%3A31%3A58Z&sr=b&sp=r&sig=t5K3aJUXQ%2FUFrVg2ZXuBl5OcirvPvF5hxkYs6CMIoxE%3D"
   },
-  "OrderComponentMetadata": {},
-  "OrderComponentTemplate": {},
+  "OrderComponentMetadata": {
+    "158b5e10170f4339b9e1150df6f3060d": 0
+  },
+  "OrderComponentTemplate": {
+    "158b5e10170f4339b9e1150df6f3060d": 0
+  },
   "OrderDataSource": {
     "CustomGallerySample": 3,
     "Details": 9,
@@ -105,6 +118,7 @@
   "OverridablePropertiesEntry": {
     "App": {},
     "BackgroundContainer": {},
+    "BackgroundContainer_1": {},
     "Button1": {},
     "Button2": {},
     "Circle1": {},
@@ -120,9 +134,13 @@
     "galleryTemplate1": {},
     "galleryTemplate3": {},
     "HeaderContainer": {},
+    "HeaderContainer_1": {},
     "HeaderIcon": {},
+    "HeaderIcon_1": {},
     "HeaderName": {},
+    "HeaderName_1": {},
     "Home_Screen": {},
+    "HomescreenComp": {},
     "Host": {},
     "Icon8": {},
     "Label1": {},
@@ -142,7 +160,9 @@
     "Rectangle7": {},
     "ScreenContainer2": {},
     "Sync Icon": {},
+    "Sync Icon_1": {},
     "SyncName": {},
+    "SyncName_1": {},
     "TextInput6": {},
     "TextInput8": {},
     "TextInput9": {}
@@ -152,6 +172,7 @@
   "PublishOrderIndices": {
     "App": 0,
     "BackgroundContainer": 39,
+    "BackgroundContainer_1": 39,
     "Button1": 7,
     "Button2": 5,
     "Circle1": 16,
@@ -167,9 +188,13 @@
     "galleryTemplate1": 9,
     "galleryTemplate3": 14,
     "HeaderContainer": 0,
+    "HeaderContainer_1": 0,
     "HeaderIcon": 0,
+    "HeaderIcon_1": 0,
     "HeaderName": 0,
+    "HeaderName_1": 0,
     "Home_Screen": 37,
+    "HomescreenComp": 0,
     "Host": 0,
     "Icon8": 23,
     "Label1": 10,
@@ -189,7 +214,9 @@
     "Rectangle7": 19,
     "ScreenContainer2": 21,
     "Sync Icon": 0,
+    "Sync Icon_1": 0,
     "SyncName": 0,
+    "SyncName_1": 0,
     "TextInput6": 24,
     "TextInput8": 25,
     "TextInput9": 27
@@ -213,9 +240,10 @@
       "dropdown": 1,
       "gallery": 2,
       "galleryTemplate": 2,
-      "groupContainer": 7,
-      "icon": 1,
-      "label": 13,
+      "groupContainer": 9,
+      "icon": 2,
+      "image": 1,
+      "label": 15,
       "rectangle": 1,
       "screen": 4,
       "text": 3
