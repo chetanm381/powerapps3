@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 10,
+    "BindingErrorCount": 34,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -111,10 +111,10 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "9fa95398-b9aa-4006-9cac-dac8ec86ecff",
-    "Id": "08f78a55-3e5a-4a0b-a71d-b231cdffaa23",
+    "Id": "05047774-f9c4-4914-a55c-c254a3b902df",
     "InstrumentationKey": "",
     "ManualOfflineProfileId": "",
-    "Name": "Flight_Meal_Service",
+    "Name": "Flight_Meal_Service.msapp",
     "OriginatingVersion": "1.336",
     "ParserErrorCount": 0,
     "ShowStatusBar": true

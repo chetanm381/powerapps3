@@ -1,5 +1,5 @@
 "Home_Screen As screen.'layout_Offline_ver1.0'":
-    OnVisible: =If(isConnected,Collect(UpdatedFlightData,FMS_Flights));
+    OnVisible: =
 
     BackgroundContainer As groupContainer.manualLayoutContainer:
         BorderThickness: =1
@@ -107,7 +107,7 @@
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
                 Height: =830
-                Items: =LastN(UpdatedFlightData,3)
+                Items: =LastN(FMS_Flights,3)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =221
@@ -141,7 +141,7 @@
                         Size: =8
                         Text: ="From"
                         Width: =110
-                        X: =10
+                        X: =30
                         Y: =39
                         ZIndex: =2
 
@@ -152,7 +152,7 @@
                         Size: =8
                         Text: ="To"
                         Width: =110
-                        X: =443
+                        X: =428
                         Y: =39
                         ZIndex: =3
 
@@ -160,10 +160,10 @@
                         FontWeight: =FontWeight.Bold
                         Height: =41
                         Size: =20
-                        Text: =Text(ThisItem.From,"APR")
+                        Text: =ThisItem.from_code
                         Width: =184
-                        X: =10
-                        Y: =50
+                        X: =30
+                        Y: =55
                         ZIndex: =4
 
                     Label20_1 As label:
@@ -171,10 +171,10 @@
                         FontWeight: =FontWeight.Bold
                         Height: =41
                         Size: =20
-                        Text: =Text(ThisItem.To,"APR")
+                        Text: =ThisItem.to_code
                         Width: =184
-                        X: =380
-                        Y: =50
+                        X: =360
+                        Y: =55
                         ZIndex: =5
 
                     Label21 As label:
@@ -194,7 +194,7 @@
                         Size: =10
                         Text: =ThisItem.Departure_Time
                         Width: =92
-                        X: =10
+                        X: =30
                         Y: =132
                         ZIndex: =7
 
@@ -205,7 +205,7 @@
                         Size: =10
                         Text: =ThisItem.Departure_Time
                         Width: =92
-                        X: =461
+                        X: =446
                         Y: =132
                         ZIndex: =8
 
@@ -215,7 +215,7 @@
                         Size: =8
                         Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
                         Width: =92
-                        X: =10
+                        X: =30
                         Y: =148
                         ZIndex: =9
 
@@ -226,7 +226,7 @@
                         Size: =8
                         Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
                         Width: =92
-                        X: =461
+                        X: =446
                         Y: =148
                         ZIndex: =10
 
@@ -243,10 +243,10 @@
                         Height: =29
                         PaddingLeft: =8
                         Size: =8
-                        Text: =ThisItem.from_code
-                        Width: =110
-                        X: =10
-                        Y: =85
+                        Text: =ThisItem.From
+                        Width: =184
+                        X: =30
+                        Y: =84
                         ZIndex: =12
 
                     Label19_3 As label:
@@ -255,19 +255,26 @@
                         Height: =29
                         PaddingRight: =0
                         Size: =8
-                        Text: ="From"
-                        Width: =110
-                        X: =443
-                        Y: =85
+                        Text: =ThisItem.To
+                        Width: =173
+                        X: =365
+                        Y: =86
                         ZIndex: =13
 
-    Label10 As label:
-        Color: =RGBA(102, 102, 102, 1)
-        Height: =27
-        Size: =10
-        Text: ="Choose Your Flight"
-        Width: =257
-        X: =32
-        Y: =112
-        ZIndex: =11
+                    Rectangle4 As rectangle:
+                        Fill: =RGBA(51, 51, 51, 1)
+                        Height: =8
+                        Width: =564
+                        Y: =193
+                        ZIndex: =14
+
+        Label10 As label:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =27
+            Size: =10
+            Text: ="Choose Your Flight"
+            Width: =257
+            X: =32
+            Y: =115
+            ZIndex: =6
 

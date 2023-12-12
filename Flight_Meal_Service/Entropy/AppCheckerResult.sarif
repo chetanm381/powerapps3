@@ -372,12 +372,249 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container6.Flights.itemcontainer.Label19_2.Text"
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container6.Flights.itemcontainer.Label19_2.Text",
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 6,
+                  "snippet": {
+                    "text": "FMS_Flights"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "FMS_Flights"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 20,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "LastN(FMS_Flights,3)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LastN"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.backgroundContainer_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.backgroundContainer_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 7,
+                  "snippet": {
+                    "text": "Flights_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.backgroundContainer_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label21_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label21_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label21_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label21_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label21_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".Title"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label21_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_2.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_2.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_2.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_2.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -390,14 +627,51 @@
               },
               "properties": {
                 "member": "Text",
-                "module": "Home_Screen",
-                "type": "Home_Screen.BackgroundContainer.Container6.Flights.itemcontainer.Label19_2"
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_3"
               }
             }
           ],
           "message": {
             "arguments": [
-              "from_code"
+              "ThisItem"
             ],
             "id": "issue"
           },
@@ -406,6 +680,665 @@
           },
           "ruleId": "app-ErrInvalidName",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".to_code"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label20_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_6.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_6.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_6.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_6.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".From"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_7.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_7.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".To"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label19_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".Departure_Time"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".Departure_Time"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 5,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 13,
+                  "snippet": {
+                    "text": ".Departure_Date"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 42,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Text(ThisItem.Departure_Date,\"mmm dd, yy\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 29,
+                  "snippet": {
+                    "text": "\"mmm dd, yy\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncorrectFormat-Func",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 5,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 13,
+                  "snippet": {
+                    "text": ".Departure_Date"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 42,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Text(ThisItem.Departure_Date,\"mmm dd, yy\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 29,
+                  "snippet": {
+                    "text": "\"mmm dd, yy\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.itemcontainer_1.Label22_7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncorrectFormat-Func",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -435,7 +1368,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -465,7 +1398,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -495,7 +1428,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -525,7 +1458,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -555,7 +1488,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -585,7 +1518,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -615,7 +1548,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -645,7 +1578,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -675,7 +1608,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -705,7 +1638,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -735,7 +1668,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -765,7 +1698,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -795,7 +1728,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -825,7 +1758,127 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Source_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Source_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Source_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Destination_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Destination_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Destination_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "HomescreenComp",
+                "type": "HomescreenComp.BackgroundContainer_1.Container6_1.Flights_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -855,7 +1908,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -885,7 +1938,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -915,7 +1968,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -945,7 +1998,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -975,7 +2028,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -1005,36 +2058,6 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.OnStart"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.OnStart",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "OnStart",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-CollectDelegatableDataSource",
           "ruleIndex": 8
         },
         {
@@ -1065,7 +2088,37 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 8
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.OnStart"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.OnStart",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnStart",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -1095,37 +2148,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Home_Screen.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Home_Screen.OnVisible",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Home_Screen",
-                "type": "Home_Screen"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -1155,7 +2178,7 @@
             "level": "Medium"
           },
           "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -1185,7 +2208,7 @@
             "level": "Medium"
           },
           "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -1215,7 +2238,7 @@
             "level": "Medium"
           },
           "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 9
+          "ruleIndex": 10
         }
       ],
       "tool": {
@@ -1278,6 +2301,20 @@
               "properties": {
                 "componentType": "app",
                 "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrIncorrectFormat-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incorrect format specifier for '{0}'."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "Medium",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }

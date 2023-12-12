@@ -34,11 +34,13 @@
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
       "From": "From",
+      "from_code": "from_code",
       "ID": "ID",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
       "Title": "Title",
-      "To": "To"
+      "To": "To",
+      "to_code": "to_code"
     },
     "DatasetName": "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase",
     "EncodeDataset": true,
