@@ -2425,17 +2425,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.FMS_Dishes_2"
+                  "fullyQualifiedName": "App.FMS_Dishes"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.FMS_Dishes_2",
+                  "fullyQualifiedName": "App.FMS_Dishes",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "FMS_Dishes_2",
+                "member": "FMS_Dishes",
                 "module": "App",
                 "type": "App"
               }
