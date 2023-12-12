@@ -8,7 +8,7 @@ Dish_Menu As screen:
 
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =905
+        Height: =979
         Items: =FMS_Dishes
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -33,8 +33,8 @@ Dish_Menu As screen:
             Size: =12
             Text: =ThisItem.Dish_Description
             Width: =463
-            X: =27
-            Y: =115
+            X: =17
+            Y: =120
             ZIndex: =3
 
         Label8_1 As label:
@@ -63,4 +63,84 @@ Dish_Menu As screen:
             X: =17
             Y: =55
             ZIndex: =6
+
+        Container2 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(72, 144, 241, 1)
+            Height: =55
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =149
+            X: =473
+            Y: =35
+            ZIndex: =7
+
+            Label6 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =35
+                Size: =50
+                Text: ="-"
+                Width: =69
+                Y: =2
+                ZIndex: =1
+
+            Label6_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =47
+                Size: =30
+                Text: ="1"
+                Width: =88
+                X: =28
+                Y: =2
+                ZIndex: =2
+
+            Label6_2 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =35
+                Size: =50
+                Text: ="+"
+                Width: =47
+                X: =94
+                Y: =8
+                ZIndex: =3
+
+        Label4 As label:
+            Height: =38
+            Size: =15
+            Text: ="Remaining Balance"
+            Width: =224
+            X: =406
+            Y: =132
+            ZIndex: =8
+
+    Container3 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =60
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Width: =215
+        X: =402
+        Y: =36
+        ZIndex: =4
+
+        Label3 As label:
+            Color: =RGBA(72, 144, 241, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =45
+            Size: =25
+            Text: |-
+                ="Balance : 25"
+            Width: =210
+            X: =5
+            Y: =8
+            ZIndex: =1
 
