@@ -1,20 +1,25 @@
-"Home_Screen As screen.'layout_Offline_ver1.0'":
-    OnVisible: =
+HomescreenComp As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =1136
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
 
-    BackgroundContainer As groupContainer.manualLayoutContainer:
+    BackgroundContainer_1 As groupContainer.manualLayoutContainer:
         BorderThickness: =1
         Fill: =RGBA(230, 230, 230, 1)
         Height: =1136
         Width: =640
-        ZIndex: =10
+        ZIndex: =1
 
-        HeaderContainer As groupContainer.manualLayoutContainer:
+        HeaderContainer_1 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height*.09
             Width: =Parent.Width
             ZIndex: =1
 
-            "'Sync Icon' As icon.Link":
+            "'Sync Icon_1' As icon.Link":
                 Color: =RGBA(102, 102, 102, 1)
                 Height: =50
                 Icon: =Icon.Link
@@ -23,7 +28,7 @@
                 Y: =16
                 ZIndex: =1
 
-            SyncName As label:
+            SyncName_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(102, 102, 102, 1)
                 Height: =30
@@ -34,7 +39,7 @@
                 Y: =56
                 ZIndex: =2
 
-            HeaderName As label:
+            HeaderName_1 As label:
                 Color: =RGBA(102, 102, 102, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =70
@@ -45,7 +50,7 @@
                 Y: =16
                 ZIndex: =3
 
-            HeaderIcon As image:
+            HeaderIcon_1 As image:
                 Height: =64
                 Image: =airplane_1
                 Width: =52
@@ -53,7 +58,7 @@
                 Y: =22
                 ZIndex: =4
 
-        Source As text:
+        Source_1 As text:
             BorderColor: =RGBA(102, 102, 102, 1)
             Default: =""
             Height: =42
@@ -66,7 +71,7 @@
             Y: =148
             ZIndex: =2
 
-        Destination As text:
+        Destination_1 As text:
             BorderColor: =RGBA(102, 102, 102, 1)
             Default: =""
             Height: =42
@@ -80,7 +85,7 @@
             Y: =148
             ZIndex: =3
 
-        Icon3 As icon.ArrowsUpDown:
+        Icon3_1 As icon.ArrowsUpDown:
             Color: =RGBA(102, 102, 102, 1)
             Height: =35
             Icon: =Icon.Sort
@@ -90,7 +95,7 @@
             Y: =148
             ZIndex: =4
 
-        Container6 As groupContainer.manualLayoutContainer:
+        Container6_1 As groupContainer.manualLayoutContainer:
             BorderStyle: =BorderStyle.None
             DropShadow: =DropShadow.None
             Height: =830
@@ -103,7 +108,7 @@
             Y: =222
             ZIndex: =5
 
-            Flights As gallery.galleryVertical:
+            Flights_1 As gallery.galleryVertical:
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
                 Height: =830
@@ -114,7 +119,7 @@
                 Width: =574
                 ZIndex: =1
 
-                itemcontainer As groupContainer.manualLayoutContainer:
+                itemcontainer_1 As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None
                     DropShadow: =DropShadow.Semilight
                     Fill: =RGBA(255, 255, 255, 1)
@@ -126,15 +131,15 @@
                     Width: =564
                     ZIndex: =1
 
-                    backgroundContainer As rectangle:
+                    backgroundContainer_1 As rectangle:
                         BorderStyle: =BorderStyle.None
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =Parent.Height
-                        OnSelect: =Select(Flights);
+                        OnSelect: =Select(Flights_1);
                         Width: =Parent.Width
                         ZIndex: =1
 
-                    Label19 As label:
+                    Label19_4 As label:
                         FontWeight: =FontWeight.Lighter
                         Height: =29
                         PaddingLeft: =8
@@ -145,7 +150,7 @@
                         Y: =39
                         ZIndex: =2
 
-                    Label19_1 As label:
+                    Label19_5 As label:
                         Align: =Align.Right
                         FontWeight: =FontWeight.Lighter
                         Height: =29
@@ -156,7 +161,7 @@
                         Y: =39
                         ZIndex: =3
 
-                    Label20 As label:
+                    Label20_2 As label:
                         FontWeight: =FontWeight.Bold
                         Height: =41
                         Size: =20
@@ -166,7 +171,7 @@
                         Y: =55
                         ZIndex: =4
 
-                    Label20_1 As label:
+                    Label20_3 As label:
                         Align: =Align.Right
                         FontWeight: =FontWeight.Bold
                         Height: =41
@@ -177,7 +182,7 @@
                         Y: =55
                         ZIndex: =5
 
-                    Label21 As label:
+                    Label21_1 As label:
                         Align: =Align.Center
                         FontWeight: =FontWeight.Semibold
                         Height: =39
@@ -188,7 +193,7 @@
                         Y: =11
                         ZIndex: =6
 
-                    Label22 As label:
+                    Label22_4 As label:
                         FontWeight: =FontWeight.Semibold
                         Height: =28
                         Size: =10
@@ -198,7 +203,7 @@
                         Y: =132
                         ZIndex: =7
 
-                    Label22_1 As label:
+                    Label22_5 As label:
                         Align: =Align.Right
                         FontWeight: =FontWeight.Semibold
                         Height: =28
@@ -209,7 +214,7 @@
                         Y: =132
                         ZIndex: =8
 
-                    Label22_2 As label:
+                    Label22_6 As label:
                         FontWeight: =FontWeight.Lighter
                         Height: =28
                         Size: =8
@@ -219,7 +224,7 @@
                         Y: =148
                         ZIndex: =9
 
-                    Label22_3 As label:
+                    Label22_7 As label:
                         Align: =Align.Right
                         FontWeight: =FontWeight.Lighter
                         Height: =28
@@ -230,7 +235,7 @@
                         Y: =148
                         ZIndex: =10
 
-                    HeaderIcon_2 As image:
+                    HeaderIcon_3 As image:
                         Height: =64
                         Image: =airplane_1
                         Width: =52
@@ -238,7 +243,7 @@
                         Y: =76
                         ZIndex: =11
 
-                    Label19_2 As label:
+                    Label19_6 As label:
                         FontWeight: =FontWeight.Lighter
                         Height: =29
                         PaddingLeft: =8
@@ -249,7 +254,7 @@
                         Y: =84
                         ZIndex: =12
 
-                    Label19_3 As label:
+                    Label19_7 As label:
                         Align: =Align.Right
                         FontWeight: =FontWeight.Lighter
                         Height: =29
@@ -261,14 +266,14 @@
                         Y: =86
                         ZIndex: =13
 
-                    Rectangle4 As rectangle:
+                    Rectangle4_1 As rectangle:
                         Fill: =RGBA(51, 51, 51, 1)
                         Height: =8
                         Width: =564
                         Y: =193
                         ZIndex: =14
 
-        Label10 As label:
+        Label10_1 As label:
             Color: =RGBA(102, 102, 102, 1)
             Height: =27
             Size: =10

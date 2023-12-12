@@ -755,7 +755,7 @@
       "MetaDataIDKey": "",
       "Name": "Gallery3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2706,7 +2706,7 @@
       "MetaDataIDKey": "",
       "Name": "Label8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3240,7 +3240,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

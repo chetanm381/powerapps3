@@ -6,7 +6,7 @@ App As appinfo:
             Connection.Connected
         );
         // Creating Collect for LoadFlights
-        If(isConnected,Collect(UpdatedFlightData,FMS_Flights));
+        If(isConnected,Collect(UpdatedFlightData,FMS_Flights););
         // Isconnected condition for checking
         If(
             isConnected,
