@@ -6,7 +6,7 @@
         Fill: =RGBA(230, 230, 230, 1)
         Height: =1136
         Width: =640
-        ZIndex: =10
+        ZIndex: =1
 
         HeaderContainer As groupContainer.manualLayoutContainer:
             Fill: =RGBA(255, 255, 255, 1)
@@ -324,7 +324,8 @@
             ZIndex: =9
 
     Container10 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(153, 153, 153, 0.55)
         Height: =1136
         Width: =640
-        ZIndex: =11
+        ZIndex: =2
 
