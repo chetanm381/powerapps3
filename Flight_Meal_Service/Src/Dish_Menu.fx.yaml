@@ -9,7 +9,7 @@ Dish_Menu As screen:
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =979
-        Items: =FMS_Dishes
+        Items: =FMS_Dishes_2
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =183
