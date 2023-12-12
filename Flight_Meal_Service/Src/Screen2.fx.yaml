@@ -1,40 +1,8 @@
 "Screen2 As screen.'layout_Offline_ver1.0'":
 
-    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.None
-        Height: =1136
-        LayoutAlignItems: =LayoutAlignItems.Stretch
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        RadiusTopLeft: =40
-        RadiusTopRight: =40
-        Width: =Parent.Width
-        ZIndex: =1
-
-        MainSectionContainer1 As groupContainer.verticalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.None
-            Height: =225
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =20
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusTopLeft: =30
-            RadiusTopRight: =30
-            ZIndex: =5
-
-            Container2 As groupContainer.manualLayoutContainer:
-                Fill: =RGBA(255, 255, 255, 1)
-                Height: =225
-                LayoutMinHeight: =112
-                LayoutMinWidth: =250
-                RadiusTopLeft: =30
-                RadiusTopRight: =30
-                ZIndex: =1
-
     Container3 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(6, 102, 242, 1)
-        Height: =393
+        Height: =342
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         Width: =640
@@ -47,8 +15,8 @@
             Size: =40
             Text: ="Choose Your Flight"
             Width: =364
-            X: =24
-            Y: =87
+            X: =20
+            Y: =40
             ZIndex: =1
 
     Image1 As image:
@@ -56,135 +24,184 @@
         Image: =aeroplane
         Width: =256
         X: =384
-        Y: =66
+        Y: =16
         ZIndex: =8
 
     Container8 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(72, 144, 241, 1)
-        Height: =761
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
+        Fill: =RGBA(194, 218, 255, 1)
+        Height: =871
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Width: =536
-        X: =57
-        Y: =339
+        Width: =640
+        Y: =265
         ZIndex: =9
 
         Gallery2 As gallery.galleryVertical:
             DelayItemLoading: =true
-            Height: =761
+            Height: =713
             Items: =UpdatedFlightData
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |
                 =
                 Set(selectedFlight,Gallery2.Selected);Navigate(DetailedScreen);
-            TemplateSize: =227
-            Width: =536
+            TemplatePadding: =0
+            TemplateSize: =197
+            Width: =591
+            X: =30
+            Y: =115
             ZIndex: =1
 
-            Label3 As label:
-                Color: =RGBA(255, 255, 255, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =56
-                OnSelect: =Select(Parent)
-                Size: =30
-                Text: =ThisItem.From
-                Width: =138
-                X: =27
-                Y: =45
-                ZIndex: =1
+            Container1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Semilight
+                Fill: =RGBA(51, 133, 255, 1)
+                Height: =181
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Width: =581
+                Y: =2
+                ZIndex: =8
 
-            Label3_1 As label:
-                Color: =RGBA(255, 255, 255, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =56
-                OnSelect: =Select(Parent)
-                Size: =30
-                Text: =ThisItem.To
-                Width: =175
-                X: =318
-                Y: =45
-                ZIndex: =2
+                Rectangle1 As rectangle:
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =181
+                    OnSelect: =Select(Gallery2);
+                    Width: =581
+                    ZIndex: =1
 
-            Icon4 As icon.Airplane:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                Color: =RGBA(255, 255, 255, 1)
-                DisplayMode: =DisplayMode.View
-                Height: =44
-                Icon: =Icon.Airplane
-                OnSelect: =Select(Parent)
-                Width: =82
-                X: =212
-                Y: =45
-                ZIndex: =3
+                Label3 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =56
+                    OnSelect: =Select(Rectangle1)
+                    Size: =20
+                    Text: =ThisItem.From
+                    Width: =218
+                    X: =23
+                    Y: =26
+                    ZIndex: =3
 
-            Label4 As label:
-                Color: =RGBA(255, 255, 255, 1)
-                Height: =54
-                OnSelect: =Select(Parent)
-                Size: =21
-                Text: =ThisItem.Arrival_Date
-                Width: =166
-                X: =190
-                Y: =149
-                ZIndex: =4
+                Label3_1 As label:
+                    Align: =Align.Right
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =56
+                    OnSelect: =Select(Rectangle1)
+                    Size: =15
+                    Text: =ThisItem.To
+                    Width: =252
+                    X: =308
+                    Y: =26
+                    ZIndex: =4
 
-            Label6 As label:
-                Color: =RGBA(255, 255, 255, 1)
-                Height: =36
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: ="From"
-                Width: =82
-                X: =27
-                Y: =9
-                ZIndex: =5
+                Icon4 As icon.Airplane:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.View
+                    Height: =44
+                    Icon: =Icon.Airplane
+                    OnSelect: =Select(Rectangle1)
+                    Width: =82
+                    X: =232
+                    Y: =32
+                    ZIndex: =5
 
-            Label6_1 As label:
-                Color: =RGBA(255, 255, 255, 1)
-                Height: =36
-                OnSelect: =Select(Parent)
-                Size: =15
-                Text: ="To"
-                Width: =48
-                X: =446
-                Y: =9
-                ZIndex: =6
+                Label4 As label:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Rectangle1)
+                    Size: =10
+                    Text: |-
+                        =Text(ThisItem.Departure_Date, "mmm, dd")
+                         
+                    Width: =105
+                    X: =23
+                    Y: =124
+                    ZIndex: =6
 
-            Rectangle3 As rectangle:
-                Fill: =RGBA(255, 255, 255, 1)
-                Height: =1
-                OnSelect: =Select(Parent)
-                Width: =526
-                Y: =224
-                ZIndex: =7
+                Label6 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =36
+                    OnSelect: =Select(Rectangle1)
+                    Size: =10
+                    Text: ="From"
+                    Width: =82
+                    X: =23
+                    Y: =9
+                    ZIndex: =7
 
-    Container9 As groupContainer.manualLayoutContainer:
-        BorderThickness: =1
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =65
-        Width: =410
-        X: =120
-        Y: =261
+                Label6_1 As label:
+                    Align: =Align.Right
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =36
+                    OnSelect: =Select(Rectangle1)
+                    Size: =10
+                    Text: ="To"
+                    Width: =48
+                    X: =512
+                    Y: =9
+                    ZIndex: =8
+
+                Rectangle3 As rectangle:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =7
+                    OnSelect: =Select(Rectangle1)
+                    Width: =581
+                    Y: =174
+                    ZIndex: =9
+
+                Label5 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =29
+                    Size: =8
+                    Text: |-
+                        =Text(ThisItem.Departure_Time,"hh:mm AM")
+                    Width: =82
+                    X: =23
+                    Y: =109
+                    ZIndex: =10
+
+                Label5_1 As label:
+                    Align: =Align.Right
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =29
+                    Size: =8
+                    Text: |-
+                        =Text(ThisItem.Arrival_Time,"hh:mm AM")
+                    Width: =82
+                    X: =478
+                    Y: =109
+                    ZIndex: =11
+
+                Label4_1 As label:
+                    Align: =Align.Right
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Rectangle1)
+                    Size: =10
+                    Text: |-
+                        =Text(ThisItem.Arrival_Date, "mmm, dd")
+                         
+                    Width: =105
+                    X: =455
+                    Y: =124
+                    ZIndex: =12
+
+    PopScreen As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(6, 102, 242, 0.39)
+        Height: =1136
+        Width: =640
         ZIndex: =10
-
-        Icon5 As icon.Search:
-            Height: =53
-            Icon: =Icon.Search
-            Width: =48
-            X: =15
-            Y: =6
-            ZIndex: =1
-
-        TextInput4 As text:
-            BorderStyle: =BorderStyle.None
-            Default: ="Search"
-            Height: =53
-            Size: =21
-            Width: =330
-            X: =63
-            Y: =6
-            ZIndex: =2
 

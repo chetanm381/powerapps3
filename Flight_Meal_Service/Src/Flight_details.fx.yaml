@@ -21,27 +21,15 @@
             LayoutMode: =LayoutMode.Auto
             ZIndex: =5
 
-    Container11 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(72, 144, 241, 1)
-        Height: =685
-        RadiusBottomLeft: =40
-        RadiusBottomRight: =40
-        RadiusTopLeft: =40
-        RadiusTopRight: =40
-        Width: =560
-        X: =40
-        Y: =246
-        ZIndex: =2
-
     Label7 As label:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
-        Height: =70
-        Size: =45
-        Text: ="Boarding Pass"
-        Width: =482
-        X: =79
-        Y: =137
+        Height: =118
+        Size: =25
+        Text: ="Move Further With Choosing Crew Member"
+        Width: =600
+        X: =20
+        Y: =27
         ZIndex: =3
 
     Label9 As label:
@@ -70,8 +58,8 @@
         Height: =40
         Icon: =Icon.Airplane
         Width: =58
-        X: =79
-        Y: =306
+        X: =237
+        Y: =194
         ZIndex: =6
 
     TextInput6 As text:
@@ -83,8 +71,8 @@
         Height: =36
         Size: =21
         Width: =156
-        X: =131
-        Y: =310
+        X: =295
+        Y: =196
         ZIndex: =7
 
     Label11 As label:
