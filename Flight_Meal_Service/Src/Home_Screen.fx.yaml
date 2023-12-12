@@ -52,3 +52,218 @@
                 Y: =22
                 ZIndex: =4
 
+        Source As text:
+            BorderColor: =RGBA(102, 102, 102, 1)
+            Default: =""
+            Height: =42
+            HintText: ="Departure City"
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(153, 153, 153, 1)
+            Size: =10
+            Width: =250
+            X: =32
+            Y: =148
+            ZIndex: =2
+
+        Destination As text:
+            BorderColor: =RGBA(102, 102, 102, 1)
+            Default: =""
+            Height: =42
+            HintText: ="Arrival City"
+            HoverBorderColor: =RGBA(51, 51, 51, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(153, 153, 153, 1)
+            Size: =10
+            Width: =250
+            X: =356
+            Y: =148
+            ZIndex: =3
+
+        Icon3 As icon.ArrowsUpDown:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =35
+            Icon: =Icon.Sort
+            Rotation: =90
+            Width: =35
+            X: =301
+            Y: =148
+            ZIndex: =4
+
+        Container6 As groupContainer.manualLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            Height: =830
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =574
+            X: =32
+            Y: =222
+            ZIndex: =5
+
+            Flights As gallery.galleryVertical:
+                BorderStyle: =BorderStyle.None
+                DelayItemLoading: =true
+                Height: =830
+                Items: =LastN(UpdatedFlightData,3)
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =221
+                Width: =574
+                ZIndex: =1
+
+                itemcontainer As groupContainer.manualLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    DropShadow: =DropShadow.Semilight
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =201
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Width: =564
+                    ZIndex: =1
+
+                    backgroundContainer As rectangle:
+                        BorderStyle: =BorderStyle.None
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =252
+                        OnSelect: =Select(Flights);
+                        Width: =564
+                        ZIndex: =1
+
+                    Label19 As label:
+                        FontWeight: =FontWeight.Lighter
+                        Height: =29
+                        Size: =8
+                        Text: ="From"
+                        Width: =110
+                        X: =10
+                        Y: =39
+                        ZIndex: =2
+
+                    Label19_1 As label:
+                        Align: =Align.Right
+                        FontWeight: =FontWeight.Lighter
+                        Height: =29
+                        Size: =8
+                        Text: ="To"
+                        Width: =110
+                        X: =443
+                        Y: =39
+                        ZIndex: =3
+
+                    Label20 As label:
+                        FontWeight: =FontWeight.Bold
+                        Height: =41
+                        Size: =20
+                        Text: =Text(ThisItem.From,"APR")
+                        Width: =184
+                        X: =10
+                        Y: =50
+                        ZIndex: =4
+
+                    Label20_1 As label:
+                        Align: =Align.Right
+                        FontWeight: =FontWeight.Bold
+                        Height: =41
+                        Size: =20
+                        Text: =Text(ThisItem.To,"APR")
+                        Width: =184
+                        X: =380
+                        Y: =50
+                        ZIndex: =5
+
+                    Label21 As label:
+                        Align: =Align.Center
+                        FontWeight: =FontWeight.Semibold
+                        Height: =39
+                        Size: =16
+                        Text: =ThisItem.Title
+                        Width: =146
+                        X: =214
+                        Y: =11
+                        ZIndex: =6
+
+                    Label22 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        Size: =10
+                        Text: =ThisItem.Departure_Time
+                        Width: =92
+                        X: =10
+                        Y: =132
+                        ZIndex: =7
+
+                    Label22_1 As label:
+                        Align: =Align.Right
+                        FontWeight: =FontWeight.Semibold
+                        Height: =28
+                        Size: =10
+                        Text: =ThisItem.Departure_Time
+                        Width: =92
+                        X: =461
+                        Y: =132
+                        ZIndex: =8
+
+                    Label22_2 As label:
+                        FontWeight: =FontWeight.Lighter
+                        Height: =28
+                        Size: =8
+                        Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
+                        Width: =92
+                        X: =10
+                        Y: =148
+                        ZIndex: =9
+
+                    Label22_3 As label:
+                        Align: =Align.Right
+                        FontWeight: =FontWeight.Lighter
+                        Height: =28
+                        Size: =8
+                        Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
+                        Width: =92
+                        X: =461
+                        Y: =148
+                        ZIndex: =10
+
+                    HeaderIcon_2 As image:
+                        Height: =64
+                        Image: =airplane_1
+                        Width: =52
+                        X: =261
+                        Y: =68
+                        ZIndex: =11
+
+                    Label19_2 As label:
+                        FontWeight: =FontWeight.Lighter
+                        Height: =29
+                        Size: =8
+                        Text: ="From"
+                        Width: =110
+                        X: =10
+                        Y: =85
+                        ZIndex: =12
+
+                    Label19_3 As label:
+                        Align: =Align.Right
+                        FontWeight: =FontWeight.Lighter
+                        Height: =29
+                        Size: =8
+                        Text: ="From"
+                        Width: =110
+                        X: =443
+                        Y: =85
+                        ZIndex: =13
+
+    Label10 As label:
+        Color: =RGBA(102, 102, 102, 1)
+        Height: =27
+        Size: =10
+        Text: ="Choose Your Flight"
+        Width: =257
+        X: =32
+        Y: =112
+        ZIndex: =11
+

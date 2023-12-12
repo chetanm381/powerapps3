@@ -1,6 +1,6 @@
 HomescreenComp As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =640
+    Height: =1136
     Width: =640
     X: =0
     Y: =0
