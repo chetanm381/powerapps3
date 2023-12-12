@@ -1,22 +1,9 @@
 "Home_Screen As screen.'layout_Offline_ver1.0'":
 
-    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.None
-        Height: =1136
-        LayoutAlignItems: =LayoutAlignItems.Stretch
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        RadiusTopLeft: =40
-        RadiusTopRight: =40
-        Width: =Parent.Width
-        ZIndex: =1
-
     Container9 As groupContainer.manualLayoutContainer:
         BorderThickness: =1
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =65
-        Width: =410
-        X: =120
-        Y: =261
+        Height: =1136
+        Width: =640
         ZIndex: =10
 
