@@ -1,4 +1,5 @@
 "Home_Screen As screen.'layout_Offline_ver1.0'":
+    OnVisible: =If(isConnected,Collect(UpdatedFlightData,FMS_Flights));
 
     BackgroundContainer As groupContainer.manualLayoutContainer:
         BorderThickness: =1
@@ -128,14 +129,15 @@
                     backgroundContainer As rectangle:
                         BorderStyle: =BorderStyle.None
                         Fill: =RGBA(0, 0, 0, 0)
-                        Height: =252
+                        Height: =Parent.Height
                         OnSelect: =Select(Flights);
-                        Width: =564
+                        Width: =Parent.Width
                         ZIndex: =1
 
                     Label19 As label:
                         FontWeight: =FontWeight.Lighter
                         Height: =29
+                        PaddingLeft: =8
                         Size: =8
                         Text: ="From"
                         Width: =110
@@ -233,14 +235,15 @@
                         Image: =airplane_1
                         Width: =52
                         X: =261
-                        Y: =68
+                        Y: =76
                         ZIndex: =11
 
                     Label19_2 As label:
                         FontWeight: =FontWeight.Lighter
                         Height: =29
+                        PaddingLeft: =8
                         Size: =8
-                        Text: ="From"
+                        Text: =ThisItem.from_code
                         Width: =110
                         X: =10
                         Y: =85
@@ -250,6 +253,7 @@
                         Align: =Align.Right
                         FontWeight: =FontWeight.Lighter
                         Height: =29
+                        PaddingRight: =0
                         Size: =8
                         Text: ="From"
                         Width: =110

@@ -372,6 +372,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container6.Flights.itemcontainer.Label19_2.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container6.Flights.itemcontainer.Label19_2.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".from_code"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Home_Screen",
+                "type": "Home_Screen.BackgroundContainer.Container6.Flights.itemcontainer.Label19_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "from_code"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Dish_Menu.Gallery3.AccessibleLabel"
                 }
               ],
@@ -1045,6 +1085,36 @@
                 "member": "OnSelect",
                 "module": "DetailedScreen",
                 "type": "DetailedScreen.DS_BackgroundContainer.Button1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home_Screen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home_Screen.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Home_Screen",
+                "type": "Home_Screen"
               }
             }
           ],
