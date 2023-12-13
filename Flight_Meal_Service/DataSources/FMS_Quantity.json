@@ -35,7 +35,6 @@
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
       "Quantity": "Quantity",
-      "required_Quantity": "required_Quantity",
       "Title": "Title"
     },
     "DatasetName": "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase",
