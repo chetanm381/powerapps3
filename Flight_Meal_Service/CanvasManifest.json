@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 40,
+    "BindingErrorCount": 31,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -131,9 +131,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "DetailedScreen",
     "Home_Screen",
-    "Flight_details",
     "Dish_Menu"
   ]
 }
