@@ -1635,10 +1635,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 11,
-                  "charOffset": 8,
+                  "charLength": 1,
+                  "charOffset": 31,
                   "snippet": {
-                    "text": ".Dish_Price"
+                    "text": "="
                   }
                 }
               },
@@ -1651,15 +1651,16 @@
           ],
           "message": {
             "arguments": [
-              "Dish_Price"
+              "Number",
+              "Text"
             ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2346,6 +2347,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Home_Screen.FlightPopUp.itemcontainer_2.Dropdown2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home_Screen.FlightPopUp.itemcontainer_2.Dropdown2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home_Screen",
+                "type": "Home_Screen.FlightPopUp.itemcontainer_2.Dropdown2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Home_Screen.FlightPopUp.Icon1.AccessibleLabel"
                 }
               ],
@@ -2477,6 +2508,36 @@
               },
               "properties": {
                 "member": "colors",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.crewMember"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.crewMember",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "crewMember",
                 "module": "App",
                 "type": "App"
               }
@@ -2747,6 +2808,36 @@
               },
               "properties": {
                 "member": "FMS_Crew_Members",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-NotOfflineConnectors",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.FMS_Dishes"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.FMS_Dishes",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FMS_Dishes",
                 "module": "App",
                 "type": "App"
               }
