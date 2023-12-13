@@ -99,7 +99,7 @@ Dish_Menu As screen:
                 RadiusTopRight: =20
                 Width: =147
                 X: =415
-                Y: =17
+                Y: =27
                 ZIndex: =7
 
             Image1 As image:
@@ -117,8 +117,7 @@ Dish_Menu As screen:
         ZIndex: =6
 
         Button10 As button:
-            Color: =RGBA(36, 124, 138, 1)
-            Fill: =RGBA(170, 219, 227, 1)
+            Fill: =RGBA(22, 151, 170, 1)
             Height: =70
             OnSelect: |-
                 =ClearCollect(updData,Gallery3.AllItems);
