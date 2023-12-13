@@ -6,7 +6,14 @@ App As appinfo:
             Connection.Connected
         );
         // Creating Collect for LoadFlights
-        If(isConnected,Collect(UpdatedFlightData,FMS_Flights););
+        If(
+            isConnected,
+            Collect(
+                UpdatedFlightData,
+                FMS_Flights
+            );
+            
+        );
         // Isconnected condition for checking
         If(
             isConnected,
@@ -42,7 +49,7 @@ App As appinfo:
         // updated data is stored in updatedata 
         //********************************************************
         Clear(UpdatedFlightData);
-        Collect(
+            Collect(
                 UpdatedFlightData,
                 FMS_Flights
             );
@@ -55,10 +62,9 @@ App As appinfo:
                 UpdatedFlightData
             );
             ,
-        
          //
-         //
-         //*************************** Disconnected Condition ***********************   
+        //
+        //*************************** Disconnected Condition ***********************   
             LoadData(
                 loadflights,
                 "loadflights"
@@ -84,11 +90,10 @@ App As appinfo:
             */
         // refresh data source 
         //Refresh(FMS_Flights);
-            
         // updated data is stored in updatedata 
         //********************************************************
         Clear(UpdatedFlightData);
-        Collect(
+            Collect(
                 UpdatedFlightData,
                 loadflights
             );
@@ -102,15 +107,6 @@ App As appinfo:
             );
             
         );
-        
-        
-        
-        
-        
-        
-        
-        
-        
         ClearCollect(
             Details,
             [
@@ -139,7 +135,6 @@ App As appinfo:
             crew,
             "crewdata"
         );
-        
         If(
             isConnected,
             ForAll(
@@ -160,7 +155,6 @@ App As appinfo:
             Clear(crew);
             
         );*/
-        
         Set(
             colors,
             ColorValue("#f1f6f8")
