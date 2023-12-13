@@ -9,7 +9,7 @@ Dish_Menu As screen:
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =979
-        Items: =FMS_Dishes_2
+        Items: =Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =183

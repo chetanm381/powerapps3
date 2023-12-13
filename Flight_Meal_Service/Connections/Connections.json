@@ -13,13 +13,17 @@
           },
           "FMS_Flights": {
             "tableName": "057b4c06-1164-4687-bafe-eccd3ab383ca"
+          },
+          "FMS_Quantity": {
+            "tableName": "4a0a3bb1-625f-41e7-8ba5-352070ab9447"
           }
         }
       }
     },
     "dataSources": [
       "FMS_Crew_Members",
-      "FMS_Flights"
+      "FMS_Flights",
+      "FMS_Quantity"
     ],
     "dependencies": {},
     "dependents": [],
