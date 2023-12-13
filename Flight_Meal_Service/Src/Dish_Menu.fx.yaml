@@ -1,4 +1,8 @@
 Dish_Menu As screen:
+    OnVisible: |-
+        =ClearCollect(
+            GalleryData,Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
+        );
 
     Container1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(72, 144, 241, 1)
@@ -9,7 +13,9 @@ Dish_Menu As screen:
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =979
-        Items: =Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
+        Items: |-
+            =
+            GalleryData
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =183
@@ -73,6 +79,15 @@ Dish_Menu As screen:
             Y: =132
             ZIndex: =8
 
+        Quantity As text:
+            Default: ="-- Enter --"
+            Height: =55
+            Size: =21
+            Width: =147
+            X: =452
+            Y: =55
+            ZIndex: =9
+
     Container3 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =60
@@ -96,4 +111,29 @@ Dish_Menu As screen:
             X: =5
             Y: =8
             ZIndex: =1
+
+    Button10 As button:
+        Height: =70
+        OnSelect: |-
+            =ClearCollect(updData,Gallery3.AllItems);
+            
+            
+            ForAll(
+               updData,
+                Patch(
+                   FMS_Quantity,
+                    {ID:updData[@ID]},
+                    {
+                        required_Quantity: Quantity.Text
+                    
+                    }
+                )
+            );
+            Refresh(FMS_Quantity);
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =337
+        Y: =1027
+        ZIndex: =5
 
