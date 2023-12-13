@@ -1227,324 +1227,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 101,
-                  "snippet": {
-                    "text": "selectedFlight"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Button1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "selectedFlight"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 115,
-                  "snippet": {
-                    "text": ".ID"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Button1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 87,
-                  "charOffset": 79,
-                  "snippet": {
-                    "text": "Patch(FMS_Flights,{ID:selectedFlight.ID},\n        {To:\"UpdatedFromConnected\"}\n        )"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Button1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Patch"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 97,
-                  "snippet": {
-                    "text": "{ID:selectedFlight.ID}"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Button1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ID",
-              "Number",
-              "Error"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 485,
-                  "snippet": {
-                    "text": "selectedFlight"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Button1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "selectedFlight"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 499,
-                  "snippet": {
-                    "text": ".ID"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Button1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 96,
-                  "charOffset": 457,
-                  "snippet": {
-                    "text": "Patch(UpdatedFlightData,{ID:selectedFlight.ID},\n        {To:\"UpdatedFromDisConnected\"}\n        )"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Button1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Patch"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 481,
-                  "snippet": {
-                    "text": "{ID:selectedFlight.ID}"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Button1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ID",
-              "Number",
-              "Error"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Dish_Menu.OnVisible"
                 }
               ],
@@ -1579,6 +1261,43 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 7,
+                  "snippet": {
+                    "text": "Parent"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Label8_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrFunctionExpectsSelectableControl",
           "ruleIndex": 5
         },
         {
@@ -1586,155 +1305,32 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Label8_1.Text"
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Label8_1.Text",
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.Text",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 20,
+                  "charLength": 8,
+                  "charOffset": 29,
                   "snippet": {
-                    "text": "="
+                    "text": ".dish_id"
                   }
                 }
               },
               "properties": {
                 "member": "Text",
                 "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Label8_1"
+                "type": "Dish_Menu.Gallery3.Container2.Label5"
               }
             }
           ],
           "message": {
             "arguments": [
-              "Number",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Label5.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Label5.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 20,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Label5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Label8.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Label8.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 20,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Label8"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Flight_details.Dropdown1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Flight_details.Dropdown1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "Flight_Details"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Flight_details",
-                "type": "Flight_details.Dropdown1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Flight_Details"
+              "dish_id"
             ],
             "id": "issue"
           },
@@ -1743,6 +1339,202 @@
           },
           "ruleId": "app-ErrInvalidName",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 20,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Label5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 7,
+                  "snippet": {
+                    "text": "Parent"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Label5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrFunctionExpectsSelectableControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 29,
+                  "snippet": {
+                    "text": ".dish_id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Label8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "dish_id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 20,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Label8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 7,
+                  "snippet": {
+                    "text": "Parent"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Label8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrFunctionExpectsSelectableControl",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1869,66 +1661,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Gallery1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Gallery1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Gallery1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Gallery1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Dish_Menu.Gallery3.AccessibleLabel"
                 }
               ],
@@ -1989,139 +1721,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Quantity.AccessibleLabel"
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Quantity.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Quantity.AccessibleLabel",
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Quantity.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Quantity"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Flight_details.TextInput6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Flight_details.TextInput6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Flight_details",
-                "type": "Flight_details.TextInput6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Flight_details.TextInput8.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Flight_details.TextInput8.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Flight_details",
-                "type": "Flight_details.TextInput8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Flight_details.TextInput9.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Flight_details.TextInput9.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Flight_details",
-                "type": "Flight_details.TextInput9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Flight_details.Dropdown1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Flight_details.Dropdown1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Flight_details",
-                "type": "Flight_details.Dropdown1"
+                "type": "Dish_Menu.Gallery3.Container2.Quantity"
               }
             }
           ],
@@ -2799,36 +2411,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DetailedScreen.DS_BackgroundContainer.Button1.OnSelect",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "DetailedScreen",
-                "type": "DetailedScreen.DS_BackgroundContainer.Button1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.FMS_Crew_Members"
                 }
               ],
@@ -3010,20 +2592,6 @@
               }
             },
             {
-              "id": "app-ErrTypeError-Arg-Expected-Found",
-              "messageStrings": {
-                "issue": {
-                  "text": "The type of this argument '{0}' does not match the expected type '{1}'. Found type '{2}'."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
               "messageStrings": {
                 "issue": {
@@ -3037,6 +2605,20 @@
                   "If you’re comparing records or tables, the field or column types must match exactly."
                 ],
                 "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrFunctionExpectsSelectableControl",
+              "messageStrings": {
+                "issue": {
+                  "text": "Select of a control that doesn’t have an OnSelect property"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }
