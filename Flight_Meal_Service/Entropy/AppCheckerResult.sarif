@@ -2466,6 +2466,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Home_Screen.FlightPopUp.itemcontainer_2.Dropdown2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home_Screen.FlightPopUp.itemcontainer_2.Dropdown2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home_Screen",
+                "type": "Home_Screen.FlightPopUp.itemcontainer_2.Dropdown2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.colors"
                 }
               ],
