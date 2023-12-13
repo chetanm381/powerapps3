@@ -1545,26 +1545,26 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Items"
+                  "fullyQualifiedName": "Dish_Menu.OnVisible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Items",
+                  "fullyQualifiedName": "Dish_Menu.OnVisible",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 29,
+                  "charOffset": 59,
                   "snippet": {
                     "text": "="
                   }
                 }
               },
               "properties": {
-                "member": "Items",
+                "member": "OnVisible",
                 "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3"
+                "type": "Dish_Menu"
               }
             }
           ],
@@ -1983,6 +1983,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Quantity.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Quantity.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Quantity"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
         },
         {
           "locations": [

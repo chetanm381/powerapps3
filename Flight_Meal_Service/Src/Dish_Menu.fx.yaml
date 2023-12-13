@@ -12,10 +12,8 @@ Dish_Menu As screen:
 
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =979
-        Items: |-
-            =
-            GalleryData
+        Height: =814
+        Items: =GalleryData
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =183
