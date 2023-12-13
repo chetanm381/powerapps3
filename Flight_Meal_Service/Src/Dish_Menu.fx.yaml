@@ -4,15 +4,24 @@ Dish_Menu As screen:
             GalleryData,Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
         );
 
-    Container1 As groupContainer.manualLayoutContainer:
+    Dishes_containerHeader As groupContainer.manualLayoutContainer:
         Fill: =RGBA(72, 144, 241, 1)
-        Height: =157
+        Height: =89
         Width: =640
         ZIndex: =1
 
+        Label2 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =89
+            PaddingLeft: =15
+            Size: =20
+            Text: ="Meals in Inventory"
+            Width: =560
+            ZIndex: =1
+
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =814
+        Height: =864
         Items: =GalleryData
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -86,52 +95,34 @@ Dish_Menu As screen:
             Y: =55
             ZIndex: =9
 
-    Container3 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =60
-        RadiusBottomLeft: =20
-        RadiusBottomRight: =20
-        RadiusTopLeft: =20
-        RadiusTopRight: =20
-        Width: =215
-        X: =402
-        Y: =36
-        ZIndex: =4
+    Container1 As groupContainer.manualLayoutContainer:
+        Height: =114
+        Width: =640
+        Y: =1021
+        ZIndex: =6
 
-        Label3 As label:
-            Color: =RGBA(72, 144, 241, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =45
-            Size: =25
-            Text: |-
-                ="Balance : 25"
-            Width: =210
-            X: =5
-            Y: =8
+        Button10 As button:
+            Height: =70
+            OnSelect: |-
+                =ClearCollect(updData,Gallery3.AllItems);
+                
+                
+                ForAll(
+                   updData,
+                    Patch(
+                       FMS_Quantity,
+                        {ID:updData[@ID]},
+                        {
+                            required_Quantity: Quantity.Text
+                        
+                        }
+                    )
+                );
+                Refresh(FMS_Quantity);
+            Size: =24
+            Text: ="Save Order"
+            Width: =280
+            X: =196
+            Y: =26
             ZIndex: =1
-
-    Button10 As button:
-        Height: =70
-        OnSelect: |-
-            =ClearCollect(updData,Gallery3.AllItems);
-            
-            
-            ForAll(
-               updData,
-                Patch(
-                   FMS_Quantity,
-                    {ID:updData[@ID]},
-                    {
-                        required_Quantity: Quantity.Text
-                    
-                    }
-                )
-            );
-            Refresh(FMS_Quantity);
-        Size: =24
-        Text: ="Button"
-        Width: =280
-        X: =337
-        Y: =1027
-        ZIndex: =5
 
