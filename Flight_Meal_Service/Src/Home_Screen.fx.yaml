@@ -521,7 +521,10 @@
         Icon1_1 As icon.CancelBadge:
             Color: =RGBA(102, 102, 102, 1)
             Icon: =Icon.NextArrow
-            OnSelect: =Set(showPopUp,false);
+            OnSelect: |
+                =Set(showPopUp,false);
+                Set(crewMember,Dropdown2.Selected.Crew_ID);
+                Navigate(Dish_Menu);
             X: =535
             Y: =748
             ZIndex: =5
