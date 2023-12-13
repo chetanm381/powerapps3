@@ -14,6 +14,9 @@
           "FMS_Dishes": {
             "tableName": "bebd0098-5624-4079-a983-20e80d757cc8"
           },
+          "FMS_Dishes_1": {
+            "tableName": "bebd0098-5624-4079-a983-20e80d757cc8"
+          },
           "FMS_Flights": {
             "tableName": "057b4c06-1164-4687-bafe-eccd3ab383ca"
           },
@@ -27,7 +30,8 @@
       "FMS_Crew_Members",
       "FMS_Flights",
       "FMS_Quantity",
-      "FMS_Dishes"
+      "FMS_Dishes",
+      "FMS_Dishes_1"
     ],
     "dependencies": {},
     "dependents": [],
