@@ -489,6 +489,15 @@
                 Y: =itemcontainer_2.Height-Rectangle4_2.Height
                 ZIndex: =14
 
+            Dropdown2 As dropdown:
+                Height: =45
+                Items: =FMS_Crew_Members
+                Size: =21
+                Width: =414
+                X: =81
+                Y: =233
+                ZIndex: =15
+
         Circle2 As circle:
             Fill: =RGBA(255, 255, 255, 1)
             X: =40

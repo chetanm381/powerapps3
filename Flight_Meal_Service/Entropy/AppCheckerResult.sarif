@@ -1635,10 +1635,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 31,
+                  "charLength": 11,
+                  "charOffset": 8,
                   "snippet": {
-                    "text": "="
+                    "text": ".Dish_Price"
                   }
                 }
               },
@@ -1651,16 +1651,15 @@
           ],
           "message": {
             "arguments": [
-              "Number",
-              "Text"
+              "Dish_Price"
             ],
             "id": "issue"
           },
           "properties": {
-            "level": "Medium"
+            "level": "High"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -2808,36 +2807,6 @@
               },
               "properties": {
                 "member": "FMS_Quantity",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.FMS_Dishes"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.FMS_Dishes",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FMS_Dishes",
                 "module": "App",
                 "type": "App"
               }
