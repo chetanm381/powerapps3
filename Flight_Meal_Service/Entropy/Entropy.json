@@ -128,7 +128,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/13/2023 05:37:04",
+  "HeaderLastSavedDateTimeUTC": "12/13/2023 05:46:08",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "a4fc6352-8ce6-4073-ae97-b96017976ecc": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/832938808e0b419c8dc90fe74f425501\""
@@ -159,18 +159,19 @@
   "OrderDataSource": {
     "ComboBoxSample": 3,
     "CustomGallerySample": 4,
-    "Details": 10,
+    "Details": 11,
     "DropDownSample": 5,
     "Flight_Tables": 9,
     "Flight_Tables\\cr319_flight_table_statecode": 0,
     "Flight_Tables\\cr319_flight_table_statuscode": 1,
     "Flight_Tables\\default.cds_cr319_flight_table_views": 2,
     "FMS_Crew_Members": 6,
+    "FMS_Dishes": 10,
     "FMS_Flights": 7,
     "FMS_Quantity": 8,
-    "loadflights": 11,
-    "updatedCrew": 12,
-    "UpdatedFlightData": 13
+    "loadflights": 12,
+    "updatedCrew": 13,
+    "UpdatedFlightData": 14
   },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
