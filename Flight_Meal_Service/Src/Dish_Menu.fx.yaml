@@ -21,7 +21,11 @@ Dish_Menu As screen:
             Height: =35
             OnSelect: =Select(Parent)
             Size: =20
-            Text: =ThisItem.Dish_Price
+            Text: |-
+                =LookUp(
+                    FMS_Dishes,
+                    ID = ThisItem.dish_id
+                ).Dish_Price
             Width: =99
             X: =27
             Y: =85

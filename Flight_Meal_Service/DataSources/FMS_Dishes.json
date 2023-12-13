@@ -27,21 +27,20 @@
       "Author#Claims": "Created By Claims",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
-      "dish_id": "dish_id",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
-      "flight_id": "flight_id",
+      "field_0": "Dish_Description",
+      "field_2": "Dish_Price",
       "ID": "ID",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
-      "Quantity": "Quantity",
-      "Title": "Title"
+      "Title": "Dish_Name"
     },
     "DatasetName": "https://appcinotechnologies.sharepoint.com/sites/PowerAppUseCase",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "FMS_Quantity",
+    "Name": "FMS_Dishes",
     "Type": "ConnectedDataSourceInfo"
   }
 ]
