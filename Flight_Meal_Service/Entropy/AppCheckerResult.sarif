@@ -1268,6 +1268,88 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 30,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text",
+              "Number"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 21,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Label8_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8_1.OnSelect"
                 }
               ],
@@ -1305,52 +1387,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.Text"
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Price.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 29,
-                  "snippet": {
-                    "text": ".dish_id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Container2.Label5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "dish_id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.Text",
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Price.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1364,19 +1406,19 @@
               "properties": {
                 "member": "Text",
                 "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Container2.Label5"
+                "type": "Dish_Menu.Gallery3.Container2.Price"
               }
             }
           ],
           "message": {
             "arguments": [
               "Number",
-              "Error"
+              "Text"
             ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
           "ruleIndex": 4
@@ -1386,12 +1428,53 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.OnSelect"
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Description.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label5.OnSelect",
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Description.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 20,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Description"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Description.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Description.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1405,7 +1488,7 @@
               "properties": {
                 "member": "OnSelect",
                 "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Container2.Label5"
+                "type": "Dish_Menu.Gallery3.Container2.Description"
               }
             }
           ],
@@ -1423,72 +1506,110 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.Text"
+                  "fullyQualifiedName": "Dish_Menu.Container1.Button10.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.Text",
+                  "fullyQualifiedName": "Dish_Menu.Container1.Button10.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 8,
-                  "charOffset": 29,
+                  "charLength": 5,
+                  "charOffset": 171,
                   "snippet": {
-                    "text": ".dish_id"
+                    "text": ".Text"
                   }
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "OnSelect",
                 "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Container2.Label8"
+                "type": "Dish_Menu.Container1.Button10"
               }
             }
           ],
           "message": {
-            "arguments": [
-              "dish_id"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.Text"
+                  "fullyQualifiedName": "Dish_Menu.Container1.Button10.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.Text",
+                  "fullyQualifiedName": "Dish_Menu.Container1.Button10.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 20,
+                  "charLength": 134,
+                  "charOffset": 67,
                   "snippet": {
-                    "text": "="
+                    "text": "Patch(\n       FMS_Quantity,\n        {ID:updData[@ID]},\n        {\n            required_Quantity: Quantity.Text\n        \n        }\n    )"
                   }
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "OnSelect",
                 "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Container2.Label8"
+                "type": "Dish_Menu.Container1.Button10"
               }
             }
           ],
           "message": {
             "arguments": [
-              "Number",
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Container1.Button10.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Container1.Button10.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 65,
+                  "charOffset": 130,
+                  "snippet": {
+                    "text": "{\n            required_Quantity: Quantity.Text\n        \n        }"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Container1.Button10"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "required_Quantity",
+              "Text",
               "Error"
             ],
             "id": "issue"
@@ -1496,45 +1617,8 @@
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Label8.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 7,
-                  "snippet": {
-                    "text": "Parent"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.Container2.Label8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrFunctionExpectsSelectableControl",
-          "ruleIndex": 5
+          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1564,7 +1648,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1594,7 +1678,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1624,7 +1708,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1654,7 +1738,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -1684,7 +1768,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1714,7 +1798,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -1744,7 +1828,67 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Price.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Price.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Price"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Price.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.Container2.Price.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.Container2.Price"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -1774,7 +1918,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1804,7 +1948,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1834,7 +1978,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1864,7 +2008,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -1894,7 +2038,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1924,7 +2068,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -1954,7 +2098,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1984,7 +2128,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2014,7 +2158,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2044,7 +2188,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2074,7 +2218,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2104,7 +2248,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2134,7 +2278,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2164,7 +2308,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 8
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -2194,7 +2338,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 8
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -2224,7 +2368,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 9
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2254,7 +2398,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 9
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2284,7 +2428,67 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 9
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.hot-food"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.hot-food",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "hot-food",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.menu"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.menu",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "menu",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2314,7 +2518,67 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 9
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.restaurant"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.restaurant",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "restaurant",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.romantic-dinner"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.romantic-dinner",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "romantic-dinner",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2344,7 +2608,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 9
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2374,7 +2638,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 10
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2404,7 +2668,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 10
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2434,7 +2698,7 @@
             "level": "Medium"
           },
           "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 11
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -2464,7 +2728,7 @@
             "level": "Medium"
           },
           "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 11
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -2494,7 +2758,7 @@
             "level": "Medium"
           },
           "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 11
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -2524,37 +2788,7 @@
             "level": "Medium"
           },
           "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.FMS_Dishes_1"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.FMS_Dishes_1",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FMS_Dishes_1",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 11
+          "ruleIndex": 13
         }
       ],
       "tool": {
@@ -2654,6 +2888,20 @@
               }
             },
             {
+              "id": "app-ErrTypeError-Arg-Expected-Found",
+              "messageStrings": {
+                "issue": {
+                  "text": "The type of this argument '{0}' does not match the expected type '{1}'. Found type '{2}'."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
               "id": "acc-AccessibleLabelNeeded",
               "messageStrings": {
                 "issue": {
@@ -2685,6 +2933,23 @@
                 "level": "Medium",
                 "primaryCategory": "accessibility",
                 "whyFix": "People who use the keyboard with your app will not be able to access this element without a tab stop."
+              }
+            },
+            {
+              "id": "acc-FocusBorderShouldBeVisible",
+              "messageStrings": {
+                "issue": {
+                  "text": "Focus isn't showing"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Change the FocusedBorderThickness property to be more than 0."
+                ],
+                "level": "Medium",
+                "primaryCategory": "accessibility",
+                "whyFix": "If the focus isn't visible, people who don't use a mouse won't be able to see it when they're interacting with the app."
               }
             },
             {
