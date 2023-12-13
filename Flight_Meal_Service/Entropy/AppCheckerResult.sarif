@@ -1595,10 +1595,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 10,
-                  "charOffset": 8,
+                  "charLength": 1,
+                  "charOffset": 20,
                   "snippet": {
-                    "text": ".Dish_Name"
+                    "text": "="
                   }
                 }
               },
@@ -1611,15 +1611,16 @@
           ],
           "message": {
             "arguments": [
-              "Dish_Name"
+              "Number",
+              "Text"
             ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1636,7 +1637,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 31,
+                  "charOffset": 20,
                   "snippet": {
                     "text": "="
                   }
@@ -1676,10 +1677,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 17,
-                  "charOffset": 8,
+                  "charLength": 1,
+                  "charOffset": 20,
                   "snippet": {
-                    "text": ".Dish_Description"
+                    "text": "="
                   }
                 }
               },
@@ -1692,15 +1693,16 @@
           ],
           "message": {
             "arguments": [
-              "Dish_Description"
+              "Number",
+              "Text"
             ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 5
         },
         {
           "locations": [
