@@ -13,27 +13,20 @@ Dish_Menu As screen:
         Label2 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
-            FontWeight: =FontWeight.Semibold
+            FontWeight: =FontWeight.Bold
             Height: =89
             PaddingLeft: =15
             Size: =20
-            Text: ="Meals in Inventory"
+            Text: ="Meals Inventory"
             Width: =560
+            X: =33
             ZIndex: =1
-
-        Icon2 As icon.Airplane:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =51
-            Icon: =Icon.Airplane
-            Width: =89
-            X: =435
-            Y: =19
-            ZIndex: =2
 
         Image2 As image:
             Height: =89
             Image: ='menu (1)'
             Width: =66
+            X: =9
             ZIndex: =3
 
     Gallery3 As gallery.galleryVertical:
@@ -42,7 +35,7 @@ Dish_Menu As screen:
         Items: =Filter(FMS_Quantity, flight_id=Flightvalue_popup.ID)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =183
+        TemplateSize: =226
         Transition: =Transition.Pop
         Y: =111
         ZIndex: =2
@@ -50,7 +43,7 @@ Dish_Menu As screen:
         Container2 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semibold
             Fill: =RGBA(22, 151, 170, 1)
-            Height: =169
+            Height: =204
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
@@ -62,25 +55,24 @@ Dish_Menu As screen:
 
             Price As label:
                 Color: =RGBA(255, 255, 255, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =35
+                FontWeight: =FontWeight.Semibold
+                Height: =49
                 OnSelect: =true
                 Size: =20
                 Text: =LookUp(FMS_Dishes,ID=ThisItem.dish_id).Dish_Price
                 Width: =99
-                X: =27
-                Y: =65
+                X: =84
+                Y: =63
                 ZIndex: =1
 
             Description As label:
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =50
                 OnSelect: =Select(Parent)
-                Size: =12
                 Text: =LookUp(FMS_Dishes,ID=ThisItem.dish_id).Dish_Description
-                Width: =463
-                X: =17
-                Y: =97
+                Width: =493
+                X: =69
+                Y: =122
                 ZIndex: =2
 
             Label8_1 As label:
@@ -92,18 +84,9 @@ Dish_Menu As screen:
                 Text: =LookUp(FMS_Dishes, ID=ThisItem.dish_id).Dish_Name
                 Tooltip: =
                 Width: =440
-                X: =60
-                Y: =17
+                X: =84
+                Y: =23
                 ZIndex: =3
-
-            Rectangle7 As rectangle:
-                BorderColor: =RGBA(219, 219, 219, 1)
-                Fill: =RGBA(219, 219, 219, 1)
-                Height: =2
-                Width: =502
-                X: =60
-                Y: =180
-                ZIndex: =4
 
             Quantity As text:
                 BorderColor: =RGBA(255, 255, 255, 1)
@@ -120,11 +103,11 @@ Dish_Menu As screen:
                 ZIndex: =7
 
             Image1 As image:
-                Height: =40
-                Image: ='hot-food (1)'
-                Width: =40
-                X: =7
-                Y: =17
+                Height: =50
+                Image: =lunch
+                Width: =50
+                X: =20
+                Y: =23
                 ZIndex: =8
 
     Container1 As groupContainer.manualLayoutContainer:
@@ -134,6 +117,8 @@ Dish_Menu As screen:
         ZIndex: =6
 
         Button10 As button:
+            Color: =RGBA(36, 124, 138, 1)
+            Fill: =RGBA(170, 219, 227, 1)
             Height: =70
             OnSelect: |-
                 =ClearCollect(updData,Gallery3.AllItems);
