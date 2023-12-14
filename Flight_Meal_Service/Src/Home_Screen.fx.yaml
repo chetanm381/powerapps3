@@ -25,7 +25,7 @@
 
             SyncName As label:
                 Align: =Align.Center
-                Color: =RGBA(102, 102, 102, 1)
+                Color: =RGBA(255, 255, 255, 1)
                 Height: =30
                 Size: =10
                 Text: ="Sync"
@@ -53,7 +53,7 @@
                 ZIndex: =4
 
         Icon3 As icon.ArrowsUpDown:
-            Color: =RGBA(102, 102, 102, 1)
+            Color: =RGBA(22, 151, 170, 1)
             Height: =35
             Icon: =Icon.Sort
             Rotation: =90
@@ -125,28 +125,31 @@
                         ZIndex: =2
 
                     Label20 As label:
+                        Color: =RGBA(22, 151, 170, 1)
                         FontWeight: =FontWeight.Bold
                         Height: =41
                         Size: =20
                         Text: =ThisItem.from_code
                         Width: =184
                         X: =30
-                        Y: =55
+                        Y: =50
                         ZIndex: =3
 
                     Label20_1 As label:
                         Align: =Align.Right
+                        Color: =RGBA(22, 151, 170, 1)
                         FontWeight: =FontWeight.Bold
                         Height: =41
                         Size: =20
                         Text: =ThisItem.to_code
                         Width: =184
-                        X: =360
-                        Y: =55
+                        X: =354
+                        Y: =50
                         ZIndex: =4
 
                     Label21 As label:
                         Align: =Align.Center
+                        Color: =RGBA(22, 151, 170, 1)
                         FontWeight: =FontWeight.Semibold
                         Height: =39
                         Size: =16
@@ -157,6 +160,7 @@
                         ZIndex: =5
 
                     Label22 As label:
+                        Color: =RGBA(22, 151, 170, 1)
                         FontWeight: =FontWeight.Semibold
                         Height: =28
                         Size: =10
@@ -168,6 +172,7 @@
 
                     Label22_1 As label:
                         Align: =Align.Right
+                        Color: =RGBA(22, 151, 170, 1)
                         FontWeight: =FontWeight.Semibold
                         Height: =28
                         Size: =10
@@ -230,7 +235,7 @@
                         ZIndex: =12
 
                     Rectangle4 As rectangle:
-                        Fill: =RGBA(51, 51, 51, 1)
+                        Fill: =RGBA(22, 151, 170, 1)
                         Height: =10
                         Width: =itemcontainer.Width
                         Y: =itemcontainer.Height-Rectangle4.Height
@@ -245,6 +250,7 @@
                         ZIndex: =14
 
             Label23 As label:
+                Color: =RGBA(22, 151, 170, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =39
                 PaddingLeft: =10
@@ -255,9 +261,10 @@
                 ZIndex: =2
 
         ChooseYourFlight As label:
-            Color: =RGBA(102, 102, 102, 1)
+            Color: =RGBA(22, 151, 170, 1)
+            FontWeight: =FontWeight.Bold
             Height: =27
-            Size: =10
+            Size: =12
             Text: ="Choose Your Flight"
             Width: =257
             X: =43
@@ -265,7 +272,7 @@
             ZIndex: =6
 
         fromCombobox As combobox:
-            BorderColor: =RGBA(102, 102, 102, 1)
+            BorderColor: =RGBA(22, 151, 170, 1)
             BorderThickness: =1
             ChevronBackground: =RGBA(0, 0, 0, 0)
             ChevronFill: =RGBA(51, 51, 51, 1)
@@ -313,7 +320,8 @@
             ZIndex: =8
 
         Button3 As button:
-            Fill: =RGBA(102, 102, 102, 1)
+            BorderColor: =RGBA(22, 151, 170, 1)
+            Fill: =RGBA(22, 151, 170, 1)
             Height: =30
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |
