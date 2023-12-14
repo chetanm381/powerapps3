@@ -183,6 +183,7 @@
                         ZIndex: =7
 
                     Label22_2 As label:
+                        Color: =RGBA(148, 135, 141, 1)
                         FontWeight: =FontWeight.Lighter
                         Height: =28
                         Size: =8
@@ -204,11 +205,11 @@
                         ZIndex: =9
 
                     HeaderIcon_2 As image:
-                        Height: =64
-                        Image: =airplane_1
-                        Width: =52
-                        X: =261
-                        Y: =76
+                        Height: =70
+                        Image: ='airplane (1)'
+                        Width: =70
+                        X: =254
+                        Y: =68
                         ZIndex: =10
 
                     Label19_2 As label:
