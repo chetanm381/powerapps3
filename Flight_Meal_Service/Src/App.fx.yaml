@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: |
+    OnStart: |-
         =Set(
             isConnected,
             Connection.Connected
@@ -159,6 +159,7 @@ App As appinfo:
             colors,
             ColorValue("#f1f6f8")
         );
+        ClearCollect(galleryItems,UpdatedFlightData);
     StartScreen: =Home_Screen
     Theme: =PowerAppsTheme
 

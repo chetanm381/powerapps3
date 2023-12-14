@@ -95,22 +95,6 @@ Dish_Menu As screen:
                 Y: =25
                 ZIndex: =3
 
-            RequiredQuantityWW As text:
-                BorderColor: =RGBA(255, 255, 255, 1)
-                Default: =""
-                Format: =TextFormat.Number
-                Height: =29
-                HintText: ="Enter Quantity"
-                RadiusBottomLeft: =10
-                RadiusBottomRight: =10
-                RadiusTopLeft: =10
-                RadiusTopRight: =10
-                Size: =10
-                Width: =113
-                X: =433
-                Y: =112
-                ZIndex: =7
-
             Image1 As image:
                 Height: =50
                 Image: =lunch
@@ -142,6 +126,22 @@ Dish_Menu As screen:
                 X: =406
                 ZIndex: =10
 
+        RequiredQuantityWW As text:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Default: =""
+            Format: =TextFormat.Number
+            Height: =29
+            HintText: ="Enter Quantity"
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Size: =10
+            Width: =113
+            X: =456
+            Y: =117
+            ZIndex: =11
+
     Container1 As groupContainer.manualLayoutContainer:
         Height: =114
         Width: =640
@@ -162,13 +162,13 @@ Dish_Menu As screen:
                        FMS_Quantity,
                         {ID:updData[@ID]},
                         {
-                            Quantity: updData[@Quantity] - updData[@]
-                        
+                          Quantity: Value(updData[@Quantity]) - Value(updData[@RequiredQuantityWW].Text)
                         }
                     )
                 );
+                
                 Refresh(FMS_Quantity);
-            Size: =24
+            Size: =18
             Text: ="Save Order"
             Width: =220
             X: =216
