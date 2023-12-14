@@ -600,11 +600,13 @@
                 ZIndex: =14
 
             Dropdown2 As dropdown:
+                AllowEmptySelection: =true
                 BorderColor: =RGBA(22, 151, 170, 1)
                 ChevronBackground: =RGBA(255, 255, 255, 1)
                 ChevronFill: =RGBA(22, 151, 170, 1)
                 ChevronHoverBackground: =RGBA(22, 151, 170, 1)
                 Color: =RGBA(148, 135, 141, 1)
+                Default: =
                 Height: =45
                 HoverFill: =RGBA(255, 255, 255, 1)
                 Items: =FMS_Crew_Members
