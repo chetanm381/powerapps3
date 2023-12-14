@@ -45,13 +45,6 @@
                 Y: =16
                 ZIndex: =3
 
-            Icon2 As icon.Airplane:
-                Color: =RGBA(255, 255, 255, 1)
-                Icon: =Icon.Airplane
-                X: =16
-                Y: =19
-                ZIndex: =4
-
         Icon3 As icon.ArrowsUpDown:
             Color: =RGBA(22, 151, 170, 1)
             Height: =35
@@ -110,8 +103,8 @@
                         Size: =8
                         Text: ="From"
                         Width: =110
-                        X: =30
-                        Y: =39
+                        X: =42
+                        Y: =34
                         ZIndex: =1
 
                     Label19_1 As label:
@@ -122,8 +115,8 @@
                         Size: =8
                         Text: ="To"
                         Width: =110
-                        X: =428
-                        Y: =39
+                        X: =429
+                        Y: =34
                         ZIndex: =2
 
                     Label20 As label:
@@ -133,7 +126,7 @@
                         Size: =20
                         Text: =ThisItem.from_code
                         Width: =184
-                        X: =30
+                        X: =42
                         Y: =50
                         ZIndex: =3
 
@@ -145,7 +138,7 @@
                         Size: =20
                         Text: =ThisItem.to_code
                         Width: =184
-                        X: =354
+                        X: =361
                         Y: =50
                         ZIndex: =4
 
@@ -157,7 +150,7 @@
                         Size: =16
                         Text: =ThisItem.Title
                         Width: =146
-                        X: =214
+                        X: =226
                         Y: =11
                         ZIndex: =5
 
@@ -168,7 +161,7 @@
                         Size: =10
                         Text: =ThisItem.Departure_Time
                         Width: =92
-                        X: =30
+                        X: =47
                         Y: =132
                         ZIndex: =6
 
@@ -177,10 +170,11 @@
                         Color: =RGBA(22, 151, 170, 1)
                         FontWeight: =FontWeight.Semibold
                         Height: =28
+                        PaddingRight: =0
                         Size: =10
                         Text: =ThisItem.Departure_Time
                         Width: =92
-                        X: =446
+                        X: =447
                         Y: =132
                         ZIndex: =7
 
@@ -188,10 +182,10 @@
                         Color: =RGBA(148, 135, 141, 1)
                         FontWeight: =FontWeight.Lighter
                         Height: =28
-                        Size: =8
+                        Size: =7
                         Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
                         Width: =92
-                        X: =30
+                        X: =50
                         Y: =148
                         ZIndex: =8
 
@@ -200,20 +194,12 @@
                         Color: =RGBA(148, 135, 141, 1)
                         FontWeight: =FontWeight.Lighter
                         Height: =28
-                        Size: =8
+                        Size: =7
                         Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
                         Width: =92
-                        X: =446
+                        X: =447
                         Y: =148
                         ZIndex: =9
-
-                    HeaderIcon_2 As image:
-                        Height: =70
-                        Image: ='airplane (1)'
-                        Width: =70
-                        X: =254
-                        Y: =68
-                        ZIndex: =10
 
                     Label19_2 As label:
                         Color: =RGBA(148, 135, 141, 1)
@@ -223,7 +209,7 @@
                         Size: =8
                         Text: =ThisItem.From
                         Width: =184
-                        X: =30
+                        X: =42
                         Y: =84
                         ZIndex: =11
 
@@ -236,7 +222,7 @@
                         Size: =8
                         Text: =ThisItem.To
                         Width: =173
-                        X: =396
+                        X: =366
                         Y: =86
                         ZIndex: =12
 
@@ -252,8 +238,40 @@
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =201
                         OnSelect: =Select(Flights);
-                        Width: =577
+                        Width: =591
                         ZIndex: =14
+
+                    Image3 As image:
+                        Height: =20
+                        Image: =placeholder
+                        Width: =20
+                        X: =22
+                        Y: =63
+                        ZIndex: =15
+
+                    Image3_1 As image:
+                        Height: =20
+                        Image: =placeholder
+                        Width: =20
+                        X: =448
+                        Y: =63
+                        ZIndex: =16
+
+                    Image3_2 As image:
+                        Height: =20
+                        Image: ='wall-clock'
+                        Width: =20
+                        X: =22
+                        Y: =144
+                        ZIndex: =17
+
+                    Image3_3 As image:
+                        Height: =20
+                        Image: ='wall-clock'
+                        Width: =20
+                        X: =448
+                        Y: =144
+                        ZIndex: =18
 
             Label23 As label:
                 Color: =RGBA(22, 151, 170, 1)
@@ -262,8 +280,8 @@
                 PaddingLeft: =10
                 Size: =20
                 Text: =If(filter,"Search Results","Upcoming Flights")
-                Underline: =true
                 Width: =597
+                X: =11
                 ZIndex: =2
 
         ChooseYourFlight As label:
