@@ -35,7 +35,7 @@ Dish_Menu As screen:
         Items: =Filter(FMS_Quantity, flight_id=Flightvalue_popup.ID)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =226
+        TemplateSize: =218
         Transition: =Transition.Pop
         Y: =111
         ZIndex: =2
@@ -43,7 +43,7 @@ Dish_Menu As screen:
         Container2 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semibold
             Fill: =RGBA(22, 151, 170, 1)
-            Height: =204
+            Height: =191
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
@@ -55,60 +55,81 @@ Dish_Menu As screen:
 
             Price As label:
                 Color: =RGBA(255, 255, 255, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =49
+                Height: =27
                 OnSelect: =true
-                Size: =20
                 Text: =LookUp(FMS_Dishes,ID=ThisItem.dish_id).Dish_Price
                 Width: =99
-                X: =84
+                X: =69
                 Y: =63
                 ZIndex: =1
 
             Description As label:
                 Color: =RGBA(255, 255, 255, 1)
-                Height: =50
-                OnSelect: =Select(Parent)
+                Height: =103
+                Size: =10
                 Text: =LookUp(FMS_Dishes,ID=ThisItem.dish_id).Dish_Description
-                Width: =493
+                VerticalAlign: =VerticalAlign.Top
+                Width: =278
                 X: =69
-                Y: =122
+                Y: =99
                 ZIndex: =2
 
             Label8_1 As label:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =46
-                OnSelect: =Select(Parent)
-                Size: =21
+                Size: =18
                 Text: =LookUp(FMS_Dishes, ID=ThisItem.dish_id).Dish_Name
                 Tooltip: =
-                Width: =440
-                X: =84
-                Y: =23
+                Width: =493
+                X: =69
+                Y: =25
                 ZIndex: =3
 
             Quantity As text:
                 BorderColor: =RGBA(255, 255, 255, 1)
                 Default: =""
-                Height: =46
+                Format: =TextFormat.Number
+                Height: =29
                 HintText: ="Enter Quantity"
-                RadiusBottomLeft: =20
-                RadiusBottomRight: =20
-                RadiusTopLeft: =20
-                RadiusTopRight: =20
-                Width: =147
-                X: =415
-                Y: =27
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Size: =10
+                Width: =113
+                X: =449
+                Y: =112
                 ZIndex: =7
 
             Image1 As image:
                 Height: =50
                 Image: =lunch
                 Width: =50
-                X: =20
-                Y: =23
+                X: =19
+                Y: =40
                 ZIndex: =8
+
+            Label1 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =20
+                Size: =8
+                Text: |-
+                    ="Remaining Quantity : "&ThisItem.Quantity
+                Width: =147
+                X: =425
+                Y: =10
+                ZIndex: =9
+
+            Icon4 As icon.Tag:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =20
+                Icon: =Icon.Tag
+                Width: =20
+                X: =405
+                Y: =10
+                ZIndex: =10
 
     Container1 As groupContainer.manualLayoutContainer:
         Height: =114
