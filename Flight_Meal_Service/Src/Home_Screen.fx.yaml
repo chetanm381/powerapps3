@@ -387,6 +387,7 @@
                 ZIndex: =1
 
             Label19_8 As label:
+                Color: =RGBA(148, 135, 141, 1)
                 FontWeight: =FontWeight.Lighter
                 Height: =29
                 PaddingLeft: =8
@@ -399,6 +400,7 @@
 
             Label19_9 As label:
                 Align: =Align.Right
+                Color: =RGBA(148, 135, 141, 1)
                 FontWeight: =FontWeight.Lighter
                 Height: =29
                 Size: =8
@@ -467,6 +469,7 @@
                 ZIndex: =8
 
             Label22_10 As label:
+                Color: =RGBA(148, 135, 141, 1)
                 FontWeight: =FontWeight.Lighter
                 Height: =28
                 Size: =8
@@ -478,6 +481,7 @@
 
             Label22_11 As label:
                 Align: =Align.Right
+                Color: =RGBA(148, 135, 141, 1)
                 FontWeight: =FontWeight.Lighter
                 Height: =28
                 Size: =8
@@ -496,6 +500,7 @@
                 ZIndex: =11
 
             Label19_10 As label:
+                Color: =RGBA(148, 135, 141, 1)
                 FontWeight: =FontWeight.Lighter
                 Height: =29
                 PaddingLeft: =8
@@ -508,6 +513,7 @@
 
             Label19_11 As label:
                 Align: =Align.Right
+                Color: =RGBA(148, 135, 141, 1)
                 FontWeight: =FontWeight.Lighter
                 Height: =29
                 PaddingRight: =0
@@ -527,10 +533,16 @@
 
             Dropdown2 As dropdown:
                 BorderColor: =RGBA(22, 151, 170, 1)
-                ChevronBackground: =RGBA(22, 151, 170, 1)
-                Color: =RGBA(125, 121, 121, 1)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(22, 151, 170, 1)
+                ChevronHoverBackground: =RGBA(22, 151, 170, 1)
+                Color: =RGBA(148, 135, 141, 1)
                 Height: =45
+                HoverFill: =RGBA(255, 255, 255, 1)
                 Items: =FMS_Crew_Members
+                PressedFill: =RGBA(22, 151, 170, 1)
+                SelectionColor: =RGBA(22, 151, 170, 1)
+                SelectionFill: =RGBA(22, 151, 170, 1)
                 Size: =15
                 Width: =414
                 X: =81
