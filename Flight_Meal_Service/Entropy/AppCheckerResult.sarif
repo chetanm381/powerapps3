@@ -2481,6 +2481,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.dinner"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.dinner",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "dinner",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.hot-food (1)"
                 }
               ],
@@ -2541,6 +2571,96 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.lunch (1)"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.lunch (1)",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "lunch (1)",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.lunch-box"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.lunch-box",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "lunch-box",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.menu (1) (1)"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.menu (1) (1)",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "menu (1) (1)",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.menu"
                 }
               ],
@@ -2552,6 +2672,36 @@
               },
               "properties": {
                 "member": "menu",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.placeholder"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.placeholder",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "placeholder",
                 "module": "App",
                 "type": "App"
               }
@@ -2691,107 +2841,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.lunch-box"
+                  "fullyQualifiedName": "App.send"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.lunch-box",
+                  "fullyQualifiedName": "App.send",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "lunch-box",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.dinner"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.dinner",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "dinner",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.lunch (1)"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.lunch (1)",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "lunch (1)",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.menu (1) (1)"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.menu (1) (1)",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "menu (1) (1)",
+                "member": "send",
                 "module": "App",
                 "type": "App"
               }
