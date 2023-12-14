@@ -158,7 +158,7 @@
                         Size: =12
                         Text: =ThisItem.Title
                         Width: =146
-                        X: =211
+                        X: =222
                         Y: =10
                         ZIndex: =5
 
@@ -270,22 +270,22 @@
                         Height: =30
                         Image: ='airplane (2)'
                         Width: =30
-                        X: =157
-                        Y: =12
+                        X: =165
+                        Y: =14
                         ZIndex: =19
 
                     Image4_1 As image:
                         Height: =30
                         Image: ='airplane (3)'
                         Width: =30
-                        X: =381
-                        Y: =12
+                        X: =392
+                        Y: =14
                         ZIndex: =23
 
                     Image5 As image:
                         Height: =50
                         Image: =minus
-                        Width: =74
+                        Width: =73
                         X: =319
                         Y: =5
                         ZIndex: =24
@@ -294,15 +294,15 @@
                         Height: =50
                         Image: =minus
                         Width: =74
-                        X: =184
-                        Y: =5
+                        X: =193
+                        Y: =4
                         ZIndex: =25
 
                     Image6 As image:
                         Height: =60
                         Image: ='airplane (1)'
                         Width: =60
-                        X: =246
+                        X: =265
                         Y: =76
                         ZIndex: =26
 
