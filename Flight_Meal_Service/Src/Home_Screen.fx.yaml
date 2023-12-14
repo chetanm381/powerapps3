@@ -46,11 +46,11 @@
                 ZIndex: =3
 
             Image6 As image:
-                Height: =80
+                Height: =60
                 Image: =airplane
-                Width: =80
-                X: =6
-                Y: =16
+                Width: =60
+                X: =21
+                Y: =21
                 ZIndex: =4
 
         Icon3 As icon.ArrowsUpDown:
