@@ -5262,7 +5262,7 @@
       "MetaDataIDKey": "",
       "Name": "Image6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
