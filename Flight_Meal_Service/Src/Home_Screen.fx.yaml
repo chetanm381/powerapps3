@@ -270,7 +270,7 @@
                         Height: =30
                         Image: ='airplane (2)'
                         Width: =30
-                        X: =162
+                        X: =157
                         Y: =52
                         ZIndex: =19
 
@@ -278,7 +278,7 @@
                         Height: =30
                         Image: ='airplane (3)'
                         Width: =30
-                        X: =376
+                        X: =381
                         Y: =52
                         ZIndex: =23
 
@@ -286,7 +286,7 @@
                         Height: =50
                         Image: =minus
                         Width: =74
-                        X: =314
+                        X: =319
                         Y: =45
                         ZIndex: =24
 
@@ -294,7 +294,7 @@
                         Height: =50
                         Image: =minus
                         Width: =74
-                        X: =189
+                        X: =184
                         Y: =45
                         ZIndex: =25
 
