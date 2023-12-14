@@ -678,7 +678,9 @@
         Icon1 As icon.CancelBadge:
             Color: =RGBA(237, 40, 40, 1)
             Icon: =Icon.CancelBadge
-            OnSelect: =Set(showPopUp,false);
+            OnSelect: |-
+                =Set(showPopUp,false);
+                Reset(Dropdown2);
             Width: =50
             X: =67
             Y: =745
@@ -694,11 +696,13 @@
 
         Icon1_1 As icon.CancelBadge:
             Color: =RGBA(127, 178, 57, 1)
+            DisplayMode: =If(IsBlank(Dropdown2.SelectedText),DisplayMode.Disabled,DisplayMode.Edit)
             Icon: =Icon.NextArrow
             OnSelect: |
                 =Set(showPopUp,false);
                 Set(crewMember,Dropdown2.Selected.Crew_ID);
                 Set(Flightvalue_popup,Flights.Selected);
+                Reset(Dropdown2);
                 Navigate(Dish_Menu);
             Width: =50
             X: =547
