@@ -149,6 +149,7 @@ Dish_Menu As screen:
             OnSelect: =Select(Parent)
             Size: =8
             Text: ="* Entered Quantity is not Available !!"
+            Visible: =If(Value(ThisItem.Quantity)<Value(RequiredQuantityWW.Text),true,false)
             Width: =560
             X: =44
             Y: =224
