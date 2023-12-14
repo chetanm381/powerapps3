@@ -143,9 +143,10 @@ Dish_Menu As screen:
             ZIndex: =11
 
     Container1 As groupContainer.manualLayoutContainer:
-        Height: =114
+        DropShadow: =DropShadow.None
+        Height: =91
         Width: =640
-        Y: =1021
+        Y: =1044
         ZIndex: =6
 
         Button10 As button:
@@ -168,10 +169,11 @@ Dish_Menu As screen:
                 );
                 
                 Refresh(FMS_Quantity);
+                Back()
             Size: =18
             Text: ="Save Order"
             Width: =220
-            X: =216
-            Y: =36
+            X: =210
+            Y: =21
             ZIndex: =1
 
