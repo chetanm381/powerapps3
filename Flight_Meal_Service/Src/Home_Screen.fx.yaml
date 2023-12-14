@@ -1,5 +1,5 @@
 "Home_Screen As screen.'layout_Offline_ver1.0'":
-    OnVisible: =
+    OnVisible: =ClearCollect(galleryItems,UpdatedFlightData);
 
     BackgroundContainer As groupContainer.manualLayoutContainer:
         BorderThickness: =1
@@ -79,7 +79,7 @@
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
                 Height: =860
-                Items: =LastN(FMS_Flights,4)
+                Items: =galleryItems
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |
@@ -329,6 +329,11 @@
                 Fill: =RGBA(22, 151, 170, 1)
                 Height: =23
                 HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: |-
+                    =Reset(toCombobox);
+                    Reset(fromCombobox);
+                    Set(filter,false);
+                    ClearCollect(galleryItems,UpdatedFlightData);
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
                 RadiusTopLeft: =5
@@ -401,11 +406,13 @@
 
         Button3 As button:
             BorderColor: =RGBA(22, 151, 170, 1)
+            DisplayMode: =If(Or(IsBlank(fromCombobox.Selected.Value),IsBlank(toCombobox.Selected.Value)),DisplayMode.Disabled,DisplayMode.Edit)
             Fill: =RGBA(22, 151, 170, 1)
             Height: =30
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |
                 =Set(filter,true);
+                ClearCollect(galleryItems,Filter(UpdatedFlightData,And(From=fromCombobox.Selected.Value,To=toCombobox.Selected.Value)));
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5

@@ -95,7 +95,7 @@ Dish_Menu As screen:
                 Y: =25
                 ZIndex: =3
 
-            Quantity As text:
+            RequiredQuantityWW As text:
                 BorderColor: =RGBA(255, 255, 255, 1)
                 Default: =""
                 Format: =TextFormat.Number
@@ -150,7 +150,8 @@ Dish_Menu As screen:
 
         Button10 As button:
             Fill: =RGBA(22, 151, 170, 1)
-            Height: =70
+            Height: =48
+            HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |-
                 =ClearCollect(updData,Gallery3.AllItems);
                 
@@ -161,7 +162,7 @@ Dish_Menu As screen:
                        FMS_Quantity,
                         {ID:updData[@ID]},
                         {
-                            required_Quantity: Quantity.Text
+                            Quantity: updData[@Quantity] - updData[@]
                         
                         }
                     )
@@ -169,8 +170,8 @@ Dish_Menu As screen:
                 Refresh(FMS_Quantity);
             Size: =24
             Text: ="Save Order"
-            Width: =280
-            X: =196
-            Y: =26
+            Width: =220
+            X: =216
+            Y: =36
             ZIndex: =1
 
