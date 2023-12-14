@@ -642,7 +642,7 @@
             ZIndex: =4
 
         Icon1_1 As icon.CancelBadge:
-            Color: =RGBA(22, 151, 170, 1)
+            Color: =RGBA(127, 178, 57, 1)
             Icon: =Icon.NextArrow
             OnSelect: |
                 =Set(showPopUp,false);
