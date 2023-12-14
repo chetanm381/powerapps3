@@ -45,6 +45,14 @@
                 Y: =16
                 ZIndex: =3
 
+            Image6 As image:
+                Height: =80
+                Image: =airplane
+                Width: =80
+                X: =6
+                Y: =16
+                ZIndex: =4
+
         Icon3 As icon.ArrowsUpDown:
             Color: =RGBA(22, 151, 170, 1)
             Height: =35
