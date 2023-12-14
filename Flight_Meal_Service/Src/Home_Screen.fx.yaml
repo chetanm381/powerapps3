@@ -385,6 +385,7 @@
                 ZIndex: =3
 
             Label20_4 As label:
+                Color: =RGBA(22, 151, 170, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =41
                 Size: =20
@@ -396,6 +397,7 @@
 
             Label20_5 As label:
                 Align: =Align.Right
+                Color: =RGBA(22, 151, 170, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =41
                 Size: =20
@@ -407,6 +409,7 @@
 
             Label21_2 As label:
                 Align: =Align.Center
+                Color: =RGBA(22, 151, 170, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =39
                 Size: =16
@@ -512,7 +515,7 @@
             ZIndex: =2
 
         Icon1 As icon.CancelBadge:
-            Color: =RGBA(102, 102, 102, 1)
+            Color: =RGBA(22, 151, 170, 1)
             Icon: =Icon.CancelBadge
             OnSelect: =Set(showPopUp,false);
             X: =58
@@ -526,7 +529,7 @@
             ZIndex: =4
 
         Icon1_1 As icon.CancelBadge:
-            Color: =RGBA(102, 102, 102, 1)
+            Color: =RGBA(22, 151, 170, 1)
             Icon: =Icon.NextArrow
             OnSelect: |
                 =Set(showPopUp,false);
