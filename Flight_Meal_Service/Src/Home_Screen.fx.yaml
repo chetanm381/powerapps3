@@ -421,6 +421,7 @@
                 ZIndex: =6
 
             Label22_8 As label:
+                Color: =RGBA(22, 151, 170, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =28
                 Size: =10
@@ -432,6 +433,7 @@
 
             Label22_9 As label:
                 Align: =Align.Right
+                Color: =RGBA(22, 151, 170, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =28
                 Size: =10
@@ -464,7 +466,7 @@
 
             HeaderIcon_4 As image:
                 Height: =64
-                Image: =airplane_1
+                Image: ='airplane (1)'
                 Width: =52
                 X: =261
                 Y: =76
@@ -501,9 +503,12 @@
                 ZIndex: =14
 
             Dropdown2 As dropdown:
+                BorderColor: =RGBA(22, 151, 170, 1)
+                ChevronBackground: =RGBA(22, 151, 170, 1)
+                Color: =RGBA(125, 121, 121, 1)
                 Height: =45
                 Items: =FMS_Crew_Members
-                Size: =21
+                Size: =15
                 Width: =414
                 X: =81
                 Y: =233
