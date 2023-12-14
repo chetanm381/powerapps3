@@ -150,8 +150,8 @@
                         Size: =12
                         Text: =ThisItem.Title
                         Width: =146
-                        X: =216
-                        Y: =51
+                        X: =211
+                        Y: =10
                         ZIndex: =5
 
                     Label22 As label:
@@ -263,7 +263,7 @@
                         Image: ='airplane (2)'
                         Width: =30
                         X: =157
-                        Y: =52
+                        Y: =12
                         ZIndex: =19
 
                     Image4_1 As image:
@@ -271,7 +271,7 @@
                         Image: ='airplane (3)'
                         Width: =30
                         X: =381
-                        Y: =52
+                        Y: =12
                         ZIndex: =23
 
                     Image5 As image:
@@ -279,7 +279,7 @@
                         Image: =minus
                         Width: =74
                         X: =319
-                        Y: =45
+                        Y: =5
                         ZIndex: =24
 
                     Image5_1 As image:
@@ -287,8 +287,16 @@
                         Image: =minus
                         Width: =74
                         X: =184
-                        Y: =45
+                        Y: =5
                         ZIndex: =25
+
+                    Image6 As image:
+                        Height: =60
+                        Image: ='airplane (1)'
+                        Width: =60
+                        X: =246
+                        Y: =76
+                        ZIndex: =26
 
             Label23 As label:
                 Color: =RGBA(22, 151, 170, 1)
