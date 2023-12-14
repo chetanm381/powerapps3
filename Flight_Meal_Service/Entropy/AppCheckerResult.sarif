@@ -2451,36 +2451,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.airplane"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.airplane",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "airplane",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.dinner"
                 }
               ],
