@@ -29,6 +29,13 @@ Dish_Menu As screen:
             X: =33
             ZIndex: =3
 
+        Arrow1 As arrow.backArrow:
+            Fill: =RGBA(255, 255, 255, 1)
+            OnSelect: =Back();
+            X: =562
+            Y: =19
+            ZIndex: =4
+
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =929

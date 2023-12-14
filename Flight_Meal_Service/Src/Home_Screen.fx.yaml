@@ -41,15 +41,14 @@
                 Size: =25
                 Text: ="AzureJet"
                 Width: =408
-                X: =97
+                X: =108
                 Y: =16
                 ZIndex: =3
 
             Image3 As image:
-                Height: =70
+                Height: =86.24
                 Image: =airplane
-                Width: =70
-                X: =8
+                Width: =97
                 Y: =16
                 ZIndex: =4
 
@@ -87,6 +86,7 @@
                     =Set(showPopUp,true);
                     Set(Flightvalue_popup,Flights.Selected);
                 TemplateSize: =221
+                Transition: =Transition.Pop
                 Width: =620
                 Y: =45
                 ZIndex: =1
@@ -155,6 +155,7 @@
                         Color: =RGBA(22, 151, 170, 1)
                         FontWeight: =FontWeight.Semibold
                         Height: =39
+                        OnSelect: =Select(backgroundContainer);
                         Size: =12
                         Text: =ThisItem.Title
                         Width: =146
@@ -253,6 +254,7 @@
                     Image3_2 As image:
                         Height: =20
                         Image: ='wall-clock'
+                        OnSelect: =Select(backgroundContainer);
                         Width: =20
                         X: =22
                         Y: =144
@@ -261,6 +263,7 @@
                     Image3_3 As image:
                         Height: =20
                         Image: ='wall-clock'
+                        OnSelect: =Select(backgroundContainer);
                         Width: =20
                         X: =466
                         Y: =144
@@ -269,6 +272,7 @@
                     Image4 As image:
                         Height: =30
                         Image: ='airplane (2)'
+                        OnSelect: =Select(backgroundContainer);
                         Width: =30
                         X: =165
                         Y: =14
@@ -277,6 +281,7 @@
                     Image4_1 As image:
                         Height: =30
                         Image: ='airplane (3)'
+                        OnSelect: =Select(backgroundContainer);
                         Width: =30
                         X: =392
                         Y: =14
@@ -285,6 +290,7 @@
                     Image5 As image:
                         Height: =50
                         Image: =minus
+                        OnSelect: =Select(backgroundContainer);
                         Width: =73
                         X: =319
                         Y: =5
@@ -293,6 +299,7 @@
                     Image5_1 As image:
                         Height: =50
                         Image: =minus
+                        OnSelect: =Select(backgroundContainer);
                         Width: =74
                         X: =193
                         Y: =4
@@ -301,6 +308,7 @@
                     Image6 As image:
                         Height: =60
                         Image: ='airplane (1)'
+                        OnSelect: =Select(backgroundContainer);
                         Width: =60
                         X: =265
                         Y: =76
@@ -316,6 +324,21 @@
                 Width: =597
                 X: =11
                 ZIndex: =2
+
+            Button1 As button:
+                Fill: =RGBA(22, 151, 170, 1)
+                Height: =23
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =10
+                Text: ="Clear"
+                Width: =68
+                X: =514
+                Y: =8
+                ZIndex: =3
 
         ChooseYourFlight As label:
             Color: =RGBA(22, 151, 170, 1)
@@ -383,10 +406,14 @@
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |
                 =Set(filter,true);
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
             Size: =10
             Text: ="Search"
             Width: =111
-            X: =486
+            X: =502
             Y: =172
             ZIndex: =9
 
@@ -401,7 +428,7 @@
             BorderStyle: =BorderStyle.None
             DropShadow: =DropShadow.Semilight
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =321
+            Height: =338
             RadiusBottomLeft: =20
             RadiusBottomRight: =20
             RadiusTopLeft: =20
@@ -558,10 +585,10 @@
                 ZIndex: =13
 
             Rectangle4_2 As rectangle:
-                Fill: =RGBA(51, 51, 51, 1)
-                Height: =10
+                Fill: =RGBA(22, 151, 170, 1)
+                Height: =16
                 Width: =itemcontainer_2.Width
-                Y: =itemcontainer_2.Height-Rectangle4_2.Height
+                Y: =322
                 ZIndex: =14
 
             Dropdown2 As dropdown:
@@ -584,22 +611,27 @@
 
         Circle2 As circle:
             Fill: =RGBA(255, 255, 255, 1)
-            X: =40
-            Y: =730
+            Height: =75
+            Width: =75
+            X: =45
+            Y: =742
             ZIndex: =2
 
         Icon1 As icon.CancelBadge:
             Color: =RGBA(237, 40, 40, 1)
             Icon: =Icon.CancelBadge
             OnSelect: =Set(showPopUp,false);
+            Width: =50
             X: =58
             Y: =748
             ZIndex: =3
 
         Circle2_1 As circle:
             Fill: =RGBA(255, 255, 255, 1)
-            X: =517
-            Y: =730
+            Height: =75
+            Width: =75
+            X: =535
+            Y: =742
             ZIndex: =4
 
         Icon1_1 As icon.CancelBadge:
@@ -610,7 +642,8 @@
                 Set(crewMember,Dropdown2.Selected.Crew_ID);
                 Set(Flightvalue_popup,Flights.Selected);
                 Navigate(Dish_Menu);
-            X: =535
+            Width: =50
+            X: =547
             Y: =748
             ZIndex: =5
 
