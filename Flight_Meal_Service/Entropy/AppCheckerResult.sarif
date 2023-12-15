@@ -1912,19 +1912,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.fromCombobox.AccessibleLabel"
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container3.fromCombobox.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.fromCombobox.AccessibleLabel",
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container3.fromCombobox.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home_Screen",
-                "type": "Home_Screen.BackgroundContainer.fromCombobox"
+                "type": "Home_Screen.BackgroundContainer.Container3.fromCombobox"
               }
             }
           ],
