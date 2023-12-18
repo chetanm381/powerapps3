@@ -52,16 +52,6 @@
                 Y: =16
                 ZIndex: =4
 
-        Icon3 As icon.ArrowsUpDown:
-            Color: =RGBA(22, 151, 170, 1)
-            Height: =35
-            Icon: =Icon.Sort
-            Rotation: =90
-            Width: =35
-            X: =239
-            Y: =170
-            ZIndex: =4
-
         Container6 As groupContainer.manualLayoutContainer:
             BorderStyle: =BorderStyle.None
             DropShadow: =DropShadow.None
@@ -79,7 +69,10 @@
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
                 Height: =860
-                Items: =galleryItems
+                Items: |-
+                    =
+                    
+                    If(IsBlank(TextInput1),galleryItems,Filter(galleryItems,Title=TextInput1.Text))
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |
@@ -314,37 +307,6 @@
                         Y: =76
                         ZIndex: =26
 
-            Label23 As label:
-                Color: =RGBA(22, 151, 170, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =39
-                PaddingLeft: =10
-                Size: =20
-                Text: =If(filter,"Search Results","Upcoming Flights")
-                Width: =597
-                X: =11
-                ZIndex: =2
-
-            Button1 As button:
-                Fill: =RGBA(22, 151, 170, 1)
-                Height: =23
-                HoverFill: =ColorFade(Self.Fill, -20%)
-                OnSelect: |-
-                    =Reset(toCombobox);
-                    Reset(fromCombobox);
-                    Set(filter,false);
-                    ClearCollect(galleryItems,UpdatedFlightData);
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Size: =10
-                Text: ="Clear"
-                Width: =68
-                X: =514
-                Y: =8
-                ZIndex: =3
-
         ChooseYourFlight As label:
             Color: =RGBA(22, 151, 170, 1)
             FontWeight: =FontWeight.Bold
@@ -352,8 +314,8 @@
             Size: =12
             Text: ="Choose Your Flight"
             Width: =257
-            X: =43
-            Y: =128
+            X: =39
+            Y: =106
             ZIndex: =6
 
         toCombobox As combobox:
@@ -376,15 +338,15 @@
             SelectMultiple: =false
             Size: =8
             Width: =171
-            X: =289
-            Y: =172
+            X: =234
+            Y: =202
             ZIndex: =8
 
         Button3 As button:
             BorderColor: =RGBA(22, 151, 170, 1)
             DisplayMode: =If(Or(IsBlank(fromCombobox.Selected.Value),IsBlank(toCombobox.Selected.Value)),DisplayMode.Disabled,DisplayMode.Edit)
             Fill: =RGBA(22, 151, 170, 1)
-            Height: =30
+            Height: =25
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |
                 =Set(filter,true);
@@ -395,39 +357,89 @@
             RadiusTopRight: =5
             Size: =10
             Text: ="Search"
-            Width: =111
-            X: =502
-            Y: =172
+            Width: =100
+            X: =424
+            Y: =207
             ZIndex: =9
 
-        Container3 As groupContainer.manualLayoutContainer:
+        fromCombobox As combobox:
+            BorderColor: =RGBA(22, 151, 170, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronFill: =RGBA(51, 51, 51, 1)
+            ChevronHoverBackground: =ColorFade(Self.BorderColor, -20%)
+            DisplayFields: =["Value"]
+            FontWeight: =FontWeight.Semibold
             Height: =30
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            InputTextPlaceholder: ="Departure City"
+            Items: =Distinct(UpdatedFlightData,From)
+            PressedFill: =RGBA(153, 153, 153, 1)
+            SearchFields: =["Value"]
+            SearchItems: =Search(Distinct(UpdatedFlightData,From),fromCombobox.SearchText,"Value")
+            SelectionFill: =RGBA(102, 102, 102, 1)
+            SelectMultiple: =false
+            Size: =8
             Width: =171
             X: =43
-            Y: =175
+            Y: =202
             ZIndex: =10
 
-            fromCombobox As combobox:
-                BorderColor: =RGBA(22, 151, 170, 1)
-                BorderThickness: =1
-                ChevronBackground: =RGBA(0, 0, 0, 0)
-                ChevronFill: =RGBA(51, 51, 51, 1)
-                ChevronHoverBackground: =ColorFade(Self.BorderColor, -20%)
-                DisplayFields: =["Value"]
-                FontWeight: =FontWeight.Semibold
-                Height: =30
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(102, 102, 102, 1)
-                InputTextPlaceholder: ="Departure City"
-                Items: =Distinct(UpdatedFlightData,From)
-                PressedFill: =RGBA(153, 153, 153, 1)
-                SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(UpdatedFlightData,From),fromCombobox.SearchText,"Value")
-                SelectionFill: =RGBA(102, 102, 102, 1)
-                SelectMultiple: =false
-                Size: =8
-                Width: =171
-                ZIndex: =1
+        TextInput1 As text:
+            BorderColor: =RGBA(22, 151, 170, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Default: =""
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =30
+            HintText: ="Search By Flight Number"
+            HoverBorderColor: =RGBA(22, 151, 170, 0.37)
+            HoverFill: =RGBA(22, 151, 170, 0.24)
+            PaddingLeft: =If(!IsBlank(TextInput1),30,30+Icon2.Width)
+            Size: =10
+            Width: =362
+            X: =43
+            Y: =155
+            ZIndex: =11
+
+        Icon2 As icon.Search:
+            Color: =RGBA(22, 151, 170, 1)
+            Height: =20
+            Icon: =Icon.Search
+            Width: =20
+            X: =47
+            Y: =160
+            ZIndex: =12
+
+        Rectangle1 As rectangle:
+            Fill: =RGBA(22, 151, 170, 1)
+            Height: =1
+            Width: =358
+            X: =47
+            Y: =185
+            ZIndex: =13
+
+        Button1 As button:
+            Fill: =RGBA(22, 151, 170, 1)
+            Height: =25
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: |-
+                =Reset(toCombobox);
+                Reset(fromCombobox);
+                Set(filter,false);
+                Reset(TextInput1);
+                ClearCollect(galleryItems,UpdatedFlightData);
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10
+            Text: ="Clear"
+            Width: =68
+            X: =541
+            Y: =207
+            ZIndex: =14
 
     FlightPopUp As groupContainer.manualLayoutContainer:
         Fill: =RGBA(153, 153, 153, 0.9)

@@ -1852,19 +1852,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container3.fromCombobox.AccessibleLabel"
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.TextInput1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container3.fromCombobox.AccessibleLabel",
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.TextInput1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home_Screen",
-                "type": "Home_Screen.BackgroundContainer.Container3.fromCombobox"
+                "type": "Home_Screen.BackgroundContainer.TextInput1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.fromCombobox.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.fromCombobox.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home_Screen",
+                "type": "Home_Screen.BackgroundContainer.fromCombobox"
               }
             }
           ],
@@ -3003,6 +3033,36 @@
               },
               "properties": {
                 "member": "colors",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.filter"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.filter",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "filter",
                 "module": "App",
                 "type": "App"
               }
