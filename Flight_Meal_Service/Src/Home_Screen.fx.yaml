@@ -72,7 +72,7 @@
                 Items: |-
                     =
                     
-                    If(IsBlank(TextInput1),galleryItems,Filter(galleryItems,Title=TextInput1.Text))
+                    If(IsBlank(TextInput1.Text),galleryItems,Filter(galleryItems,Title=Upper(TextInput1.Text)))
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |
