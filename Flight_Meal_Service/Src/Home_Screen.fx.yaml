@@ -69,10 +69,7 @@
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
                 Height: =860
-                Items: |-
-                    =
-                    
-                    If(IsBlank(TextInput1.Text),galleryItems,Filter(galleryItems,Title=Upper(TextInput1.Text)))
+                Items: =Search(galleryItems,TextInput1.Text,"Title")
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |
@@ -396,21 +393,12 @@
             HintText: ="Search By Flight Number"
             HoverBorderColor: =RGBA(22, 151, 170, 0.37)
             HoverFill: =RGBA(22, 151, 170, 0.24)
-            PaddingLeft: =If(!IsBlank(TextInput1),30,30+Icon2.Width)
+            PaddingLeft: =If(!IsBlank(TextInput1),30,30+Icon3.Width)
             Size: =10
             Width: =362
             X: =43
             Y: =155
             ZIndex: =11
-
-        Icon2 As icon.Search:
-            Color: =RGBA(22, 151, 170, 1)
-            Height: =20
-            Icon: =Icon.Search
-            Width: =20
-            X: =47
-            Y: =160
-            ZIndex: =12
 
         Rectangle1 As rectangle:
             Fill: =RGBA(22, 151, 170, 1)
@@ -440,6 +428,15 @@
             X: =541
             Y: =207
             ZIndex: =14
+
+        Icon3 As icon.Search:
+            Color: =RGBA(22, 151, 170, 1)
+            Height: =20
+            Icon: =Icon.Search
+            Width: =20
+            X: =47
+            Y: =160
+            ZIndex: =15
 
     FlightPopUp As groupContainer.manualLayoutContainer:
         Fill: =RGBA(153, 153, 153, 0.9)
