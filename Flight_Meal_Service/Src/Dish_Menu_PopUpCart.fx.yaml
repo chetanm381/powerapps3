@@ -334,6 +334,60 @@ Dish_Menu_PopUpCart As screen:
     Container4 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(22, 151, 170, 0.32)
         Height: =1136
+        Visible: =false
         Width: =640
         ZIndex: =7
+
+        Container7 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semilight
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =974
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =603
+            X: =20
+            Y: =140
+            ZIndex: =1
+
+            Label8 As label:
+                Color: =RGBA(22, 151, 170, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Flight : "&Flightvalue_popup.Title
+                Width: =422
+                X: =64
+                Y: =7
+                ZIndex: =1
+
+            Arrow2 As arrow.backArrow:
+                Fill: =RGBA(22, 151, 170, 1)
+                Height: =35
+                Width: =35
+                X: =14
+                Y: =25
+                ZIndex: =2
+
+            Rectangle5 As rectangle:
+                Fill: =RGBA(22, 151, 170, 1)
+                Height: =1
+                Width: =574
+                X: =14
+                Y: =77
+                ZIndex: =3
+
+            Gallery1 As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =504
+                Items: =CustomGallerySample
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =150
+                Width: =589
+                X: =14
+                Y: =109
+                ZIndex: =4
 
