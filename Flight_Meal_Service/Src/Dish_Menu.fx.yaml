@@ -3,6 +3,7 @@ Dish_Menu As screen:
         =ClearCollect(
             GalleryData,Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
         );
+        Clear(galleryItems);
 
     Dishes_containerHeader As groupContainer.manualLayoutContainer:
         Fill: =RGBA(22, 151, 170, 1)
@@ -68,8 +69,8 @@ Dish_Menu As screen:
                 OnSelect: =true
                 Text: =LookUp(FMS_Dishes,ID=ThisItem.dish_id).Dish_Price
                 Width: =99
-                X: =85
-                Y: =60
+                X: =64
+                Y: =71
                 ZIndex: =1
 
             Description As label:
@@ -79,19 +80,19 @@ Dish_Menu As screen:
                 Text: =LookUp(FMS_Dishes,ID=ThisItem.dish_id).Dish_Description
                 VerticalAlign: =VerticalAlign.Top
                 Width: =278
-                X: =85
-                Y: =99
+                X: =64
+                Y: =110
                 ZIndex: =2
 
             Label8_1 As label:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Bold
-                Height: =46
-                Size: =18
+                Height: =62
+                Size: =20
                 Text: =LookUp(FMS_Dishes, ID=ThisItem.dish_id).Dish_Name
                 Tooltip: =
                 Width: =493
-                X: =85
+                X: =64
                 Y: =25
                 ZIndex: =3
 
@@ -99,7 +100,7 @@ Dish_Menu As screen:
                 Height: =50
                 Image: =lunch
                 Width: =50
-                X: =35
+                X: =14
                 Y: =37
                 ZIndex: =8
 
@@ -134,49 +135,11 @@ Dish_Menu As screen:
             Height: =38
             HoverBorderColor: =ColorFade(Self.HandleFill, 30%)
             Max: =ThisItem.Quantity
-            OnChange: |-
-                =If(
-                    IsBlank(
-                        LookUp(
-                            CartItems,
-                            dish_Id = ThisItem.dish_id
-                        )
-                    ),
-                    Collect(
-                        CartItems,
-                        {
-                            dish_Id: ThisItem.dish_id,
-                            dish_name: LookUp(
-                                FMS_Dishes,
-                                ID = ThisItem.dish_id
-                            ).Dish_Name,
-                            price: LookUp(
-                                FMS_Dishes,
-                                ID = ThisItem.dish_id
-                            ).Dish_Price,
-                            quantity: RequiredQuantityWW.Value
-                        }
-                    ),
-                    Update(
-                        CartItems,
-                        LookUp(CartItems,dish_Id=ThisItem.dish_id),
-                        {
-                            dish_Id: ThisItem.dish_id,
-                            dish_name: LookUp(
-                                FMS_Dishes,
-                                ID = ThisItem.dish_id
-                            ).Dish_Name,
-                            price: LookUp(
-                                FMS_Dishes,
-                                ID = ThisItem.dish_id
-                            ).Dish_Price,
-                            quantity: RequiredQuantityWW.Value
-                        }
-                    )
-                )
+            OnChange: =
             OnSelect: =
             RailFill: =RGBA(255, 255, 255, 1)
             RailThickness: =2
+            Reset: =true
             ValueFill: =RGBA(255, 255, 255, 1)
             Width: =139
             X: =448
@@ -192,7 +155,7 @@ Dish_Menu As screen:
             Text: ="Select Quantity "
             Width: =139
             X: =448
-            Y: =55
+            Y: =56
             ZIndex: =14
 
         Label5 As label:
@@ -203,7 +166,7 @@ Dish_Menu As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Text: |-
-                ="No. of This Item in Cart : "&RequiredQuantityWW.Value
+                ="No. of This Item in Cart : "&If(RequiredQuantityWW.Value=0,0,RequiredQuantityWW.Value)
             Width: =217
             X: =370
             Y: =183
@@ -278,7 +241,7 @@ Dish_Menu As screen:
                 FontWeight: =FontWeight.Bold
                 Height: =49
                 Size: =18
-                Text: =Sum(CartItems,quantity)
+                Text: =Sum(Gallery3.AllItems,RequiredQuantityWW.Value)
                 Width: =96
                 X: =472
                 ZIndex: =3
