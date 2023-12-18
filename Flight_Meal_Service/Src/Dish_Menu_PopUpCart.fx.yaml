@@ -1,17 +1,17 @@
-Dish_Menu As screen:
+Dish_Menu_PopUpCart As screen:
     OnVisible: |-
         =ClearCollect(
             GalleryData,Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
         );
         Clear(CartItems);
 
-    Dishes_containerHeader As groupContainer.manualLayoutContainer:
+    Dishes_containerHeader_1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(22, 151, 170, 1)
         Height: =89
         Width: =640
         ZIndex: =1
 
-        Label2 As label:
+        Label2_1 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -23,21 +23,21 @@ Dish_Menu As screen:
             X: =33
             ZIndex: =1
 
-        Image2 As image:
+        Image2_1 As image:
             Height: =89
             Image: ='menu (1)'
             Width: =66
             X: =33
             ZIndex: =3
 
-        Arrow1 As arrow.backArrow:
+        Arrow1_1 As arrow.backArrow:
             Fill: =RGBA(255, 255, 255, 1)
             OnSelect: =Back();
             X: =562
             Y: =19
             ZIndex: =4
 
-    Gallery3 As gallery.galleryVertical:
+    Gallery3_1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =929
         Items: =Filter(FMS_Quantity, flight_id=Flightvalue_popup.ID)
@@ -50,7 +50,7 @@ Dish_Menu As screen:
         Y: =115
         ZIndex: =2
 
-        Container2 As groupContainer.manualLayoutContainer:
+        Container2_1 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semibold
             Fill: =RGBA(22, 151, 170, 1)
             Height: =212
@@ -63,7 +63,7 @@ Dish_Menu As screen:
             Y: =8
             ZIndex: =10
 
-            Price As label:
+            Price_1 As label:
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =39
                 OnSelect: =true
@@ -73,7 +73,7 @@ Dish_Menu As screen:
                 Y: =60
                 ZIndex: =1
 
-            Description As label:
+            Description_1 As label:
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =92
                 Size: =10
@@ -84,7 +84,7 @@ Dish_Menu As screen:
                 Y: =99
                 ZIndex: =2
 
-            Label8_1 As label:
+            Label8_2 As label:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =46
@@ -92,11 +92,11 @@ Dish_Menu As screen:
                 Text: =LookUp(FMS_Dishes, ID=ThisItem.dish_id).Dish_Name
                 Tooltip: =
                 Width: =493
-                X: =85
+                X: =83
                 Y: =25
                 ZIndex: =3
 
-            Image1 As image:
+            Image1_1 As image:
                 Height: =50
                 Image: =lunch
                 Width: =50
@@ -104,7 +104,7 @@ Dish_Menu As screen:
                 Y: =37
                 ZIndex: =8
 
-            Label1 As label:
+            Label1_1 As label:
                 BorderStyle: =BorderStyle.None
                 Color: =RGBA(22, 151, 170, 1)
                 Fill: =RGBA(255, 255, 255, 1)
@@ -114,10 +114,10 @@ Dish_Menu As screen:
                 Text: |-
                     ="Remaining Quantity : "&ThisItem.Quantity
                 Width: =147
-                X: =431
+                X: =429
                 ZIndex: =9
 
-            Icon4 As icon.Tag:
+            Icon4_1 As icon.Tag:
                 Color: =RGBA(22, 151, 170, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 FocusedBorderThickness: =0
@@ -127,7 +127,7 @@ Dish_Menu As screen:
                 X: =406
                 ZIndex: =10
 
-        RequiredQuantityWW As slider:
+        RequiredQuantityWW_1 As slider:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Default: =0
@@ -155,7 +155,7 @@ Dish_Menu As screen:
                                 FMS_Dishes,
                                 ID = ThisItem.dish_id
                             ).Dish_Price,
-                            quantity: RequiredQuantityWW.Value
+                            quantity: RequiredQuantityWW_1.Value
                         }
                     ),
                     Update(
@@ -171,7 +171,7 @@ Dish_Menu As screen:
                                 FMS_Dishes,
                                 ID = ThisItem.dish_id
                             ).Dish_Price,
-                            quantity: RequiredQuantityWW.Value
+                            quantity: RequiredQuantityWW_1.Value
                         }
                     )
                 )
@@ -195,7 +195,7 @@ Dish_Menu As screen:
                                 FMS_Dishes,
                                 ID = ThisItem.dish_id
                             ).Dish_Price,
-                            quantity: RequiredQuantityWW.Value
+                            quantity: RequiredQuantityWW_1.Value
                         }
                     ),
                     Update(
@@ -211,7 +211,7 @@ Dish_Menu As screen:
                                 FMS_Dishes,
                                 ID = ThisItem.dish_id
                             ).Dish_Price,
-                            quantity: RequiredQuantityWW.Value
+                            quantity: RequiredQuantityWW_1.Value
                         }
                     )
                 )
@@ -223,7 +223,7 @@ Dish_Menu As screen:
             Y: =99
             ZIndex: =13
 
-        Label3 As label:
+        Label3_1 As label:
             Color: =RGBA(255, 255, 255, 1)
             Height: =19
             OnSelect: =Select(Parent)
@@ -235,7 +235,7 @@ Dish_Menu As screen:
             Y: =80
             ZIndex: =14
 
-        Label5 As label:
+        Label5_1 As label:
             Align: =Align.Right
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Semibold
@@ -243,25 +243,25 @@ Dish_Menu As screen:
             OnSelect: =Select(Parent)
             Size: =8
             Text: |-
-                ="No. of This Item in Cart : "&RequiredQuantityWW.Value
+                ="No. of This Item in Cart : "&RequiredQuantityWW_1.Value
             Width: =560
             X: =31
             Y: =196
             ZIndex: =15
 
-    Container1 As groupContainer.manualLayoutContainer:
+    Container1_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
         Height: =150
         Width: =640
         Y: =985
         ZIndex: =6
 
-        Button10 As button:
+        Button10_1 As button:
             Fill: =RGBA(22, 151, 170, 1)
             Height: =48
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |-
-                =ClearCollect(updData,Gallery3.AllItems);
+                =ClearCollect(updData,Gallery3_1.AllItems);
                 
                 
                 ForAll(
@@ -270,7 +270,7 @@ Dish_Menu As screen:
                        FMS_Quantity,
                         {ID:updData[@ID]},
                         {
-                          Quantity: Value(updData[@Quantity]) - Value(updData[@RequiredQuantityWW].Value)
+                          Quantity: Value(updData[@Quantity]) - Value(updData[@RequiredQuantityWW_1].Value)
                         }
                     )
                 );
@@ -284,7 +284,7 @@ Dish_Menu As screen:
             Y: =81
             ZIndex: =1
 
-        Container3 As groupContainer.manualLayoutContainer:
+        Container3_1 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(22, 151, 170, 1)
             Height: =49
             RadiusBottomLeft: =15
@@ -296,13 +296,13 @@ Dish_Menu As screen:
             Y: =13
             ZIndex: =2
 
-            Rectangle2 As rectangle:
+            Rectangle2_1 As rectangle:
                 Fill: =RGBA(22, 151, 170, 1)
                 Height: =49
                 Width: =588
                 ZIndex: =1
 
-            Label4 As label:
+            Label4_1 As label:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =49
@@ -312,7 +312,7 @@ Dish_Menu As screen:
                 X: =50
                 ZIndex: =2
 
-            Label6 As label:
+            Label6_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Bold
@@ -323,7 +323,7 @@ Dish_Menu As screen:
                 X: =472
                 ZIndex: =3
 
-            Icon2 As icon.ShoppingCart:
+            Icon2_1 As icon.ShoppingCart:
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =30
                 Icon: =Icon.ShoppingCart

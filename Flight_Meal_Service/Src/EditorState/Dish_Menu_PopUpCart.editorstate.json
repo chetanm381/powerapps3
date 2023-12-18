@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "Arrow1": {
+    "Arrow1_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -58,7 +58,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Arrow1",
+      "Name": "Arrow1_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -152,7 +152,7 @@
       "StyleName": "defaultArrowStyle",
       "Type": "ControlInfo"
     },
-    "Button10": {
+    "Button10_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -243,7 +243,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Button10",
+      "Name": "Button10_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -432,7 +432,7 @@
       "StyleName": "defaultButtonStyle",
       "Type": "ControlInfo"
     },
-    "Container1": {
+    "Container1_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -474,7 +474,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Container1",
+      "Name": "Container1_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -593,7 +593,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "Container2": {
+    "Container2_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -635,7 +635,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Container2",
+      "Name": "Container2_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -754,7 +754,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "Container3": {
+    "Container3_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -824,7 +824,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Container3",
+      "Name": "Container3_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -943,7 +943,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "Description": {
+    "Description_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -1031,7 +1031,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Description",
+      "Name": "Description_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
@@ -1240,7 +1240,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Dish_Menu": {
+    "Dish_Menu_PopUpCart": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -1268,24 +1268,14 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Dish_Menu",
+      "Name": "Dish_Menu_PopUpCart",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ImagePosition",
+          "PropertyName": "LoadingSpinner",
           "RuleProviderType": "Unknown"
         },
         {
@@ -1295,17 +1285,27 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "LoadingSpinner",
+          "PropertyName": "ImagePosition",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "LoadingSpinnerColor",
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "Size",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LoadingSpinnerColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -1322,7 +1322,7 @@
       "StyleName": "defaultScreenStyle",
       "Type": "ControlInfo"
     },
-    "Dishes_containerHeader": {
+    "Dishes_containerHeader_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -1364,7 +1364,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Dishes_containerHeader",
+      "Name": "Dishes_containerHeader_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -1483,7 +1483,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "Gallery3": {
+    "Gallery3_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1526,7 +1526,7 @@
         "Height",
         "ZIndex"
       ],
-      "GalleryTemplateChildName": "galleryTemplate3",
+      "GalleryTemplateChildName": "galleryTemplate3_1",
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
       "IsComponentDefinition": false,
@@ -1536,7 +1536,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Gallery3",
+      "Name": "Gallery3_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -1670,7 +1670,7 @@
       "StyleName": "defaultGalleryStyle",
       "Type": "ControlInfo"
     },
-    "galleryTemplate3": {
+    "galleryTemplate3_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "ItemAccessibleLabel",
@@ -1686,7 +1686,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "galleryTemplate3",
+      "Name": "galleryTemplate3_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -1710,7 +1710,7 @@
       "StyleName": "defaultGalleryTemplateStyle",
       "Type": "ControlInfo"
     },
-    "Icon2": {
+    "Icon2_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
@@ -1753,7 +1753,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Icon2",
+      "Name": "Icon2_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -1877,7 +1877,7 @@
       "StyleName": "defaultIconStyle",
       "Type": "ControlInfo"
     },
-    "Icon4": {
+    "Icon4_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
@@ -1948,7 +1948,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Icon4",
+      "Name": "Icon4_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -2072,7 +2072,7 @@
       "StyleName": "defaultIconStyle",
       "Type": "ControlInfo"
     },
-    "Image1": {
+    "Image1_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -2142,7 +2142,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Image1",
+      "Name": "Image1_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
@@ -2296,7 +2296,7 @@
       "StyleName": "defaultImageStyle",
       "Type": "ControlInfo"
     },
-    "Image2": {
+    "Image2_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -2352,7 +2352,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Image2",
+      "Name": "Image2_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -2506,7 +2506,7 @@
       "StyleName": "defaultImageStyle",
       "Type": "ControlInfo"
     },
-    "Label1": {
+    "Label1_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -2607,7 +2607,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label1",
+      "Name": "Label1_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -2811,7 +2811,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Label2": {
+    "Label2_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -2898,7 +2898,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label2",
+      "Name": "Label2_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -3102,7 +3102,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Label3": {
+    "Label3_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -3183,7 +3183,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label3",
+      "Name": "Label3_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -3392,7 +3392,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Label4": {
+    "Label4_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -3472,7 +3472,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label4",
+      "Name": "Label4_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -3676,7 +3676,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Label5": {
+    "Label5_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -3764,7 +3764,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label5",
+      "Name": "Label5_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
@@ -3973,7 +3973,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Label6": {
+    "Label6_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -4060,7 +4060,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label6",
+      "Name": "Label6_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
@@ -4264,7 +4264,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Label8_1": {
+    "Label8_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -4346,7 +4346,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label8_1",
+      "Name": "Label8_2",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -4560,7 +4560,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Price": {
+    "Price_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -4648,7 +4648,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Price",
+      "Name": "Price_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
@@ -4857,7 +4857,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Rectangle2": {
+    "Rectangle2_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -4892,7 +4892,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Rectangle2",
+      "Name": "Rectangle2_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -4976,7 +4976,7 @@
       "StyleName": "defaultRectangleStyle",
       "Type": "ControlInfo"
     },
-    "RequiredQuantityWW": {
+    "RequiredQuantityWW_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Layout",
@@ -5101,7 +5101,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "RequiredQuantityWW",
+      "Name": "RequiredQuantityWW_1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
@@ -5251,5 +5251,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Dish_Menu"
+  "TopParentName": "Dish_Menu_PopUpCart"
 }

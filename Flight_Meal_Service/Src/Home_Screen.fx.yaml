@@ -311,8 +311,8 @@
             Size: =12
             Text: ="Choose Your Flight"
             Width: =257
-            X: =39
-            Y: =106
+            X: =43
+            Y: =117
             ZIndex: =6
 
         toCombobox As combobox:

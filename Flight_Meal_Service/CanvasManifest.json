@@ -132,6 +132,7 @@
   },
   "ScreenOrder": [
     "Home_Screen",
-    "Dish_Menu"
+    "Dish_Menu",
+    "Dish_Menu_PopUpCart"
   ]
 }

@@ -1432,6 +1432,867 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 284,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 406,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 722,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 844,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 271,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 389,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 708,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 826,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 59,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text",
+              "Number"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 30,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text",
+              "Number"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Label8_2.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Label8_2.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 21,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Label8_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Price_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Price_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 20,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Price_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Description_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Description_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 20,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Description_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 284,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 406,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 724,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 846,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 271,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 389,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 710,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 828,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "HomescreenComp.BackgroundContainer_1.toCombobox_1.AccessibleLabel"
                 }
               ],
@@ -1846,6 +2707,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2992,19 +3883,319 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.AccessibleLabel"
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Dishes_containerHeader_1.Arrow1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.AccessibleLabel",
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Dishes_containerHeader_1.Arrow1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Dishes_containerHeader_1.Arrow1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Dishes_containerHeader_1.Arrow1_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Dishes_containerHeader_1.Arrow1_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Dishes_containerHeader_1.Arrow1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Label8_2.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Label8_2.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Label8_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Label8_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Label8_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Label8_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Price_1.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Price_1.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Price_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Price_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Price_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Price_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Description_1.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Description_1.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Description_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Description_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Description_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.Container2_1.Description_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Dish_Menu_PopUpCart",
+                "type": "Dish_Menu_PopUpCart.Gallery3_1.RequiredQuantityWW_1"
               }
             }
           ],
