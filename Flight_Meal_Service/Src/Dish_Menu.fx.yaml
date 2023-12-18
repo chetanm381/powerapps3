@@ -1,9 +1,8 @@
 Dish_Menu As screen:
-    OnVisible: |-
+    OnVisible: |
         =ClearCollect(
             GalleryData,Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
         );
-        Clear(CartItems);
 
     Dishes_containerHeader As groupContainer.manualLayoutContainer:
         Fill: =RGBA(22, 151, 170, 1)
@@ -175,46 +174,7 @@ Dish_Menu As screen:
                         }
                     )
                 )
-            OnSelect: |-
-                =If(
-                    IsBlank(
-                        LookUp(
-                            CartItems,
-                            dish_Id = ThisItem.dish_id
-                        )
-                    ),
-                    Collect(
-                        CartItems,
-                        {
-                            dish_Id: ThisItem.dish_id,
-                            dish_name: LookUp(
-                                FMS_Dishes,
-                                ID = ThisItem.dish_id
-                            ).Dish_Name,
-                            price: LookUp(
-                                FMS_Dishes,
-                                ID = ThisItem.dish_id
-                            ).Dish_Price,
-                            quantity: RequiredQuantityWW.Value
-                        }
-                    ),
-                    Update(
-                        CartItems,
-                        {dish_Id: ThisItem.dish_id},
-                        {
-                            dish_Id: ThisItem.dish_id,
-                            dish_name: LookUp(
-                                FMS_Dishes,
-                                ID = ThisItem.dish_id
-                            ).Dish_Name,
-                            price: LookUp(
-                                FMS_Dishes,
-                                ID = ThisItem.dish_id
-                            ).Dish_Price,
-                            quantity: RequiredQuantityWW.Value
-                        }
-                    )
-                )
+            OnSelect: =
             RailFill: =RGBA(255, 255, 255, 1)
             RailThickness: =2
             ValueFill: =RGBA(255, 255, 255, 1)
@@ -299,6 +259,7 @@ Dish_Menu As screen:
             Rectangle2 As rectangle:
                 Fill: =RGBA(22, 151, 170, 1)
                 Height: =49
+                OnSelect: =Navigate(Dish_Menu_PopUpCart,ScreenTransition.Fade)
                 Width: =588
                 ZIndex: =1
 

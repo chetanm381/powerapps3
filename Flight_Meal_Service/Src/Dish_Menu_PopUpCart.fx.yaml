@@ -365,6 +365,7 @@ Dish_Menu_PopUpCart As screen:
             Arrow2 As arrow.backArrow:
                 Fill: =RGBA(22, 151, 170, 1)
                 Height: =35
+                OnSelect: =Back();
                 Width: =35
                 X: =14
                 Y: =25
@@ -393,10 +394,39 @@ Dish_Menu_PopUpCart As screen:
                     DelayItemLoading: =true
                     Fill: =RGBA(255, 255, 255, 1)
                     Height: =604
-                    Items: =CustomGallerySample
+                    Items: =CartItems
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =150
+                    TemplateSize: =76
                     Width: =574
                     ZIndex: =1
+
+                    Label9 As label:
+                        Height: =48
+                        OnSelect: =Select(Parent)
+                        Size: =21
+                        Text: =ThisItem.dish_name
+                        Width: =442
+                        X: =25
+                        Y: =5
+                        ZIndex: =1
+
+                    Label10 As label:
+                        Height: =23
+                        OnSelect: =Select(Parent)
+                        Size: =21
+                        Text: =ThisItem.price
+                        Width: =339
+                        X: =25
+                        Y: =53
+                        ZIndex: =2
+
+                    Label11 As label:
+                        Height: =76
+                        OnSelect: =Select(Parent)
+                        Size: =21
+                        Text: =ThisItem.quantity
+                        Width: =97
+                        X: =467
+                        ZIndex: =3
 
