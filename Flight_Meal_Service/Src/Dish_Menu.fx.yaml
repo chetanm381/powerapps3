@@ -201,7 +201,7 @@ Dish_Menu As screen:
                 Refresh(FMS_Quantity);
                 Back()
             Size: =18
-            Text: ="Save Order"
+            Text: ="Place Order"
             Width: =220
             X: =213
             Y: =81
