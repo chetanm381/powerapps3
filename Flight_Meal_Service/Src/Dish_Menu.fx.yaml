@@ -185,28 +185,28 @@ Dish_Menu As screen:
 
         Label3 As label:
             Color: =RGBA(255, 255, 255, 1)
-            Height: =19
+            Height: =43
             OnSelect: =Select(Parent)
             PaddingLeft: =0
-            Size: =10
+            Size: =14
             Text: ="Select Quantity "
-            Width: =114
+            Width: =139
             X: =448
-            Y: =80
+            Y: =55
             ZIndex: =14
 
         Label5 As label:
             Align: =Align.Right
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =21
+            Height: =37
             OnSelect: =Select(Parent)
-            Size: =8
+            Size: =10
             Text: |-
                 ="No. of This Item in Cart : "&RequiredQuantityWW.Value
-            Width: =560
-            X: =31
-            Y: =196
+            Width: =217
+            X: =370
+            Y: =183
             ZIndex: =15
 
     Container1 As groupContainer.manualLayoutContainer:
@@ -259,7 +259,6 @@ Dish_Menu As screen:
             Rectangle2 As rectangle:
                 Fill: =RGBA(22, 151, 170, 1)
                 Height: =49
-                OnSelect: =Navigate(Dish_Menu_PopUpCart,ScreenTransition.Fade)
                 Width: =588
                 ZIndex: =1
 
@@ -268,7 +267,7 @@ Dish_Menu As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =49
                 Size: =15
-                Text: ="Items Selected to Place Order"
+                Text: ="Total Items"
                 Width: =351
                 X: =50
                 ZIndex: =2
