@@ -126,34 +126,46 @@ Dish_Menu As screen:
                 X: =406
                 ZIndex: =10
 
-        RequiredQuantityWW As text:
-            BorderColor: =RGBA(255, 255, 255, 1)
-            Default: =""
-            Format: =TextFormat.Number
-            Height: =29
-            HintText: ="Enter Quantity"
-            RadiusBottomLeft: =10
-            RadiusBottomRight: =10
-            RadiusTopLeft: =10
-            RadiusTopRight: =10
-            Size: =10
-            Width: =113
-            X: =456
-            Y: =117
-            ZIndex: =11
+        RequiredQuantityWW As slider:
+            Default: =0
+            HandleSize: =15
+            Height: =38
+            HoverBorderColor: =ColorFade(Self.HandleFill, 30%)
+            Max: =ThisItem.Quantity
+            OnSelect: =Select(Parent)
+            RailFill: =RGBA(255, 255, 255, 1)
+            RailThickness: =2
+            ValueFill: =RGBA(255, 255, 255, 1)
+            Width: =139
+            X: =448
+            Y: =99
+            ZIndex: =13
 
         Label3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =19
+            OnSelect: =Select(Parent)
+            PaddingLeft: =0
+            Size: =10
+            Text: ="Select Quantity "
+            Width: =114
+            X: =448
+            Y: =80
+            ZIndex: =14
+
+        Label5 As label:
             Align: =Align.Right
-            Color: =RGBA(255, 0, 0, 1)
-            Height: =12
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =21
             OnSelect: =Select(Parent)
             Size: =8
-            Text: ="* Entered Quantity is not Available !!"
-            Visible: =If(Value(ThisItem.Quantity)<Value(RequiredQuantityWW.Text),true,false)
+            Text: |-
+                ="No. of This Item in Cart : "&RequiredQuantityWW.Value
             Width: =560
-            X: =44
-            Y: =224
-            ZIndex: =12
+            X: =31
+            Y: =196
+            ZIndex: =15
 
     Container1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
@@ -163,7 +175,6 @@ Dish_Menu As screen:
         ZIndex: =6
 
         Button10 As button:
-            DisplayMode: =If(CountIf(Gallery3.AllItems,Value(RequiredQuantityWW.Text)>Value(Quantity))>0,DisplayMode.Disabled,DisplayMode.Edit)
             Fill: =RGBA(22, 151, 170, 1)
             Height: =48
             HoverFill: =ColorFade(Self.Fill, -20%)
@@ -177,7 +188,7 @@ Dish_Menu As screen:
                        FMS_Quantity,
                         {ID:updData[@ID]},
                         {
-                          Quantity: Value(updData[@Quantity]) - Value(updData[@RequiredQuantityWW].Text)
+                          Quantity: Value(updData[@Quantity]) - Value(updData[@RequiredQuantityWW].Value)
                         }
                     )
                 );

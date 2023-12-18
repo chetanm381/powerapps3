@@ -1852,19 +1852,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.AccessibleLabel"
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container3.fromCombobox.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.AccessibleLabel",
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container3.fromCombobox.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Dish_Menu",
-                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+                "module": "Home_Screen",
+                "type": "Home_Screen.BackgroundContainer.Container3.fromCombobox"
               }
             }
           ],
@@ -1895,36 +1895,6 @@
                 "member": "AccessibleLabel",
                 "module": "Home_Screen",
                 "type": "Home_Screen.BackgroundContainer.toCombobox"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container3.fromCombobox.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Container3.fromCombobox.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home_Screen",
-                "type": "Home_Screen.BackgroundContainer.Container3.fromCombobox"
               }
             }
           ],
@@ -2986,6 +2956,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Dish_Menu.Gallery3.RequiredQuantityWW.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Dish_Menu",
+                "type": "Dish_Menu.Gallery3.RequiredQuantityWW"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [
