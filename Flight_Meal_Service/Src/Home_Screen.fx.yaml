@@ -410,10 +410,24 @@
             Y: =202
             ZIndex: =16
 
-        Dropdown3 As dropdown:
+        tocombobox As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =fromcombobox.BorderColor
             BorderThickness: =1
+            ChevronBackground: =fromcombobox.ChevronBackground
+            ChevronFill: =fromcombobox.ChevronFill
+            ChevronHoverBackground: =fromcombobox.ChevronHoverBackground
+            ChevronHoverFill: =fromcombobox.ChevronHoverFill
+            Color: =fromcombobox.Color
+            Fill: =fromcombobox.Fill
             Height: =30
+            HoverColor: =fromcombobox.HoverColor
+            HoverFill: =fromcombobox.HoverFill
             Items: =Distinct(UpdatedFlightData,To)
+            PressedColor: =fromcombobox.PressedColor
+            PressedFill: =fromcombobox.PressedFill
+            SelectionColor: =fromcombobox.SelectionColor
+            SelectionFill: =fromcombobox.SelectionFill
             Size: =8
             Width: =171
             X: =235

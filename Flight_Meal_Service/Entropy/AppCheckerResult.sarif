@@ -3753,19 +3753,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Dropdown3.AccessibleLabel"
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.tocombobox.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.Dropdown3.AccessibleLabel",
+                  "fullyQualifiedName": "Home_Screen.BackgroundContainer.tocombobox.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home_Screen",
-                "type": "Home_Screen.BackgroundContainer.Dropdown3"
+                "type": "Home_Screen.BackgroundContainer.tocombobox"
               }
             }
           ],
