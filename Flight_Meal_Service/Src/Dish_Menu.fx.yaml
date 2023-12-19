@@ -46,7 +46,8 @@ Dish_Menu As screen:
         Items: =Filter(DD_fms_quantity, flight_id=Text(Flightvalue_popup.ID))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =243
+        Selectable: =false
+        TemplateSize: =219
         Transition: =Transition.Pop
         Width: =639
         Y: =154
@@ -179,7 +180,6 @@ Dish_Menu As screen:
             Default: =RequiredQuantityWW.Value
             Format: =TextFormat.Number
             Height: =70
-            OnSelect: =Select(Parent)
             Size: =21
             Visible: =false
             Width: =560
@@ -222,7 +222,7 @@ Dish_Menu As screen:
 
         Container3 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(22, 151, 170, 1)
-            Height: =56
+            Height: =61
             RadiusBottomLeft: =15
             RadiusBottomRight: =15
             RadiusTopLeft: =15

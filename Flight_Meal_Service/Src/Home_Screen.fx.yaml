@@ -162,17 +162,19 @@
             Flights As gallery.galleryVertical:
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
-                Height: =860
+                Height: =865
                 Items: =Search(Flightdata,TextInput1.Text,"Title")
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |
                     =Set(showPopUp,true);
                     Set(Flightvalue_popup,Flights.Selected);
+                TemplatePadding: =0
                 TemplateSize: =221
                 Transition: =Transition.Pop
-                Width: =620
-                Y: =45
+                Width: =610
+                X: =8
+                Y: =40
                 ZIndex: =1
 
                 itemcontainer As groupContainer.manualLayoutContainer:
