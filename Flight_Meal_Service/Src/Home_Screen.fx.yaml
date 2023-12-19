@@ -1,5 +1,5 @@
 "Home_Screen As screen.'layout_Offline_ver1.0'":
-    OnVisible: =ClearCollect(galleryItems,UpdatedFlightData);
+    OnVisible: =ClearCollect(galleryItems,DD_fms_flights);
 
     BackgroundContainer As groupContainer.manualLayoutContainer:
         BorderThickness: =1
@@ -69,7 +69,7 @@
                 BorderStyle: =BorderStyle.None
                 DelayItemLoading: =true
                 Height: =860
-                Items: =Search(galleryItems,TextInput1.Text,"Title")
+                Items: =Search(Flightdata,TextInput1.Text,"Title")
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |
@@ -323,7 +323,7 @@
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |
                 =Set(filter,true);
-                ClearCollect(galleryItems,Filter(UpdatedFlightData,And(From=fromcombobox.Selected.Value,To=tocombobox.Selected.Value)));
+                ClearCollect(Flightdata,Filter(Flightdata,And(From=fromcombobox.Selected.Value,To=tocombobox.Selected.Value)));
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
@@ -369,7 +369,7 @@
                 Reset(fromcombobox);
                 Set(filter,false);
                 Reset(TextInput1);
-                ClearCollect(galleryItems,UpdatedFlightData);
+                ClearCollect(Flightdata,DD_fms_flights);
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
@@ -401,7 +401,7 @@
             Height: =30
             HoverColor: =RGBA(22, 151, 170, 1)
             HoverFill: =RGBA(22, 151, 170, 0.37)
-            Items: =Distinct(UpdatedFlightData,From)
+            Items: =Distinct(Flightdata,From)
             PressedFill: =RGBA(22, 151, 170, 1)
             SelectionFill: =RGBA(22, 151, 170, 1)
             Size: =8
@@ -423,7 +423,7 @@
             Height: =30
             HoverColor: =fromcombobox.HoverColor
             HoverFill: =fromcombobox.HoverFill
-            Items: =Distinct(UpdatedFlightData,To)
+            Items: =Distinct(Flightdata,To)
             PressedColor: =fromcombobox.PressedColor
             PressedFill: =fromcombobox.PressedFill
             SelectionColor: =fromcombobox.SelectionColor

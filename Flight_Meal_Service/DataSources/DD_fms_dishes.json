@@ -1,0 +1,9 @@
+[
+  {
+    "IsComponentScoped": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "DD_fms_dishes",
+    "Type": "CollectionDataSourceInfo"
+  }
+]

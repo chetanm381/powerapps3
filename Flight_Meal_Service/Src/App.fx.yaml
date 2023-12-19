@@ -1,165 +1,86 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: |-
+    OnStart: |
         =Set(
             isConnected,
             Connection.Connected
         );
         // Creating Collect for LoadFlights
-        If(
-            isConnected,
-            Collect(
-                UpdatedFlightData,
-                FMS_Flights
-            );
-            
-        );
-        // Isconnected condition for checking
-        If(
-            isConnected,
-        // IsConnected Condition 
-        //loaddata from local storage     
-        //          ************************************Connected COndition *****************
-            LoadData(
-                loadflights,
-                "loadflights"
-            );
-            
-        //for all used to update data to sharepoint from local storage when we are connected to network.
-        ForAll(
-                loadflights As input,
-                Patch(
-                    FMS_Flights,
-                    {ID: input.ID},
-                    {
-                        From: input.From,
-                        To: input.To,
-                        Arrival_Date: input.Arrival_Date,
-                        Arrival_Time: input.Arrival_Time,
-                        Title: input.Title,
-                        Departure_Date: input.Departure_Date,
-                        Departure_Time: input.Departure_Time
-                    }
-                )
-            );
-            
-        // refresh data source 
-        Refresh(FMS_Flights);
-            
-        // updated data is stored in updatedata 
-        //********************************************************
-        Clear(UpdatedFlightData);
-            Collect(
-                UpdatedFlightData,
-                FMS_Flights
-            );
-            
-        //Clear load data and save updated data 
-        //****************************    
-        Clear(loadflights);
-            Collect(
-                loadflights,
-                UpdatedFlightData
-            );
-            ,
-         //
-        //
-        //*************************** Disconnected Condition ***********************   
-            LoadData(
-                loadflights,
-                "loadflights"
-            );
-            
-        //for all used to update data to UpdateData from local Data .
-        /*ForAll(
-                loadflights As input,
-                Patch(
-                    UpdatedFlightData,
-                    {ID: input.ID},
-                    {
-                        From: input.From,
-                        To: input.To,
-                        Arrival_Date: input.Arrival_Date,
-                        Arrival_Time: input.Arrival_Time,
-                        Title: input.Title,
-                        Departure_Date: input.Departure_Date,
-                        Departure_Time: input.Departure_Time
-                    }
-                )
-            );
-            */
-        // refresh data source 
-        //Refresh(FMS_Flights);
-        // updated data is stored in updatedata 
-        //********************************************************
-        Clear(UpdatedFlightData);
-            Collect(
-                UpdatedFlightData,
-                loadflights
-            );
-            
-        //Clear load data and save updated data 
-        //****************************    
-        Clear(loadflights);
-            Collect(
-                loadflights,
-                UpdatedFlightData
-            );
-            
+        ClearCollect(
+            DD_fms_dishes,
+            {ID: 1}
         );
         ClearCollect(
-            Details,
-            [
-                {
-                    CrewMember: "Chetan",
-                    Number: "#01234",
-                    from: "Delhi",
-                    to: "Chennai",
-                    Date: "20/12/2023",
-                    DepartureTime: "4:00 PM",
-                    ArrivalTime: "7:00 PM"
-                },
-                {
-                    CrewMember: "Gourav",
-                    Number: "#01234",
-                    from: "Delhi",
-                    to: "Chennai",
-                    Date: "20/12/2023",
-                    DepartureTime: "4:00 PM",
-                    ArrivalTime: "7:00 PM"
-                }
-            ]
+            DD_fms_crew_members,
+            {ID: 1}
         );
-        /*
-        LoadData(
-            crew,
-            "crewdata"
+        ClearCollect(
+            DD_fms_quantity,
+            {ID: 1}
+        );
+        ClearCollect(
+            DD_fms_flights,
+            {ID: 1}
         );
         If(
             isConnected,
-            ForAll(
-                crew,
-                Patch(
-                    FMS_Crew_Members,
-                    Defaults(FMS_Crew_Members),
-                    {Crew_Member_Name: ThisRecord.Crew_Member_Name}
-                )
+            ClearCollect(
+                UpdatedFlightData,
+                FMS_Flights
             );
-            Collect(
-                updatedCrew,
-                ForAll(
-                    FMS_Crew_Members,
-                    ThisRecord
-                )
+            ClearCollect(
+                CD_fms_dishes,
+                FMS_Dishes
             );
-            Clear(crew);
+            ClearCollect(
+                CD_fms_crew_members,
+                FMS_Crew_Members
+            );
+            ClearCollect(
+                CD_fms_quantity,
+                FMS_Quantity
+            );
+            ClearCollect(
+                DD_fms_dishes,
+                CD_fms_dishes
+            );
+            ClearCollect(
+                DD_fms_crew_members,
+                CD_fms_crew_members
+            );
+            ClearCollect(
+                DD_fms_quantity,
+                CD_fms_quantity
+            );
+            ClearCollect(
+                DD_fms_flights,
+                UpdatedFlightData
+            );
             
-        );*/
-        Set(
-            colors,
-            ColorValue("#f1f6f8")
+            
+            
+            
+            //else condition
+            ,
+            LoadData(
+                DD_fms_crew_members,
+                "DD_fms_crew_members"
+            );
+            LoadData(
+                DD_fms_quantity,
+                "DD_fms_quantity"
+            );
+            LoadData(
+                DD_fms_dishes,
+                "DD_fms_dishes"
+            );
+            LoadData(
+                DD_fms_flights,
+                "DD_fms_flights"
+            );
+            
         );
-        ClearCollect(galleryItems,UpdatedFlightData);
+        ClearCollect(Flightdata,DD_fms_flights);
     StartScreen: =Home_Screen
     Theme: =PowerAppsTheme
 
