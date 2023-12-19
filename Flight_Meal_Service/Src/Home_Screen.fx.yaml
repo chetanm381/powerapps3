@@ -534,25 +534,25 @@
         Label12 As label:
             Color: =RGBA(22, 151, 170, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =15
+            Height: =25
             PaddingLeft: =0
-            Size: =12
+            Size: =10
             Text: ="Departure City"
             Width: =171
             X: =47
-            Y: =237
+            Y: =233
             ZIndex: =18
 
         Label12_1 As label:
             Color: =RGBA(22, 151, 170, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =15
+            Height: =25
             PaddingLeft: =0
-            Size: =12
+            Size: =10
             Text: ="Arrival City"
             Width: =171
             X: =235
-            Y: =237
+            Y: =233
             ZIndex: =19
 
     FlightPopUp As groupContainer.manualLayoutContainer:
