@@ -317,13 +317,13 @@
 
         Button3 As button:
             BorderColor: =RGBA(22, 151, 170, 1)
-            DisplayMode: =If(Or(IsBlank(fromCombobox.Selected.Value),IsBlank(toCombobox.Selected.Value)),DisplayMode.Disabled,DisplayMode.Edit)
+            DisplayMode: =If(Or(IsBlank(fromcombobox.Selected.Value),IsBlank(tocombobox.Selected.Value)),DisplayMode.Disabled,DisplayMode.Edit)
             Fill: =RGBA(22, 151, 170, 1)
             Height: =25
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |
                 =Set(filter,true);
-                ClearCollect(galleryItems,Filter(UpdatedFlightData,And(From=fromCombobox.Selected.Value,To=toCombobox.Selected.Value)));
+                ClearCollect(galleryItems,Filter(UpdatedFlightData,And(From=fromcombobox.Selected.Value,To=tocombobox.Selected.Value)));
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
             RadiusTopLeft: =5
@@ -365,8 +365,8 @@
             Height: =25
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |-
-                =Reset(toCombobox);
-                Reset(fromCombobox);
+                =Reset(tocombobox);
+                Reset(fromcombobox);
                 Set(filter,false);
                 Reset(TextInput1);
                 ClearCollect(galleryItems,UpdatedFlightData);
@@ -433,6 +433,30 @@
             X: =235
             Y: =202
             ZIndex: =17
+
+        Label12 As label:
+            Color: =RGBA(22, 151, 170, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =15
+            PaddingLeft: =0
+            Size: =12
+            Text: ="Departure City"
+            Width: =171
+            X: =47
+            Y: =237
+            ZIndex: =18
+
+        Label12_1 As label:
+            Color: =RGBA(22, 151, 170, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =15
+            PaddingLeft: =0
+            Size: =12
+            Text: ="Arrival City"
+            Width: =171
+            X: =235
+            Y: =237
+            ZIndex: =19
 
     FlightPopUp As groupContainer.manualLayoutContainer:
         Fill: =RGBA(153, 153, 153, 0.9)
