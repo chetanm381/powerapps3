@@ -4,6 +4,7 @@ Dish_Menu As screen:
             GalleryData,Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
         );
         Clear(galleryItems);
+        Reset(Gallery3.)
 
     Dishes_containerHeader As groupContainer.manualLayoutContainer:
         Fill: =RGBA(22, 151, 170, 1)
@@ -32,7 +33,9 @@ Dish_Menu As screen:
 
         Arrow1 As arrow.backArrow:
             Fill: =RGBA(255, 255, 255, 1)
-            OnSelect: =Back();
+            OnSelect: |-
+                =
+                Back();
             X: =562
             Y: =19
             ZIndex: =4
@@ -166,6 +169,7 @@ Dish_Menu As screen:
             Size: =10
             Text: |-
                 ="No. of This Item in Cart : "&If(RequiredQuantityWW.Value=0,0,RequiredQuantityWW.Value)
+            Visible: =If(RequiredQuantityWW.Value>0,true,false)
             Width: =217
             X: =370
             Y: =183
