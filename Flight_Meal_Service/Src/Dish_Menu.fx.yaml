@@ -42,7 +42,7 @@ Dish_Menu As screen:
 
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =929
+        Height: =855
         Items: =Filter(DD_fms_quantity, flight_id=Text(Flightvalue_popup.ID))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -50,7 +50,7 @@ Dish_Menu As screen:
         TemplateSize: =219
         Transition: =Transition.Pop
         Width: =639
-        Y: =154
+        Y: =167
         ZIndex: =2
 
         Container2 As groupContainer.manualLayoutContainer:
@@ -189,10 +189,10 @@ Dish_Menu As screen:
 
     Container1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =155
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =99
         Width: =640
-        Y: =979
+        Y: =1037
         ZIndex: =6
 
         Container3 As groupContainer.manualLayoutContainer:
@@ -203,8 +203,8 @@ Dish_Menu As screen:
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Width: =391
-            X: =8
-            Y: =74
+            X: =32
+            Y: =13
             ZIndex: =2
 
             Rectangle2 As rectangle:
@@ -250,8 +250,8 @@ Dish_Menu As screen:
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Width: =108
-            X: =525
-            Y: =74
+            X: =503
+            Y: =13
             ZIndex: =3
 
             Label7 As label:
