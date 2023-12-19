@@ -167,12 +167,24 @@ Dish_Menu As screen:
             Height: =37
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =RequiredQuantityWW.Value
+            Text: =If(And(RequiredQuantityWW.Value=0,Value(TextInput5.Text)>0),0,RequiredQuantityWW.Value)
             Visible: =If(RequiredQuantityWW.Value>0,true,false)
             Width: =217
             X: =370
             Y: =183
             ZIndex: =15
+
+        TextInput5 As text:
+            Default: =RequiredQuantityWW.Value
+            Format: =TextFormat.Number
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Visible: =false
+            Width: =560
+            X: =40
+            Y: =40
+            ZIndex: =16
 
     Container1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
