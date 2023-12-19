@@ -189,14 +189,15 @@ Dish_Menu As screen:
 
     Container1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =150
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =155
         Width: =640
-        Y: =985
+        Y: =979
         ZIndex: =6
 
         Button10 As button:
             Fill: =RGBA(22, 151, 170, 1)
-            Height: =48
+            Height: =61
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |-
                 =ClearCollect(selectedDishes,Gallery3.AllItems);
@@ -213,11 +214,15 @@ Dish_Menu As screen:
                     )
                 );
                 Back()
-            Size: =18
-            Text: ="Place Order"
-            Width: =220
-            X: =213
-            Y: =81
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Size: =10
+            Text: =""
+            Width: =108
+            X: =525
+            Y: =74
             ZIndex: =1
 
         Container3 As groupContainer.manualLayoutContainer:
@@ -227,9 +232,9 @@ Dish_Menu As screen:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Width: =588
-            X: =29
-            Y: =4
+            Width: =391
+            X: =8
+            Y: =74
             ZIndex: =2
 
             Rectangle2 As rectangle:
@@ -241,23 +246,12 @@ Dish_Menu As screen:
             Label4 As label:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
-                Height: =56
+                Height: =61
                 Size: =15
                 Text: ="Total Items"
-                Width: =351
+                Width: =249
                 X: =50
                 ZIndex: =2
-
-            Label6 As label:
-                Align: =Align.Center
-                Color: =RGBA(255, 255, 255, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =56
-                Size: =18
-                Text: =Sum(Gallery3.AllItems,RequiredQuantityWW.Value)
-                Width: =96
-                X: =472
-                ZIndex: =3
 
             Icon2 As icon.ShoppingCart:
                 Color: =RGBA(255, 255, 255, 1)
@@ -266,6 +260,35 @@ Dish_Menu As screen:
                 Width: =50
                 Y: =13
                 ZIndex: =4
+
+            Label6 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =61
+                Size: =18
+                Text: =Sum(Gallery3.AllItems,RequiredQuantityWW.Value)
+                Width: =96
+                X: =295
+                ZIndex: =5
+
+        Container5 As groupContainer.manualLayoutContainer:
+            Height: =61
+            Width: =108
+            X: =525
+            Y: =74
+            ZIndex: =3
+
+            Label7 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =61
+                Size: =10
+                Text: ="CheckOut"
+                Width: =56
+                X: =52
+                ZIndex: =1
 
     TextInput2 As text:
         BorderColor: =RGBA(0, 0, 0, 0)
