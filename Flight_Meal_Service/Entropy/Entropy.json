@@ -170,7 +170,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/19/2023 11:48:06",
+  "HeaderLastSavedDateTimeUTC": "12/19/2023 12:05:32",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "a4fc6352-8ce6-4073-ae97-b96017976ecc": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/f597afac72dd422baf0f16bc04fdfbd6\""
@@ -258,6 +258,7 @@
     "FMS_Quantity": 10,
     "GalleryData": 12,
     "galleryItems": 13,
+    "selectedDishes": 25,
     "UpdatedFlightData": 20,
     "updData": 16
   },
@@ -577,7 +578,7 @@
     "Label22_8": 55,
     "Label22_9": 56,
     "Label23_1": 139,
-    "Label3": 83,
+    "Label3": 82,
     "Label3_1": 117,
     "Label4": 89,
     "Label4_1": 123,
@@ -599,7 +600,7 @@
     "Rectangle4_2": 61,
     "Rectangle5": 101,
     "Rectangle6": 72,
-    "RequiredQuantityWW": 84,
+    "RequiredQuantityWW": 83,
     "RequiredQuantityWW_1": 118,
     "Sync Icon": 4,
     "Sync Icon_1": 130,
@@ -607,7 +608,7 @@
     "SyncName_1": 132,
     "TextInput1": 7,
     "TextInput2": 70,
-    "TextInput5": 82,
+    "TextInput5": 84,
     "tocombobox": 11,
     "toCombobox_1": 135
   },

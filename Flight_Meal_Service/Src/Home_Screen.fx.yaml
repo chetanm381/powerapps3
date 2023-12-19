@@ -18,6 +18,100 @@
                 Color: =RGBA(255, 255, 255, 1)
                 Height: =50
                 Icon: =Icon.Link
+                OnSelect: |-
+                    =Set(
+                        isConnected,
+                        Connection.Connected
+                    );
+                    If(
+                        isConnected,
+                        ForAll(
+                            DD_fms_quantity,
+                            Patch(
+                                FMS_Quantity,
+                                {ID: DD_fms_quantity[@ID]},
+                                {Quantity:DD_fms_quantity[@Quantity]}
+                            )
+                        );
+                    
+                    //****************************************************************
+                        ClearCollect(
+                            UpdatedFlightData,
+                            FMS_Flights
+                        );
+                        ClearCollect(
+                            CD_fms_dishes,
+                            FMS_Dishes
+                        );
+                        ClearCollect(
+                            CD_fms_crew_members,
+                            FMS_Crew_Members
+                        );
+                        ClearCollect(
+                            CD_fms_quantity,
+                            FMS_Quantity
+                        );
+                        ClearCollect(
+                            DD_fms_dishes,
+                            CD_fms_dishes
+                        );
+                        ClearCollect(
+                            DD_fms_crew_members,
+                            CD_fms_crew_members
+                        );
+                        ClearCollect(
+                            DD_fms_quantity,
+                            CD_fms_quantity
+                        );
+                        ClearCollect(
+                            DD_fms_flights,
+                            UpdatedFlightData
+                        );
+                        
+                        
+                        SaveData(
+                            DD_fms_crew_members,
+                            "DD_fms_crew_members"
+                        );
+                        SaveData(
+                            DD_fms_quantity,
+                            "DD_fms_quantity"
+                        );
+                        SaveData(
+                            DD_fms_dishes,
+                            "DD_fms_dishes"
+                        );
+                        SaveData(
+                            DD_fms_flights,
+                            "DD_fms_flights"
+                        );
+                        LoadData(
+                            DD_fms_crew_members,
+                            "DD_fms_crew_members"
+                        );
+                        LoadData(
+                            DD_fms_quantity,
+                            "DD_fms_quantity"
+                        );
+                        LoadData(
+                            DD_fms_dishes,
+                            "DD_fms_dishes"
+                        );
+                        LoadData(
+                            DD_fms_flights,
+                            "DD_fms_flights"
+                        );
+                        Notify("Data Sync Completed",NotificationType.Success);
+                        
+                    
+                    
+                    //**************************************************************    
+                        ,
+                        Notify(
+                            "No Internet , Can not Sync Data",
+                            NotificationType.Error
+                        )
+                    )
                 Width: =50
                 X: =564
                 Y: =16
@@ -26,12 +120,12 @@
             SyncName As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
-                Height: =30
+                Height: =25
                 Size: =10
-                Text: ="Sync"
-                Width: =50
-                X: =564
-                Y: =56
+                Text: ="Sync Data"
+                Width: =85
+                X: =546
+                Y: =66
                 ZIndex: =2
 
             HeaderName As label:

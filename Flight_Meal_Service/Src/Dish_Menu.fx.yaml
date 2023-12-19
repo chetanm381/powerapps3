@@ -167,7 +167,8 @@ Dish_Menu As screen:
             Height: =37
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =If(And(RequiredQuantityWW.Value=0,Value(TextInput5.Text)>0),0,RequiredQuantityWW.Value)
+            Text: |-
+                ="Items in Cart : "&If(And(RequiredQuantityWW.Value=0,Value(TextInput5.Text)>0),0,RequiredQuantityWW.Value)
             Visible: =If(RequiredQuantityWW.Value>0,true,false)
             Width: =217
             X: =370
@@ -198,21 +199,19 @@ Dish_Menu As screen:
             Height: =48
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |-
-                =ClearCollect(updData,Gallery3.AllItems);
+                =ClearCollect(selectedDishes,Gallery3.AllItems);
                 
                 
                 ForAll(
-                   updData,
+                   selectedDishes,
                     Patch(
-                       FMS_Quantity,
-                        {ID:updData[@ID]},
+                       DD_fms_quantity,
+                        {ID:selectedDishes[@ID]},
                         {
-                          Quantity: Value(updData[@Quantity]) - Value(updData[@RequiredQuantityWW].Value)
+                          Quantity: Value(selectedDishes[@Quantity]) - Value(selectedDishes[@RequiredQuantityWW].Value)
                         }
                     )
                 );
-                
-                Refresh(FMS_Quantity);
                 Back()
             Size: =18
             Text: ="Place Order"
