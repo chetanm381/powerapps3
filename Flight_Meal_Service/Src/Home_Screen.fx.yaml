@@ -536,6 +536,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =25
             PaddingLeft: =0
+            PaddingTop: =0
             Size: =10
             Text: ="Departure City"
             VerticalAlign: =VerticalAlign.Top
@@ -549,6 +550,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =25
             PaddingLeft: =0
+            PaddingTop: =0
             Size: =10
             Text: ="Arrival City"
             VerticalAlign: =VerticalAlign.Top
