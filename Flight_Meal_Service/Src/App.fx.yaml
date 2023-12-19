@@ -58,6 +58,22 @@ App As appinfo:
             );
             
             
+            SaveData(
+                DD_fms_crew_members,
+                "DD_fms_crew_members"
+            );
+            SaveData(
+                DD_fms_quantity,
+                "DD_fms_quantity"
+            );
+            SaveData(
+                DD_fms_dishes,
+                "DD_fms_dishes"
+            );
+            SaveData(
+                DD_fms_flights,
+                "DD_fms_flights"
+            );
             
             
             //else condition
