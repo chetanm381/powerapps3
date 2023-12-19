@@ -167,8 +167,7 @@ Dish_Menu As screen:
             Height: =37
             OnSelect: =Select(Parent)
             Size: =10
-            Text: |-
-                ="No. of This Item in Cart : "&If(RequiredQuantityWW.Value=0,0,RequiredQuantityWW.Value)
+            Text: =RequiredQuantityWW.Value
             Visible: =If(RequiredQuantityWW.Value>0,true,false)
             Width: =217
             X: =370
