@@ -643,7 +643,7 @@
                 Default: =
                 Height: =45
                 HoverFill: =RGBA(255, 255, 255, 1)
-                Items: =FMS_Crew_Members
+                Items: =DD_fms_crew_members
                 PressedFill: =RGBA(22, 151, 170, 1)
                 SelectionColor: =RGBA(22, 151, 170, 1)
                 SelectionFill: =RGBA(22, 151, 170, 1)
