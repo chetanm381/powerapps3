@@ -538,6 +538,7 @@
             PaddingLeft: =0
             Size: =10
             Text: ="Departure City"
+            VerticalAlign: =VerticalAlign.Top
             Width: =171
             X: =47
             Y: =233
@@ -550,6 +551,7 @@
             PaddingLeft: =0
             Size: =10
             Text: ="Arrival City"
+            VerticalAlign: =VerticalAlign.Top
             Width: =171
             X: =235
             Y: =233
