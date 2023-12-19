@@ -495,7 +495,7 @@
             ChevronFill: =RGBA(22, 151, 170, 1)
             ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
             FontWeight: =FontWeight.Lighter
-            Height: =30
+            Height: =25
             HoverColor: =RGBA(22, 151, 170, 1)
             HoverFill: =RGBA(22, 151, 170, 0.37)
             Items: =Distinct(Flightdata,From)
@@ -504,7 +504,7 @@
             Size: =8
             Width: =171
             X: =47
-            Y: =202
+            Y: =207
             ZIndex: =16
 
         tocombobox As dropdown:
@@ -517,7 +517,7 @@
             ChevronHoverFill: =fromcombobox.ChevronHoverFill
             Color: =fromcombobox.Color
             Fill: =fromcombobox.Fill
-            Height: =30
+            Height: =25
             HoverColor: =fromcombobox.HoverColor
             HoverFill: =fromcombobox.HoverFill
             Items: =Distinct(Flightdata,To)
@@ -528,7 +528,7 @@
             Size: =8
             Width: =171
             X: =235
-            Y: =202
+            Y: =207
             ZIndex: =17
 
         Label12 As label:
