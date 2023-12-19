@@ -236,7 +236,8 @@
                         BorderStyle: =BorderStyle.None
                         Fill: =RGBA(0, 0, 0, 0)
                         Height: =201
-                        OnSelect: =Select(Flights);
+                        OnSelect: |
+                            =Select(Flights);
                         Width: =591
                         Y: =5
                         ZIndex: =14
