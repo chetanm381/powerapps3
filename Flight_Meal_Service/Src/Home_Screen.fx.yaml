@@ -1,5 +1,5 @@
 "Home_Screen As screen.'layout_Offline_ver1.0'":
-    OnVisible: =ClearCollect(galleryItems,DD_fms_flights);
+    OnVisible: =
 
     BackgroundContainer As groupContainer.manualLayoutContainer:
         BorderThickness: =1
