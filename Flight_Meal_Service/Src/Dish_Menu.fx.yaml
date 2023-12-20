@@ -294,6 +294,24 @@ Dish_Menu As screen:
                             }
                         )
                     );
+                    
+                     SaveData(
+                            DD_fms_crew_members,
+                            "DD_fms_crew_members"
+                        );
+                        SaveData(
+                            DD_fms_quantity,
+                            "DD_fms_quantity"
+                        );
+                        SaveData(
+                            DD_fms_dishes,
+                            "DD_fms_dishes"
+                        );
+                        SaveData(
+                            DD_fms_flights,
+                            "DD_fms_flights"
+                        );
+                    
                     Back()
                 PressedFill: =RGBA(0,0,0,0.1)
                 Size: =24
