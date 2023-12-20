@@ -51,6 +51,13 @@
                             CD_fms_quantity,
                             FMS_Quantity
                         );
+                    Clear(DD_fms_crew_members);
+                    Clear(DD_fms_dishes);
+                    Clear(DD_fms_flights);
+                    Clear(DD_fms_quantity);
+                    
+                    
+                    
                         ClearCollect(
                             DD_fms_dishes,
                             CD_fms_dishes
@@ -111,7 +118,8 @@
                             "No Internet , Can not Sync Data",
                             NotificationType.Error
                         )
-                    )
+                    );
+                    ClearCollect(Flightdata,DD_fms_flights);
                 Width: =50
                 X: =564
                 Y: =16
@@ -419,7 +427,7 @@
             Height: =25
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: |
-                =Set(filter,true);
+                =
                 ClearCollect(Flightdata,Filter(Flightdata,And(From=fromcombobox.Selected.Value,To=tocombobox.Selected.Value)));
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
@@ -466,6 +474,7 @@
                 Reset(fromcombobox);
                 Set(filter,false);
                 Reset(TextInput1);
+                Clear(Flightdata);
                 ClearCollect(Flightdata,DD_fms_flights);
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
