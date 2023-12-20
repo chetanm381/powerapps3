@@ -71,7 +71,9 @@ Dish_Menu As screen:
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =854
-        Items: =Filter(DD_fms_quantity, flight_id=Text(Flightvalue_popup.ID))
+        Items: |
+            =
+            Filter(DD_fms_quantity,flight_id=Text(Flightvalue_popup.ID))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         Selectable: =false
@@ -136,26 +138,26 @@ Dish_Menu As screen:
                 ZIndex: =8
 
             Label1 As label:
+                Align: =Align.Center
                 BorderStyle: =BorderStyle.None
                 Color: =RGBA(22, 151, 170, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
-                Height: =25
-                Size: =8
-                Text: |-
-                    ="Remaining Quantity : "&ThisItem.Quantity
-                Width: =147
-                X: =431
+                Height: =37
+                Size: =10
+                Text: ="Remaining Quantity  "&ThisItem.Quantity
+                Width: =159
+                X: =417
                 ZIndex: =9
 
             Icon4 As icon.Tag:
                 Color: =RGBA(22, 151, 170, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 FocusedBorderThickness: =0
-                Height: =25
+                Height: =37
                 Icon: =Icon.Tag
-                Width: =25
-                X: =406
+                Width: =39
+                X: =392
                 ZIndex: =10
 
         Label3 As label:
@@ -168,7 +170,7 @@ Dish_Menu As screen:
             Text: ="Items Added"
             Width: =123
             X: =469
-            Y: =43
+            Y: =55
             ZIndex: =14
 
         Label5 As label:
@@ -181,7 +183,7 @@ Dish_Menu As screen:
             Text: =TextInput3.Text
             Width: =123
             X: =469
-            Y: =79
+            Y: =90
             ZIndex: =15
 
         TextInput3 As text:
@@ -200,7 +202,7 @@ Dish_Menu As screen:
             Height: =44
             Width: =123
             X: =469
-            Y: =129
+            Y: =137
             ZIndex: =19
 
             Button2_1 As button:
@@ -419,7 +421,8 @@ Dish_Menu As screen:
         Height: =50
         HoverColor: =RGBA(22, 151, 170, 1)
         HoverFill: =
-        OnSelect: =Set(SelectedTab,2)
+        OnSelect: |
+            =Set(SelectedTab,2);
         PressedColor: =Color.White
         PressedFill: =Self.Fill
         RadiusBottomLeft: =0
