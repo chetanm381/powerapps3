@@ -1,9 +1,7 @@
 Dish_Menu As screen:
     OnVisible: |
-        =ClearCollect(
-            GalleryData,Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
-        );
-        Clear(galleryItems);
+        =
+        
         Set(SelectedTab,1);
 
     Container10 As groupContainer.manualLayoutContainer:
@@ -98,12 +96,13 @@ Dish_Menu As screen:
 
             Price As label:
                 Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
                 Height: =39
                 OnSelect: =true
                 Text: =LookUp(DD_fms_dishes,ID=Value(ThisItem.dish_id)).Dish_Price
                 Width: =99
                 X: =64
-                Y: =71
+                Y: =79
                 ZIndex: =1
 
             Description As label:
@@ -431,6 +430,7 @@ Dish_Menu As screen:
         RadiusTopRight: =0
         Size: =24
         Text: ="Cart"
+        Visible: =false
         Width: =107
         X: =499
         Y: =108

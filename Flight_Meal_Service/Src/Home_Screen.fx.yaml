@@ -838,7 +838,6 @@
                 Set(crewMember,Dropdown2.Selected.Crew_ID);
                 Set(Flightvalue_popup,Flights.Selected);
                 Reset(Dropdown2);
-                Clear(CartItems);
                 Navigate(Dish_Menu);
             Width: =50
             X: =547
