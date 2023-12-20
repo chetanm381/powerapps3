@@ -92,6 +92,9 @@
                             DD_fms_flights,
                             "DD_fms_flights"
                         );
+                    
+                    
+                        /*
                         LoadData(
                             DD_fms_crew_members,
                             "DD_fms_crew_members"
@@ -107,7 +110,7 @@
                         LoadData(
                             DD_fms_flights,
                             "DD_fms_flights"
-                        );
+                        ); */
                         Notify("Data Sync Completed",NotificationType.Success);
                         
                     

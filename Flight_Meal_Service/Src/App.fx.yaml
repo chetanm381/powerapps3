@@ -56,7 +56,7 @@ App As appinfo:
                 DD_fms_flights,
                 UpdatedFlightData
             );
-            
+         /*   
             ClearData();
             SaveData(
                 DD_fms_crew_members,
@@ -74,7 +74,7 @@ App As appinfo:
                 DD_fms_flights,
                 "DD_fms_flights"
             );
-            
+            */
             
             //else condition
             ,
