@@ -187,7 +187,7 @@ Dish_Menu As screen:
             ZIndex: =15
 
         TextInput3 As text:
-            Default: =ThisItem.required_Quantity
+            Default: =If(IsBlank(ThisItem.required_Quantity),0,ThisItem.required_Quantity)
             Height: =68
             OnSelect: =Select(Parent)
             Reset: =true
@@ -298,7 +298,7 @@ Dish_Menu As screen:
                 FontWeight: =FontWeight.Bold
                 Height: =61
                 Size: =18
-                Text: =Sum(Gallery3.AllItems,required_Quantity)
+                Text: =Sum(Gallery3.AllItems,If(IsBlank(required_Quantity),0,required_Quantity))
                 Width: =96
                 X: =295
                 ZIndex: =5
