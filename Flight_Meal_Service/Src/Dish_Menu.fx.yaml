@@ -4,13 +4,24 @@ Dish_Menu As screen:
             GalleryData,Filter(FMS_Quantity,flight_id=Flightvalue_popup.ID)
         );
         Clear(galleryItems);
-        Reset(Gallery3.)
+        Set(SelectedTab,1);
+
+    Container10 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =1047
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =640
+        Y: =89
+        ZIndex: =1
 
     Dishes_containerHeader As groupContainer.manualLayoutContainer:
         Fill: =RGBA(22, 151, 170, 1)
         Height: =89
         Width: =640
-        ZIndex: =1
+        ZIndex: =2
 
         Label2 As label:
             Align: =Align.Center
@@ -35,6 +46,23 @@ Dish_Menu As screen:
             Fill: =RGBA(255, 255, 255, 1)
             OnSelect: |-
                 =
+                
+                
+                
+                ForAll(
+                   selectedDishes,
+                    Patch(
+                       DD_fms_quantity,
+                        {ID:selectedDishes[@ID]},
+                        {
+                          required_Quantity:0
+                        }
+                    )
+                );
+                
+                
+                
+                
                 Back();
             X: =562
             Y: =19
@@ -42,7 +70,7 @@ Dish_Menu As screen:
 
     Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =855
+        Height: =854
         Items: =Filter(DD_fms_quantity, flight_id=Text(Flightvalue_popup.ID))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -51,7 +79,7 @@ Dish_Menu As screen:
         Transition: =Transition.Pop
         Width: =639
         Y: =167
-        ZIndex: =2
+        ZIndex: =3
 
         Container2 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semibold
@@ -94,7 +122,7 @@ Dish_Menu As screen:
                 Size: =20
                 Text: =LookUp(DD_fms_dishes,ID=Value(ThisItem.dish_id)).Dish_Name
                 Tooltip: =
-                Width: =493
+                Width: =367
                 X: =64
                 Y: =25
                 ZIndex: =3
@@ -130,70 +158,101 @@ Dish_Menu As screen:
                 X: =406
                 ZIndex: =10
 
-        RequiredQuantityWW As slider:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Default: =0
-            HandleSize: =15
-            Height: =38
-            HoverBorderColor: =ColorFade(Self.HandleFill, 30%)
-            Max: =ThisItem.Quantity
-            OnChange: =
-            OnSelect: =
-            RailFill: =RGBA(255, 255, 255, 1)
-            RailThickness: =2
-            Reset: =true
-            ValueFill: =RGBA(255, 255, 255, 1)
-            Width: =139
-            X: =448
-            Y: =99
-            ZIndex: =13
-
         Label3 As label:
+            Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Height: =43
             OnSelect: =Select(Parent)
             PaddingLeft: =0
-            Size: =14
-            Text: ="Select Quantity "
-            Width: =139
-            X: =448
-            Y: =56
+            Size: =12
+            Text: ="Items Added"
+            Width: =123
+            X: =469
+            Y: =43
             ZIndex: =14
 
         Label5 As label:
-            Align: =Align.Right
+            Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Semibold
             Height: =37
             OnSelect: =Select(Parent)
-            Size: =10
-            Text: |-
-                ="Items in Cart : "&If(And(RequiredQuantityWW.Value=0,Value(TextInput5.Text)>0),0,RequiredQuantityWW.Value)
-            Visible: =If(RequiredQuantityWW.Value>0,true,false)
-            Width: =217
-            X: =370
-            Y: =183
+            Size: =20
+            Text: =TextInput3.Text
+            Width: =123
+            X: =469
+            Y: =79
             ZIndex: =15
 
-        TextInput5 As text:
-            Default: =RequiredQuantityWW.Value
-            Format: =TextFormat.Number
-            Height: =70
+        TextInput3 As text:
+            Default: =ThisItem.required_Quantity
+            Height: =68
+            OnSelect: =Select(Parent)
+            Reset: =true
             Size: =21
             Visible: =false
-            Width: =560
-            X: =44
-            Y: =173
-            ZIndex: =16
+            Width: =214
+            X: =28
+            Y: =8
+            ZIndex: =17
+
+        Container9 As groupContainer.manualLayoutContainer:
+            Height: =44
+            Width: =123
+            X: =469
+            Y: =129
+            ZIndex: =19
+
+            Button2_1 As button:
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(22, 151, 170, 1)
+                DisplayMode: =If(Value(TextInput3.Text)<1,DisplayMode.Disabled,DisplayMode.Edit)
+                Fill: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: |-
+                    =Patch(DD_fms_quantity,{ID:ThisItem.ID},{required_Quantity:Value(If(IsBlank(ThisItem.required_Quantity),0,ThisItem.required_Quantity))-1})
+                PaddingBottom: =14
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =25
+                Text: ="_"
+                VerticalAlign: =VerticalAlign.Bottom
+                Width: =Parent.Width*.50
+                ZIndex: =1
+
+            Button2 As button:
+                Color: =RGBA(22, 151, 170, 1)
+                DisplayMode: =If(Value(TextInput3.Text)<Value(ThisItem.Quantity),DisplayMode.Edit,DisplayMode.Disabled)
+                Fill: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: |
+                    =Patch(DD_fms_quantity,{ID:ThisItem.ID},{required_Quantity:Value(If(IsBlank(ThisItem.required_Quantity),0,ThisItem.required_Quantity))+1})
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =24
+                Text: ="+"
+                Width: =Parent.Width*.50
+                X: =61
+                ZIndex: =2
 
     Container1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
-        Fill: =RGBA(237, 237, 237, 1)
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =99
         Width: =640
         Y: =1037
-        ZIndex: =6
+        ZIndex: =4
 
         Container3 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(22, 151, 170, 1)
@@ -237,7 +296,7 @@ Dish_Menu As screen:
                 FontWeight: =FontWeight.Bold
                 Height: =61
                 Size: =18
-                Text: =Sum(Gallery3.AllItems,RequiredQuantityWW.Value)
+                Text: =Sum(Gallery3.AllItems,required_Quantity)
                 Width: =96
                 X: =295
                 ZIndex: =5
@@ -282,7 +341,7 @@ Dish_Menu As screen:
                 HoverFill: =RGBA(0,0,0,0.1)
                 OnSelect: |-
                     =ClearCollect(selectedDishes,Gallery3.AllItems);
-                    
+                    Set(isConnected,Connection.Connected);
                     
                     ForAll(
                        selectedDishes,
@@ -290,11 +349,12 @@ Dish_Menu As screen:
                            DD_fms_quantity,
                             {ID:selectedDishes[@ID]},
                             {
-                              Quantity: Value(selectedDishes[@Quantity]) - Value(selectedDishes[@RequiredQuantityWW].Value)
+                              Quantity: Value(selectedDishes[@Quantity]) - Value(selectedDishes[@required_Quantity])
                             }
                         )
                     );
                     
+                    If(!isConnected,
                      SaveData(
                             DD_fms_crew_members,
                             "DD_fms_crew_members"
@@ -311,7 +371,7 @@ Dish_Menu As screen:
                             DD_fms_flights,
                             "DD_fms_flights"
                         );
-                    
+                    );
                     Back()
                 PressedFill: =RGBA(0,0,0,0.1)
                 Size: =24
@@ -319,34 +379,68 @@ Dish_Menu As screen:
                 Width: =108
                 ZIndex: =3
 
-    TextInput2 As text:
+    Button5 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Default: =""
-        Height: =48
-        HintText: ="Search by Dish Name"
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingLeft: =If(IsBlank(TextInput2),45+Icon8.Width,45)
-        Size: =18
-        Width: =560
-        X: =40
-        Y: =102
-        ZIndex: =7
-
-    Icon8 As icon.Search:
+        BorderThickness: =0
         Color: =RGBA(22, 151, 170, 1)
-        Height: =31
-        Icon: =Icon.Search
-        Width: =35
-        X: =46
-        Y: =110
-        ZIndex: =8
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =50
+        HoverColor: =RGBA(22, 151, 170, 1)
+        HoverFill: =
+        OnSelect: |
+            =Set(SelectedTab,1)
+        PressedColor: =Color.White
+        PressedFill: =Self.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="All Dishes"
+        Width: =169
+        X: =32
+        Y: =107
+        ZIndex: =5
 
-    Rectangle6 As rectangle:
+    Rectangle3 As rectangle:
+        BorderColor: =RGBA(22, 151, 170, 1)
         Fill: =RGBA(22, 151, 170, 1)
         Height: =2
-        Width: =554
-        X: =46
-        Y: =150
-        ZIndex: =9
+        Visible: =If(SelectedTab=1,true,false)
+        Width: =169
+        X: =32
+        Y: =157
+        ZIndex: =6
+
+    Button5_1 As button:
+        BorderThickness: =0
+        Color: =RGBA(22, 151, 170, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =50
+        HoverColor: =RGBA(22, 151, 170, 1)
+        HoverFill: =
+        OnSelect: =Set(SelectedTab,2)
+        PressedColor: =Color.White
+        PressedFill: =Self.Fill
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="Cart"
+        Width: =107
+        X: =499
+        Y: =108
+        ZIndex: =7
+
+    Rectangle3_1 As rectangle:
+        BorderColor: =RGBA(22, 151, 170, 1)
+        Fill: =RGBA(22, 151, 170, 1)
+        Height: =2
+        OnSelect: =
+        Visible: =If(SelectedTab=2,true,false)
+        Width: =107
+        X: =499
+        Y: =157
+        ZIndex: =8
 
