@@ -428,7 +428,7 @@
                                 RadiusTopLeft: =0
                                 RadiusTopRight: =0
                                 Width: =300
-                                X: =(Parent.Width-Self.Width)/2
+                                X: =(Parent.Width-Self.Width)/2+15
                                 Y: =10
                                 ZIndex: =1
 
@@ -840,7 +840,7 @@
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Width: =318
-                X: =(Parent.Width-Self.Width)/2
+                X: =(Parent.Width-Self.Width)/2+15
                 Y: =27
                 ZIndex: =17
 
