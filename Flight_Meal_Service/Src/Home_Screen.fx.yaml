@@ -8,173 +8,374 @@
         Width: =Parent.Width
         ZIndex: =1
 
+        Container19 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =89
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =1
+
+            HeaderContainer As groupContainer.manualLayoutContainer:
+                Fill: =RGBA(22, 151, 170, 1)
+                Height: =Parent.Height*.09
+                LayoutMinHeight: =89
+                LayoutMinWidth: =250
+                Width: =Parent.Width
+                ZIndex: =1
+
+                "'Sync Icon' As icon.Link":
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =50
+                    Icon: =Icon.Link
+                    OnSelect: |-
+                        =Set(
+                            isConnected,
+                            Connection.Connected
+                        );
+                        If(
+                            isConnected,
+                            ForAll(
+                                DD_fms_quantity,
+                                Patch(
+                                    FMS_Quantity,
+                                    {ID: DD_fms_quantity[@ID]},
+                                    {Quantity:DD_fms_quantity[@Quantity]}
+                                )
+                            );
+                        
+                        //****************************************************************
+                            ClearCollect(
+                                UpdatedFlightData,
+                                FMS_Flights
+                            );
+                            ClearCollect(
+                                CD_fms_dishes,
+                                FMS_Dishes
+                            );
+                            ClearCollect(
+                                CD_fms_crew_members,
+                                FMS_Crew_Members
+                            );
+                            ClearCollect(
+                                CD_fms_quantity,
+                                FMS_Quantity
+                            );
+                        Clear(DD_fms_crew_members);
+                        Clear(DD_fms_dishes);
+                        Clear(DD_fms_flights);
+                        Clear(DD_fms_quantity);
+                        
+                        
+                        
+                            ClearCollect(
+                                DD_fms_dishes,
+                                CD_fms_dishes
+                            );
+                            ClearCollect(
+                                DD_fms_crew_members,
+                                CD_fms_crew_members
+                            );
+                            ClearCollect(
+                                DD_fms_quantity,
+                                CD_fms_quantity
+                            );
+                            ClearCollect(
+                                DD_fms_flights,
+                                UpdatedFlightData
+                            );
+                            ClearData();
+                            
+                            SaveData(
+                                DD_fms_crew_members,
+                                "DD_fms_crew_members"
+                            );
+                            SaveData(
+                                DD_fms_quantity,
+                                "DD_fms_quantity"
+                            );
+                            SaveData(
+                                DD_fms_dishes,
+                                "DD_fms_dishes"
+                            );
+                            SaveData(
+                                DD_fms_flights,
+                                "DD_fms_flights"
+                            );
+                        
+                        
+                            /*
+                            LoadData(
+                                DD_fms_crew_members,
+                                "DD_fms_crew_members"
+                            );
+                            LoadData(
+                                DD_fms_quantity,
+                                "DD_fms_quantity"
+                            );
+                            LoadData(
+                                DD_fms_dishes,
+                                "DD_fms_dishes"
+                            );
+                            LoadData(
+                                DD_fms_flights,
+                                "DD_fms_flights"
+                            ); */
+                            Notify("Data Sync Completed",NotificationType.Success);
+                            
+                        
+                        
+                        //**************************************************************    
+                            ,
+                            Notify(
+                                "No Internet , Can not Sync Data",
+                                NotificationType.Error
+                            )
+                        );
+                        ClearCollect(Flightdata,DD_fms_flights);
+                    Width: =50
+                    X: =Parent.Width-80
+                    Y: =16
+                    ZIndex: =1
+
+                SyncName As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =25
+                    Size: =10
+                    Text: ="Sync Data"
+                    Width: =85
+                    X: =Parent.Width-100
+                    Y: =66
+                    ZIndex: =2
+
+                HeaderName As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =70
+                    Size: =25
+                    Text: ="AzureJet"
+                    Width: =408
+                    X: =108
+                    Y: =16
+                    ZIndex: =3
+
+                Image3 As image:
+                    Height: =86.24
+                    Image: =airplane
+                    Width: =97
+                    Y: =16
+                    ZIndex: =4
+
         Container16 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
             Height: =225
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             X: =40
             Y: =40
             ZIndex: =2
 
+            Container20 As groupContainer.manualLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(230, 230, 230, 1)
+                FillPortions: =0
+                Height: =170
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Group1 As group:
+                    Height: =5
+                    Width: =5
+                    X: =-3
+                    Y: =-115
+                    ZIndex: =11
+
+                    ChooseYourFlight As label:
+                        Color: =RGBA(22, 151, 170, 1)
+                        FontWeight: =FontWeight.Bold
+                        Height: =27
+                        Size: =12
+                        Text: ="Choose Your Flight"
+                        Width: =257
+                        X: =40
+                        Y: =
+                        ZIndex: =1
+
+                    Button3 As button:
+                        BorderColor: =RGBA(22, 151, 170, 1)
+                        DisplayMode: =If(Or(IsBlank(fromcombobox.Selected.Value),IsBlank(tocombobox.Selected.Value)),DisplayMode.Disabled,DisplayMode.Edit)
+                        Fill: =RGBA(22, 151, 170, 1)
+                        Height: =25
+                        HoverFill: =ColorFade(Self.Fill, -20%)
+                        OnSelect: |
+                            =
+                            ClearCollect(Flightdata,Filter(Flightdata,And(From=fromcombobox.Selected.Value,To=tocombobox.Selected.Value)));
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =10
+                        Text: ="Search"
+                        Width: =100
+                        X: =421
+                        Y: =92
+                        ZIndex: =2
+
+                    TextInput1 As text:
+                        BorderColor: =RGBA(22, 151, 170, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =1
+                        Default: =""
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =30
+                        HintText: ="Search By Flight Number"
+                        HoverBorderColor: =RGBA(22, 151, 170, 0.37)
+                        HoverFill: =RGBA(22, 151, 170, 0.24)
+                        PaddingLeft: =If(!IsBlank(TextInput1),30,30+Icon3.Width)
+                        Size: =10
+                        Width: =362
+                        X: =40
+                        Y: =40
+                        ZIndex: =3
+
+                    Rectangle1 As rectangle:
+                        Fill: =RGBA(22, 151, 170, 1)
+                        Height: =1
+                        Width: =358
+                        X: =44
+                        Y: =70
+                        ZIndex: =4
+
+                    Button1 As button:
+                        Fill: =RGBA(22, 151, 170, 1)
+                        Height: =25
+                        HoverFill: =ColorFade(Self.Fill, -20%)
+                        OnSelect: |-
+                            =Reset(tocombobox);
+                            Reset(fromcombobox);
+                            Set(filter,false);
+                            Reset(TextInput1);
+                            Clear(Flightdata);
+                            ClearCollect(Flightdata,DD_fms_flights);
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =10
+                        Text: ="Clear"
+                        Width: =68
+                        X: =538
+                        Y: =92
+                        ZIndex: =5
+
+                    Icon3 As icon.Search:
+                        Color: =RGBA(22, 151, 170, 1)
+                        Height: =20
+                        Icon: =Icon.Search
+                        Width: =20
+                        X: =44
+                        Y: =45
+                        ZIndex: =6
+
+                    fromcombobox As dropdown:
+                        AllowEmptySelection: =true
+                        BorderColor: =RGBA(22, 151, 170, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(0, 0, 0, 0)
+                        ChevronFill: =RGBA(22, 151, 170, 1)
+                        ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
+                        Height: =25
+                        HoverColor: =RGBA(22, 151, 170, 1)
+                        HoverFill: =RGBA(22, 151, 170, 0.37)
+                        Items: =Distinct(Flightdata,From)
+                        PressedFill: =RGBA(22, 151, 170, 1)
+                        SelectionFill: =RGBA(22, 151, 170, 1)
+                        Size: =12
+                        Width: =171
+                        X: =44
+                        Y: =92
+                        ZIndex: =7
+
+                    tocombobox As dropdown:
+                        AllowEmptySelection: =true
+                        BorderColor: =fromcombobox.BorderColor
+                        BorderThickness: =1
+                        ChevronBackground: =fromcombobox.ChevronBackground
+                        ChevronFill: =fromcombobox.ChevronFill
+                        ChevronHoverBackground: =fromcombobox.ChevronHoverBackground
+                        ChevronHoverFill: =fromcombobox.ChevronHoverFill
+                        Color: =fromcombobox.Color
+                        Fill: =fromcombobox.Fill
+                        Height: =25
+                        HoverColor: =fromcombobox.HoverColor
+                        HoverFill: =fromcombobox.HoverFill
+                        Items: =Distinct(Flightdata,To)
+                        PressedColor: =fromcombobox.PressedColor
+                        PressedFill: =fromcombobox.PressedFill
+                        SelectionColor: =fromcombobox.SelectionColor
+                        SelectionFill: =fromcombobox.SelectionFill
+                        Size: =12
+                        Width: =171
+                        X: =232
+                        Y: =92
+                        ZIndex: =8
+
+                    Label12 As label:
+                        Color: =RGBA(22, 151, 170, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =25
+                        PaddingLeft: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Text: ="Departure City"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =171
+                        X: =44
+                        Y: =118
+                        ZIndex: =9
+
+                    Label12_1 As label:
+                        Color: =RGBA(22, 151, 170, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =25
+                        PaddingLeft: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Text: ="Arrival City"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =171
+                        X: =232
+                        Y: =118
+                        ZIndex: =10
+
             BackgroundContainer As groupContainer.manualLayoutContainer:
-                BorderThickness: =1
+                BorderStyle: =BorderStyle.None
                 Fill: =RGBA(230, 230, 230, 1)
                 Height: =1136
                 LayoutMinHeight: =112
                 LayoutMinWidth: =250
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 Width: =640
-                ZIndex: =1
-
-                HeaderContainer As groupContainer.manualLayoutContainer:
-                    Fill: =RGBA(22, 151, 170, 1)
-                    Height: =Parent.Height*.09
-                    Width: =Parent.Width
-                    ZIndex: =1
-
-                    "'Sync Icon' As icon.Link":
-                        Color: =RGBA(255, 255, 255, 1)
-                        Height: =50
-                        Icon: =Icon.Link
-                        OnSelect: |-
-                            =Set(
-                                isConnected,
-                                Connection.Connected
-                            );
-                            If(
-                                isConnected,
-                                ForAll(
-                                    DD_fms_quantity,
-                                    Patch(
-                                        FMS_Quantity,
-                                        {ID: DD_fms_quantity[@ID]},
-                                        {Quantity:DD_fms_quantity[@Quantity]}
-                                    )
-                                );
-                            
-                            //****************************************************************
-                                ClearCollect(
-                                    UpdatedFlightData,
-                                    FMS_Flights
-                                );
-                                ClearCollect(
-                                    CD_fms_dishes,
-                                    FMS_Dishes
-                                );
-                                ClearCollect(
-                                    CD_fms_crew_members,
-                                    FMS_Crew_Members
-                                );
-                                ClearCollect(
-                                    CD_fms_quantity,
-                                    FMS_Quantity
-                                );
-                            Clear(DD_fms_crew_members);
-                            Clear(DD_fms_dishes);
-                            Clear(DD_fms_flights);
-                            Clear(DD_fms_quantity);
-                            
-                            
-                            
-                                ClearCollect(
-                                    DD_fms_dishes,
-                                    CD_fms_dishes
-                                );
-                                ClearCollect(
-                                    DD_fms_crew_members,
-                                    CD_fms_crew_members
-                                );
-                                ClearCollect(
-                                    DD_fms_quantity,
-                                    CD_fms_quantity
-                                );
-                                ClearCollect(
-                                    DD_fms_flights,
-                                    UpdatedFlightData
-                                );
-                                ClearData();
-                                
-                                SaveData(
-                                    DD_fms_crew_members,
-                                    "DD_fms_crew_members"
-                                );
-                                SaveData(
-                                    DD_fms_quantity,
-                                    "DD_fms_quantity"
-                                );
-                                SaveData(
-                                    DD_fms_dishes,
-                                    "DD_fms_dishes"
-                                );
-                                SaveData(
-                                    DD_fms_flights,
-                                    "DD_fms_flights"
-                                );
-                            
-                            
-                                /*
-                                LoadData(
-                                    DD_fms_crew_members,
-                                    "DD_fms_crew_members"
-                                );
-                                LoadData(
-                                    DD_fms_quantity,
-                                    "DD_fms_quantity"
-                                );
-                                LoadData(
-                                    DD_fms_dishes,
-                                    "DD_fms_dishes"
-                                );
-                                LoadData(
-                                    DD_fms_flights,
-                                    "DD_fms_flights"
-                                ); */
-                                Notify("Data Sync Completed",NotificationType.Success);
-                                
-                            
-                            
-                            //**************************************************************    
-                                ,
-                                Notify(
-                                    "No Internet , Can not Sync Data",
-                                    NotificationType.Error
-                                )
-                            );
-                            ClearCollect(Flightdata,DD_fms_flights);
-                        Width: =50
-                        X: =Parent.Width-80
-                        Y: =16
-                        ZIndex: =1
-
-                    SyncName As label:
-                        Align: =Align.Center
-                        Color: =RGBA(255, 255, 255, 1)
-                        Height: =25
-                        Size: =10
-                        Text: ="Sync Data"
-                        Width: =85
-                        X: =Parent.Width-80
-                        Y: =66
-                        ZIndex: =2
-
-                    HeaderName As label:
-                        Color: =RGBA(255, 255, 255, 1)
-                        FontWeight: =FontWeight.Bold
-                        Height: =70
-                        Size: =25
-                        Text: ="AzureJet"
-                        Width: =408
-                        X: =108
-                        Y: =16
-                        ZIndex: =3
-
-                    Image3 As image:
-                        Height: =86.24
-                        Image: =airplane
-                        Width: =97
-                        Y: =16
-                        ZIndex: =4
+                ZIndex: =2
 
                 Container6 As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None
@@ -184,9 +385,8 @@
                     RadiusBottomRight: =15
                     RadiusTopLeft: =15
                     RadiusTopRight: =15
-                    Width: =620
+                    Width: =Parent.Width-20
                     X: =20
-                    Y: =220
                     ZIndex: =5
 
                     Flights As gallery.galleryVertical:
@@ -202,9 +402,8 @@
                         TemplatePadding: =0
                         TemplateSize: =221
                         Transition: =Transition.Pop
-                        Width: =610
+                        Width: =Parent.Width-10
                         X: =8
-                        Y: =40
                         ZIndex: =1
 
                         itemcontainer As groupContainer.manualLayoutContainer:
@@ -216,7 +415,7 @@
                             RadiusBottomRight: =20
                             RadiusTopLeft: =20
                             RadiusTopRight: =20
-                            Width: =591
+                            Width: =Parent.Width-25
                             ZIndex: =1
 
                             Label19 As label:
@@ -430,164 +629,6 @@
                                 X: =265
                                 Y: =76
                                 ZIndex: =26
-
-                ChooseYourFlight As label:
-                    Color: =RGBA(22, 151, 170, 1)
-                    FontWeight: =FontWeight.Bold
-                    Height: =27
-                    Size: =12
-                    Text: ="Choose Your Flight"
-                    Width: =257
-                    X: =43
-                    Y: =117
-                    ZIndex: =6
-
-                Button3 As button:
-                    BorderColor: =RGBA(22, 151, 170, 1)
-                    DisplayMode: =If(Or(IsBlank(fromcombobox.Selected.Value),IsBlank(tocombobox.Selected.Value)),DisplayMode.Disabled,DisplayMode.Edit)
-                    Fill: =RGBA(22, 151, 170, 1)
-                    Height: =25
-                    HoverFill: =ColorFade(Self.Fill, -20%)
-                    OnSelect: |
-                        =
-                        ClearCollect(Flightdata,Filter(Flightdata,And(From=fromcombobox.Selected.Value,To=tocombobox.Selected.Value)));
-                    RadiusBottomLeft: =5
-                    RadiusBottomRight: =5
-                    RadiusTopLeft: =5
-                    RadiusTopRight: =5
-                    Size: =10
-                    Text: ="Search"
-                    Width: =100
-                    X: =424
-                    Y: =207
-                    ZIndex: =9
-
-                TextInput1 As text:
-                    BorderColor: =RGBA(22, 151, 170, 1)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =1
-                    Default: =""
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =30
-                    HintText: ="Search By Flight Number"
-                    HoverBorderColor: =RGBA(22, 151, 170, 0.37)
-                    HoverFill: =RGBA(22, 151, 170, 0.24)
-                    PaddingLeft: =If(!IsBlank(TextInput1),30,30+Icon3.Width)
-                    Size: =10
-                    Width: =362
-                    X: =43
-                    Y: =155
-                    ZIndex: =11
-
-                Rectangle1 As rectangle:
-                    Fill: =RGBA(22, 151, 170, 1)
-                    Height: =1
-                    Width: =358
-                    X: =47
-                    Y: =185
-                    ZIndex: =13
-
-                Button1 As button:
-                    Fill: =RGBA(22, 151, 170, 1)
-                    Height: =25
-                    HoverFill: =ColorFade(Self.Fill, -20%)
-                    OnSelect: |-
-                        =Reset(tocombobox);
-                        Reset(fromcombobox);
-                        Set(filter,false);
-                        Reset(TextInput1);
-                        Clear(Flightdata);
-                        ClearCollect(Flightdata,DD_fms_flights);
-                    RadiusBottomLeft: =5
-                    RadiusBottomRight: =5
-                    RadiusTopLeft: =5
-                    RadiusTopRight: =5
-                    Size: =10
-                    Text: ="Clear"
-                    Width: =68
-                    X: =541
-                    Y: =207
-                    ZIndex: =14
-
-                Icon3 As icon.Search:
-                    Color: =RGBA(22, 151, 170, 1)
-                    Height: =20
-                    Icon: =Icon.Search
-                    Width: =20
-                    X: =47
-                    Y: =160
-                    ZIndex: =15
-
-                fromcombobox As dropdown:
-                    AllowEmptySelection: =true
-                    BorderColor: =RGBA(22, 151, 170, 1)
-                    BorderThickness: =1
-                    ChevronBackground: =RGBA(0, 0, 0, 0)
-                    ChevronFill: =RGBA(22, 151, 170, 1)
-                    ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
-                    Height: =25
-                    HoverColor: =RGBA(22, 151, 170, 1)
-                    HoverFill: =RGBA(22, 151, 170, 0.37)
-                    Items: =Distinct(Flightdata,From)
-                    PressedFill: =RGBA(22, 151, 170, 1)
-                    SelectionFill: =RGBA(22, 151, 170, 1)
-                    Size: =12
-                    Width: =171
-                    X: =47
-                    Y: =207
-                    ZIndex: =16
-
-                tocombobox As dropdown:
-                    AllowEmptySelection: =true
-                    BorderColor: =fromcombobox.BorderColor
-                    BorderThickness: =1
-                    ChevronBackground: =fromcombobox.ChevronBackground
-                    ChevronFill: =fromcombobox.ChevronFill
-                    ChevronHoverBackground: =fromcombobox.ChevronHoverBackground
-                    ChevronHoverFill: =fromcombobox.ChevronHoverFill
-                    Color: =fromcombobox.Color
-                    Fill: =fromcombobox.Fill
-                    Height: =25
-                    HoverColor: =fromcombobox.HoverColor
-                    HoverFill: =fromcombobox.HoverFill
-                    Items: =Distinct(Flightdata,To)
-                    PressedColor: =fromcombobox.PressedColor
-                    PressedFill: =fromcombobox.PressedFill
-                    SelectionColor: =fromcombobox.SelectionColor
-                    SelectionFill: =fromcombobox.SelectionFill
-                    Size: =12
-                    Width: =171
-                    X: =235
-                    Y: =207
-                    ZIndex: =17
-
-                Label12 As label:
-                    Color: =RGBA(22, 151, 170, 1)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =25
-                    PaddingLeft: =0
-                    PaddingTop: =0
-                    Size: =10
-                    Text: ="Departure City"
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =171
-                    X: =47
-                    Y: =233
-                    ZIndex: =18
-
-                Label12_1 As label:
-                    Color: =RGBA(22, 151, 170, 1)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =25
-                    PaddingLeft: =0
-                    PaddingTop: =0
-                    Size: =10
-                    Text: ="Arrival City"
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =171
-                    X: =235
-                    Y: =233
-                    ZIndex: =19
 
     FlightPopUp As groupContainer.manualLayoutContainer:
         Fill: =RGBA(153, 153, 153, 0.9)
