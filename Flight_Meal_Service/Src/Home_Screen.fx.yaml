@@ -506,7 +506,6 @@
             ChevronBackground: =RGBA(0, 0, 0, 0)
             ChevronFill: =RGBA(22, 151, 170, 1)
             ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
-            FontWeight: =FontWeight.Lighter
             Height: =25
             HoverColor: =RGBA(22, 151, 170, 1)
             HoverFill: =RGBA(22, 151, 170, 0.37)
