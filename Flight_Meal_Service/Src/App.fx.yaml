@@ -97,7 +97,7 @@ App As appinfo:
             
         );
         ClearCollect(Flightdata,DD_fms_flights);
-    StartScreen: =Screen1
+    StartScreen: =Home_Screen
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
