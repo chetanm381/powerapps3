@@ -134,7 +134,7 @@ Screen1 As screen:
                         );
                         ClearCollect(Flightdata,DD_fms_flights);
                     Width: =50
-                    X: =564
+                    X: =Parent.Width-80
                     Y: =16
                     ZIndex: =1
 
@@ -217,7 +217,7 @@ Screen1 As screen:
                         RadiusBottomRight: =20
                         RadiusTopLeft: =20
                         RadiusTopRight: =20
-                        Width: =630
+                        Width: =Parent.Width
                         ZIndex: =1
 
                         Label19_13 As label:
@@ -233,15 +233,14 @@ Screen1 As screen:
                             ZIndex: =1
 
                         Label19_12 As label:
-                            Align: =Align.Right
                             Color: =RGBA(148, 135, 141, 1)
                             FontWeight: =FontWeight.Lighter
-                            Height: =29
+                            Height: =52
                             Size: =10
                             Text: ="To"
-                            Width: =110
-                            X: =459
-                            Y: =34
+                            Width: =30
+                            X: =560
+                            Y: =24
                             ZIndex: =2
 
                         Label20_7 As label:
@@ -256,14 +255,13 @@ Screen1 As screen:
                             ZIndex: =3
 
                         Label20_6 As label:
-                            Align: =Align.Right
                             Color: =RGBA(22, 151, 170, 1)
                             FontWeight: =FontWeight.Bold
-                            Height: =41
+                            Height: =42
                             Size: =20
                             Text: =ThisItem.to_code
-                            Width: =184
-                            X: =411
+                            Width: =86
+                            X: =539
                             Y: =50
                             ZIndex: =4
 
@@ -298,8 +296,8 @@ Screen1 As screen:
                             PaddingRight: =0
                             Size: =10
                             Text: =ThisItem.Departure_Time
-                            Width: =92
-                            X: =527
+                            Width: =70
+                            X: =549
                             Y: =132
                             ZIndex: =7
 
@@ -315,14 +313,13 @@ Screen1 As screen:
                             ZIndex: =8
 
                         Label22_16 As label:
-                            Align: =Align.Right
                             Color: =RGBA(148, 135, 141, 1)
                             FontWeight: =FontWeight.Lighter
                             Height: =28
                             Size: =8
                             Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
-                            Width: =92
-                            X: =497
+                            Width: =72
+                            X: =Parent.Width-80
                             Y: =148
                             ZIndex: =9
 
@@ -339,15 +336,14 @@ Screen1 As screen:
                             ZIndex: =11
 
                         Label19_15 As label:
-                            Align: =Align.Right
                             Color: =RGBA(148, 135, 141, 1)
                             FontWeight: =FontWeight.Lighter
                             Height: =29
                             PaddingRight: =0
                             Size: =10
                             Text: =ThisItem.To
-                            Width: =173
-                            X: =406
+                            Width: =73
+                            X: =Parent.Width-80
                             Y: =86
                             ZIndex: =12
 
@@ -364,7 +360,7 @@ Screen1 As screen:
                             Height: =201
                             OnSelect: |
                                 =Select(Flights_2);
-                            Width: =630
+                            Width: =Parent.Width
                             Y: =5
                             ZIndex: =14
 
@@ -382,7 +378,7 @@ Screen1 As screen:
                             Image: ='wall-clock'
                             OnSelect: =Select(backgroundContainer_3);
                             Width: =20
-                            X: =506
+                            X: =Parent.Width-100
                             Y: =144
                             ZIndex: =18
 
