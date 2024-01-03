@@ -1,12 +1,19 @@
 "Home_Screen As screen.'layout_Offline_ver1.0'":
     OnVisible: =
 
+    Container18 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
     BackgroundContainer As groupContainer.manualLayoutContainer:
         BorderThickness: =1
         Fill: =RGBA(230, 230, 230, 1)
         Height: =1136
         Width: =640
-        ZIndex: =1
+        ZIndex: =2
 
         HeaderContainer As groupContainer.manualLayoutContainer:
             Fill: =RGBA(22, 151, 170, 1)
@@ -575,7 +582,7 @@
         Height: =1136
         Visible: =showPopUp
         Width: =640
-        ZIndex: =2
+        ZIndex: =3
 
         itemcontainer_2 As groupContainer.manualLayoutContainer:
             BorderStyle: =BorderStyle.None
@@ -854,11 +861,4 @@
             X: =547
             Y: =748
             ZIndex: =5
-
-    Container18 As groupContainer.verticalAutoLayoutContainer:
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =Parent.Width
-        ZIndex: =3
 
