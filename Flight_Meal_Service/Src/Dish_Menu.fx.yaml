@@ -98,7 +98,7 @@ Dish_Menu As screen:
                 Height: =Parent.Height-80
                 Items: |
                     =
-                    LastN(Filter(DD_fms_quantity,flight_id=Text(Flightvalue_popup.ID)),4)
+                    LastN(Filter(DD_fms_quantity,flight_id=Text(Flightvalue_popup.ID)),CountRows(Filter(DD_fms_quantity,flight_id=Text(Flightvalue_popup.ID)))-1)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 Selectable: =false
