@@ -106,7 +106,7 @@
     "DocumentLayoutLockOrientation": false,
     "DocumentLayoutMaintainAspectRatio": false,
     "DocumentLayoutOrientation": "portrait",
-    "DocumentLayoutScaleToFit": true,
+    "DocumentLayoutScaleToFit": false,
     "DocumentLayoutWidth": 640,
     "DocumentType": "App",
     "EnableInstrumentation": false,
@@ -133,6 +133,7 @@
   "ScreenOrder": [
     "Home_Screen",
     "Dish_Menu",
-    "Dish_Menu_PopUpCart"
+    "Dish_Menu_PopUpCart",
+    "Screen1"
   ]
 }

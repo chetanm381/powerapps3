@@ -1,0 +1,433 @@
+Screen1 As screen:
+
+    Container11 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        Container12 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =112
+            LayoutMinWidth: =Parent.Width
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            HeaderContainer_2 As groupContainer.manualLayoutContainer:
+                Fill: =RGBA(22, 151, 170, 1)
+                Height: =Parent.Height*.09
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                Width: =Parent.Width
+                ZIndex: =1
+
+                "'Sync Icon_2' As icon.Link":
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =50
+                    Icon: =Icon.Link
+                    OnSelect: |-
+                        =Set(
+                            isConnected,
+                            Connection.Connected
+                        );
+                        If(
+                            isConnected,
+                            ForAll(
+                                DD_fms_quantity,
+                                Patch(
+                                    FMS_Quantity,
+                                    {ID: DD_fms_quantity[@ID]},
+                                    {Quantity:DD_fms_quantity[@Quantity]}
+                                )
+                            );
+                        
+                        //****************************************************************
+                            ClearCollect(
+                                UpdatedFlightData,
+                                FMS_Flights
+                            );
+                            ClearCollect(
+                                CD_fms_dishes,
+                                FMS_Dishes
+                            );
+                            ClearCollect(
+                                CD_fms_crew_members,
+                                FMS_Crew_Members
+                            );
+                            ClearCollect(
+                                CD_fms_quantity,
+                                FMS_Quantity
+                            );
+                        Clear(DD_fms_crew_members);
+                        Clear(DD_fms_dishes);
+                        Clear(DD_fms_flights);
+                        Clear(DD_fms_quantity);
+                        
+                        
+                        
+                            ClearCollect(
+                                DD_fms_dishes,
+                                CD_fms_dishes
+                            );
+                            ClearCollect(
+                                DD_fms_crew_members,
+                                CD_fms_crew_members
+                            );
+                            ClearCollect(
+                                DD_fms_quantity,
+                                CD_fms_quantity
+                            );
+                            ClearCollect(
+                                DD_fms_flights,
+                                UpdatedFlightData
+                            );
+                            ClearData();
+                            
+                            SaveData(
+                                DD_fms_crew_members,
+                                "DD_fms_crew_members"
+                            );
+                            SaveData(
+                                DD_fms_quantity,
+                                "DD_fms_quantity"
+                            );
+                            SaveData(
+                                DD_fms_dishes,
+                                "DD_fms_dishes"
+                            );
+                            SaveData(
+                                DD_fms_flights,
+                                "DD_fms_flights"
+                            );
+                        
+                        
+                            /*
+                            LoadData(
+                                DD_fms_crew_members,
+                                "DD_fms_crew_members"
+                            );
+                            LoadData(
+                                DD_fms_quantity,
+                                "DD_fms_quantity"
+                            );
+                            LoadData(
+                                DD_fms_dishes,
+                                "DD_fms_dishes"
+                            );
+                            LoadData(
+                                DD_fms_flights,
+                                "DD_fms_flights"
+                            ); */
+                            Notify("Data Sync Completed",NotificationType.Success);
+                            
+                        
+                        
+                        //**************************************************************    
+                            ,
+                            Notify(
+                                "No Internet , Can not Sync Data",
+                                NotificationType.Error
+                            )
+                        );
+                        ClearCollect(Flightdata,DD_fms_flights);
+                    Width: =50
+                    X: =564
+                    Y: =16
+                    ZIndex: =1
+
+                SyncName_2 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =25
+                    Size: =10
+                    Text: ="Sync Data"
+                    Width: =85
+                    X: =546
+                    Y: =66
+                    ZIndex: =2
+
+                HeaderName_2 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =70
+                    Size: =25
+                    Text: ="AzureJet"
+                    Width: =408
+                    X: =108
+                    Y: =16
+                    ZIndex: =3
+
+                Image3_1 As image:
+                    Height: =86.24
+                    Image: =airplane
+                    Width: =97
+                    Y: =16
+                    ZIndex: =4
+
+        Container14 As groupContainer.verticalAutoLayoutContainer:
+            Height: =225
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            Container6_2 As groupContainer.manualLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                Height: =905
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Width: =Parent.Width
+                X: =20
+                Y: =220
+                ZIndex: =1
+
+                Flights_2 As gallery.galleryVertical:
+                    BorderStyle: =BorderStyle.None
+                    DelayItemLoading: =true
+                    Height: =865
+                    Items: =Search(Flightdata,TextInput1.Text,"Title")
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    OnSelect: |
+                        =Set(showPopUp,true);
+                        Set(Flightvalue_popup,Flights_2.Selected);
+                    TemplatePadding: =0
+                    TemplateSize: =221
+                    Transition: =Transition.Pop
+                    Width: =Parent.Width-10
+                    X: =8
+                    Y: =40
+                    ZIndex: =1
+
+                    itemcontainer_3 As groupContainer.manualLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.Semilight
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =206
+                        RadiusBottomLeft: =20
+                        RadiusBottomRight: =20
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        Width: =630
+                        ZIndex: =1
+
+                        Label19_13 As label:
+                            Color: =RGBA(148, 135, 141, 1)
+                            FontWeight: =FontWeight.Lighter
+                            Height: =29
+                            PaddingLeft: =8
+                            Size: =10
+                            Text: ="From"
+                            Width: =110
+                            X: =42
+                            Y: =35
+                            ZIndex: =1
+
+                        Label19_12 As label:
+                            Align: =Align.Right
+                            Color: =RGBA(148, 135, 141, 1)
+                            FontWeight: =FontWeight.Lighter
+                            Height: =29
+                            Size: =10
+                            Text: ="To"
+                            Width: =110
+                            X: =459
+                            Y: =34
+                            ZIndex: =2
+
+                        Label20_7 As label:
+                            Color: =RGBA(22, 151, 170, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =41
+                            Size: =20
+                            Text: =ThisItem.from_code
+                            Width: =184
+                            X: =42
+                            Y: =51
+                            ZIndex: =3
+
+                        Label20_6 As label:
+                            Align: =Align.Right
+                            Color: =RGBA(22, 151, 170, 1)
+                            FontWeight: =FontWeight.Bold
+                            Height: =41
+                            Size: =20
+                            Text: =ThisItem.to_code
+                            Width: =184
+                            X: =411
+                            Y: =50
+                            ZIndex: =4
+
+                        Label21_3 As label:
+                            Align: =Align.Center
+                            Color: =RGBA(22, 151, 170, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =39
+                            OnSelect: =Select(backgroundContainer_3);
+                            Size: =12
+                            Text: =ThisItem.Title
+                            Width: =146
+                            X: =252
+                            Y: =10
+                            ZIndex: =5
+
+                        Label22_13 As label:
+                            Color: =RGBA(22, 151, 170, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =28
+                            Size: =10
+                            Text: =ThisItem.Departure_Time
+                            Width: =92
+                            X: =47
+                            Y: =132
+                            ZIndex: =6
+
+                        Label22_14 As label:
+                            Color: =RGBA(22, 151, 170, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =28
+                            PaddingRight: =0
+                            Size: =10
+                            Text: =ThisItem.Departure_Time
+                            Width: =92
+                            X: =527
+                            Y: =132
+                            ZIndex: =7
+
+                        Label22_15 As label:
+                            Color: =RGBA(148, 135, 141, 1)
+                            FontWeight: =FontWeight.Lighter
+                            Height: =28
+                            Size: =8
+                            Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
+                            Width: =92
+                            X: =50
+                            Y: =148
+                            ZIndex: =8
+
+                        Label22_16 As label:
+                            Align: =Align.Right
+                            Color: =RGBA(148, 135, 141, 1)
+                            FontWeight: =FontWeight.Lighter
+                            Height: =28
+                            Size: =8
+                            Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
+                            Width: =92
+                            X: =497
+                            Y: =148
+                            ZIndex: =9
+
+                        Label19_14 As label:
+                            Color: =RGBA(148, 135, 141, 1)
+                            FontWeight: =FontWeight.Lighter
+                            Height: =29
+                            PaddingLeft: =8
+                            Size: =10
+                            Text: =ThisItem.From
+                            Width: =184
+                            X: =42
+                            Y: =86
+                            ZIndex: =11
+
+                        Label19_15 As label:
+                            Align: =Align.Right
+                            Color: =RGBA(148, 135, 141, 1)
+                            FontWeight: =FontWeight.Lighter
+                            Height: =29
+                            PaddingRight: =0
+                            Size: =10
+                            Text: =ThisItem.To
+                            Width: =173
+                            X: =406
+                            Y: =86
+                            ZIndex: =12
+
+                        Rectangle4_3 As rectangle:
+                            Fill: =RGBA(22, 151, 170, 1)
+                            Height: =10
+                            Width: =itemcontainer_3.Width
+                            Y: =itemcontainer_3.Height-Rectangle4_3.Height
+                            ZIndex: =13
+
+                        backgroundContainer_3 As rectangle:
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =201
+                            OnSelect: |
+                                =Select(Flights_2);
+                            Width: =630
+                            Y: =5
+                            ZIndex: =14
+
+                        Image3_4 As image:
+                            Height: =20
+                            Image: ='wall-clock'
+                            OnSelect: =Select(backgroundContainer_3);
+                            Width: =20
+                            X: =22
+                            Y: =144
+                            ZIndex: =17
+
+                        Image3_5 As image:
+                            Height: =20
+                            Image: ='wall-clock'
+                            OnSelect: =Select(backgroundContainer_3);
+                            Width: =20
+                            X: =506
+                            Y: =144
+                            ZIndex: =18
+
+                        Image4_4 As image:
+                            Height: =30
+                            Image: ='airplane (2)'
+                            OnSelect: =Select(backgroundContainer_3);
+                            Width: =30
+                            X: =195
+                            Y: =14
+                            ZIndex: =19
+
+                        Image4_5 As image:
+                            Height: =30
+                            Image: ='airplane (3)'
+                            OnSelect: =Select(backgroundContainer_3);
+                            Width: =30
+                            X: =422
+                            Y: =14
+                            ZIndex: =23
+
+                        Image5_5 As image:
+                            Height: =50
+                            Image: =minus
+                            OnSelect: =Select(backgroundContainer_3);
+                            Width: =73
+                            X: =349
+                            Y: =5
+                            ZIndex: =24
+
+                        Image5_4 As image:
+                            Height: =50
+                            Image: =minus
+                            OnSelect: =Select(backgroundContainer_3);
+                            Width: =74
+                            X: =223
+                            Y: =4
+                            ZIndex: =25
+
+                        Image6_1 As image:
+                            Height: =60
+                            Image: ='airplane (1)'
+                            OnSelect: =Select(backgroundContainer_3);
+                            Width: =60
+                            X: =285
+                            Y: =76
+                            ZIndex: =26
+
