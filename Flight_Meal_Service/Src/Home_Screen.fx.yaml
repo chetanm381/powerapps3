@@ -646,9 +646,9 @@
 
     FlightPopUp As groupContainer.manualLayoutContainer:
         Fill: =RGBA(153, 153, 153, 0.9)
-        Height: =1136
+        Height: =Parent.Height
         Visible: =showPopUp
-        Width: =640
+        Width: =Parent.Width
         ZIndex: =3
 
         itemcontainer_2 As groupContainer.manualLayoutContainer:
@@ -660,7 +660,7 @@
             RadiusBottomRight: =20
             RadiusTopLeft: =20
             RadiusTopRight: =20
-            Width: =577
+            Width: =Parent.Width-70
             X: =40
             Y: =348
             ZIndex: =1
@@ -694,7 +694,7 @@
                 Size: =8
                 Text: ="To"
                 Width: =110
-                X: =428
+                X: =Parent.Width-150
                 Y: =61
                 ZIndex: =3
 
@@ -717,21 +717,9 @@
                 Size: =20
                 Text: =Flightvalue_popup.to_code
                 Width: =184
-                X: =360
+                X: =Parent.Width-200
                 Y: =77
                 ZIndex: =5
-
-            Label21_2 As label:
-                Align: =Align.Center
-                Color: =RGBA(22, 151, 170, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =39
-                Size: =16
-                Text: =Flightvalue_popup.Title
-                Width: =146
-                X: =206
-                Y: =17
-                ZIndex: =6
 
             Label22_8 As label:
                 Color: =RGBA(22, 151, 170, 1)
@@ -752,7 +740,7 @@
                 Size: =10
                 Text: =Flightvalue_popup.Departure_Time
                 Width: =92
-                X: =446
+                X: =Parent.Width-110
                 Y: =154
                 ZIndex: =8
 
@@ -775,7 +763,7 @@
                 Size: =8
                 Text: =Text(Flightvalue_popup.Departure_Date,"mmm dd, yy")
                 Width: =92
-                X: =446
+                X: =Parent.Width-110
                 Y: =170
                 ZIndex: =10
 
@@ -783,7 +771,7 @@
                 Height: =60
                 Image: ='airplane (1)'
                 Width: =60
-                X: =247
+                X: =(Parent.Width-Self.Width)/2
                 Y: =100
                 ZIndex: =11
 
@@ -808,7 +796,7 @@
                 Size: =8
                 Text: =Flightvalue_popup.To
                 Width: =173
-                X: =365
+                X: =Parent.Width-210
                 Y: =108
                 ZIndex: =13
 
@@ -835,7 +823,7 @@
                 SelectionFill: =RGBA(22, 151, 170, 1)
                 Size: =14
                 Width: =414
-                X: =81
+                X: =(Parent.Width-Self.Width)/2
                 Y: =251
                 ZIndex: =15
 
@@ -847,45 +835,9 @@
                 Text: |-
                     ="Please select your Crew member :"
                 Width: =252
-                X: =81
+                X: =(Parent.Width-Self.Width)/2
                 Y: =219
                 ZIndex: =16
-
-            Image4_2 As image:
-                Height: =30
-                Image: ='airplane (2)'
-                OnSelect: =Select(backgroundContainer);
-                Width: =30
-                X: =135
-                Y: =21
-                ZIndex: =17
-
-            Image4_3 As image:
-                Height: =30
-                Image: ='airplane (3)'
-                OnSelect: =Select(backgroundContainer);
-                Width: =30
-                X: =388
-                Y: =21
-                ZIndex: =18
-
-            Image5_2 As image:
-                Height: =50
-                Image: =minus
-                OnSelect: =Select(backgroundContainer);
-                Width: =73
-                X: =315
-                Y: =11
-                ZIndex: =19
-
-            Image5_3 As image:
-                Height: =50
-                Image: =minus
-                OnSelect: =Select(backgroundContainer);
-                Width: =74
-                X: =165
-                Y: =11
-                ZIndex: =20
 
         Circle2 As circle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -910,7 +862,7 @@
             Fill: =RGBA(255, 255, 255, 1)
             Height: =75
             Width: =75
-            X: =535
+            X: =Parent.Width-105
             Y: =742
             ZIndex: =4
 
@@ -925,7 +877,7 @@
                 Reset(Dropdown2);
                 Navigate(Dish_Menu);
             Width: =50
-            X: =547
+            X: =Parent.Width-92
             Y: =748
             ZIndex: =5
 
