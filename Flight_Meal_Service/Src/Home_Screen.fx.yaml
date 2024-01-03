@@ -513,7 +513,7 @@
             Items: =Distinct(Flightdata,From)
             PressedFill: =RGBA(22, 151, 170, 1)
             SelectionFill: =RGBA(22, 151, 170, 1)
-            Size: =8
+            Size: =12
             Width: =171
             X: =47
             Y: =207
@@ -537,7 +537,7 @@
             PressedFill: =fromcombobox.PressedFill
             SelectionColor: =fromcombobox.SelectionColor
             SelectionFill: =fromcombobox.SelectionFill
-            Size: =8
+            Size: =12
             Width: =171
             X: =235
             Y: =207
