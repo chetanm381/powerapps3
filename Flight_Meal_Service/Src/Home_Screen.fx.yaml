@@ -466,19 +466,6 @@
                                 Y: =50
                                 ZIndex: =4
 
-                            Label21 As label:
-                                Align: =Align.Center
-                                Color: =RGBA(22, 151, 170, 1)
-                                FontWeight: =FontWeight.Semibold
-                                Height: =39
-                                OnSelect: =Select(backgroundContainer);
-                                Size: =12
-                                Text: =ThisItem.Title
-                                Width: =146
-                                X: =222
-                                Y: =10
-                                ZIndex: =5
-
                             Label22 As label:
                                 Color: =RGBA(22, 151, 170, 1)
                                 FontWeight: =FontWeight.Semibold
@@ -586,50 +573,76 @@
                                 Y: =144
                                 ZIndex: =18
 
-                            Image4 As image:
-                                Height: =30
-                                Image: ='airplane (2)'
-                                OnSelect: =Select(backgroundContainer);
-                                Width: =30
-                                X: =165
-                                Y: =14
-                                ZIndex: =19
+                            Container21 As groupContainer.manualLayoutContainer:
+                                BorderStyle: =BorderStyle.None
+                                DropShadow: =DropShadow.None
+                                Height: =164
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Width: =Parent.Width*0.50
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =10
+                                ZIndex: =27
 
-                            Image4_1 As image:
-                                Height: =30
-                                Image: ='airplane (3)'
-                                OnSelect: =Select(backgroundContainer);
-                                Width: =30
-                                X: =392
-                                Y: =14
-                                ZIndex: =23
+                                Image4 As image:
+                                    Height: =30
+                                    Image: ='airplane (2)'
+                                    OnSelect: =Select(backgroundContainer);
+                                    Width: =30
+                                    X: =15
+                                    Y: =15
+                                    ZIndex: =1
 
-                            Image5 As image:
-                                Height: =50
-                                Image: =minus
-                                OnSelect: =Select(backgroundContainer);
-                                Width: =73
-                                X: =319
-                                Y: =5
-                                ZIndex: =24
+                                Image4_1 As image:
+                                    Height: =30
+                                    Image: ='airplane (3)'
+                                    OnSelect: =Select(backgroundContainer);
+                                    Width: =30
+                                    X: =256
+                                    Y: =15
+                                    ZIndex: =2
 
-                            Image5_1 As image:
-                                Height: =50
-                                Image: =minus
-                                OnSelect: =Select(backgroundContainer);
-                                Width: =74
-                                X: =193
-                                Y: =4
-                                ZIndex: =25
+                                Image5 As image:
+                                    Height: =50
+                                    Image: =minus
+                                    OnSelect: =Select(backgroundContainer);
+                                    Width: =73
+                                    X: =179
+                                    Y: =5
+                                    ZIndex: =3
 
-                            Image6 As image:
-                                Height: =60
-                                Image: ='airplane (1)'
-                                OnSelect: =Select(backgroundContainer);
-                                Width: =60
-                                X: =265
-                                Y: =76
-                                ZIndex: =26
+                                Image5_1 As image:
+                                    Height: =50
+                                    Image: =minus
+                                    OnSelect: =Select(backgroundContainer);
+                                    Width: =74
+                                    X: =43
+                                    Y: =5
+                                    ZIndex: =4
+
+                                Image6 As image:
+                                    Height: =60
+                                    Image: ='airplane (1)'
+                                    OnSelect: =Select(backgroundContainer);
+                                    Width: =60
+                                    X: =120
+                                    Y: =78
+                                    ZIndex: =5
+
+                                Label21 As label:
+                                    Align: =Align.Center
+                                    Color: =RGBA(22, 151, 170, 1)
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =39
+                                    OnSelect: =Select(backgroundContainer);
+                                    Size: =12
+                                    Text: =ThisItem.Title
+                                    Width: =146
+                                    X: =77
+                                    Y: =10
+                                    ZIndex: =6
 
     FlightPopUp As groupContainer.manualLayoutContainer:
         Fill: =RGBA(153, 153, 153, 0.9)
