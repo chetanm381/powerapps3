@@ -199,170 +199,163 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                Group1 As group:
-                    Height: =5
-                    Width: =5
-                    X: =-3
-                    Y: =-115
-                    ZIndex: =11
+                ChooseYourFlight As label:
+                    Color: =RGBA(22, 151, 170, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =27
+                    Size: =12
+                    Text: ="Choose Your Flight"
+                    Width: =257
+                    X: =40
+                    Y: =
+                    ZIndex: =1
 
-                    ChooseYourFlight As label:
-                        Color: =RGBA(22, 151, 170, 1)
-                        FontWeight: =FontWeight.Bold
-                        Height: =27
-                        Size: =12
-                        Text: ="Choose Your Flight"
-                        Width: =257
-                        X: =40
-                        Y: =
-                        ZIndex: =1
+                Button3 As button:
+                    BorderColor: =RGBA(22, 151, 170, 1)
+                    DisplayMode: =If(Or(IsBlank(fromcombobox.Selected.Value),IsBlank(tocombobox.Selected.Value)),DisplayMode.Disabled,DisplayMode.Edit)
+                    Fill: =RGBA(22, 151, 170, 1)
+                    Height: =25
+                    HoverFill: =ColorFade(Self.Fill, -20%)
+                    OnSelect: |
+                        =
+                        ClearCollect(Flightdata,Filter(Flightdata,And(From=fromcombobox.Selected.Value,To=tocombobox.Selected.Value)));
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =10
+                    Text: ="Search"
+                    Width: =100
+                    X: =421
+                    Y: =92
+                    ZIndex: =2
 
-                    Button3 As button:
-                        BorderColor: =RGBA(22, 151, 170, 1)
-                        DisplayMode: =If(Or(IsBlank(fromcombobox.Selected.Value),IsBlank(tocombobox.Selected.Value)),DisplayMode.Disabled,DisplayMode.Edit)
-                        Fill: =RGBA(22, 151, 170, 1)
-                        Height: =25
-                        HoverFill: =ColorFade(Self.Fill, -20%)
-                        OnSelect: |
-                            =
-                            ClearCollect(Flightdata,Filter(Flightdata,And(From=fromcombobox.Selected.Value,To=tocombobox.Selected.Value)));
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =10
-                        Text: ="Search"
-                        Width: =100
-                        X: =421
-                        Y: =92
-                        ZIndex: =2
+                TextInput1 As text:
+                    BorderColor: =RGBA(22, 151, 170, 1)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =1
+                    Default: =""
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =30
+                    HintText: ="Search By Flight Number"
+                    HoverBorderColor: =RGBA(22, 151, 170, 0.37)
+                    HoverFill: =RGBA(22, 151, 170, 0.24)
+                    PaddingLeft: =If(!IsBlank(TextInput1),30,30+Icon3.Width)
+                    Size: =10
+                    Width: =362
+                    X: =40
+                    Y: =40
+                    ZIndex: =3
 
-                    TextInput1 As text:
-                        BorderColor: =RGBA(22, 151, 170, 1)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =1
-                        Default: =""
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =30
-                        HintText: ="Search By Flight Number"
-                        HoverBorderColor: =RGBA(22, 151, 170, 0.37)
-                        HoverFill: =RGBA(22, 151, 170, 0.24)
-                        PaddingLeft: =If(!IsBlank(TextInput1),30,30+Icon3.Width)
-                        Size: =10
-                        Width: =362
-                        X: =40
-                        Y: =40
-                        ZIndex: =3
+                Rectangle1 As rectangle:
+                    Fill: =RGBA(22, 151, 170, 1)
+                    Height: =1
+                    Width: =358
+                    X: =44
+                    Y: =70
+                    ZIndex: =4
 
-                    Rectangle1 As rectangle:
-                        Fill: =RGBA(22, 151, 170, 1)
-                        Height: =1
-                        Width: =358
-                        X: =44
-                        Y: =70
-                        ZIndex: =4
+                Button1 As button:
+                    Fill: =RGBA(22, 151, 170, 1)
+                    Height: =25
+                    HoverFill: =ColorFade(Self.Fill, -20%)
+                    OnSelect: |-
+                        =Reset(tocombobox);
+                        Reset(fromcombobox);
+                        Set(filter,false);
+                        Reset(TextInput1);
+                        Clear(Flightdata);
+                        ClearCollect(Flightdata,DD_fms_flights);
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =10
+                    Text: ="Clear"
+                    Width: =68
+                    X: =538
+                    Y: =92
+                    ZIndex: =5
 
-                    Button1 As button:
-                        Fill: =RGBA(22, 151, 170, 1)
-                        Height: =25
-                        HoverFill: =ColorFade(Self.Fill, -20%)
-                        OnSelect: |-
-                            =Reset(tocombobox);
-                            Reset(fromcombobox);
-                            Set(filter,false);
-                            Reset(TextInput1);
-                            Clear(Flightdata);
-                            ClearCollect(Flightdata,DD_fms_flights);
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =10
-                        Text: ="Clear"
-                        Width: =68
-                        X: =538
-                        Y: =92
-                        ZIndex: =5
+                Icon3 As icon.Search:
+                    Color: =RGBA(22, 151, 170, 1)
+                    Height: =20
+                    Icon: =Icon.Search
+                    Width: =20
+                    X: =44
+                    Y: =45
+                    ZIndex: =6
 
-                    Icon3 As icon.Search:
-                        Color: =RGBA(22, 151, 170, 1)
-                        Height: =20
-                        Icon: =Icon.Search
-                        Width: =20
-                        X: =44
-                        Y: =45
-                        ZIndex: =6
+                fromcombobox As dropdown:
+                    AllowEmptySelection: =true
+                    BorderColor: =RGBA(22, 151, 170, 1)
+                    BorderThickness: =1
+                    ChevronBackground: =RGBA(0, 0, 0, 0)
+                    ChevronFill: =RGBA(22, 151, 170, 1)
+                    ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
+                    Height: =25
+                    HoverColor: =RGBA(22, 151, 170, 1)
+                    HoverFill: =RGBA(22, 151, 170, 0.37)
+                    Items: =Distinct(Flightdata,From)
+                    PressedFill: =RGBA(22, 151, 170, 1)
+                    SelectionFill: =RGBA(22, 151, 170, 1)
+                    Size: =12
+                    Width: =171
+                    X: =44
+                    Y: =92
+                    ZIndex: =7
 
-                    fromcombobox As dropdown:
-                        AllowEmptySelection: =true
-                        BorderColor: =RGBA(22, 151, 170, 1)
-                        BorderThickness: =1
-                        ChevronBackground: =RGBA(0, 0, 0, 0)
-                        ChevronFill: =RGBA(22, 151, 170, 1)
-                        ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
-                        Height: =25
-                        HoverColor: =RGBA(22, 151, 170, 1)
-                        HoverFill: =RGBA(22, 151, 170, 0.37)
-                        Items: =Distinct(Flightdata,From)
-                        PressedFill: =RGBA(22, 151, 170, 1)
-                        SelectionFill: =RGBA(22, 151, 170, 1)
-                        Size: =12
-                        Width: =171
-                        X: =44
-                        Y: =92
-                        ZIndex: =7
+                tocombobox As dropdown:
+                    AllowEmptySelection: =true
+                    BorderColor: =fromcombobox.BorderColor
+                    BorderThickness: =1
+                    ChevronBackground: =fromcombobox.ChevronBackground
+                    ChevronFill: =fromcombobox.ChevronFill
+                    ChevronHoverBackground: =fromcombobox.ChevronHoverBackground
+                    ChevronHoverFill: =fromcombobox.ChevronHoverFill
+                    Color: =fromcombobox.Color
+                    Fill: =fromcombobox.Fill
+                    Height: =25
+                    HoverColor: =fromcombobox.HoverColor
+                    HoverFill: =fromcombobox.HoverFill
+                    Items: =Distinct(Flightdata,To)
+                    PressedColor: =fromcombobox.PressedColor
+                    PressedFill: =fromcombobox.PressedFill
+                    SelectionColor: =fromcombobox.SelectionColor
+                    SelectionFill: =fromcombobox.SelectionFill
+                    Size: =12
+                    Width: =171
+                    X: =232
+                    Y: =92
+                    ZIndex: =8
 
-                    tocombobox As dropdown:
-                        AllowEmptySelection: =true
-                        BorderColor: =fromcombobox.BorderColor
-                        BorderThickness: =1
-                        ChevronBackground: =fromcombobox.ChevronBackground
-                        ChevronFill: =fromcombobox.ChevronFill
-                        ChevronHoverBackground: =fromcombobox.ChevronHoverBackground
-                        ChevronHoverFill: =fromcombobox.ChevronHoverFill
-                        Color: =fromcombobox.Color
-                        Fill: =fromcombobox.Fill
-                        Height: =25
-                        HoverColor: =fromcombobox.HoverColor
-                        HoverFill: =fromcombobox.HoverFill
-                        Items: =Distinct(Flightdata,To)
-                        PressedColor: =fromcombobox.PressedColor
-                        PressedFill: =fromcombobox.PressedFill
-                        SelectionColor: =fromcombobox.SelectionColor
-                        SelectionFill: =fromcombobox.SelectionFill
-                        Size: =12
-                        Width: =171
-                        X: =232
-                        Y: =92
-                        ZIndex: =8
+                Label12 As label:
+                    Color: =RGBA(22, 151, 170, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =25
+                    PaddingLeft: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Text: ="Departure City"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =171
+                    X: =44
+                    Y: =118
+                    ZIndex: =9
 
-                    Label12 As label:
-                        Color: =RGBA(22, 151, 170, 1)
-                        FontWeight: =FontWeight.Semibold
-                        Height: =25
-                        PaddingLeft: =0
-                        PaddingTop: =0
-                        Size: =10
-                        Text: ="Departure City"
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =171
-                        X: =44
-                        Y: =118
-                        ZIndex: =9
-
-                    Label12_1 As label:
-                        Color: =RGBA(22, 151, 170, 1)
-                        FontWeight: =FontWeight.Semibold
-                        Height: =25
-                        PaddingLeft: =0
-                        PaddingTop: =0
-                        Size: =10
-                        Text: ="Arrival City"
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =171
-                        X: =232
-                        Y: =118
-                        ZIndex: =10
+                Label12_1 As label:
+                    Color: =RGBA(22, 151, 170, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =25
+                    PaddingLeft: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Text: ="Arrival City"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =171
+                    X: =232
+                    Y: =118
+                    ZIndex: =10
 
             BackgroundContainer As groupContainer.manualLayoutContainer:
                 BorderStyle: =BorderStyle.None

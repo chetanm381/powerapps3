@@ -131,9 +131,9 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Screen1",
     "Home_Screen",
     "Dish_Menu",
+    "Screen1",
     "Dish_Menu_PopUpCart"
   ]
 }
