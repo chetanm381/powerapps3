@@ -309,8 +309,8 @@ Dish_Menu As screen:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Width: =135
-            X: =476
+            Width: =152
+            X: =458
             Y: =13
             ZIndex: =3
 
@@ -319,9 +319,9 @@ Dish_Menu As screen:
                 Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =FontWeight.Semibold
                 Height: =26
-                Size: =12
+                Size: =15
                 Text: ="CheckOut"
-                Width: =97
+                Width: =113
                 X: =35
                 Y: =18
                 ZIndex: =1
