@@ -206,7 +206,7 @@ Dish_Menu As screen:
                     Height: =37
                     OnSelect: =Select(Parent)
                     Size: =20
-                    Text: =TextInput3.Text
+                    Text: =If(IsBlank(ThisItem.required_Quantity),0,ThisItem.required_Quantity)
                     Width: =123
                     X: =Parent.Width-170
                     Y: =90
@@ -448,6 +448,16 @@ Dish_Menu As screen:
                                 {ID:selectedDishes[@ID]},
                                 {
                                   Quantity: Value(selectedDishes[@Quantity]) - Value(selectedDishes[@required_Quantity])
+                                }
+                            )
+                        );
+                        ForAll(
+                           selectedDishes,
+                            Patch(
+                               DD_fms_quantity,
+                                {ID:selectedDishes[@ID]},
+                                {
+                                  required_Quantity:0
                                 }
                             )
                         );

@@ -935,6 +935,7 @@
             OnSelect: |
                 =Set(showPopUp,false);
                 Set(crewMember,Dropdown2.Selected.Crew_ID);
+                
                 Set(Flightvalue_popup,Flights.Selected);
                 Reset(Dropdown2);
                 Navigate(Dish_Menu);
