@@ -326,6 +326,7 @@ Dish_Menu As screen:
             Height: =99
             LayoutMinHeight: =112
             LayoutMinWidth: =250
+            Visible: =false
             Width: =Parent.Width
             Y: =1037
             ZIndex: =3
