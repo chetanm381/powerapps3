@@ -525,11 +525,11 @@
                                 Align: =Align.Right
                                 Color: =RGBA(22, 151, 170, 1)
                                 FontWeight: =FontWeight.Bold
-                                Height: =41
+                                Height: =42
                                 Size: =24
                                 Text: =ThisItem.to_code
-                                Width: =184
-                                X: =Parent.Width-205
+                                Width: =151
+                                X: =Parent.Width-180
                                 Y: =54
                                 ZIndex: =5
 
@@ -593,7 +593,7 @@
                                 Size: =10
                                 Text: =ThisItem.To
                                 Width: =173
-                                X: =Parent.Width-210
+                                X: =Parent.Width-215
                                 Y: =86
                                 ZIndex: =11
 
