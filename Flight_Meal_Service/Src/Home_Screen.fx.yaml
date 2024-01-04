@@ -234,8 +234,8 @@
                     Size: =10
                     Text: ="Search"
                     Width: =85
-                    X: =Parent.X+435
-                    Y: =92
+                    X: =Parent.Width-200
+                    Y: =101
                     ZIndex: =2
 
                 TextInput1 As text:
@@ -244,12 +244,12 @@
                     BorderThickness: =1
                     Default: =""
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =30
+                    Height: =35
                     HintText: ="Search By Flight Number"
                     HoverBorderColor: =RGBA(22, 151, 170, 0.37)
                     HoverFill: =RGBA(22, 151, 170, 0.24)
                     PaddingLeft: =If(!IsBlank(TextInput1),30,30+Icon3.Width)
-                    Size: =10
+                    Size: =15
                     Width: =362
                     X: =Parent.X+40
                     Y: =40
@@ -260,7 +260,7 @@
                     Height: =1
                     Width: =358
                     X: =Parent.X+40
-                    Y: =70
+                    Y: =75
                     ZIndex: =4
 
                 Button1 As button:
@@ -281,8 +281,8 @@
                     Size: =10
                     Text: ="Clear"
                     Width: =68
-                    X: =Parent.X+535
-                    Y: =92
+                    X: =Parent.Width-95
+                    Y: =101
                     ZIndex: =5
 
                 Icon3 As icon.Search:
@@ -291,7 +291,7 @@
                     Icon: =Icon.Search
                     Width: =20
                     X: =Parent.X+40
-                    Y: =45
+                    Y: =50
                     ZIndex: =6
 
                 fromcombobox As dropdown:
@@ -301,14 +301,14 @@
                     ChevronBackground: =RGBA(0, 0, 0, 0)
                     ChevronFill: =RGBA(22, 151, 170, 1)
                     ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
-                    Height: =25
+                    Height: =35
                     HoverColor: =RGBA(22, 151, 170, 1)
                     HoverFill: =RGBA(22, 151, 170, 0.37)
                     Items: =Distinct(Flightdata,From)
                     PressedFill: =RGBA(22, 151, 170, 1)
                     SelectionFill: =RGBA(22, 151, 170, 1)
                     Size: =12
-                    Width: =171
+                    Width: =180
                     X: =Parent.X+40
                     Y: =92
                     ZIndex: =7
@@ -323,7 +323,7 @@
                     ChevronHoverFill: =fromcombobox.ChevronHoverFill
                     Color: =fromcombobox.Color
                     Fill: =fromcombobox.Fill
-                    Height: =25
+                    Height: =35
                     HoverColor: =fromcombobox.HoverColor
                     HoverFill: =fromcombobox.HoverFill
                     Items: =Distinct(Flightdata,To)
@@ -332,7 +332,7 @@
                     SelectionColor: =fromcombobox.SelectionColor
                     SelectionFill: =fromcombobox.SelectionFill
                     Size: =12
-                    Width: =171
+                    Width: =180
                     X: =Parent.X+235
                     Y: =92
                     ZIndex: =8
@@ -348,7 +348,7 @@
                     VerticalAlign: =VerticalAlign.Top
                     Width: =171
                     X: =Parent.X+40
-                    Y: =118
+                    Y: =127
                     ZIndex: =9
 
                 Label12_1 As label:
@@ -362,7 +362,7 @@
                     VerticalAlign: =VerticalAlign.Top
                     Width: =171
                     X: =Parent.X+235
-                    Y: =118
+                    Y: =127
                     ZIndex: =10
 
             BackgroundContainer As groupContainer.manualLayoutContainer:
