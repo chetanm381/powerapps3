@@ -22,6 +22,12 @@ App As appinfo:
             DD_fms_flights,
             {ID: 1}
         );
+        ClearCollect(
+            DD_fms_orders,
+            {ID: 1}
+        );
+        
+        
         If(
             isConnected,
             ClearCollect(
@@ -41,6 +47,11 @@ App As appinfo:
                 FMS_Quantity
             );
             ClearCollect(
+                CD_fms_orders,
+                FMS_Orders
+            );
+        
+            ClearCollect(
                 DD_fms_dishes,
                 CD_fms_dishes
             );
@@ -55,6 +66,10 @@ App As appinfo:
             ClearCollect(
                 DD_fms_flights,
                 UpdatedFlightData
+            );
+            ClearCollect(
+                DD_fms_orders,
+                CD_fms_orders
             );
          /*   
             ClearData();
@@ -93,6 +108,10 @@ App As appinfo:
             LoadData(
                 DD_fms_flights,
                 "DD_fms_flights"
+            );
+            LoadData(
+                DD_fms_orders,
+                "DD_fms_orders"
             );
             
         );

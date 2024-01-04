@@ -71,10 +71,16 @@
                                 CD_fms_quantity,
                                 FMS_Quantity
                             );
+                            ClearCollect(
+                                CD_fms_orders,
+                                FMS_Orders
+                            );
+                        
                         Clear(DD_fms_crew_members);
                         Clear(DD_fms_dishes);
                         Clear(DD_fms_flights);
                         Clear(DD_fms_quantity);
+                        Clear(DD_fms_orders);
                         
                         
                         
@@ -94,6 +100,11 @@
                                 DD_fms_flights,
                                 UpdatedFlightData
                             );
+                            ClearCollect(
+                                DD_fms_orders,
+                                CD_fms_orders
+                            );
+                        
                             ClearData();
                             
                             SaveData(
@@ -111,6 +122,10 @@
                             SaveData(
                                 DD_fms_flights,
                                 "DD_fms_flights"
+                            );
+                            SaveData(
+                                DD_fms_orders,
+                                "DD_fms_orders"
                             );
                         
                         

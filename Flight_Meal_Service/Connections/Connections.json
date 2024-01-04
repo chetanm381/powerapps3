@@ -20,6 +20,9 @@
           "FMS_Flights": {
             "tableName": "057b4c06-1164-4687-bafe-eccd3ab383ca"
           },
+          "FMS_Orders": {
+            "tableName": "494103a7-4f02-40c5-a960-64b80117c613"
+          },
           "FMS_Quantity": {
             "tableName": "4a0a3bb1-625f-41e7-8ba5-352070ab9447"
           }
@@ -31,7 +34,8 @@
       "FMS_Flights",
       "FMS_Quantity",
       "FMS_Dishes",
-      "FMS_Dishes_1"
+      "FMS_Dishes_1",
+      "FMS_Orders"
     ],
     "dependencies": {},
     "dependents": [],

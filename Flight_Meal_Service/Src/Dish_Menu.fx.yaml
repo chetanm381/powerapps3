@@ -9,7 +9,7 @@ Dish_Menu As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
-        ZIndex: =9
+        ZIndex: =1
 
         Container15 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -231,30 +231,6 @@ Dish_Menu As screen:
                     Y: =137
                     ZIndex: =19
 
-                    Button2_1 As button:
-                        BorderStyle: =BorderStyle.None
-                        Color: =RGBA(22, 151, 170, 1)
-                        DisplayMode: =If(Value(TextInput3.Text)<1,DisplayMode.Disabled,DisplayMode.Edit)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        FontWeight: =FontWeight.Bold
-                        Height: =44
-                        HoverFill: =ColorFade(Self.Fill, -20%)
-                        OnSelect: |-
-                            =Patch(DD_fms_quantity,{ID:ThisItem.ID},{required_Quantity:Value(If(IsBlank(ThisItem.required_Quantity),0,ThisItem.required_Quantity))-1})
-                        PaddingBottom: =14
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =25
-                        Text: ="_"
-                        VerticalAlign: =VerticalAlign.Bottom
-                        Width: =Parent.Width*.50
-                        ZIndex: =1
-
                     Button2 As button:
                         Color: =RGBA(22, 151, 170, 1)
                         DisplayMode: =If(Value(TextInput3.Text)<Value(ThisItem.Quantity),DisplayMode.Edit,DisplayMode.Disabled)
@@ -262,16 +238,16 @@ Dish_Menu As screen:
                         FontWeight: =FontWeight.Bold
                         Height: =44
                         HoverFill: =ColorFade(Self.Fill, -20%)
-                        OnSelect: |
-                            =Patch(DD_fms_quantity,{ID:ThisItem.ID},{required_Quantity:Value(If(IsBlank(ThisItem.required_Quantity),0,ThisItem.required_Quantity))+1})
+                        OnSelect: |-
+                            =Set(OrderPopUp,true);
+                            Set(dishorder,ThisItem);
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
-                        Size: =24
-                        Text: ="+"
-                        Width: =Parent.Width*.50
-                        X: =61
+                        Size: =12
+                        Text: ="Add to Cart "
+                        Width: =122
                         ZIndex: =2
 
             Button5 As button:
@@ -486,4 +462,176 @@ Dish_Menu As screen:
                     Text: =""
                     Width: =Parent.Width
                     ZIndex: =3
+
+    Container22 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(166, 166, 166, 0.59)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Visible: =OrderPopUp
+        Width: =Parent.Width
+        ZIndex: =2
+
+        Container23 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =Parent.Height*.40
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =Parent.Width*.80
+            X: =Parent.X+Parent.Width*0.60
+            Y: =Parent.Y+Parent.Width*0.60
+            ZIndex: =1
+
+            Container21_2 As groupContainer.manualLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                Height: =154
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =300
+                X: =(Parent.Width-Self.Width)/2+10
+                Y: =45
+                ZIndex: =1
+
+                Image4_6 As image:
+                    Height: =30
+                    Image: ='airplane (2)'
+                    Width: =30
+                    X: =15
+                    Y: =15
+                    ZIndex: =1
+
+                Image4_7 As image:
+                    Height: =30
+                    Image: ='airplane (3)'
+                    Width: =30
+                    X: =256
+                    Y: =15
+                    ZIndex: =2
+
+                Image5_7 As image:
+                    Height: =50
+                    Image: =minus
+                    Width: =73
+                    X: =179
+                    Y: =5
+                    ZIndex: =3
+
+                Image5_6 As image:
+                    Height: =50
+                    Image: =minus
+                    Width: =74
+                    X: =43
+                    Y: =5
+                    ZIndex: =4
+
+                Label21_4 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(22, 151, 170, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =39
+                    Size: =12
+                    Text: =Flightvalue_popup.Title
+                    Width: =146
+                    X: =77
+                    Y: =10
+                    ZIndex: =6
+
+                Image6_2 As image:
+                    Height: =54
+                    Image: ='airplane (1)'
+                    Width: =60
+                    X: =110
+                    Y: =82
+                    ZIndex: =7
+
+            Label13 As label:
+                Align: =Align.Center
+                Color: =RGBA(22, 151, 170, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =21
+                Text: ="Enter Seat Number "
+                Width: =282
+                X: =(Parent.Width-Self.Width)/2+10
+                Y: =226
+                ZIndex: =2
+
+            TextInput1_1 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =1
+                Default: =""
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =35
+                HintText: ="Seat Number"
+                HoverBorderColor: =RGBA(22, 151, 170, 0.37)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                PaddingLeft: =If(!IsBlank(TextInput1_1),30,30+Icon3.Width)
+                Size: =15
+                Width: =Label13.Width
+                X: =Label13.X-15
+                Y: =290
+                ZIndex: =3
+
+            Rectangle6 As rectangle:
+                Fill: =RGBA(22, 151, 170, 1)
+                Height: =2
+                Width: =Label13.Width
+                X: =Label13.X
+                Y: =330
+                ZIndex: =4
+
+            Button1_1 As button:
+                Fill: =RGBA(22, 151, 170, 1)
+                Height: =30
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: |-
+                    =Set(OrderPopUp,false);
+                    Patch(
+                    DD_fms_orders,
+                    Defaults(DD_fms_orders),
+                    {
+                        SeatNumber:TextInput1_1.Text,
+                        DishID:dishorder.dish_id,
+                        FlightID:Flightvalue_popup.Title 
+                    }
+                    );
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =13
+                Text: ="Order"
+                Width: =100
+                X: =Parent.Width-140
+                Y: =383
+                ZIndex: =5
+
+            Button1_2 As button:
+                Fill: =RGBA(22, 151, 170, 1)
+                Height: =30
+                HoverFill: =ColorFade(Self.Fill, -20%)
+                OnSelect: =Set(OrderPopUp,false);
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =13
+                Text: ="Cancel"
+                Width: =100
+                X: =140-Self.Width
+                Y: =383
+                ZIndex: =6
 
