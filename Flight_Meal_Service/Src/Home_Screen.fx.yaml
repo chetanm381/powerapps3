@@ -211,7 +211,7 @@
                     Color: =RGBA(22, 151, 170, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =27
-                    Size: =12
+                    Size: =16
                     Text: ="Choose Your Flight"
                     Width: =257
                     X: =Parent.X+40
@@ -233,7 +233,7 @@
                     RadiusTopRight: =5
                     Size: =10
                     Text: ="Search"
-                    Width: =85
+                    Width: =100
                     X: =Parent.Width-200
                     Y: =101
                     ZIndex: =2
@@ -280,7 +280,7 @@
                     RadiusTopRight: =5
                     Size: =10
                     Text: ="Clear"
-                    Width: =68
+                    Width: =80
                     X: =Parent.Width-95
                     Y: =101
                     ZIndex: =5
