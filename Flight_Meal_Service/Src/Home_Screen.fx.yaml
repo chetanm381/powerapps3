@@ -231,10 +231,10 @@
                     RadiusBottomRight: =5
                     RadiusTopLeft: =5
                     RadiusTopRight: =5
-                    Size: =10
+                    Size: =12
                     Text: ="Search"
-                    Width: =100
-                    X: =Parent.Width-200
+                    Width: =110
+                    X: =Parent.Width-220
                     Y: =101
                     ZIndex: =2
 
@@ -278,9 +278,9 @@
                     RadiusBottomRight: =5
                     RadiusTopLeft: =5
                     RadiusTopRight: =5
-                    Size: =10
+                    Size: =12
                     Text: ="Clear"
-                    Width: =80
+                    Width: =90
                     X: =Parent.Width-95
                     Y: =101
                     ZIndex: =5
