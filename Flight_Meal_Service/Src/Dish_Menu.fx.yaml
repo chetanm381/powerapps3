@@ -173,7 +173,7 @@ Dish_Menu As screen:
                         Size: =10
                         Text: ="Remaining Quantity  "&ThisItem.Quantity
                         Width: =159
-                        X: =Parent.Width-190
+                        X: =Parent.Width-Self.Width
                         ZIndex: =9
 
                     Icon4 As icon.Tag:
@@ -183,7 +183,7 @@ Dish_Menu As screen:
                         Height: =37
                         Icon: =Icon.Tag
                         Width: =39
-                        X: =Parent.Width-215
+                        X: =Parent.Width-Self.Width-Label1.Width+10
                         ZIndex: =10
 
                 Label3 As label:
