@@ -491,11 +491,9 @@
                                     ZIndex: =7
 
                             Label19 As label:
-                                Color: =RGBA(148, 135, 141, 1)
-                                FontWeight: =FontWeight.Lighter
                                 Height: =29
                                 PaddingLeft: =8
-                                Size: =10
+                                Size: =12
                                 Text: ="From"
                                 Width: =110
                                 X: =42
@@ -504,10 +502,8 @@
 
                             Label19_1 As label:
                                 Align: =Align.Right
-                                Color: =RGBA(148, 135, 141, 1)
-                                FontWeight: =FontWeight.Lighter
                                 Height: =29
-                                Size: =10
+                                Size: =12
                                 Text: ="To"
                                 Width: =110
                                 X: =Parent.Width-160
@@ -518,11 +514,11 @@
                                 Color: =RGBA(22, 151, 170, 1)
                                 FontWeight: =FontWeight.Bold
                                 Height: =41
-                                Size: =20
+                                Size: =24
                                 Text: =ThisItem.from_code
                                 Width: =184
                                 X: =42
-                                Y: =51
+                                Y: =55
                                 ZIndex: =4
 
                             Label20_1 As label:
@@ -530,18 +526,18 @@
                                 Color: =RGBA(22, 151, 170, 1)
                                 FontWeight: =FontWeight.Bold
                                 Height: =41
-                                Size: =20
+                                Size: =24
                                 Text: =ThisItem.to_code
                                 Width: =184
                                 X: =Parent.Width-205
-                                Y: =50
+                                Y: =54
                                 ZIndex: =5
 
                             Label22 As label:
                                 Color: =RGBA(22, 151, 170, 1)
                                 FontWeight: =FontWeight.Semibold
                                 Height: =28
-                                Size: =10
+                                Size: =12
                                 Text: =ThisItem.Departure_Time
                                 Width: =92
                                 X: =47
@@ -554,18 +550,16 @@
                                 FontWeight: =FontWeight.Semibold
                                 Height: =28
                                 PaddingRight: =0
-                                Size: =10
+                                Size: =12
                                 Text: =ThisItem.Departure_Time
                                 Width: =92
-                                X: =Parent.Width-125
+                                X: =Parent.Width-113
                                 Y: =132
                                 ZIndex: =7
 
                             Label22_2 As label:
-                                Color: =RGBA(148, 135, 141, 1)
-                                FontWeight: =FontWeight.Lighter
                                 Height: =28
-                                Size: =8
+                                Size: =10
                                 Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
                                 Width: =92
                                 X: =50
@@ -574,19 +568,15 @@
 
                             Label22_3 As label:
                                 Align: =Align.Right
-                                Color: =RGBA(148, 135, 141, 1)
-                                FontWeight: =FontWeight.Lighter
                                 Height: =28
-                                Size: =8
+                                Size: =10
                                 Text: =Text(ThisItem.Departure_Date,"mmm dd, yy")
-                                Width: =92
-                                X: =Parent.Width-120
+                                Width: =79
+                                X: =Parent.Width-93
                                 Y: =148
                                 ZIndex: =9
 
                             Label19_2 As label:
-                                Color: =RGBA(148, 135, 141, 1)
-                                FontWeight: =FontWeight.Lighter
                                 Height: =29
                                 PaddingLeft: =8
                                 Size: =10
@@ -598,8 +588,6 @@
 
                             Label19_3 As label:
                                 Align: =Align.Right
-                                Color: =RGBA(148, 135, 141, 1)
-                                FontWeight: =FontWeight.Lighter
                                 Height: =29
                                 PaddingRight: =0
                                 Size: =10
@@ -617,21 +605,21 @@
                                 ZIndex: =12
 
                             Image3_2 As image:
-                                Height: =20
+                                Height: =25
                                 Image: ='wall-clock'
                                 OnSelect: =Select(backgroundContainer);
-                                Width: =20
-                                X: =22
-                                Y: =144
+                                Width: =25
+                                X: =21
+                                Y: =139
                                 ZIndex: =13
 
                             Image3_3 As image:
-                                Height: =20
+                                Height: =25
                                 Image: ='wall-clock'
                                 OnSelect: =Select(backgroundContainer);
-                                Width: =20
+                                Width: =25
                                 X: =Parent.Width-115
-                                Y: =144
+                                Y: =140
                                 ZIndex: =14
 
                             backgroundContainer As rectangle:
