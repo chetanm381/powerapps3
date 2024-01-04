@@ -235,7 +235,7 @@ Dish_Menu As screen:
 
                     Button2 As button:
                         Color: =RGBA(22, 151, 170, 1)
-                        DisplayMode: =If(Value(TextInput3.Text)<Value(ThisItem.Quantity),DisplayMode.Edit,DisplayMode.Disabled)
+                        DisplayMode: =If(Value(ThisItem.Quantity)<=0,DisplayMode.Disabled,DisplayMode.Edit)
                         Fill: =RGBA(255, 255, 255, 1)
                         FontWeight: =FontWeight.Bold
                         Height: =44
@@ -569,33 +569,28 @@ Dish_Menu As screen:
                     Y: =175
                     ZIndex: =8
 
-                TextInput1_1 As text:
-                    Align: =Align.Center
-                    BorderColor: =RGBA(255, 255, 255, 1)
-                    BorderStyle: =BorderStyle.None
+                fromcombobox_1 As dropdown:
+                    BorderColor: =RGBA(22, 151, 170, 1)
                     BorderThickness: =1
-                    Default: =""
-                    Fill: =RGBA(0, 0, 0, 0)
+                    ChevronBackground: =RGBA(0, 0, 0, 0)
+                    ChevronFill: =RGBA(22, 151, 170, 1)
+                    ChevronHoverBackground: =ColorFade(Self.ChevronFill, -20%)
                     Height: =35
-                    HintText: ="Seat Number"
-                    HoverBorderColor: =RGBA(22, 151, 170, 0.37)
-                    HoverFill: =RGBA(255, 255, 255, 1)
-                    PaddingLeft: =If(!IsBlank(TextInput1_1),30,30+Icon3.Width)
-                    Size: =15
-                    Width: =Label13.Width
-                    X: =Label13.X-15
+                    HoverColor: =RGBA(22, 151, 170, 1)
+                    HoverFill: =RGBA(22, 151, 170, 0.37)
+                    Items: |-
+                        =[Blank(),"1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D", "3A", "3B", "3C", "3D", "4A", "4B", "4C", "4D", "5A", "5B", "5C", "5D", "6A", "6B", "6C", "6D", "7A", "7B", "7C", "7D", "8A", "8B", "8C", "8D", "9A", "9B", "9C", "9D", "10A", "10B", "10C", "10D", "11A", "11B", "11C", "11D", "12A", "12B", "12C", "12D", "13A", "13B", "13C", "13D", "14A", "14B", "14C", "14D", "15A", "15B", "15C", "15D", "16A", "16B", "16C", "16D", "17A", "17B", "17C", "17D", "18A", "18B", "18C", "18D", "19A", "19B", "19C", "19D", "20A", "20B", "20C", "20D", "21A", "21B", "21C", "21D", "22A", "22B", "22C", "22D", "23A", "23B", "23C", "23D", "24A", "24B", "24C", "24D", "25A", "25B", "25C", "25D", "26A", "26B", "26C", "26D", "27A", "27B", "27C", "27D", "28A", "28B", "28C", "28D", "29A", "29B", "29C", "29D", "30A", "30B", "30C", "30D", "30F"
+                        ]
+                    PressedFill: =RGBA(22, 151, 170, 1)
+                    SelectionFill: =RGBA(22, 151, 170, 1)
+                    Size: =12
+                    Width: =180
+                    X: =60
                     Y: =239
-                    ZIndex: =9
-
-                Rectangle6 As rectangle:
-                    Fill: =RGBA(22, 151, 170, 1)
-                    Height: =2
-                    Width: =Label13.Width
-                    X: =Label13.X
-                    Y: =279
-                    ZIndex: =10
+                    ZIndex: =11
 
             Button1_1 As button:
+                DisplayMode: =If(IsBlank(fromcombobox_1.SelectedText.Value),DisplayMode.Disabled,DisplayMode.Edit)
                 Fill: =RGBA(22, 151, 170, 1)
                 Height: =30
                 HoverFill: =ColorFade(Self.Fill, -20%)
@@ -605,7 +600,7 @@ Dish_Menu As screen:
                     DD_fms_orders,
                     Defaults(DD_fms_orders),
                     {
-                        SeatNumber:TextInput1_1.Text,
+                        SeatNumber:fromcombobox_1.SelectedText.Value,
                         DishID:dishorder.dish_id,
                         FlightID:Flightvalue_popup.Title 
                     }

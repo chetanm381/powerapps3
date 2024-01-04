@@ -2750,19 +2750,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Dish_Menu.Container22.Container23.Container21_2.TextInput1_1.AccessibleLabel"
+                  "fullyQualifiedName": "Dish_Menu.Container22.Container23.Container21_2.fromcombobox_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Dish_Menu.Container22.Container23.Container21_2.TextInput1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Dish_Menu.Container22.Container23.Container21_2.fromcombobox_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Dish_Menu",
-                "type": "Dish_Menu.Container22.Container23.Container21_2.TextInput1_1"
+                "type": "Dish_Menu.Container22.Container23.Container21_2.fromcombobox_1"
               }
             }
           ],
@@ -6103,36 +6103,6 @@
           },
           "ruleId": "app-CollectDelegatableDataSource",
           "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Dish_Menu.Container22.Container23.Container21_2.TextInput1_1.PaddingLeft"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Dish_Menu.Container22.Container23.Container21_2.TextInput1_1.PaddingLeft",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "PaddingLeft",
-                "module": "Dish_Menu",
-                "type": "Dish_Menu.Container22.Container23.Container21_2.TextInput1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 12
         },
         {
           "locations": [
