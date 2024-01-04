@@ -418,7 +418,6 @@
                         TemplateSize: =221
                         Transition: =Transition.Pop
                         Width: =Parent.Width-10
-                        X: =8
                         ZIndex: =1
 
                         itemcontainer As groupContainer.manualLayoutContainer:
@@ -640,10 +639,10 @@
                             backgroundContainer As rectangle:
                                 BorderStyle: =BorderStyle.None
                                 Fill: =RGBA(0, 0, 0, 0)
-                                Height: =201
+                                Height: =Parent.Height
                                 OnSelect: |
                                     =Select(Flights);
-                                Width: =591
+                                Width: =Parent.Width
                                 Y: =5
                                 ZIndex: =15
 
