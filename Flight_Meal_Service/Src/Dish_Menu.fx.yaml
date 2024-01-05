@@ -81,11 +81,12 @@ Dish_Menu As screen:
                                 DD_fms_orders,
                                 Patch(
                                     FMS_Orders,
-                                    Defaults(FMS_Orders),
+                                   {ID: DD_fms_orders[@ID]}
+                                   ,
                                     {
-                                        DishID:DD_fms_orders[@DishID],
-                                        FlightID:DD_fms_orders[@FlightID],
-                                        SeatNumber:DD_fms_orders[@SeatNumber]
+                                        DishID: DD_fms_orders[@DishID],
+                                        FlightID: DD_fms_orders[@FlightID],
+                                        SeatNumber: DD_fms_orders[@SeatNumber]
                         
                                     }
                                 )
@@ -715,6 +716,7 @@ Dish_Menu As screen:
                 HoverFill: =ColorFade(Self.Fill, -20%)
                 OnSelect: |
                     =Set(OrderPopUp,false);
+                    Reset(fromcombobox_1);
                     Patch(
                     DD_fms_orders,
                     Defaults(DD_fms_orders),
