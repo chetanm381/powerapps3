@@ -53,6 +53,19 @@
                                     {Quantity:DD_fms_quantity[@Quantity]}
                                 )
                             );
+                            ForAll(
+                                DD_fms_orders,
+                                Patch(
+                                    FMS_Orders,
+                                    Defaults(FMS_Orders),
+                                    {
+                                        DishID:DD_fms_orders[@DishID],
+                                        FlightID:DD_fms_orders[@FlightID],
+                                        SeatNumber:DD_fms_orders[@SeatNumber]
+                        
+                                    }
+                                )
+                            );
                         
                         //****************************************************************
                             ClearCollect(
@@ -159,7 +172,7 @@
                         );
                         ClearCollect(Flightdata,DD_fms_flights);
                     Width: =50
-                    X: =Parent.Width-80
+                    X: =550
                     Y: =16
                     ZIndex: =1
 
